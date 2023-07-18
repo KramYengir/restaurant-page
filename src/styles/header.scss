@@ -1,0 +1,17 @@
+$background-color: grey;
+
+header{
+    width: 100%;
+    flex: 0.15;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.5rem;
+    color: white;
+    background-color: $background-color;
+}
+
+a{
+    background-color: none;
+    cursor: pointer;
+}

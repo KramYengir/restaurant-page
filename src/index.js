@@ -1,12 +1,15 @@
-import './style.css';
+import './styles/main.scss';
+import header from './header.js';
+import homepage from './homepage.js';
+import footer from './footer.js';
 
-const body = document.querySelector('body');
 
-function makeDiv(){
-    const div = document.createElement('div');
-    div.textContent = 'Working fine...';
+let currentPage;
 
-    return div;
-}
+const content = document.getElementById('content');
 
-body.appendChild(makeDiv());
+content.appendChild(header);
+content.appendChild(homepage);
+content.appendChild(footer);
+
+
