@@ -11,10 +11,19 @@ body{
     align-items: center;
 }
 
-#content{
-    height: 90%;
-    width: 90%;
+#content, #content-main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+}
+
+#content{
+    height: 95%;
+    width: 95%;
+}
+
+#content-main{
+    flex: 1;
+    background-color: #e67b7b;
 }

@@ -1,4 +1,4 @@
-import './styles/header.scss';
+import '../styles/header.scss';
 
 const buildHeader = (()=>{
 
@@ -6,6 +6,11 @@ const buildHeader = (()=>{
     const home = document.createElement('a');
     const menu = document.createElement('a');
     const contact = document.createElement('a');
+
+    home.id = 'home-tab';
+    menu.id = 'menu-tab';
+    contact.id = 'contact-tab';
+
 
     home.textContent = 'Home';
     menu.textContent = 'Menu';
