@@ -1,10 +1,10 @@
 @import './colors.scss';
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Serif:wght@700&display=swap');
 $tab-text-size: 1rem;
 
 header{
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'PT Serif', serif;
     width: 100%;
     flex: 0.15;
     display: flex;
@@ -12,8 +12,7 @@ header{
     align-items: center;
    
     color: $gold-color;
-    background-color: $background-dark;
-    opacity: 95%;
+    background-color: $background-dark-90;
 }
 
 a{
@@ -36,6 +35,7 @@ a{
         font-weight: 700;
         font-size: 2rem;
         text-shadow: 0.5px 0.5px $blue-color;
+        letter-spacing: 1.5px;
 
     }
     
@@ -64,7 +64,7 @@ a.active > #home-heading{
 }
 
 #right-side a.active{
-    border-bottom: 2px solid $blue-color;
-    transition: border-width 0.1s ease-in-out;
+    border-bottom: 4px solid $blue-color;
+    transition: border-width 0.2s ease-in-out;
 }
 
