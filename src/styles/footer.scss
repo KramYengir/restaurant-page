@@ -1,4 +1,4 @@
-$background-color: rgb(85, 180, 76);
+@import './colors.scss';
 
 footer{
     width: 100%;
@@ -7,8 +7,10 @@ footer{
     justify-content: center;
     align-items: flex-end;
     gap: 1.5rem;
+
     color: white;
-    background-color: $background-color;
+    background-color: $background-dark;
+    opacity: 95%;
 }
 
 a{

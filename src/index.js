@@ -3,13 +3,14 @@ import header from './modules/header.js';
 import homepage from './modules/homepage.js';
 import menu from './modules/menu.js';
 import contact from './modules/contact.js';
+import about from './modules/about.js';
 import footer from './modules/footer.js';
 
 
 
 let currentPage = homepage;
 
-const pages = [homepage, menu, contact];
+const pages = [homepage, menu, about, contact];
 
 const content = document.getElementById('content');
 const contentMain = document.createElement('div');
@@ -29,9 +30,22 @@ const loadContent = (index)=>{
     currentPage = pages[index];
 }
 
+const toggleActiveTab = (index)=>{
+    tabLinks.forEach((el,i)=>{
+        if(i === index){
+            tabLinks[index].classList.add('active')
+        }
+        else{
+            tabLinks[i].classList.remove('active')
+            console.log('matching index');
+        }
+    })
+}
+
 tabLinks.forEach((el, i) =>{
     el.addEventListener('click', ()=>{
         loadContent(i);
+        toggleActiveTab(i);
     })
 })
 

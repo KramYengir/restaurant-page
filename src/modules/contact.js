@@ -2,7 +2,7 @@ import '../styles/contact.scss';
 
 const buildContactpage = (()=>{
     const container = document.createElement('div');
-    container.id = 'container';
+    container.id = 'contact-container';
     
     const box = document.createElement('div');
     box.id = 'contact-box';

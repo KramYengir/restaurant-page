@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -9,6 +11,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $background-light;
 }
 
 #content, #content-main{
@@ -20,10 +23,10 @@ body{
 
 #content{
     height: 95%;
-    width: 95%;
+    width: min(100%, 1000px);
 }
 
 #content-main{
     flex: 1;
-    background-color: #e67b7b;
+    /* background-color: #e67b7b; */
 }

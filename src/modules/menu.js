@@ -2,7 +2,7 @@ import '../styles/menu.scss';
 
 const buildMenu = (()=>{
     const container = document.createElement('div');
-    container.id = 'container';
+    container.id = 'menu-container';
     
     const box = document.createElement('div');
     box.id = 'menu-box';

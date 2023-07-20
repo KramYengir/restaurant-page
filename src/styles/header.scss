@@ -1,18 +1,58 @@
-$background-color: #2a2a2a;
-$font-color: #af9f7f;
+@import './colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+$tab-text-size: 1rem;
 
 header{
+    font-family: 'Merriweather', serif;
     width: 100%;
-    flex: 0.15;
+    flex: 0.10;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 2rem;
-    color: $font-color;
-    background-color: $background-color;
+    justify-content: space-between;
+    align-items: center;
+   
+    color: $gold-color;
+    background-color: $background-dark;
+    opacity: 95%;
 }
 
 a{
+    font-size: $tab-text-size;
     background-color: none;
+    margin: 1rem;
+    
     cursor: pointer;
 }
+
+#home-tab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    #home-heading{
+        color: $gold-dark-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-shadow: 0.5px 0.5px $blue-color;
+
+    }
+    
+    #home-sub-heading{
+        font-size: 1rem;
+        color: white;
+        font-style: oblique;
+    }
+}
+
+#right-side a{
+    text-transform: uppercase;
+    /* -webkit-text-stroke: 0.2px $blue-color; */
+
+}
+
+#right-side a.active{
+    border-bottom: 2px solid $gold-color;
+
+}
+

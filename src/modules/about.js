@@ -1,11 +1,11 @@
-import '../styles/homepage.scss';
+import '../styles/about.scss';
 
-const buildHomepage = (()=>{
+const buildAboutpage = (()=>{
     const container = document.createElement('div');
-    container.id = 'homepage-container';
+    container.id = 'about-container';
     
     const box = document.createElement('div');
-    box.id = 'homepage-box';
+    box.id = 'about-box';
 
     container.appendChild(box);
 
@@ -13,4 +13,4 @@ const buildHomepage = (()=>{
 
 })();
 
-export default buildHomepage;
+export default buildAboutpage;

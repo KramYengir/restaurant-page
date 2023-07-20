@@ -1,6 +1,8 @@
-#container{
+@import './colors.scss';
+
+#homepage-container{
     flex: 1.5;
-    background-color: rgb(163, 163, 233);
+    /* background-color: rgb(163, 163, 233); */
     
     display: flex;
     justify-content: center;
@@ -10,5 +12,5 @@
 #homepage-box{
     width: 50%;
     height: 50%;
-    background-color: aliceblue;
+    background-color: rgb(78, 123, 161);
 }
