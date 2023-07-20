@@ -6,7 +6,7 @@ $tab-text-size: 1rem;
 header{
     font-family: 'Merriweather', serif;
     width: 100%;
-    flex: 0.10;
+    flex: 0.15;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,12 +28,13 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 2rem;
     
     #home-heading{
         color: $gold-dark-color;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-shadow: 0.5px 0.5px $blue-color;
 
     }
@@ -42,17 +43,28 @@ a{
         font-size: 1rem;
         color: white;
         font-style: oblique;
+        margin-top: 0.25rem;
     }
+}
+
+a.active > #home-heading{
+    border-bottom: 2px solid $blue-color;
+    margin-bottom: -2px;
+    transition: border-width 0.1s ease-in-out,
+                margin-bottom 0.1s ease-in;
+}
+
+#right-side{
+    padding-right: 2rem;
 }
 
 #right-side a{
     text-transform: uppercase;
-    /* -webkit-text-stroke: 0.2px $blue-color; */
 
 }
 
 #right-side a.active{
-    border-bottom: 2px solid $gold-color;
-
+    border-bottom: 2px solid $blue-color;
+    transition: border-width 0.1s ease-in-out;
 }
 
