@@ -1,7 +1,7 @@
 import '../styles/homepage.scss';
 
-const WELCOME_TITLE = 'Welcome to Ferryhill';
-const WELCOME_MSG = "Voted Salford's Best Chippy 2023 by SalfordNow.co.uk readers";
+const WELCOME_TITLE = 'Welcome to Ferryhill!';
+const WELCOME_MSG = "Voted Salford's Best Chippy IN 2023 by Salfordnow.co.uk readers";
 const HOURS_MSG = 'Be sure to check our social media pages or get in touch with us for up-to-date changes';
 const HOURS_INFO = `<div class='heading' id='title'>Opening Hours</div>
                     <div class='heading days'>Mon - Sat</div>
@@ -43,12 +43,18 @@ const buildHomepage = (()=>{
     hoursMsg.id = 'hours-msg';
     hoursMsg.innerText = HOURS_MSG;
 
+    const hoursDiv = document.createElement('div');
+    hoursDiv.id = 'hours-div';
+
+
     const hoursInfo = document.createElement('div');
     hoursInfo.id = 'hours-info';
     hoursInfo.innerHTML = HOURS_INFO;
 
+    hoursDiv.appendChild(hoursInfo);
+
     openingHoursDiv.appendChild(hoursMsg);
-    openingHoursDiv.appendChild(hoursInfo);
+    openingHoursDiv.appendChild(hoursDiv);
 
 
     container.appendChild(welcomeDiv);

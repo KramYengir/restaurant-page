@@ -4,14 +4,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
     place-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
     
 
     >div{
-        /* aspect-ratio: 1.1; */
-        width: clamp(85vw, 90vw, 95vw);
+        /* width: clamp(85vw, 90vw, 95vw); */
+        width: 100vw;
         min-height: 600px;
-        background-color: rgba(255, 255, 255, 0.05);
+       /*  background-color: rgba(255, 255, 255, 0.05); */
 
     }
 }
@@ -23,19 +23,32 @@
     align-items: center;
     text-align: center;
 
-    border-radius: 20px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url('../assets/fish.jpg');
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-position: center;
+    background-size: cover;
+
+    font-family: 'Merriweather', serif;
 
     #welcome-title{
-        font-size: 4rem;
-        color: $gold-color;
+        font-size: clamp(3rem, 4.5rem, 6.5rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $blue-color;
     }
 
     #welcome-msg{
-        font-size: 2rem;
+        margin-top: 2REM;
+        font-size: 1.5rem;
         max-width: 80%;
-        color: $blue-color;
+        color: white;
+        text-transform: uppercase;
+
     }
 }
 
@@ -47,17 +60,21 @@
     text-align: center;
     padding: 1rem;
 
-    border-radius: 20px;
+    background-color: $background-dark;
     
     #hours-msg{
         padding: 10%;
         flex: 1;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: $gold-color;
     }
 
-    #hours-info{
+    #hours-div{
         flex: 1;
+    }
+
+    #hours-info{
+        max-width: 80%;
         padding: 2rem;
         border: 1px solid $blue-color;
         border-radius: 10px;

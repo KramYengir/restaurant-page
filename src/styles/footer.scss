@@ -3,19 +3,15 @@
 footer{
     position: fixed;
     bottom: 0;
-    min-height: 60px;
+    min-height: 50px;
 
     width: 100%;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 
 
-    color: white;
+    color: $gold-color;
     background-color: $background-dark-90;
-}
-
-a{
-    background-color: none;
-    cursor: pointer;
 }

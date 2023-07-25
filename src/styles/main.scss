@@ -1,5 +1,6 @@
 @import './colors.scss';
 @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 
 *{
@@ -25,12 +26,12 @@ body{
     flex-grow: 1;
     justify-content: space-between;
     width: 100%;
-    background-color: $background-dark;
+    /* background-color: $background-dark; */
 
 }
 
 #content-main{
     flex-grow: 1;
-    margin-top: 110px;
-    margin-bottom: 90px;
+    margin-top: 95px;
+    margin-bottom: 50px;
 }
