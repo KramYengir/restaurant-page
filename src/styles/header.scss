@@ -1,6 +1,7 @@
 @import './colors.scss';
-@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+ */
+ 
 $tab-text-size: 1rem;
 
 header{
@@ -20,7 +21,7 @@ header{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: $gold-color;
    /*  background-color: $background-dark-90; */
-   background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
+    background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
    }
 
 a{
