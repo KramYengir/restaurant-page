@@ -8,6 +8,8 @@ import footer from './modules/footer.js';
 
 
 
+
+
 let currentPage = homepage;
 
 const pages = [homepage, menu, about, contact];

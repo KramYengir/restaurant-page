@@ -6,27 +6,29 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $background-light;
 }
 
 #content, #content-main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    
 }
 
 #content{
-    height: 95%;
-    width: min(100%, 1200px);
+    flex-grow: 1;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $background-dark;
+
 }
 
 #content-main{
-    flex: 1;
-    /* background-color: #e67b7b; */
+    flex-grow: 1;
+    margin-top: 110px;
+    margin-bottom: 90px;
 }
