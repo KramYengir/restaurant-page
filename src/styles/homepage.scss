@@ -5,11 +5,13 @@
     grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
     place-items: center;
     gap: 1rem;
+    
 
     >div{
         /* aspect-ratio: 1.1; */
         width: clamp(85vw, 90vw, 95vw);
         min-height: 600px;
+        background-color: rgba(255, 255, 255, 0.05);
 
     }
 }
@@ -19,8 +21,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
-    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
     font-family: Georgia, 'Times New Roman', Times, serif;
 
     #welcome-title{
@@ -31,15 +35,46 @@
     #welcome-msg{
         font-size: 2rem;
         max-width: 80%;
-        text-align: center;
         color: $blue-color;
     }
 }
 
-#news{
-    background-color: red
-}
-
 #hours{
-    background-color: blue
+    display: flex;
+    /* grid-template: 1fr / 1fr 1fr; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+    border-radius: 20px;
+    
+    #hours-msg{
+        padding: 10%;
+        flex: 1;
+        font-size: 1.5rem;
+        color: $gold-color;
+    }
+
+    #hours-info{
+        flex: 1;
+        padding: 2rem;
+        border: 1px solid $blue-color;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.95);
+
+        #title{
+            font-size: 1.8rem;
+            border: 2px solid $blue-color;
+            border-radius: 10px;
+        }
+
+        .heading{
+            font-size: 1.5rem;
+        }
+
+        .days{
+            margin-top: 1rem;
+        }
+    }
 }
