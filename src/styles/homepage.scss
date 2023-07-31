@@ -95,3 +95,14 @@
         }
     }
 }
+
+@media only screen and (max-width: 800px){
+    #hours{
+        flex-direction: column;
+
+        #hours-info{
+            max-width: 100%;
+            padding: 3rem;
+        }
+    }
+}
