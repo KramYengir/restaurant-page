@@ -1,16 +1,63 @@
 @import './colors.scss';
 
+$heading-border: 1px solid $blue-color;
+
+$container-background-color: $background-dark;
+$section-background-color: $gold-dark-color;
+$heading-color: $blue-color;
+$item-name-color: $gold-color;
+$item-price-color: $gold-color;;
+
 #menu-container{
-    flex: 1.5;
-    /* background-color: rgb(163, 163, 233); */
-    
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.8fr));
     justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
+    
+    background-color: $container-background-color;
+    padding-top: 10vh;
 }
 
-#menu-box{
-    width: 50%;
-    height: 50%;
-    background-color: rgb(114, 175, 117);
+.menu-section{
+    max-width: 80vw;
+}
+
+.section-heading{
+    text-transform: uppercase;
+    color: $heading-color;
+    border-bottom: $heading-border;
+}
+
+.section-heading, .menu-item{
+    margin: 0.5rem;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item-name{
+    color: $item-name-color;
+    text-transform: capitalize;
+}
+
+
+.menu-option{
+    color: $gold-color;
+    font-size: small;
+}
+
+.menu-option::before{
+    content: ' ';
+    white-space: pre;
+}
+
+.menu-item-price{
+    color: $item-price-color;
+}
+
+.menu-item-price::before{
+    content: '£';
 }
