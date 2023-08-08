@@ -2,7 +2,7 @@
 
 $heading-border: 1px solid $blue-color;
 
-$container-background-color: $background-dark;
+$container-background-color: $background-dark-90;
 $section-background-color: $gold-dark-color;
 $heading-color: $blue-color;
 $item-name-color: $gold-color;
@@ -12,11 +12,15 @@ $item-price-color: $gold-color;;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 0.8fr));
     justify-content: center;
-    gap: 2rem;
-    flex-grow: 1;
+    align-self: center;
+    gap: 3rem;
+    /* flex-grow: 1; */
+    max-width: 80%;
+    min-height: 95%;
     
     background-color: $container-background-color;
-    padding-top: 10vh;
+    padding: 5vh 10vw;
+    margin: 5vh 0;
 }
 
 .menu-section{

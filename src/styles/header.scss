@@ -3,6 +3,7 @@
  */
  
 $tab-text-size: 1rem;
+$gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
 
 header{
     
@@ -20,8 +21,9 @@ header{
     
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: $gold-color;
-   /*  background-color: $background-dark-90; */
-    background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
+    background-color: $background-dark;
+    /* background: $gradient-background; */
+    border-bottom: 2px solid $gold-color;
    }
 
 a{
@@ -52,16 +54,16 @@ a{
     #home-sub-heading{
         font-size: 1rem;
         color: white;
-        margin-top: 0.25rem;
+        margin-top: -0.15rem;
     }
 }
 
-a.active > #home-heading{
+/* a.active > #home-heading{
     border-bottom: 2px solid $blue-color;
     margin-bottom: -2px;
     transition: border-width 0.1s ease-in,
                 margin-bottom 0.1s ease-in;
-}
+} */
 
 #right-side{
     padding-right: 2rem;
