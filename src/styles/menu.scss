@@ -37,9 +37,18 @@ $item-price-color: $gold-color;;
     margin: 0.5rem;
 }
 
+.menu-item ~ div:not(.menu-option){
+    color: red;
+}
+
 .menu-item{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item:not(.item-option){
+    margin-top: 1rem;
 }
 
 .menu-item-name{
@@ -47,13 +56,17 @@ $item-price-color: $gold-color;;
     text-transform: capitalize;
 }
 
-
-.menu-option{
-    color: $gold-color;
-    font-size: small;
+.item-option{
+    margin-top: 0;
+    margin-bottom: 0.4rem;
 }
 
-.menu-option::before{
+.item-option-text{
+    color: white;
+    font-size: 0.8rem;
+}
+
+.item-option-text::before{
     content: ' ';
     white-space: pre;
 }

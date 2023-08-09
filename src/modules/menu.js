@@ -3,37 +3,37 @@ import '../styles/menu.scss';
 const menuiteams = {
     fish:{
         'haddock': '',
-        'large hadddock': '5.00',
-        'small haddock': '3.20',
+        '- large hadddock': '5.00',
+        '- small haddock': '3.20',
         'cod': '',
-        'large cod': '5.00',
-        'small cod': '3.20',
+        '- large cod': '5.00',
+        '- small cod': '3.20',
         'plaice': '5.20',
         'homemade fishcake': '1.70',
         'breaded fishcake': '2.00',
         'salmon & dill': '2.00',
         'calamari rings': '4.80',
-        'salt & peppr squid': '4.80',
+        'salt & pepper squid': '4.80',
         'breaded scampi': '4.20',
         'fish barm': '',
-        'large barm': '5.40',
-        'small barm': '3.60',
+        '- large barm': '5.40',
+        '- small barm': '3.60',
         'fish bites': '2.20',
-        '5 pieces': '',
+        '- 5 pieces': '',
 
     },
     'chips & more':{
         'chips': '',
-        'large': '3.40',
-        'regular': '2.30',
-        'small': '1.95',
-        'cheesy chips add £1': '',
+        '- large': '3.40',
+        '- regular': '2.30',
+        '- small': '1.95',
+        '- cheesy chips add £1': '',
         'chip barm': '2.50',
         'scallops': '2.30',
-        'or 50p each': '',
+        '- or 50p each': '',
         'sausage': '',
-        'small sausage': '0.90',
-        'large sausage': '1.80',
+        '- small sausage': '0.90',
+        '- large sausage': '1.80',
     },
     'original holland pies':{
         'meat': '2.20',
@@ -50,36 +50,52 @@ const menuiteams = {
         '- minced steak & onion': '3.20',
     },
     'sides & sauces':{
-        'peas':'',
-        'small peas':'1.10',
-        'large peas':'1.40',
-        'gravy':'',
-        'small gravy':'1.10',
-        'large gravy':'1.40',
-        'spicy curry':'',
-        'small spicy curry':'1.10',
-        'large spicy curry':'1.40',
-        'fruity curry':'',
-        'small fruity curry':'1.10',
-        'large fruity curry':'1.40',
-        'beans':'',
-        'small beans':'1.10',
-        'large beans':'1.40',
+        'peas / gravy / spicy curry / fruity curry / beans':'',
+        '- small':'1.10',
+        '- large':'1.40',
         'rice': '2.50',
+    },
+    'chicken':{
+        'chicken breast': '4.50',
+        '100% chicken fillet burger': '3.50',
+        'chicken nuggets': '3.80',
+        '- portion of 8 or 50p each': '',
+    },
+    'extras':{
+        'chicken curry': '5.20',
+        'chilli con carne': '5.20',
+        '- both served with rice/chips or half/half':'',
+        '':'',
+        'half rice / half chips & curry': '3.20',
+        'sausage dinner':'5.80',
+        '- sausage, chips, peas and gravy':'',
+        'pie dinner': '6.20',
+        '- any pie, chips, peas and gravy':'',
+        'haggis': '3.00',
+        'black pudding': '3.00',
+        'minted pea fritters': '2.00',
+        'spam fritters': '2.00',
+        'haggis': '3.00',
+        '- 4 in a portion': '',
+
     }
 }
 
 const helper = (()=>{
     const isSizeOrOption = (value)=>{
 
-        let numRegex = /\d/;
+        /* let numRegex = /\d/;
 
         if(value.includes('large') || value.includes('small') 
-            || value.includes('regular') || numRegex.test(value))
+            || value.includes('regular') || (numRegex.test(value) && !(value.includes('%'))))
         {
             return true;                   
         }
+        else return false; */
+
+        if(value.includes('-')) return true;
         else return false;
+
     }
 
     const isEmptyPrice = (price)=>{
@@ -123,7 +139,8 @@ const buildMenu = (()=>{
             let itemName = document.createElement('div');
             //check if the item is an item or an option/size
             if(helper.isSizeOrOption(item)){
-                itemName.classList.add('menu-option');
+                itemDiv.classList.add('item-option')
+                itemName.classList.add('item-option-text');
             }
             itemName.classList.add('menu-item-name');
             itemName.innerText = item;
