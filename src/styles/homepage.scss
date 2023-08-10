@@ -4,12 +4,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
     place-items: center;
-    /* gap: 1rem; */
+    gap: 1rem;
     
 
     >div{
         /* width: clamp(85vw, 90vw, 95vw); */
-        width: 100vw;
+        width: min(1200px, 100vw);
         min-height: 600px;
        /*  background-color: rgba(255, 255, 255, 0.05); */
 
@@ -97,7 +97,7 @@
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px){    
     #hours{
         flex-direction: column;
 
