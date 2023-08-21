@@ -2,25 +2,38 @@
 
 $heading-border: 1px solid $blue-color;
 
+//-COLORS
 $container-background-color: $background-dark-90;
 $section-background-color: $gold-dark-color;
 $heading-color: $blue-color;
 $item-name-color: $gold-color;
 $item-price-color: $gold-color;;
 
+//-SIZES
+$section-heading-size: clamp(2rem, 2.8vw, 2.5rem);
+$item-size: clamp(1rem, 1.8vw, 1.5rem);
+$option-size: clamp(0.8rem, 1.5vw, 1.2rem);
+$price-size: clamp(1rem, 1.8vw, 1.4rem);
+
 #menu-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 0.8fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));
     justify-content: center;
     align-self: center;
     gap: 3rem;
     /* flex-grow: 1; */
-    max-width: 80%;
+    width: clamp(80vw, 60vw, 95vw);
     min-height: 95%;
     
     background-color: $container-background-color;
     padding: 5vh 10vw;
     margin: 5vh 0;
+}
+
+@media only screen and (max-width: 600px){
+    #menu-container{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));
+    }
 }
 
 .menu-section{
@@ -31,6 +44,7 @@ $item-price-color: $gold-color;;
     text-transform: uppercase;
     color: $heading-color;
     border-bottom: $heading-border;
+    font-size: $section-heading-size;
 }
 
 .section-heading, .menu-item{
@@ -49,6 +63,7 @@ $item-price-color: $gold-color;;
 
 .menu-item:not(.item-option){
     margin-top: 1rem;
+    font-size: $item-size;
 }
 
 .menu-item-name{
@@ -63,7 +78,7 @@ $item-price-color: $gold-color;;
 
 .item-option-text{
     color: white;
-    font-size: 0.8rem;
+    font-size: $option-size;
 }
 
 .item-option-text::before{
@@ -73,6 +88,7 @@ $item-price-color: $gold-color;;
 
 .menu-item-price{
     color: $item-price-color;
+    font-size: $price-size;
 }
 
 .menu-item-price::before{
