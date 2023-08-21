@@ -1,10 +1,50 @@
 @import './colors.scss';
 
+$background-color: $background-dark;
+$img-size: clamp(300px, 50vw, 650px);
+$font-size: clamp(0.9rem, 2.5vw, 2rem);
+$font-color: white;
+
 #about-container{
-    flex: 1.5;
-    /* background-color: rgb(163, 163, 233); */
+    flex-grow: 1;
+    min-width: 80%;
+    align-self: center;
+    padding: 2rem;
+    margin-top: 2vh;
+    background-color: $background-color;
     
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+}
+
+@media only screen and (max-width: 800px){
+    #about-container{
+        grid-template-columns: auto;
+    }
+}
+
+.img-container{
+    aspect-ratio: 4/3;
+    width: $img-size;
+    
+    background-position: center;
+    background-size: contain;
+    //all the same img for now...
+    background-image: url('../assets/fish.jpg');
+}
+
+.text-container{
+    aspect-ratio: 4/3;
+    width: clamp(250px, 30vw, 650px);
+
+    justify-self: center;
+
+    font-size: $font-size;
+    text-align: center;
+    color: #fff;
+
 }
