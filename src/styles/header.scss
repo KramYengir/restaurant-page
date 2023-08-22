@@ -24,7 +24,7 @@ header{
     background-color: $background-dark;
     /* background: $gradient-background; */
     border-bottom: 2px solid $gold-color;
-   }
+}
 
 a{
     font-size: $tab-text-size;
@@ -58,24 +58,59 @@ a{
     }
 }
 
-/* a.active > #home-heading{
-    border-bottom: 2px solid $blue-color;
-    margin-bottom: -2px;
-    transition: border-width 0.1s ease-in,
-                margin-bottom 0.1s ease-in;
-} */
-
 #right-side{
     padding-right: 2rem;
 }
 
 #right-side a{
     text-transform: uppercase;
-
 }
 
 #right-side a.active{
     border-bottom: 4px solid $blue-color;
     transition: border-width 0.2s ease-in-out;
+}
+
+#menu-button{
+    display: none;
+}
+
+#dropdown-box{
+    display: none;
+}
+
+#dropdown-box.active{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    position: absolute;
+    background-color: #fff;
+    
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+
+    .dropdown-link{
+        padding: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    #right-side{
+        display: none;    
+    }
+
+    #menu-button{
+        display: flex;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+
+    #home-tab{
+        margin-left: 3rem;
+    }
+
 }
 

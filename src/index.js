@@ -6,10 +6,6 @@ import contact from './modules/contact.js';
 import about from './modules/about.js';
 import footer from './modules/footer.js';
 
-
-
-
-
 let currentPage = homepage;
 
 const pages = [homepage, menu, about, contact];
@@ -46,7 +42,7 @@ const toggleActiveTab = (index)=>{
 
 tabLinks.forEach((el, i) =>{
     el.addEventListener('click', ()=>{
-        loadContent(i);
+        loadContent(el.dataset.index);
         toggleActiveTab(i);
     })
 })
