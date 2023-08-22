@@ -1,5 +1,7 @@
 import '../styles/header.scss';
 
+const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line class="lines" x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+
 const buildHeader = (()=>{
 
     const header = document.createElement('header');
@@ -23,6 +25,8 @@ const buildHeader = (()=>{
 
 
     const menuButton = document.createElement('button');
+    //add svg to menu button
+    menuButton.innerHTML = SVG;
 
     const homeHeading = document.createElement('div');
     homeHeading.id = 'home-heading';
@@ -47,25 +51,16 @@ const buildHeader = (()=>{
     menu.dataset.index = 1;
     about.dataset.index = 2;
     contact.dataset.index = 3;
-  /*   home.dataset.index = 0;
-    home.dataset.index = 0;
-    home.dataset.index = 0; */
-
-
 
     home.appendChild(homeHeading);
     home.appendChild(homeSubHeading);
     menu.textContent = 'Menu';
     about.textContent = 'About';
     contact.textContent = 'Contact';
-    menuButton.textContent = 'Menu';
 
     //dropdown box
     const dropDownBox = document.createElement('div');
-    dropDownBox.id = 'dropdown-box';
-/*  dropDownBox.appendChild(dropdownMenu);
-    dropDownBox.appendChild(dropdownAbout);
-    dropDownBox.appendChild(dropdownContact);  */  
+    dropDownBox.id = 'dropdown-box'; 
     
     left.appendChild(home);
     right.appendChild(menu);
@@ -78,7 +73,6 @@ const buildHeader = (()=>{
     header.appendChild(right);
     menuButton.appendChild(dropDownBox);
     header.appendChild(menuButton);
-    // header.appendChild(dropDownBox);
     
     menuButton.addEventListener('click', ()=>{
         dropDownBox.classList.toggle('active');

@@ -87,12 +87,18 @@ a{
     position: absolute;
     background-color: #fff;
     
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     padding: 0.5rem 0;
-    gap: 0.5rem;
+    gap: 0.9rem;
 
-    .dropdown-link{
-        padding: 10px;
+    background-color: $background-dark;
+    border: 1px solid $gold-color;
+    border-top: none;
+    border-right: none;
+    border-radius: 10px;
+
+    a{
+        color: $gold-color;
     }
 }
 
@@ -105,8 +111,18 @@ a{
     #menu-button{
         display: flex;
         justify-content: center;
-        margin-right: 2rem;
+        margin-right: 4rem;
+
+        width: 3rem;
+        height: 2.5rem; 
+        background-color: $background-dark;
+
+        svg{
+            color: $gold-color;
+            background-color: $background-dark;
+        }
     }
+    
 
     #home-tab{
         margin-left: 3rem;
