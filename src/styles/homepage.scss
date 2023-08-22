@@ -1,8 +1,30 @@
 @import './colors.scss';
 
+//FONT COLORS
+$welcome-title-color: $blue-color;
+$welcome-msg-color: white;
+$hours-msg-color: $gold-color;
+$hours-title-color: white;
+$hours-days-color: white;
+$hours-times-color: white;
+
+//BORDER & BACKGROUND COLORS
+$hours-background-color: $background-dark;
+$hours-times-background-color: $background-dark;
+$hours-title-border-color: $blue-color;
+$days-border-color: $blue-color;
+
+//FONTSIZES
+$welcome-title-size: clamp(2.5rem, 4vw, 6.5rem);
+$welcome-msg-size: clamp(1rem, 2vw, 4rem);
+$hours-msg-size: clamp(1.5rem, 2vw, 5rem);
+$hours-title-size: clamp(1.8rem, 2.5vw, 4rem);
+$hours-days-size: clamp(1.4rem, 2vw, 3.5rem);
+$hours-times-size: clamp(1rem, 1.5vw, 2rem);
+
 #homepage-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));
     place-items: center;
     gap: 1rem;
     
@@ -36,17 +58,17 @@
     font-family: 'Merriweather', serif;
 
     #welcome-title{
-        font-size: clamp(3rem, 4.5rem, 6.5rem);
+        font-size: $welcome-title-size;
         font-weight: 700;
         text-transform: uppercase;
-        color: $blue-color;
+        color: $welcome-title-color
     }
 
     #welcome-msg{
-        margin-top: 2REM;
-        font-size: 1.5rem;
+        margin-top: 2rem;
+        font-size: $welcome-msg-size;
         max-width: 80%;
-        color: white;
+        color: $welcome-msg-color;
         text-transform: uppercase;
 
     }
@@ -54,20 +76,19 @@
 
 #hours{
     display: flex;
-    /* grid-template: 1fr / 1fr 1fr; */
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem;
 
-    background-color: $background-dark;
-    border-top: 1px solid $gold-color;
+    background-color: $hours-background-color;
+    /* border-top: 1px solid $gold-color; */
     
     #hours-msg{
         padding: 10%;
         flex: 1;
-        font-size: 1.8rem;
-        color: $gold-color;
+        font-size: $hours-msg-size;
+        color: $hours-msg-color
     }
 
     #hours-div{
@@ -79,20 +100,30 @@
         padding: 2rem;
         border: 1px solid $blue-color;
         border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: $hours-times-background-color;
 
         #title{
-            font-size: 1.8rem;
-            border: 2px solid $blue-color;
+            font-size: $hours-title-size;
+            padding: 0 1rem;
+            border: 2px solid $hours-title-border-color;
             border-radius: 10px;
+            color: $hours-title-color;
         }
 
         .heading{
-            font-size: 1.5rem;
+            font-size: $hours-days-size;
+            border-bottom: 1px solid $days-border-color;
         }
-
+        
         .days{
             margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: $hours-days-color;
+        }
+
+        .times{
+            font-size: $hours-times-size;
+            color: $hours-times-color;
         }
     }
 }
@@ -103,7 +134,7 @@
 
         #hours-info{
             max-width: 100%;
-            padding: 3rem;
+            padding: 2.5rem;
         }
     }
 }
