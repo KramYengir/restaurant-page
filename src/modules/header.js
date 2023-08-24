@@ -71,8 +71,8 @@ const buildHeader = (()=>{
     
     header.appendChild(left);
     header.appendChild(right);
-    menuButton.appendChild(dropDownBox);
     header.appendChild(menuButton);
+    header.appendChild(dropDownBox);
     
     menuButton.addEventListener('click', ()=>{
         dropDownBox.classList.toggle('active');

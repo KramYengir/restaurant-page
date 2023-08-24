@@ -10,8 +10,6 @@ header{
     padding: 0.5rem 0;
     min-height: 95px;
     
-    
-    /* font-family: 'Merriweather', serif; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -79,13 +77,14 @@ a{
 
 #dropdown-box.active{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     
     position: absolute;
-    background-color: #fff;
+    min-width: 100vw;
+    top: 95px;
     
-    margin-top: 2.5rem;
     padding: 0.5rem 0;
     gap: 0.9rem;
 
@@ -93,10 +92,11 @@ a{
     border: 1px solid $gold-color;
     border-top: none;
     border-right: none;
-    border-radius: 10px;
+    border-left: none;
 
     a{
         color: $gold-color;
+        font-size: 1.5rem;
     }
 }
 
@@ -114,10 +114,14 @@ a{
         width: 3rem;
         height: 2.5rem; 
         background-color: $background-dark;
+        border: none;
+
+        cursor: pointer;
 
         svg{
             color: $gold-color;
             background-color: $background-dark;
+            width: 4rem;
         }
     }
     
