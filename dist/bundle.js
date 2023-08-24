@@ -163,7 +163,7 @@ header {
   position: fixed;
   padding: 0.5rem 0;
   min-height: 95px;
-  /* font-family: 'Merriweather', serif; */
+  z-index: 40;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -221,26 +221,33 @@ a {
 }
 
 #dropdown-box {
-  display: none;
+  position: absolute;
+  top: 0;
+  z-index: -5;
 }
 
 #dropdown-box.active {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
   position: absolute;
-  background-color: #fff;
-  margin-top: 2.5rem;
+  z-index: 1;
+  min-width: 100vw;
+  top: 95px;
   padding: 0.5rem 0;
   gap: 0.9rem;
   background-color: #2a2a2a;
   border: 1px solid #ebd693;
   border-top: none;
   border-right: none;
-  border-radius: 10px;
+  border-left: none;
+  transition: background-color 0.2s, top 0.2s, z-index 0.2s;
 }
 #dropdown-box.active a {
   color: #ebd693;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 600px) {
@@ -249,20 +256,44 @@ a {
   }
   #menu-button {
     display: flex;
-    justify-content: center;
-    margin-right: 4rem;
-    width: 3rem;
-    height: 2.5rem;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-right: 2.5rem;
+    width: max-content;
+    height: max-content;
     background-color: #2a2a2a;
+    border: none;
+    cursor: pointer;
   }
-  #menu-button svg {
-    color: #ebd693;
-    background-color: #2a2a2a;
+  #menu-button .line {
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 100px;
+    background-color: #ebd693;
+    transform-origin: left center;
+    transition: rotate 0.5s, width 0.5s, translate 0.5s, opacity 0.5s, background-color 0.5s;
+  }
+  #menu-button.active #line2 {
+    width: 0;
+    opacity: 0;
+  }
+  #menu-button.active #line1, #menu-button.active #line3 {
+    background-color: #17cfc6;
+  }
+  #menu-button.active #line1 {
+    translate: 0 -0.15rem;
+    width: 2.4038rem;
+    rotate: 45deg;
+  }
+  #menu-button.active #line3 {
+    translate: 0 0.15rem;
+    width: 2.4038rem;
+    rotate: -45deg;
   }
   #home-tab {
     margin-left: 3rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAMA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EAGA,wCAAA;EACA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,qDAAA;EACA,cCdS;EDeT,yBCrBc;EDsBd,sCAAA;EACA,gCAAA;AAPJ;;AAUA;EACI,eAvBY;EAwBZ,sBAAA;EACA,gBAAA;EAEA,eAAA;AARJ;;AAWA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;AARJ;AAUI;EACI,+BAAA;EACA,cCnCU;EDoCV,yBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gCAAA;EACA,qBAAA;AARR;AAYI;EACI,eAAA;EACA,YAAA;EACA,oBAAA;AAVR;;AAcA;EACI,mBAAA;AAXJ;;AAcA;EACI,yBAAA;AAXJ;;AAcA;EACI,gCAAA;EACA,yCAAA;AAXJ;;AAcA;EACI,aAAA;AAXJ;;AAcA;EACI,aAAA;AAXJ;;AAcA;EACI,aAAA;EACA,eAAA;EACA,uBAAA;EAEA,kBAAA;EACA,sBAAA;EAEA,kBAAA;EACA,iBAAA;EACA,WAAA;EAEA,yBC3Fc;ED4Fd,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;AAdJ;AAgBI;EACI,cC5FK;AD8Eb;;AAmBA;EACI;IACI,aAAA;EAhBN;EAmBE;IACI,aAAA;IACA,uBAAA;IACA,kBAAA;IAEA,WAAA;IACA,cAAA;IACA,yBCnHU;EDiGhB;EAoBM;IACI,cChHC;IDiHD,yBCvHM;EDqGhB;EAuBE;IACI,iBAAA;EArBN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n$tab-text-size: 1rem;\n$gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 95px;\n    \n    \n    /* font-family: 'Merriweather', serif; */\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    font-family: Georgia, 'Times New Roman', Times, serif;\n    color: $gold-color;\n    background-color: $background-dark;\n    /* background: $gradient-background; */\n    border-bottom: 2px solid $gold-color;\n}\n\na{\n    font-size: $tab-text-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n    \n    #home-heading{\n        font-family: 'Rozha One', serif;\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 400;\n        font-size: 1.8rem;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: 1rem;\n        color: white;\n        margin-top: -0.15rem;\n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    display: none;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    \n    position: absolute;\n    background-color: #fff;\n    \n    margin-top: 2.5rem;\n    padding: 0.5rem 0;\n    gap: 0.9rem;\n\n    background-color: $background-dark;\n    border: 1px solid $gold-color;\n    border-top: none;\n    border-right: none;\n    border-radius: 10px;\n\n    a{\n        color: $gold-color;\n    }\n}\n\n\n@media only screen and (max-width: 600px){\n    #right-side{\n        display: none;    \n    }\n\n    #menu-button{\n        display: flex;\n        justify-content: center;\n        margin-right: 4rem;\n\n        width: 3rem;\n        height: 2.5rem; \n        background-color: $background-dark;\n\n        svg{\n            color: $gold-color;\n            background-color: $background-dark;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #17cfc6;\n$blue-dark-color: #0d7a75;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAcA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,qDAAA;EACA,cCrBS;EDsBT,yBC5Bc;ED6Bd,sCAAA;EACA,gCAAA;AAdJ;;AAiBA;EACI,eA9BY;EA+BZ,sBAAA;EACA,gBAAA;EAEA,eAAA;AAfJ;;AAkBA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;AAfJ;AAiBI;EACI,+BAAA;EACA,cC1CU;ED2CV,yBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gCAAA;EACA,qBAAA;AAfR;AAmBI;EACI,eAAA;EACA,YAAA;EACA,oBAAA;AAjBR;;AAqBA;EACI,mBAAA;AAlBJ;;AAqBA;EACI,yBAAA;AAlBJ;;AAqBA;EACI,gCAAA;EACA,yCAAA;AAlBJ;;AAqBA;EACI,aAAA;AAlBJ;;AAqBA;EACI,kBAAA;EACA,MAAA;EACA,WAAA;AAlBJ;;AAqBA;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EAEA,kBAAA;EACA,UAAA;EACA,gBAAA;EACA,SAAA;EAEA,iBAAA;EACA,WAAA;EAEA,yBCtGc;EDuGd,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,iBAAA;EAEA,yDAAA;AAtBJ;AA0BI;EACI,cC3GK;ED4GL,iBAAA;EACA,yBAAA;AAxBR;;AA6BA;EACI;IACI,aAAA;EA1BN;EA6BE;IACI,aAAA;IACA,sBAAA;IACA,WAzHU;IA0HV,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCrIU;IDsIV,YAAA;IAEA,eAAA;EA7BN;EA+BM;IACI,WAAA;IACA,cApIE;IAsIF,oBAAA;IAEA,yBC1IC;ID6ID,6BAAA;IAGA,wFAAA;EAnCV;EA6CM;IACI,QAAA;IACA,UAAA;EA3CV;EA8CM;IACI,yBC9JC;EDkHX;EA+CM;IACI,qBAAA;IACA,gBAjKO;IAkKP,aAAA;EA7CV;EAgDM;IACI,oBAAA;IACA,gBAvKO;IAwKP,cAAA;EA9CV;EAmDE;IACI,iBAAA;EAjDN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n$tab-text-size: 1rem;\n$gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\n$menu-button-gap: 0.4rem;\n$line-height: 0.3rem;\n$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.2s;\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 95px;\n    z-index: 40;\n    \n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    font-family: Georgia, 'Times New Roman', Times, serif;\n    color: $gold-color;\n    background-color: $background-dark;\n    /* background: $gradient-background; */\n    border-bottom: 2px solid $gold-color;\n}\n\na{\n    font-size: $tab-text-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n    \n    #home-heading{\n        font-family: 'Rozha One', serif;\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 400;\n        font-size: 1.8rem;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: 1rem;\n        color: white;\n        margin-top: -0.15rem;\n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    position: absolute;\n    top: 0;\n    z-index: -5;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n    align-items: center;\n    \n    position: absolute;\n    z-index: 1;\n    min-width: 100vw;\n    top: 95px;\n    \n    padding: 0.5rem 0;\n    gap: 0.9rem;\n\n    background-color: $background-dark;\n    border: 1px solid $gold-color;\n    border-top: none;\n    border-right: none;\n    border-left: none;\n\n    transition: background-color $dropbox-animate-time,\n                top $dropbox-animate-time,\n                z-index $dropbox-animate-time;\n\n    a{\n        color: $gold-color;\n        font-size: 1.5rem;\n        text-transform: uppercase;\n    }\n}\n\n\n@media only screen and (max-width: 600px){\n    #right-side{\n        display: none;    \n    }\n\n    #menu-button{\n        display: flex;\n        flex-direction: column;\n        gap: $menu-button-gap;\n        margin-right: 2.5rem;\n\n        width: max-content;\n        height: max-content; \n        background-color: $background-dark;\n        border: none;\n\n        cursor: pointer;\n\n        .line{\n            width: 3rem;\n            height: $line-height;\n\n            border-radius: 100px;\n\n            background-color: $gold-color;\n\n            //for rotation\n            transform-origin: left center;\n\n            //animation\n            transition: rotate $lines-animate-time,\n                        width $lines-animate-time,\n                        translate $lines-animate-time,\n                        opacity $lines-animate-time,\n                        background-color $lines-animate-time;\n        }\n\n    }\n\n    #menu-button.active{\n        #line2{\n            width: 0;\n            opacity: 0;\n        }\n\n        #line1, #line3{\n            background-color: $blue-color;\n        }\n\n        #line1{\n            translate: 0 calc($line-height / -2);\n            width: $line-cross-width;\n            rotate: 45deg;\n        }\n\n        #line3{\n            translate: 0 calc($line-height / 2);\n            width: $line-cross-width;\n            rotate: -45deg;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #17cfc6;\n$blue-dark-color: #0d7a75;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1481,20 +1512,26 @@ const buildHeader = (()=>{
     const about = document.createElement('a');
     const contact = document.createElement('a');
 
-/*     const dropdownMenu = document.createElement('a');
-    dropdownMenu.classList.add('dropdown-link');
-    dropdownMenu.textContent = 'Menu';
-    const dropdownAbout = document.createElement('a');
-    dropdownAbout.classList.add('dropdown-link');
-    dropdownAbout.textContent = 'About';
-    const dropdownContact = document.createElement('a');
-    dropdownContact.classList.add('dropdown-link');
-    dropdownContact.textContent = 'Contact'; */
-
 
     const menuButton = document.createElement('button');
     //add svg to menu button
-    menuButton.innerHTML = SVG;
+    /* menuButton.innerHTML = SVG; */
+
+    //instead, I'm going to use three divs inside the
+    //button to create the hamburger effect
+    const line1 = document.createElement('div');
+    line1.classList.add('line');
+    line1.id = 'line1';
+    const line2 = document.createElement('div');
+    line2.classList.add('line');
+    line2.id = 'line2';
+    const line3 = document.createElement('div');
+    line3.classList.add('line');
+    line3.id = 'line3';
+
+    menuButton.appendChild(line1);
+    menuButton.appendChild(line2);
+    menuButton.appendChild(line3);
 
     const homeHeading = document.createElement('div');
     homeHeading.id = 'home-heading';
@@ -1539,11 +1576,20 @@ const buildHeader = (()=>{
     
     header.appendChild(left);
     header.appendChild(right);
-    menuButton.appendChild(dropDownBox);
     header.appendChild(menuButton);
+    header.appendChild(dropDownBox);
     
     menuButton.addEventListener('click', ()=>{
+        toggleDropbox();
+    })
+
+    dropDownBox.addEventListener('click', ()=>{
+        toggleDropbox();
+    })
+
+    const toggleDropbox = ()=>{
         dropDownBox.classList.toggle('active');
+        menuButton.classList.toggle('active');
         if(dropDownBox.classList.contains('active')){
             dropDownBox.appendChild(menu);
             dropDownBox.appendChild(about);
@@ -1558,7 +1604,7 @@ const buildHeader = (()=>{
             right.appendChild(about);
             right.appendChild(contact);
         }
-    })
+    }
 
     return header;
 
