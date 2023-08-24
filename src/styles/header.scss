@@ -5,10 +5,19 @@
 $tab-text-size: 1rem;
 $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
 
+$menu-button-gap: 0.4rem;
+$line-height: 0.3rem;
+$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));
+$line-cross-width: calc($menu-button-height * 1.414);
+
+$lines-animate-time: 0.5s;
+$dropbox-animate-time: 0.2s;
+
 header{
     position: fixed;
     padding: 0.5rem 0;
     min-height: 95px;
+    z-index: 40;
     
     width: 100%;
     display: flex;
@@ -72,7 +81,9 @@ a{
 }
 
 #dropdown-box{
-    display: none;
+    position: absolute;
+    top: 0;
+    z-index: -5;
 }
 
 #dropdown-box.active{
@@ -82,6 +93,7 @@ a{
     align-items: center;
     
     position: absolute;
+    z-index: 1;
     min-width: 100vw;
     top: 95px;
     
@@ -94,9 +106,14 @@ a{
     border-right: none;
     border-left: none;
 
+    transition: background-color $dropbox-animate-time,
+                top $dropbox-animate-time,
+                z-index $dropbox-animate-time;
+
     a{
         color: $gold-color;
         font-size: 1.5rem;
+        text-transform: uppercase;
     }
 }
 
@@ -108,20 +125,58 @@ a{
 
     #menu-button{
         display: flex;
-        justify-content: center;
-        margin-right: 4rem;
+        flex-direction: column;
+        gap: $menu-button-gap;
+        margin-right: 2.5rem;
 
-        width: 3rem;
-        height: 2.5rem; 
+        width: max-content;
+        height: max-content; 
         background-color: $background-dark;
         border: none;
 
         cursor: pointer;
 
-        svg{
-            color: $gold-color;
-            background-color: $background-dark;
-            width: 4rem;
+        .line{
+            width: 3rem;
+            height: $line-height;
+
+            border-radius: 100px;
+
+            background-color: $gold-color;
+
+            //for rotation
+            transform-origin: left center;
+
+            //animation
+            transition: rotate $lines-animate-time,
+                        width $lines-animate-time,
+                        translate $lines-animate-time,
+                        opacity $lines-animate-time,
+                        background-color $lines-animate-time;
+        }
+
+    }
+
+    #menu-button.active{
+        #line2{
+            width: 0;
+            opacity: 0;
+        }
+
+        #line1, #line3{
+            background-color: $blue-color;
+        }
+
+        #line1{
+            translate: 0 calc($line-height / -2);
+            width: $line-cross-width;
+            rotate: 45deg;
+        }
+
+        #line3{
+            translate: 0 calc($line-height / 2);
+            width: $line-cross-width;
+            rotate: -45deg;
         }
     }
     

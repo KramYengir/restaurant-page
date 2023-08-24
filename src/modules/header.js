@@ -13,20 +13,26 @@ const buildHeader = (()=>{
     const about = document.createElement('a');
     const contact = document.createElement('a');
 
-/*     const dropdownMenu = document.createElement('a');
-    dropdownMenu.classList.add('dropdown-link');
-    dropdownMenu.textContent = 'Menu';
-    const dropdownAbout = document.createElement('a');
-    dropdownAbout.classList.add('dropdown-link');
-    dropdownAbout.textContent = 'About';
-    const dropdownContact = document.createElement('a');
-    dropdownContact.classList.add('dropdown-link');
-    dropdownContact.textContent = 'Contact'; */
-
 
     const menuButton = document.createElement('button');
     //add svg to menu button
-    menuButton.innerHTML = SVG;
+    /* menuButton.innerHTML = SVG; */
+
+    //instead, I'm going to use three divs inside the
+    //button to create the hamburger effect
+    const line1 = document.createElement('div');
+    line1.classList.add('line');
+    line1.id = 'line1';
+    const line2 = document.createElement('div');
+    line2.classList.add('line');
+    line2.id = 'line2';
+    const line3 = document.createElement('div');
+    line3.classList.add('line');
+    line3.id = 'line3';
+
+    menuButton.appendChild(line1);
+    menuButton.appendChild(line2);
+    menuButton.appendChild(line3);
 
     const homeHeading = document.createElement('div');
     homeHeading.id = 'home-heading';
@@ -75,7 +81,16 @@ const buildHeader = (()=>{
     header.appendChild(dropDownBox);
     
     menuButton.addEventListener('click', ()=>{
+        toggleDropbox();
+    })
+
+    dropDownBox.addEventListener('click', ()=>{
+        toggleDropbox();
+    })
+
+    const toggleDropbox = ()=>{
         dropDownBox.classList.toggle('active');
+        menuButton.classList.toggle('active');
         if(dropDownBox.classList.contains('active')){
             dropDownBox.appendChild(menu);
             dropDownBox.appendChild(about);
@@ -90,7 +105,7 @@ const buildHeader = (()=>{
             right.appendChild(about);
             right.appendChild(contact);
         }
-    })
+    }
 
     return header;
 
