@@ -19,11 +19,11 @@ body{
 #content, #content-main{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     
 }
 
 #content{
-    flex-grow: 1;
     justify-content: space-between;
     width: 100%;
     /* background-color: $background-dark; */
@@ -31,7 +31,6 @@ body{
 }
 
 #content-main{
-    flex-grow: 1;
     margin-top: 95px;
     margin-bottom: 50px; 
     background-color: $blue-dark-color;
