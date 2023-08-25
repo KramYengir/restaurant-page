@@ -3,10 +3,10 @@ import '../styles/about.scss';
 const buildAboutpage = (()=>{
 
     const textContent = [
-        'Ferryhill, what a place to be, bal blab blabalb',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg f',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg f',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg f',    
+        'Ferryhill, what a place to be, bal blab blabadfdf dfdf dfdf dlb',
+        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg dffdffdf fdfdf',
+        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg fdfdfd dffdfd df fdfdf f',
+        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hdfdf dfdf dfdf ddffddfsg jdhg f',    
     ]
 
     const container = document.createElement('div');
@@ -24,8 +24,18 @@ const buildAboutpage = (()=>{
         textContainer.id = `text-${i}`;
         textContainer.textContent = `${textContent[i-1]}`;
 
-        container.appendChild(imgContainer);
-        container.appendChild(textContainer);
+        let section = document.createElement('div');
+        section.classList.add('section')
+
+        section.appendChild(imgContainer);
+        section.appendChild(textContainer);
+
+        /* let seperator = document.createElement('div');
+        seperator.classList.add('seperator'); */
+
+        container.appendChild(section);
+        /* container.appendChild(textContainer); */
+        /* container.appendChild(seperator); */
         
     }
 
