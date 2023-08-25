@@ -15,12 +15,12 @@ $hours-title-border-color: $blue-color;
 $days-border-color: $blue-color;
 
 //FONTSIZES
-$welcome-title-size: clamp(2.5rem, 4vw, 6.5rem);
-$welcome-msg-size: clamp(1rem, 2vw, 4rem);
-$hours-msg-size: clamp(1.5rem, 2vw, 5rem);
-$hours-title-size: clamp(1.8rem, 2.5vw, 4rem);
-$hours-days-size: clamp(1.4rem, 2vw, 3.5rem);
-$hours-times-size: clamp(1rem, 1.5vw, 2rem);
+$welcome-title-size: clamp(2.8rem, 5vw, 6.5rem);
+$welcome-msg-size: clamp(1.2rem, 1.8vw, 4rem);
+$hours-msg-size: clamp(1.3rem, 1.5vw, 5rem);
+$hours-title-size: clamp(1.6rem, 2vw, 4rem);
+$hours-days-size: clamp(1.4rem, 1.6vw, 3.5rem);
+$hours-times-size: clamp(1rem, 1.3vw, 2rem);
 
 #homepage-container{
     display: grid;
@@ -55,7 +55,7 @@ $hours-times-size: clamp(1rem, 1.5vw, 2rem);
     background-position: center;
     background-size: cover;
 
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
 
     #welcome-title{
         font-size: $welcome-title-size;
