@@ -65,12 +65,9 @@ $font-size: clamp(1.2rem, 2vw, 1.5rem);
 
 @media only screen and (max-width: 800px){
    
-    #about-container{
-    }
-    
     .section{
         flex-direction: column;
-        min-width: 100vw;
+        min-width: 95vw;
         gap: 2rem;
    }
 
