@@ -7,12 +7,12 @@ $container-background-color: $background-dark-90;
 $section-background-color: $gold-dark-color;
 $heading-color: $blue-color;
 $item-name-color: $gold-color;
-$item-price-color: $gold-color;;
+$item-price-color: $blue-color;;
 
 //-SIZES
-$section-heading-size: clamp(2rem, 2.8vw, 2.5rem);
-$item-size: clamp(1rem, 1.8vw, 1.5rem);
-$option-size: clamp(0.8rem, 1.5vw, 1.2rem);
+$section-heading-size: clamp(2rem, 2.8vw, 2.3rem);
+$item-size: clamp(1rem, 1.8vw, 1.4rem);
+$option-size: clamp(0.8rem, 1.4vw, 1.2rem);
 $price-size: clamp(1rem, 1.8vw, 1.4rem);
 
 #menu-container{
@@ -22,12 +22,14 @@ $price-size: clamp(1rem, 1.8vw, 1.4rem);
     align-self: center;
     gap: 3rem;
     /* flex-grow: 1; */
-    width: clamp(80vw, 60vw, 95vw);
+    width: clamp(85vw, 60vw, 95vw);
     min-height: 95%;
     
     background-color: $container-background-color;
     padding: 5vh 10vw;
     margin: 5vh 0;
+
+    border: 1px solid $gold-color;
 }
 
 @media only screen and (max-width: 600px){

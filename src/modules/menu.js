@@ -94,7 +94,7 @@ const menuiteams = {
         'fish bites':'3.90',
         'sausage':'3.90',
     },
-    'gluten free moday & tuesday':{
+    'gluten free monday & tuesday':{
         'fish':'',
         '- large':'5.20',
         '- small':'3.40',
