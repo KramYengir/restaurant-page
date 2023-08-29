@@ -72,16 +72,29 @@ const buildHeader = (()=>{
     right.appendChild(menu);
     right.appendChild(about);
     right.appendChild(contact);
-    
-    
-    
+
     header.appendChild(left);
     header.appendChild(right);
     header.appendChild(menuButton);
     header.appendChild(dropDownBox);
     
+    home.addEventListener('click', ()=>{
+        if(menuButton.classList.contains('active'))
+            toggleDropbox();
+    })
+
+    //add eventlisteners to all links
+    //to reset page position
+    let headerLinks = [...header.querySelectorAll('a')];
+    headerLinks.forEach(el =>{
+        el.addEventListener('click', ()=>{
+            window.scrollTo(0,0);
+        })
+    })
+
     menuButton.addEventListener('click', ()=>{
         toggleDropbox();
+        
     })
 
     dropDownBox.addEventListener('click', ()=>{
