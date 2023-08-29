@@ -30,6 +30,8 @@ const buildAboutpage = (()=>{
         section.appendChild(imgContainer);
         section.appendChild(textContainer);
 
+        /* section.id = `section-${i}`; */
+
         /* let seperator = document.createElement('div');
         seperator.classList.add('seperator'); */
 

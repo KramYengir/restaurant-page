@@ -2,17 +2,17 @@
 
 //COLORS
 $background-color: $background-dark-90;
-$font-color: $gold-color;
+$font-color:$gold-color;
 
 //SIZES
-$img-size: clamp(300px, 80vw, 650px);
-$text-container-size: clamp(300px, 40vw, 650px);
-$font-size: clamp(1.2rem, 2vw, 1.5rem);
+$img-size: clamp(300px, 65vw, 600px);
+$text-container-size: clamp(300px, 40vw, 600px);
+$font-size: clamp(1rem, 2vw, 1.5rem);
 
 #about-container{
     flex-grow: 1;
-    min-width: 80vw;
-    max-width: 90vw;
+    /* min-width: 80vw;
+    max-width: 90vw; */
     align-self: center;
     padding: 0 0;
     margin-top: 2vh;
@@ -21,7 +21,7 @@ $font-size: clamp(1.2rem, 2vw, 1.5rem);
     grid-template-columns: auto;
     justify-content: center;
     align-items: center;
-    grid-row-gap: 3rem;
+    grid-row-gap: 2rem;
 }
 
 .section{
@@ -32,6 +32,10 @@ $font-size: clamp(1.2rem, 2vw, 1.5rem);
     padding: 1rem;
 
     background-color: $background-color;
+}
+
+.section:nth-child(even){
+    flex-direction: row-reverse;
 }
 
 
@@ -52,9 +56,7 @@ $font-size: clamp(1.2rem, 2vw, 1.5rem);
 .text-container{
     /* aspect-ratio: 4/3; */
     width: $text-container-size;
-    padding: 2rem 1rem;
-    
-    justify-self: center;
+    padding: 1rem 1rem;
     
     font-size: $font-size;
     text-align: center;
@@ -65,10 +67,10 @@ $font-size: clamp(1.2rem, 2vw, 1.5rem);
 
 @media only screen and (max-width: 800px){
    
-    .section{
+    .section, .section:nth-child(even){
         flex-direction: column;
         min-width: 95vw;
-        gap: 2rem;
+        gap: 1rem;
    }
 
 }
