@@ -28,16 +28,16 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   flex-grow: 1;
-  min-width: 80vw;
-  max-width: 90vw;
+  /* min-width: 80vw;
+  max-width: 90vw; */
   align-self: center;
   padding: 0 0;
-  margin-top: 2vh;
+  margin-top: 2.5vh;
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
-  grid-row-gap: 3rem;
+  grid-row-gap: 2rem;
 }
 
 .section {
@@ -49,9 +49,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   background-color: rgba(42, 42, 42, 0.9);
 }
 
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .img-container {
   aspect-ratio: 4/3;
-  width: clamp(300px, 80vw, 650px);
+  width: clamp(300px, 65vw, 600px);
   background-position: center;
   background-size: contain;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
@@ -61,21 +65,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
 
 .text-container {
   /* aspect-ratio: 4/3; */
-  width: clamp(300px, 40vw, 650px);
-  padding: 2rem 1rem;
-  justify-self: center;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  width: clamp(300px, 40vw, 600px);
+  padding: 1rem 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   text-align: center;
   color: #ebd693;
 }
 
 @media only screen and (max-width: 800px) {
-  .section {
+  .section, .section:nth-child(even) {
     flex-direction: column;
     min-width: 95vw;
-    gap: 2rem;
+    gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,eAAA;EACA,eAAA;EACA,kBAAA;EACA,YAAA;EACA,eAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AAXJ;;AAcA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EAEA,uCC/BiB;ADmBrB;;AAgBA;EACI,iBAAA;EACA,gCAhCO;EAkCP,2BAAA;EACA,wBAAA;EAEA,yDAAA;EAEA;wBAAA;AAfJ;;AAoBA;EACI,uBAAA;EACA,gCA7CkB;EA8ClB,kBAAA;EAEA,oBAAA;EAEA,qCAjDQ;EAkDR,kBAAA;EACA,cCtDS;ADmCb;;AAwBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EAtBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: $gold-color;\n\n//SIZES\n$img-size: clamp(300px, 80vw, 650px);\n$text-container-size: clamp(300px, 40vw, 650px);\n$font-size: clamp(1.2rem, 2vw, 1.5rem);\n\n#about-container{\n    flex-grow: 1;\n    min-width: 80vw;\n    max-width: 90vw;\n    align-self: center;\n    padding: 0 0;\n    margin-top: 2vh;\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 3rem;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 100%;\n    padding: 1rem;\n\n    background-color: $background-color;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: contain;\n    //all the same img for now...\n    background-image: url('../assets/fish.jpg');\n    \n    /* border: 2px solid $blue-color;\n    border-radius: 10px; */\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 2rem 1rem;\n    \n    justify-self: center;\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section{\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 2rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA;oBAAA;EAEA,kBAAA;EACA,YAAA;EACA,iBAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AAXJ;;AAcA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EAEA,uCC/BiB;ADmBrB;;AAeA;EACI,2BAAA;AAZJ;;AAgBA;EACI,iBAAA;EACA,gCApCO;EAsCP,2BAAA;EACA,wBAAA;EAEA,yDAAA;EAEA;wBAAA;AAfJ;;AAoBA;EACI,uBAAA;EACA,gCAjDkB;EAkDlB,kBAAA;EAEA,mCAnDQ;EAoDR,kBAAA;EACA,cCxDS;ADsCb;;AAuBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EArBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color:$gold-color;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 600px);\n$text-container-size: clamp(300px, 40vw, 600px);\n$font-size: clamp(1rem, 2vw, 1.5rem);\n\n#about-container{\n    flex-grow: 1;\n    /* min-width: 80vw;\n    max-width: 90vw; */\n    align-self: center;\n    padding: 0 0;\n    margin-top: 2.5vh;\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 100%;\n    padding: 1rem;\n\n    background-color: $background-color;\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: contain;\n    //all the same img for now...\n    background-image: url('../assets/fish.jpg');\n    \n    /* border: 2px solid $blue-color;\n    border-radius: 10px; */\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem 1rem;\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -145,7 +148,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `footer {
   color: #ebd693;
   background-color: #2a2a2a;
   border-top: 2px solid #ebd693;
-}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACI,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAGA,cCRS;EDST,yBCfc;EDgBd,6BAAA;AAJJ","sourcesContent":["@import './colors.scss';\n\nfooter{\n    position: fixed;\n    bottom: 0;\n    min-height: 50px;\n\n    width: 100%;\n    flex-shrink: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n\n    color: $gold-color;\n    background-color: $background-dark;\n    border-top: 2px solid $gold-color ;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+  font-size: 0.8rem;
+}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACI,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAGA,cCRS;EDST,yBCfc;EDgBd,6BAAA;EACA,iBAAA;AAJJ","sourcesContent":["@import './colors.scss';\n\nfooter{\n    position: fixed;\n    bottom: 0;\n    min-height: 50px;\n\n    width: 100%;\n    flex-shrink: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n\n    color: $gold-color;\n    background-color: $background-dark;\n    border-top: 2px solid $gold-color ;\n    font-size: 0.8rem;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -176,7 +180,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* @import url('https://fonts.googleap
 header {
   position: fixed;
   padding: 0.5rem 0;
-  min-height: 95px;
+  min-height: 90px;
   z-index: 40;
   width: 100%;
   display: flex;
@@ -194,6 +198,11 @@ a {
   background-color: none;
   margin: 0 1.5rem;
   cursor: pointer;
+}
+
+a:active {
+  transform: scale(1.01);
+  transition: 0.2s;
 }
 
 #home-tab {
@@ -249,7 +258,7 @@ a {
   position: absolute;
   z-index: 1;
   min-width: 100vw;
-  top: 95px;
+  top: 90px;
   padding: 0.5rem 0;
   gap: 0.9rem;
   background-color: #2a2a2a;
@@ -261,7 +270,7 @@ a {
 }
 #dropdown-box.active a {
   color: #ebd693;
-  font-size: 1.5rem;
+  font-size: 1.14rem;
   text-transform: uppercase;
   min-width: 100vw;
   margin-left: 0;
@@ -310,7 +319,7 @@ a {
   #home-tab {
     margin-left: 3rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAuBA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,2DAAA;EACA,cC9BS;ED+BT,yBCrCc;EDsCd,sCAAA;EACA,gCAAA;AAvBJ;;AA0BA;EACI,eAjCe;EAkCf,sBAAA;EACA,gBAAA;EAEA,eAAA;AAxBJ;;AA2BA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;AAxBJ;AA0BI;EACI,qCAAA;EACA,cCnDU;EDoDV,yBAAA;EACA,gBAAA;EACA,eArDK;EAsDL,gCAAA;EACA,qBAAA;AAxBR;AA4BI;EACI,eA3DS;EA4DT,YAAA;EACA,oBAAA;AA1BR;;AA8BA;EACI,mBAAA;AA3BJ;;AA8BA;EACI,yBAAA;AA3BJ;;AA8BA;EACI,gCAAA;EACA,yCAAA;AA3BJ;;AA8BA;EACI,aAAA;AA3BJ;;AA8BA;EACI,kBAAA;EACA,MAAA;EACA,WAAA;AA3BJ;;AA8BA;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,kBAAA;EACA,UAAA;EACA,gBAAA;EACA,SAAA;EAEA,iBAAA;EACA,WAAA;EAEA,yBChHc;EDiHd,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,iBAAA;EAEA,yDAAA;AA/BJ;AAmCI;EACI,cCrHK;EDsHL,iBAjHa;EAkHb,yBAAA;EACA,gBAAA;EACA,cAAA;AAjCR;;AAsCA;EACI;IACI,aAAA;EAnCN;EAsCE;IACI,aAAA;IACA,sBAAA;IACA,WA9HU;IA+HV,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCjJU;IDkJV,YAAA;IAEA,eAAA;EAtCN;EAwCM;IACI,WAxIC;IAyID,cAxIE;IA0IF,oBAAA;IAEA,yBCtJC;IDyJD,6BAAA;IAGA,wFAAA;EA5CV;EAsDM;IACI,QAAA;IACA,UAAA;EApDV;EAuDM;IACI,yBC1KC;EDqHX;EAwDM;IACI,qBAAA;IACA,gBArKO;IAsKP,aAAA;EAtDV;EAyDM;IACI,oBAAA;IACA,gBA3KO;IA4KP,cAAA;EAvDV;EA4DE;IACI,iBAAA;EA1DN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n //COLORS\n $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\n//FONT SIZES\n$title-size: 2rem;\n$sub-title-size: 1rem;\n$header-link-size: 1rem;\n$dropdown-link-size: 1.5rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: 3rem;\n$line-height: 0.3rem;\n$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.2s;\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 95px;\n    z-index: 40;\n    \n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    /* font-family: Georgia, 'Times New Roman', Times, serif; */\n    color: $gold-color;\n    background-color: $background-dark;\n    /* background: $gradient-background; */\n    border-bottom: 2px solid $gold-color;\n}\n\na{\n    font-size: $header-link-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n    \n    #home-heading{\n        /* font-family: 'Rozha One', serif; */\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 600;\n        font-size: $title-size;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: $sub-title-size;\n        color: white;\n        margin-top: -0.15rem;\n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    position: absolute;\n    top: 0;\n    z-index: -5;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n    align-items: center;\n    text-align: center;\n    \n    position: absolute;\n    z-index: 1;\n    min-width: 100vw;\n    top: 95px;\n    \n    padding: 0.5rem 0;\n    gap: 0.9rem;\n\n    background-color: $background-dark;\n    border: 1px solid $gold-color;\n    border-top: none;\n    border-right: none;\n    border-left: none;\n\n    transition: background-color $dropbox-animate-time,\n                top $dropbox-animate-time,\n                z-index $dropbox-animate-time;\n\n    a{\n        color: $gold-color;\n        font-size: $dropdown-link-size;\n        text-transform: uppercase;\n        min-width: 100vw;\n        margin-left: 0;\n    }\n}\n\n\n@media only screen and (max-width: 650px){\n    #right-side{\n        display: none;    \n    }\n\n    #menu-button{\n        display: flex;\n        flex-direction: column;\n        gap: $menu-button-gap;\n        margin-right: 2.5rem;\n\n        width: max-content;\n        height: max-content; \n        background-color: $background-dark;\n        border: none;\n\n        cursor: pointer;\n\n        .line{\n            width: $line-width;\n            height: $line-height;\n\n            border-radius: 100px;\n\n            background-color: $gold-color;\n\n            //for rotation\n            transform-origin: left center;\n\n            //animation\n            transition: rotate $lines-animate-time,\n                        width $lines-animate-time,\n                        translate $lines-animate-time,\n                        opacity $lines-animate-time,\n                        background-color $lines-animate-time;\n        }\n\n    }\n\n    #menu-button.active{\n        #line2{\n            width: 0;\n            opacity: 0;\n        }\n\n        #line1, #line3{\n            background-color: $blue-color;\n        }\n\n        #line1{\n            translate: 0 calc($line-height / -2);\n            width: $line-cross-width;\n            rotate: 45deg;\n        }\n\n        #line3{\n            translate: 0 calc($line-height / 2);\n            width: $line-cross-width;\n            rotate: -45deg;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAuBA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,2DAAA;EACA,cC9BS;ED+BT,yBCrCc;EDsCd,sCAAA;EACA,gCAAA;AAvBJ;;AA0BA;EACI,eAjCe;EAkCf,sBAAA;EACA,gBAAA;EAEA,eAAA;AAxBJ;;AA2BA;EACI,sBAAA;EACA,gBAAA;AAxBJ;;AA2BA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;AAxBJ;AA0BI;EACI,qCAAA;EACA,cCxDU;EDyDV,yBAAA;EACA,gBAAA;EACA,eA1DK;EA2DL,gCAAA;EACA,qBAAA;AAxBR;AA4BI;EACI,eAhES;EAiET,YAAA;EACA,oBAAA;AA1BR;;AA8BA;EACI,mBAAA;AA3BJ;;AA8BA;EACI,yBAAA;AA3BJ;;AA8BA;EACI,gCAAA;EACA,yCAAA;AA3BJ;;AA8BA;EACI,aAAA;AA3BJ;;AA8BA;EACI,kBAAA;EACA,MAAA;EACA,WAAA;AA3BJ;;AA8BA;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,kBAAA;EACA,UAAA;EACA,gBAAA;EACA,SAAA;EAEA,iBAAA;EACA,WAAA;EAEA,yBCrHc;EDsHd,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,iBAAA;EAEA,yDAAA;AA/BJ;AAmCI;EACI,cC1HK;ED2HL,kBAtHa;EAuHb,yBAAA;EACA,gBAAA;EACA,cAAA;AAjCR;;AAsCA;EACI;IACI,aAAA;EAnCN;EAsCE;IACI,aAAA;IACA,sBAAA;IACA,WAnIU;IAoIV,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCtJU;IDuJV,YAAA;IAEA,eAAA;EAtCN;EAwCM;IACI,WA7IC;IA8ID,cA7IE;IA+IF,oBAAA;IAEA,yBC3JC;ID8JD,6BAAA;IAGA,wFAAA;EA5CV;EAsDM;IACI,QAAA;IACA,UAAA;EApDV;EAuDM;IACI,yBC/KC;ED0HX;EAwDM;IACI,qBAAA;IACA,gBA1KO;IA2KP,aAAA;EAtDV;EAyDM;IACI,oBAAA;IACA,gBAhLO;IAiLP,cAAA;EAvDV;EA4DE;IACI,iBAAA;EA1DN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n //COLORS\n $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\n//FONT SIZES\n$title-size: 2rem;\n$sub-title-size: 1rem;\n$header-link-size: 1rem;\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: 3rem;\n$line-height: 0.3rem;\n$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.2s;\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 90px;\n    z-index: 40;\n    \n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    /* font-family: Georgia, 'Times New Roman', Times, serif; */\n    color: $gold-color;\n    background-color: $background-dark;\n    /* background: $gradient-background; */\n    border-bottom: 2px solid $gold-color;\n}\n\na{\n    font-size: $header-link-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\na:active{\n    transform: scale(1.01);\n    transition: 0.2s;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n    \n    #home-heading{\n        /* font-family: 'Rozha One', serif; */\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 600;\n        font-size: $title-size;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: $sub-title-size;\n        color: white;\n        margin-top: -0.15rem;\n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    position: absolute;\n    top: 0;\n    z-index: -5;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n    align-items: center;\n    text-align: center;\n    \n    position: absolute;\n    z-index: 1;\n    min-width: 100vw;\n    top: 90px;\n    \n    padding: 0.5rem 0;\n    gap: 0.9rem;\n\n    background-color: $background-dark;\n    border: 1px solid $gold-color;\n    border-top: none;\n    border-right: none;\n    border-left: none;\n\n    transition: background-color $dropbox-animate-time,\n                top $dropbox-animate-time,\n                z-index $dropbox-animate-time;\n\n    a{\n        color: $gold-color;\n        font-size: $dropdown-link-size;\n        text-transform: uppercase;\n        min-width: 100vw;\n        margin-left: 0;\n    }\n}\n\n\n@media only screen and (max-width: 650px){\n    #right-side{\n        display: none;    \n    }\n\n    #menu-button{\n        display: flex;\n        flex-direction: column;\n        gap: $menu-button-gap;\n        margin-right: 2.5rem;\n\n        width: max-content;\n        height: max-content; \n        background-color: $background-dark;\n        border: none;\n\n        cursor: pointer;\n\n        .line{\n            width: $line-width;\n            height: $line-height;\n\n            border-radius: 100px;\n\n            background-color: $gold-color;\n\n            //for rotation\n            transform-origin: left center;\n\n            //animation\n            transition: rotate $lines-animate-time,\n                        width $lines-animate-time,\n                        translate $lines-animate-time,\n                        opacity $lines-animate-time,\n                        background-color $lines-animate-time;\n        }\n\n    }\n\n    #menu-button.active{\n        #line2{\n            width: 0;\n            opacity: 0;\n        }\n\n        #line1, #line3{\n            background-color: $blue-color;\n        }\n\n        #line1{\n            translate: 0 calc($line-height / -2);\n            width: $line-cross-width;\n            rotate: 45deg;\n        }\n\n        #line3{\n            translate: 0 calc($line-height / 2);\n            width: $line-cross-width;\n            rotate: -45deg;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -488,10 +497,10 @@ body {
 }
 
 #content-main {
-  margin-top: 95px;
+  margin-top: 90px;
   margin-bottom: 50px;
   background-color: #357088;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAKA;EACI,SAAA;EACA,sBAAA;EACA,kCAAA;AAFJ;;AAKA;EACI,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AAFJ;;AAKA;EACI,aAAA;EACA,sBAAA;EACA,YAAA;AAFJ;;AAMA;EACI,8BAAA;EACA,WAAA;EACA,wCAAA;AAHJ;;AAOA;EACI,gBAAA;EACA,mBAAA;EACA,yBC3Bc;ADuBlB","sourcesContent":["@import './colors.scss';\n@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');\n\n\n*{\n    margin: 0;\n    box-sizing: border-box;\n    font-family: 'Merriweather', serif;\n}\n\nbody{\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n#content, #content-main{\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    \n}\n\n#content{\n    justify-content: space-between;\n    width: 100%;\n    /* background-color: $background-dark; */\n\n}\n\n#content-main{\n    margin-top: 95px;\n    margin-bottom: 50px; \n    background-color: $blue-dark-color;\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAKA;EACI,SAAA;EACA,sBAAA;EACA,kCAAA;AAFJ;;AAKA;EACI,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AAFJ;;AAKA;EACI,aAAA;EACA,sBAAA;EACA,YAAA;AAFJ;;AAMA;EACI,8BAAA;EACA,WAAA;EACA,wCAAA;AAHJ;;AAOA;EACI,gBAAA;EACA,mBAAA;EACA,yBC3Bc;ADuBlB","sourcesContent":["@import './colors.scss';\n@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');\n\n\n*{\n    margin: 0;\n    box-sizing: border-box;\n    font-family: 'Merriweather', serif;\n}\n\nbody{\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n#content, #content-main{\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    \n}\n\n#content{\n    justify-content: space-between;\n    width: 100%;\n    /* background-color: $background-dark; */\n\n}\n\n#content-main{\n    margin-top: 90px;\n    margin-bottom: 50px; \n    background-color: $blue-dark-color;\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -525,11 +534,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
   align-self: center;
   gap: 3rem;
   /* flex-grow: 1; */
-  width: 80vw;
+  width: 85vw;
   min-height: 95%;
   background-color: rgba(42, 42, 42, 0.9);
   padding: 5vh 10vw;
   margin: 5vh 0;
+  border: 1px solid #ebd693;
 }
 
 @media only screen and (max-width: 600px) {
@@ -545,7 +555,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
   text-transform: uppercase;
   color: #4fa9cc;
   border-bottom: 1px solid #4fa9cc;
-  font-size: clamp(2rem, 2.8vw, 2.5rem);
+  font-size: clamp(2rem, 2.8vw, 2.3rem);
 }
 
 .section-heading, .menu-item {
@@ -564,7 +574,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .menu-item:not(.item-option) {
   margin-top: 1rem;
-  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
 }
 
 .menu-item-name {
@@ -579,7 +589,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .item-option-text {
   color: white;
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
 }
 
 .item-option-text::before {
@@ -588,13 +598,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 }
 
 .menu-item-price {
-  color: #ebd693;
+  color: #4fa9cc;
   font-size: clamp(1rem, 1.8vw, 1.4rem);
 }
 
 .menu-item-price::before {
   content: "£";
-}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;AAhBJ;;AAmBA;EACI;IACI,6DAAA;EAhBN;AACF;AAoBA;EACI,eAAA;AAlBJ;;AAqBA;EACI,yBAAA;EACA,cCrCS;EDsCT,gCA5Ca;EA6Cb,qCAnCmB;AAiBvB;;AAqBA;EACI,cAAA;AAlBJ;;AAqBA;EACI,UAAA;AAlBJ;;AAqBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AAlBJ;;AAqBA;EACI,gBAAA;EACA,qCArDQ;AAmCZ;;AAqBA;EACI,cChES;EDiET,0BAAA;AAlBJ;;AAqBA;EACI,aAAA;EACA,qBAAA;AAlBJ;;AAqBA;EACI,YAAA;EACA,uCAnEU;AAiDd;;AAqBA;EACI,YAAA;EACA,gBAAA;AAlBJ;;AAqBA;EACI,cCpFS;EDqFT,qCA5ES;AA0Db;;AAqBA;EACI,YAAA;AAlBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: $gold-color;;\n\n//-SIZES\n$section-heading-size: clamp(2rem, 2.8vw, 2.5rem);\n$item-size: clamp(1rem, 1.8vw, 1.5rem);\n$option-size: clamp(0.8rem, 1.5vw, 1.2rem);\n$price-size: clamp(1rem, 1.8vw, 1.4rem);\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: clamp(80vw, 60vw, 95vw);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n.menu-section{\n    max-width: 80vw;\n}\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;EAEA,yBAAA;AAjBJ;;AAoBA;EACI;IACI,6DAAA;EAjBN;AACF;AAqBA;EACI,eAAA;AAnBJ;;AAsBA;EACI,yBAAA;EACA,cCvCS;EDwCT,gCA9Ca;EA+Cb,qCArCmB;AAkBvB;;AAsBA;EACI,cAAA;AAnBJ;;AAsBA;EACI,UAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AAnBJ;;AAsBA;EACI,gBAAA;EACA,qCAvDQ;AAoCZ;;AAsBA;EACI,cClES;EDmET,0BAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,qBAAA;AAnBJ;;AAsBA;EACI,YAAA;EACA,uCArEU;AAkDd;;AAsBA;EACI,YAAA;EACA,gBAAA;AAnBJ;;AAsBA;EACI,cCpFS;EDqFT,qCA9ES;AA2Db;;AAsBA;EACI,YAAA;AAnBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: $blue-color;;\n\n//-SIZES\n$section-heading-size: clamp(2rem, 2.8vw, 2.3rem);\n$item-size: clamp(1rem, 1.8vw, 1.4rem);\n$option-size: clamp(0.8rem, 1.4vw, 1.2rem);\n$price-size: clamp(1rem, 1.8vw, 1.4rem);\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: clamp(85vw, 60vw, 95vw);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n\n    border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n.menu-section{\n    max-width: 80vw;\n}\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1443,6 +1453,8 @@ const buildAboutpage = (()=>{
         section.appendChild(imgContainer);
         section.appendChild(textContainer);
 
+        /* section.id = `section-${i}`; */
+
         /* let seperator = document.createElement('div');
         seperator.classList.add('seperator'); */
 
@@ -1599,16 +1611,29 @@ const buildHeader = (()=>{
     right.appendChild(menu);
     right.appendChild(about);
     right.appendChild(contact);
-    
-    
-    
+
     header.appendChild(left);
     header.appendChild(right);
     header.appendChild(menuButton);
     header.appendChild(dropDownBox);
     
+    home.addEventListener('click', ()=>{
+        if(menuButton.classList.contains('active'))
+            toggleDropbox();
+    })
+
+    //add eventlisteners to all links
+    //to reset page position
+    let headerLinks = [...header.querySelectorAll('a')];
+    headerLinks.forEach(el =>{
+        el.addEventListener('click', ()=>{
+            window.scrollTo(0,0);
+        })
+    })
+
     menuButton.addEventListener('click', ()=>{
         toggleDropbox();
+        
     })
 
     dropDownBox.addEventListener('click', ()=>{
@@ -1830,7 +1855,7 @@ const menuiteams = {
         'fish bites':'3.90',
         'sausage':'3.90',
     },
-    'gluten free moday & tuesday':{
+    'gluten free monday & tuesday':{
         'fish':'',
         '- large':'5.20',
         '- small':'3.40',
@@ -2170,6 +2195,7 @@ tabLinks.forEach((el, i) =>{
         toggleActiveTab(i);
     })
 })
+
 
 
 })();
