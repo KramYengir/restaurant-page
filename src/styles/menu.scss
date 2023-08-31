@@ -10,10 +10,10 @@ $item-name-color: $gold-color;
 $item-price-color: $blue-color;;
 
 //-SIZES
-$section-heading-size: clamp(2rem, 2.8vw, 2.3rem);
-$item-size: clamp(1rem, 1.8vw, 1.4rem);
-$option-size: clamp(0.8rem, 1.4vw, 1.2rem);
-$price-size: clamp(1rem, 1.8vw, 1.4rem);
+$section-heading-size: clamp(1.4rem, 2.8vw, 1.8rem);
+$item-size: clamp(1rem, 1.8vw, 1.2rem);
+$option-size: clamp(0.7rem, 1.4vw, 1rem);
+$price-size: clamp(1rem, 1.8vw, 1.2rem);
 
 #menu-container{
     display: grid;
