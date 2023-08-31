@@ -1,12 +1,19 @@
 @import './colors.scss';
 
 //FONT COLORS
-$welcome-title-color: $blue-color;
+$welcome-title-color: $gold-color;
 $welcome-msg-color: white;
 $hours-msg-color: $gold-color;
 $hours-title-color: white;
 $hours-days-color: white;
 $hours-times-color: white;
+
+//BACKGROUND IMAGE
+$welcome-bg-img: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+),
+url('../assets/fish.jpg');
 
 //BORDER & BACKGROUND COLORS
 $hours-background-color: $background-dark;
@@ -15,25 +22,26 @@ $hours-title-border-color: $blue-color;
 $days-border-color: $blue-color;
 
 //FONTSIZES
-$welcome-title-size: clamp(2.8rem, 5vw, 6.5rem);
-$welcome-msg-size: clamp(1.2rem, 1.8vw, 4rem);
-$hours-msg-size: clamp(1.3rem, 1.5vw, 5rem);
-$hours-title-size: clamp(1.6rem, 2vw, 4rem);
-$hours-days-size: clamp(1.4rem, 1.6vw, 3.5rem);
-$hours-times-size: clamp(1rem, 1.3vw, 2rem);
+$welcome-title-size: clamp(2.8rem, 5vw, 4.5rem);
+$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.8rem);
+$hours-msg-size: clamp(1.3rem, 1.5vw, 1.5rem);
+$hours-title-size: clamp(1.6rem, 2vw, 1.8rem);
+$hours-days-size: clamp(1.4rem, 1.6vw, 1.6rem);
+$hours-times-size: clamp(1rem, 1.3vw, 1.2rem);
 
 #homepage-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));
     place-items: center;
     gap: 1rem;
+
+    margin-top: 1rem;
     
 
     >div{
-        /* width: clamp(85vw, 90vw, 95vw); */
-        width: min(1200px, 100vw);
-        min-height: 600px;
-       /*  background-color: rgba(255, 255, 255, 0.05); */
+        width: clamp(300px, 100vw, 1200px);
+        /* width: min(1200px, 100vw); */
+        min-height: 400px;
 
     }
 }
@@ -45,12 +53,7 @@ $hours-times-size: clamp(1rem, 1.3vw, 2rem);
     align-items: center;
     text-align: center;
 
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url('../assets/fish.jpg');
+    background: $welcome-bg-img;
 
     background-position: center;
     background-size: cover;
@@ -69,7 +72,7 @@ $hours-times-size: clamp(1rem, 1.3vw, 2rem);
         font-size: $welcome-msg-size;
         max-width: 80%;
         color: $welcome-msg-color;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
 
     }
 }
