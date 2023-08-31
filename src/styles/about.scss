@@ -44,12 +44,12 @@ $font-size: clamp(1rem, 2vw, 1.5rem);
     width: $img-size;
     
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     //all the same img for now...
-    background-image: url('../assets/fish.jpg');
+    /* background-image: url('../assets/fish.jpg'); */
     
-    /* border: 2px solid $blue-color;
-    border-radius: 10px; */
+    border: 2px solid $blue-color;
+    border-radius: 10px;
     
 }
 
@@ -62,6 +62,18 @@ $font-size: clamp(1rem, 2vw, 1.5rem);
     text-align: center;
     color: $font-color;
     
+}
+
+#section-1 .img-container{
+    background-image: url('../assets/FH_front.png');
+}
+
+#section-2 .img-container{
+    background-image: url('../assets/FH_packed.png');
+}
+
+#section-3 .img-container{
+    background-image: url('../assets/FH_pies.jpg');
 }
 
 

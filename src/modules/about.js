@@ -3,10 +3,10 @@ import '../styles/about.scss';
 const buildAboutpage = (()=>{
 
     const textContent = [
-        'Ferryhill, what a place to be, bal blab blabadfdf dfdf dfdf dlb',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg dffdffdf fdfdf',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg fdfdfd dffdfd df fdfdf f',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hdfdf dfdf dfdf ddffddfsg jdhg f',    
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.'
     ]
 
     const container = document.createElement('div');
@@ -30,7 +30,7 @@ const buildAboutpage = (()=>{
         section.appendChild(imgContainer);
         section.appendChild(textContainer);
 
-        /* section.id = `section-${i}`; */
+        section.id = `section-${i}`;
 
         /* let seperator = document.createElement('div');
         seperator.classList.add('seperator'); */
