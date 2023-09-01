@@ -5,7 +5,8 @@ const API_KEY = "AIzaSyALqs75llImmdtIhHQ2jopv08LW5cleUYs";
 
 const ADDRESS = `<div class='contact-info contact-heading' id='adrss-heading'>Ferryhill Fish & Chips</div>
                 <div class='contact-info'>50 Ferryhill Road,</div>
-                <div class='contact-info'>Manchester</div>
+                <div class='contact-info'>Irlam,</div>
+                <div class='contact-info'>Manchester,</div>
                 <div class='contact-info'>United Kingdom</div>
                 <div class='contact-info contact-heading'>Tel:</div>
                 <div class='contact-info'>0161 775 4738</div>
@@ -31,12 +32,18 @@ const buildContactpage = (()=>{
     //CREATE BOXES
     const contactBox = document.createElement('div');
     contactBox.classList.add('box');
+    contactBox.id = 'contact-info-box';
     contactBox.innerHTML = ADDRESS;
     
     const mapBox = document.createElement('div');
     mapBox.classList.add('box');
-    mapBox.id = 'map';
-    mapBox.textContent = 'map box';
+    mapBox.id = 'map-box';
+    
+    //A CONTAINER DIV FOR THE MAP
+    const mapContainer = document.createElement('div');
+    mapContainer.id = 'map';
+    //APPEND TO MAPBOX
+    mapBox.appendChild(mapContainer);
 
     const messageBox = document.createElement('div');
     messageBox.classList.add('box');
@@ -67,7 +74,7 @@ const buildContactpage = (()=>{
       loader.load().then(async () => {
         const { Map } = await google.maps.importLibrary("maps");
       
-        let map = new Map(mapBox, {
+        let map = new Map(mapContainer, {
           center: { lat: 53.448156, lng: -2.415962 },
           zoom: 15,
         });
