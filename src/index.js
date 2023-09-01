@@ -6,6 +6,7 @@ import contact from './modules/contact.js';
 import about from './modules/about.js';
 import footer from './modules/footer.js';
 
+
 let currentPage = homepage;
 
 const pages = [homepage, menu, about, contact];

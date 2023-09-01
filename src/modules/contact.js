@@ -1,4 +1,7 @@
 import '../styles/contact.scss';
+import { Loader } from "@googlemaps/js-api-loader";
+
+const API_KEY = "AIzaSyALqs75llImmdtIhHQ2jopv08LW5cleUYs";
 
 const ADDRESS = `<div class='contact-info contact-heading' id='adrss-heading'>Ferryhill Fish & Chips</div>
                 <div class='contact-info'>50 Ferryhill Road,</div>
@@ -11,17 +14,18 @@ const ADDRESS = `<div class='contact-info contact-heading' id='adrss-heading'>Fe
                 `
 ;
 
+
 const buildContactpage = (()=>{
     const container = document.createElement('div');
     container.id = 'contact-container';
 
     //CREATE SECTIONS
     const locationSection = document.createElement('div');
-    locationSection.classList.add('about-section');
+    locationSection.classList.add('contact-section');
     locationSection.id = 'location-section';
     
     const socialSection = document.createElement('div');
-    socialSection.classList.add('about-section');
+    socialSection.classList.add('contact-section');
     socialSection.id = 'social-section';
 
     //CREATE BOXES
@@ -31,6 +35,7 @@ const buildContactpage = (()=>{
     
     const mapBox = document.createElement('div');
     mapBox.classList.add('box');
+    mapBox.id = 'map';
     mapBox.textContent = 'map box';
 
     const messageBox = document.createElement('div');
@@ -52,6 +57,27 @@ const buildContactpage = (()=>{
     //APPEND SECTIOSN TO CONTAINER
     container.appendChild(locationSection);
     container.appendChild(socialSection);
+
+    //GOOGLE MAPS STUFF
+    const loader = new Loader({
+        apiKey: API_KEY,
+        version: "weekly",
+      });
+      
+      loader.load().then(async () => {
+        const { Map } = await google.maps.importLibrary("maps");
+      
+        let map = new Map(mapBox, {
+          center: { lat: 53.448156, lng: -2.415962 },
+          zoom: 15,
+        });
+
+        let location = new google.maps.LatLng(53.448156,-2.415962 );
+        let marker = new google.maps.Marker({
+            position:location,
+            map:map
+        });
+      });
 
     return container;
 
