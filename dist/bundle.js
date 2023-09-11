@@ -2,6 +2,418 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@googlemaps/js-api-loader/dist/index.esm.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DEFAULT_ID: () => (/* binding */ DEFAULT_ID),
+/* harmony export */   Loader: () => (/* binding */ Loader),
+/* harmony export */   LoaderStatus: () => (/* binding */ LoaderStatus)
+/* harmony export */ });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+// do not edit .js files directly - edit src/index.jst
+
+
+
+var fastDeepEqual = function equal(a, b) {
+  if (a === b) return true;
+
+  if (a && b && typeof a == 'object' && typeof b == 'object') {
+    if (a.constructor !== b.constructor) return false;
+
+    var length, i, keys;
+    if (Array.isArray(a)) {
+      length = a.length;
+      if (length != b.length) return false;
+      for (i = length; i-- !== 0;)
+        if (!equal(a[i], b[i])) return false;
+      return true;
+    }
+
+
+
+    if (a.constructor === RegExp) return a.source === b.source && a.flags === b.flags;
+    if (a.valueOf !== Object.prototype.valueOf) return a.valueOf() === b.valueOf();
+    if (a.toString !== Object.prototype.toString) return a.toString() === b.toString();
+
+    keys = Object.keys(a);
+    length = keys.length;
+    if (length !== Object.keys(b).length) return false;
+
+    for (i = length; i-- !== 0;)
+      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
+
+    for (i = length; i-- !== 0;) {
+      var key = keys[i];
+
+      if (!equal(a[key], b[key])) return false;
+    }
+
+    return true;
+  }
+
+  // true if both NaN, false otherwise
+  return a!==a && b!==b;
+};
+
+/**
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at.
+ *
+ *      Http://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DEFAULT_ID = "__googleMapsScriptId";
+/**
+ * The status of the [[Loader]].
+ */
+var LoaderStatus;
+(function (LoaderStatus) {
+    LoaderStatus[LoaderStatus["INITIALIZED"] = 0] = "INITIALIZED";
+    LoaderStatus[LoaderStatus["LOADING"] = 1] = "LOADING";
+    LoaderStatus[LoaderStatus["SUCCESS"] = 2] = "SUCCESS";
+    LoaderStatus[LoaderStatus["FAILURE"] = 3] = "FAILURE";
+})(LoaderStatus || (LoaderStatus = {}));
+/**
+ * [[Loader]] makes it easier to add Google Maps JavaScript API to your application
+ * dynamically using
+ * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+ * It works by dynamically creating and appending a script node to the the
+ * document head and wrapping the callback function so as to return a promise.
+ *
+ * ```
+ * const loader = new Loader({
+ *   apiKey: "",
+ *   version: "weekly",
+ *   libraries: ["places"]
+ * });
+ *
+ * loader.load().then((google) => {
+ *   const map = new google.maps.Map(...)
+ * })
+ * ```
+ */
+class Loader {
+    /**
+     * Creates an instance of Loader using [[LoaderOptions]]. No defaults are set
+     * using this library, instead the defaults are set by the Google Maps
+     * JavaScript API server.
+     *
+     * ```
+     * const loader = Loader({apiKey, version: 'weekly', libraries: ['places']});
+     * ```
+     */
+    constructor({ apiKey, authReferrerPolicy, channel, client, id = DEFAULT_ID, language, libraries = [], mapIds, nonce, region, retries = 3, url = "https://maps.googleapis.com/maps/api/js", version, }) {
+        this.callbacks = [];
+        this.done = false;
+        this.loading = false;
+        this.errors = [];
+        this.apiKey = apiKey;
+        this.authReferrerPolicy = authReferrerPolicy;
+        this.channel = channel;
+        this.client = client;
+        this.id = id || DEFAULT_ID; // Do not allow empty string
+        this.language = language;
+        this.libraries = libraries;
+        this.mapIds = mapIds;
+        this.nonce = nonce;
+        this.region = region;
+        this.retries = retries;
+        this.url = url;
+        this.version = version;
+        if (Loader.instance) {
+            if (!fastDeepEqual(this.options, Loader.instance.options)) {
+                throw new Error(`Loader must not be called again with different options. ${JSON.stringify(this.options)} !== ${JSON.stringify(Loader.instance.options)}`);
+            }
+            return Loader.instance;
+        }
+        Loader.instance = this;
+    }
+    get options() {
+        return {
+            version: this.version,
+            apiKey: this.apiKey,
+            channel: this.channel,
+            client: this.client,
+            id: this.id,
+            libraries: this.libraries,
+            language: this.language,
+            region: this.region,
+            mapIds: this.mapIds,
+            nonce: this.nonce,
+            url: this.url,
+            authReferrerPolicy: this.authReferrerPolicy,
+        };
+    }
+    get status() {
+        if (this.errors.length) {
+            return LoaderStatus.FAILURE;
+        }
+        if (this.done) {
+            return LoaderStatus.SUCCESS;
+        }
+        if (this.loading) {
+            return LoaderStatus.LOADING;
+        }
+        return LoaderStatus.INITIALIZED;
+    }
+    get failed() {
+        return this.done && !this.loading && this.errors.length >= this.retries + 1;
+    }
+    /**
+     * CreateUrl returns the Google Maps JavaScript API script url given the [[LoaderOptions]].
+     *
+     * @ignore
+     * @deprecated
+     */
+    createUrl() {
+        let url = this.url;
+        url += `?callback=__googleMapsCallback`;
+        if (this.apiKey) {
+            url += `&key=${this.apiKey}`;
+        }
+        if (this.channel) {
+            url += `&channel=${this.channel}`;
+        }
+        if (this.client) {
+            url += `&client=${this.client}`;
+        }
+        if (this.libraries.length > 0) {
+            url += `&libraries=${this.libraries.join(",")}`;
+        }
+        if (this.language) {
+            url += `&language=${this.language}`;
+        }
+        if (this.region) {
+            url += `&region=${this.region}`;
+        }
+        if (this.version) {
+            url += `&v=${this.version}`;
+        }
+        if (this.mapIds) {
+            url += `&map_ids=${this.mapIds.join(",")}`;
+        }
+        if (this.authReferrerPolicy) {
+            url += `&auth_referrer_policy=${this.authReferrerPolicy}`;
+        }
+        return url;
+    }
+    deleteScript() {
+        const script = document.getElementById(this.id);
+        if (script) {
+            script.remove();
+        }
+    }
+    /**
+     * Load the Google Maps JavaScript API script and return a Promise.
+     * @deprecated, use importLibrary() instead.
+     */
+    load() {
+        return this.loadPromise();
+    }
+    /**
+     * Load the Google Maps JavaScript API script and return a Promise.
+     *
+     * @ignore
+     * @deprecated, use importLibrary() instead.
+     */
+    loadPromise() {
+        return new Promise((resolve, reject) => {
+            this.loadCallback((err) => {
+                if (!err) {
+                    resolve(window.google);
+                }
+                else {
+                    reject(err.error);
+                }
+            });
+        });
+    }
+    importLibrary(name) {
+        this.execute();
+        return google.maps.importLibrary(name);
+    }
+    /**
+     * Load the Google Maps JavaScript API script with a callback.
+     * @deprecated, use importLibrary() instead.
+     */
+    loadCallback(fn) {
+        this.callbacks.push(fn);
+        this.execute();
+    }
+    /**
+     * Set the script on document.
+     */
+    setScript() {
+        var _a, _b;
+        if (document.getElementById(this.id)) {
+            // TODO wrap onerror callback for cases where the script was loaded elsewhere
+            this.callback();
+            return;
+        }
+        const params = {
+            key: this.apiKey,
+            channel: this.channel,
+            client: this.client,
+            libraries: this.libraries.length && this.libraries,
+            v: this.version,
+            mapIds: this.mapIds,
+            language: this.language,
+            region: this.region,
+            authReferrerPolicy: this.authReferrerPolicy,
+        };
+        // keep the URL minimal:
+        Object.keys(params).forEach(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (key) => !params[key] && delete params[key]);
+        if (!((_b = (_a = window === null || window === void 0 ? void 0 : window.google) === null || _a === void 0 ? void 0 : _a.maps) === null || _b === void 0 ? void 0 : _b.importLibrary)) {
+            // tweaked copy of https://developers.google.com/maps/documentation/javascript/load-maps-js-api#dynamic-library-import
+            // which also sets the base url, the id, and the nonce
+            /* eslint-disable */
+            ((g) => {
+                // @ts-ignore
+                let h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window;
+                // @ts-ignore
+                b = b[c] || (b[c] = {});
+                // @ts-ignore
+                const d = b.maps || (b.maps = {}), r = new Set(), e = new URLSearchParams(), u = () => 
+                // @ts-ignore
+                h || (h = new Promise((f, n) => __awaiter(this, void 0, void 0, function* () {
+                    var _a;
+                    yield (a = m.createElement("script"));
+                    a.id = this.id;
+                    e.set("libraries", [...r] + "");
+                    // @ts-ignore
+                    for (k in g)
+                        e.set(k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()), g[k]);
+                    e.set("callback", c + ".maps." + q);
+                    a.src = this.url + `?` + e;
+                    d[q] = f;
+                    a.onerror = () => (h = n(Error(p + " could not load.")));
+                    // @ts-ignore
+                    a.nonce = this.nonce || ((_a = m.querySelector("script[nonce]")) === null || _a === void 0 ? void 0 : _a.nonce) || "";
+                    m.head.append(a);
+                })));
+                // @ts-ignore
+                d[l] ? console.warn(p + " only loads once. Ignoring:", g) : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+            })(params);
+            /* eslint-enable */
+        }
+        // While most libraries populate the global namespace when loaded via bootstrap params,
+        // this is not the case for "marker" when used with the inline bootstrap loader
+        // (and maybe others in the future). So ensure there is an importLibrary for each:
+        const libraryPromises = this.libraries.map((library) => this.importLibrary(library));
+        // ensure at least one library, to kick off loading...
+        if (!libraryPromises.length) {
+            libraryPromises.push(this.importLibrary("core"));
+        }
+        Promise.all(libraryPromises).then(() => this.callback(), (error) => {
+            const event = new ErrorEvent("error", { error }); // for backwards compat
+            this.loadErrorCallback(event);
+        });
+    }
+    /**
+     * Reset the loader state.
+     */
+    reset() {
+        this.deleteScript();
+        this.done = false;
+        this.loading = false;
+        this.errors = [];
+        this.onerrorEvent = null;
+    }
+    resetIfRetryingFailed() {
+        if (this.failed) {
+            this.reset();
+        }
+    }
+    loadErrorCallback(e) {
+        this.errors.push(e);
+        if (this.errors.length <= this.retries) {
+            const delay = this.errors.length * Math.pow(2, this.errors.length);
+            console.error(`Failed to load Google Maps script, retrying in ${delay} ms.`);
+            setTimeout(() => {
+                this.deleteScript();
+                this.setScript();
+            }, delay);
+        }
+        else {
+            this.onerrorEvent = e;
+            this.callback();
+        }
+    }
+    callback() {
+        this.done = true;
+        this.loading = false;
+        this.callbacks.forEach((cb) => {
+            cb(this.onerrorEvent);
+        });
+        this.callbacks = [];
+    }
+    execute() {
+        this.resetIfRetryingFailed();
+        if (this.done) {
+            this.callback();
+        }
+        else {
+            // short circuit and warn if google.maps is already loaded
+            if (window.google && window.google.maps && window.google.maps.version) {
+                console.warn("Google Maps already loaded outside @googlemaps/js-api-loader." +
+                    "This may result in undesirable behavior as options and script parameters may not match.");
+                this.callback();
+                return;
+            }
+            if (this.loading) ;
+            else {
+                this.loading = true;
+                this.setScript();
+            }
+        }
+    }
+}
+
+
+//# sourceMappingURL=index.esm.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/about.scss":
 /*!************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/about.scss ***!
@@ -22,14 +434,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fish.jpg */ "./src/assets/fish.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_front.png */ "./src/assets/FH_front.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_packed.png */ "./src/assets/FH_packed.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_potatoes.png */ "./src/assets/FH_potatoes.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   flex-grow: 1;
-  /* min-width: 80vw;
-  max-width: 90vw; */
   align-self: center;
   padding: 0 0;
   margin-top: 2.5vh;
@@ -57,10 +471,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   aspect-ratio: 4/3;
   width: clamp(300px, 65vw, 600px);
   background-position: center;
-  background-size: contain;
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-  /* border: 2px solid \$blue-color;
-  border-radius: 10px; */
+  background-size: cover;
+  /* background-image: url('../assets/fish.jpg'); */
+  border: 2px solid #4fa9cc;
+  border-radius: 10px;
 }
 
 .text-container {
@@ -72,13 +486,25 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   color: #ebd693;
 }
 
+#section-1 .img-container {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
+#section-2 .img-container {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+#section-3 .img-container {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+}
+
 @media only screen and (max-width: 800px) {
   .section, .section:nth-child(even) {
     flex-direction: column;
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA;oBAAA;EAEA,kBAAA;EACA,YAAA;EACA,iBAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AAXJ;;AAcA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EAEA,uCC/BiB;ADmBrB;;AAeA;EACI,2BAAA;AAZJ;;AAgBA;EACI,iBAAA;EACA,gCApCO;EAsCP,2BAAA;EACA,wBAAA;EAEA,yDAAA;EAEA;wBAAA;AAfJ;;AAoBA;EACI,uBAAA;EACA,gCAjDkB;EAkDlB,kBAAA;EAEA,mCAnDQ;EAoDR,kBAAA;EACA,cCxDS;ADsCb;;AAuBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EArBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color:$gold-color;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 600px);\n$text-container-size: clamp(300px, 40vw, 600px);\n$font-size: clamp(1rem, 2vw, 1.5rem);\n\n#about-container{\n    flex-grow: 1;\n    /* min-width: 80vw;\n    max-width: 90vw; */\n    align-self: center;\n    padding: 0 0;\n    margin-top: 2.5vh;\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 100%;\n    padding: 1rem;\n\n    background-color: $background-color;\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: contain;\n    //all the same img for now...\n    background-image: url('../assets/fish.jpg');\n    \n    /* border: 2px solid $blue-color;\n    border-radius: 10px; */\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem 1rem;\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,iBAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AAXJ;;AAcA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EAEA,uCC7BiB;ADiBrB;;AAeA;EACI,2BAAA;AAZJ;;AAgBA;EACI,iBAAA;EACA,gCAlCO;EAoCP,2BAAA;EACA,sBAAA;EAEA,iDAAA;EAEA,yBAAA;EACA,mBAAA;AAhBJ;;AAoBA;EACI,uBAAA;EACA,gCA/CkB;EAgDlB,kBAAA;EAEA,mCAjDQ;EAkDR,kBAAA;EACA,cCtDS;ADoCb;;AAsBA;EACI,yDAAA;AAnBJ;;AAsBA;EACI,yDAAA;AAnBJ;;AAsBA;EACI,yDAAA;AAnBJ;;AAuBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EArBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color:$gold-color;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 600px);\n$text-container-size: clamp(300px, 40vw, 600px);\n$font-size: clamp(1rem, 2vw, 1.5rem);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-top: 2.5vh;\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 100%;\n    padding: 1rem;\n\n    background-color: $background-color;\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: cover;\n    //all the same img for now...\n    /* background-image: url('../assets/fish.jpg'); */\n    \n    border: 2px solid $blue-color;\n    border-radius: 10px;\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem 1rem;\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n#section-1 .img-container{\n    background-image: url('../assets/FH_front.png');\n}\n\n#section-2 .img-container{\n    background-image: url('../assets/FH_packed.png');\n}\n\n#section-3 .img-container{\n    background-image: url('../assets/FH_potatoes.png');\n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -105,12 +531,63 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#contact-container {
-  flex: 1.5;
-  /* background-color: rgb(163, 163, 233); */
+  flex-grow: 1;
+  align-self: center;
+  padding: 0 0;
+  margin-top: 2.5vh;
+  min-width: 80vw;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  /* gap: 1rem; */
+  text-align: center;
+}
+
+.contact-section {
   display: flex;
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: #2a2a2a;
+}
+
+.box {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-}`, "",{"version":3,"sources":["webpack://./src/styles/contact.scss"],"names":[],"mappings":"AAEA;EACI,SAAA;EACA,0CAAA;EAEA,aAAA;EACA,uBAAA;EACA,mBAAA;AAFJ","sourcesContent":["@import './colors.scss';\n\n#contact-container{\n    flex: 1.5;\n    /* background-color: rgb(163, 163, 233); */\n    \n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n"],"sourceRoot":""}]);
+}
+
+#contact-info-box {
+  color: white;
+  background-color: #2a2a2a;
+}
+
+#map-box {
+  background-color: #2a2a2a;
+}
+
+#map {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border: 2px solid #4fa9cc;
+  border-radius: 10px;
+}
+
+.contact-heading {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #4fa9cc;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-section {
+    flex-direction: column;
+    min-width: 95vw;
+    gap: 1rem;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/styles/contact.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAMA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,iBAAA;EACA,eAAA;EAEA,aAAA;EACA,2BAAA;EACA,oBAAA;EACA,eAAA;EAEA,kBAAA;AAPJ;;AAWA;EACI,aAAA;EACA,aAAA;EACA,WAAA;EAEA,yBC3Bc;ADkBlB;;AAYA;EACI,OAAA;EACA,uBAAA;EAEA,aAAA;EACA,sBAAA;EACA,uBAAA;AAVJ;;AAaA;EACI,YApCiB;EAqCjB,yBCzCc;AD+BlB;;AAcA;EACI,yBC9Cc;ADmClB;;AAeA;EACI,UAAA;EACA,WAAA;EACA,YAAA;EAEA,yBAAA;EACA,mBAAA;AAbJ;;AAgBA;EACI,iBAAA;EACA,gBAAA;EACA,cCtDS;ADyCb;;AAgBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EAdN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$section-bg-color: $background-dark;\n$address-font-color: white;\n\n#contact-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-top: 2.5vh;\n    min-width: 80vw;\n    \n    display: grid;\n    grid-template-columns: auto;\n    grid-auto-rows: auto;\n    /* gap: 1rem; */\n\n    text-align: center;\n}\n\n\n.contact-section{\n    display: flex;\n    padding: 1rem;\n    gap: 0.5rem;\n\n    background-color: $section-bg-color;\n}\n\n.box{\n    flex: 1;\n    background-color: white;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n#contact-info-box{\n    color: $address-font-color;\n    background-color: $section-bg-color;\n\n}\n\n#map-box{\n    background-color: $section-bg-color;\n\n}\n\n#map{\n    width: 90%;\n    height: 90%;\n    margin: auto;\n\n    border: 2px solid $blue-color;\n    border-radius: 10px;\n}\n\n.contact-heading{\n    font-size: 1.2rem;\n    margin-top: 1rem;\n    color:  $blue-color;\n}\n\n@media only screen and (max-width: 800px){\n   \n    .contact-section{\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -355,12 +832,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
   grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));
   place-items: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 #homepage-container > div {
-  /* width: clamp(85vw, 90vw, 95vw); */
-  width: min(1200px, 100vw);
-  min-height: 600px;
-  /*  background-color: rgba(255, 255, 255, 0.05); */
+  width: clamp(300px, 100vw, 1200px);
+  /* width: min(1200px, 100vw); */
+  min-height: 400px;
 }
 
 #welcome {
@@ -369,23 +846,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_0___});
   background-position: center;
   background-size: cover;
   /* font-family: 'Merriweather', serif; */
 }
 #welcome #welcome-title {
-  font-size: clamp(2.8rem, 5vw, 6.5rem);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
   font-weight: 700;
   text-transform: uppercase;
-  color: #4fa9cc;
+  color: #ebd693;
 }
 #welcome #welcome-msg {
   margin-top: 2rem;
-  font-size: clamp(1.2rem, 1.8vw, 4rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.8rem);
   max-width: 80%;
   color: white;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 #hours {
@@ -400,7 +877,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
 #hours #hours-msg {
   padding: 10%;
   flex: 1;
-  font-size: clamp(1.3rem, 1.5vw, 5rem);
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
   color: #ebd693;
 }
 #hours #hours-div {
@@ -414,14 +891,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
   background-color: #2a2a2a;
 }
 #hours #hours-info #title {
-  font-size: clamp(1.6rem, 2vw, 4rem);
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
   padding: 0 1rem;
   border: 2px solid #4fa9cc;
   border-radius: 10px;
   color: white;
 }
 #hours #hours-info .heading {
-  font-size: clamp(1.4rem, 1.6vw, 3.5rem);
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
   border-bottom: 1px solid #4fa9cc;
 }
 #hours #hours-info .days {
@@ -430,7 +907,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
   color: white;
 }
 #hours #hours-info .times {
-  font-size: clamp(1rem, 1.3vw, 2rem);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
   color: white;
 }
 
@@ -442,7 +919,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAwBA;EACI,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;AAvBJ;AA0BI;EACI,oCAAA;EACA,yBAAA;EACA,iBAAA;EACD,kDAAA;AAxBP;;AA6BA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,8GACI;EAMJ,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAlCJ;AAoCI;EACI,qCA3Ca;EA4Cb,gBAAA;EACA,yBAAA;EACA,cCvDK;ADqBb;AAqCI;EACI,gBAAA;EACA,qCAlDW;EAmDX,cAAA;EACA,YAlEY;EAmEZ,yBAAA;AAnCR;;AAwCA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EAEA,yBCnFc;EDoFd,uCAAA;AAtCJ;AAwCI;EACI,YAAA;EACA,OAAA;EACA,qCAtES;EAuET,cCpFK;AD8Cb;AAyCI;EACI,OAAA;AAvCR;AA0CI;EACI,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCtGU;AD8DlB;AA0CQ;EACI,mCArFO;EAsFP,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YAvGQ;AA+DpB;AA2CQ;EACI,uCA5FM;EA6FN,gCAAA;AAzCZ;AA4CQ;EACI,gBAAA;EACA,qBAAA;EACA,YAjHO;AAuEnB;AA6CQ;EACI,mCAtGO;EAuGP,YArHQ;AA0EpB;;AAgDA;EACI;IACI,sBAAA;EA7CN;EA+CM;IACI,eAAA;IACA,eAAA;EA7CV;AACF","sourcesContent":["@import './colors.scss';\n\n//FONT COLORS\n$welcome-title-color: $blue-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: clamp(2.8rem, 5vw, 6.5rem);\n$welcome-msg-size: clamp(1.2rem, 1.8vw, 4rem);\n$hours-msg-size: clamp(1.3rem, 1.5vw, 5rem);\n$hours-title-size: clamp(1.6rem, 2vw, 4rem);\n$hours-days-size: clamp(1.4rem, 1.6vw, 3.5rem);\n$hours-times-size: clamp(1rem, 1.3vw, 2rem);\n\n#homepage-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n    place-items: center;\n    gap: 1rem;\n    \n\n    >div{\n        /* width: clamp(85vw, 90vw, 95vw); */\n        width: min(1200px, 100vw);\n        min-height: 600px;\n       /*  background-color: rgba(255, 255, 255, 0.05); */\n\n    }\n}\n\n#welcome{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n\n    background:\n        linear-gradient(\n            rgba(0, 0, 0, 0.55),\n            rgba(0, 0, 0, 0.55)\n        ),\n        url('../assets/fish.jpg');\n\n    background-position: center;\n    background-size: cover;\n\n    /* font-family: 'Merriweather', serif; */\n\n    #welcome-title{\n        font-size: $welcome-title-size;\n        font-weight: 700;\n        text-transform: uppercase;\n        color: $welcome-title-color\n    }\n\n    #welcome-msg{\n        margin-top: 2rem;\n        font-size: $welcome-msg-size;\n        max-width: 80%;\n        color: $welcome-msg-color;\n        text-transform: uppercase;\n\n    }\n}\n\n#hours{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    padding: 1rem;\n\n    background-color: $hours-background-color;\n    /* border-top: 1px solid $gold-color; */\n    \n    #hours-msg{\n        padding: 10%;\n        flex: 1;\n        font-size: $hours-msg-size;\n        color: $hours-msg-color\n    }\n\n    #hours-div{\n        flex: 1;\n    }\n\n    #hours-info{\n        max-width: 80%;\n        padding: 2rem;\n        border: 1px solid $blue-color;\n        border-radius: 10px;\n        background-color: $hours-times-background-color;\n\n        #title{\n            font-size: $hours-title-size;\n            padding: 0 1rem;\n            border: 2px solid $hours-title-border-color;\n            border-radius: 10px;\n            color: $hours-title-color;\n        }\n\n        .heading{\n            font-size: $hours-days-size;\n            border-bottom: 1px solid $days-border-color;\n        }\n        \n        .days{\n            margin-top: 1rem;\n            margin-bottom: 0.5rem;\n            color: $hours-days-color;\n        }\n\n        .times{\n            font-size: $hours-times-size;\n            color: $hours-times-color;\n        }\n    }\n}\n\n@media only screen and (max-width: 800px){    \n    #hours{\n        flex-direction: column;\n\n        #hours-info{\n            max-width: 100%;\n            padding: 2.5rem;\n        }\n    }\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA+BA;EACI,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,gBAAA;AA/BJ;AAkCI;EACI,kCAAA;EACA,+BAAA;EACA,iBAAA;AAhCR;;AAqCA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,4GA5Ca;EA8Cb,2BAAA;EACA,sBAAA;EAEA,wCAAA;AArCJ;AAuCI;EACI,qCAvCa;EAwCb,gBAAA;EACA,yBAAA;EACA,cC5DK;ADuBb;AAwCI;EACI,gBAAA;EACA,uCA9CW;EA+CX,cAAA;EACA,YArEY;EAsEZ,+BAAA;AAtCR;;AA2CA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EAEA,yBCtFc;EDuFd,uCAAA;AAzCJ;AA2CI;EACI,YAAA;EACA,OAAA;EACA,uCAlES;EAmET,cCvFK;AD8Cb;AA4CI;EACI,OAAA;AA1CR;AA6CI;EACI,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCzGU;AD8DlB;AA6CQ;EACI,qCAjFO;EAkFP,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1GQ;AA+DpB;AA8CQ;EACI,uCAxFM;EAyFN,gCAAA;AA5CZ;AA+CQ;EACI,gBAAA;EACA,qBAAA;EACA,YApHO;AAuEnB;AAgDQ;EACI,qCAlGO;EAmGP,YAxHQ;AA0EpB;;AAmDA;EACI;IACI,sBAAA;EAhDN;EAkDM;IACI,eAAA;IACA,eAAA;EAhDV;AACF","sourcesContent":["@import './colors.scss';\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(\n    rgba(0, 0, 0, 0.7),\n    rgba(0, 0, 0, 0.7)\n),\nurl('../assets/fish.jpg');\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: clamp(2.8rem, 5vw, 4.5rem);\n$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.8rem);\n$hours-msg-size: clamp(1.3rem, 1.5vw, 1.5rem);\n$hours-title-size: clamp(1.6rem, 2vw, 1.8rem);\n$hours-days-size: clamp(1.4rem, 1.6vw, 1.6rem);\n$hours-times-size: clamp(1rem, 1.3vw, 1.2rem);\n\n#homepage-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n    place-items: center;\n    gap: 1rem;\n\n    margin-top: 1rem;\n    \n\n    >div{\n        width: clamp(300px, 100vw, 1200px);\n        /* width: min(1200px, 100vw); */\n        min-height: 400px;\n\n    }\n}\n\n#welcome{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n\n    background: $welcome-bg-img;\n\n    background-position: center;\n    background-size: cover;\n\n    /* font-family: 'Merriweather', serif; */\n\n    #welcome-title{\n        font-size: $welcome-title-size;\n        font-weight: 700;\n        text-transform: uppercase;\n        color: $welcome-title-color\n    }\n\n    #welcome-msg{\n        margin-top: 2rem;\n        font-size: $welcome-msg-size;\n        max-width: 80%;\n        color: $welcome-msg-color;\n        /* text-transform: uppercase; */\n\n    }\n}\n\n#hours{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    padding: 1rem;\n\n    background-color: $hours-background-color;\n    /* border-top: 1px solid $gold-color; */\n    \n    #hours-msg{\n        padding: 10%;\n        flex: 1;\n        font-size: $hours-msg-size;\n        color: $hours-msg-color\n    }\n\n    #hours-div{\n        flex: 1;\n    }\n\n    #hours-info{\n        max-width: 80%;\n        padding: 2rem;\n        border: 1px solid $blue-color;\n        border-radius: 10px;\n        background-color: $hours-times-background-color;\n\n        #title{\n            font-size: $hours-title-size;\n            padding: 0 1rem;\n            border: 2px solid $hours-title-border-color;\n            border-radius: 10px;\n            color: $hours-title-color;\n        }\n\n        .heading{\n            font-size: $hours-days-size;\n            border-bottom: 1px solid $days-border-color;\n        }\n        \n        .days{\n            margin-top: 1rem;\n            margin-bottom: 0.5rem;\n            color: $hours-days-color;\n        }\n\n        .times{\n            font-size: $hours-times-size;\n            color: $hours-times-color;\n        }\n    }\n}\n\n@media only screen and (max-width: 800px){    \n    #hours{\n        flex-direction: column;\n\n        #hours-info{\n            max-width: 100%;\n            padding: 2.5rem;\n        }\n    }\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -555,7 +1032,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
   text-transform: uppercase;
   color: #4fa9cc;
   border-bottom: 1px solid #4fa9cc;
-  font-size: clamp(2rem, 2.8vw, 2.3rem);
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
 }
 
 .section-heading, .menu-item {
@@ -574,7 +1051,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .menu-item:not(.item-option) {
   margin-top: 1rem;
-  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
 }
 
 .menu-item-name {
@@ -589,7 +1066,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .item-option-text {
   color: white;
-  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
+  font-size: clamp(0.7rem, 1.4vw, 1rem);
 }
 
 .item-option-text::before {
@@ -599,12 +1076,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .menu-item-price {
   color: #4fa9cc;
-  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
 }
 
 .menu-item-price::before {
   content: "£";
-}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;EAEA,yBAAA;AAjBJ;;AAoBA;EACI;IACI,6DAAA;EAjBN;AACF;AAqBA;EACI,eAAA;AAnBJ;;AAsBA;EACI,yBAAA;EACA,cCvCS;EDwCT,gCA9Ca;EA+Cb,qCArCmB;AAkBvB;;AAsBA;EACI,cAAA;AAnBJ;;AAsBA;EACI,UAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AAnBJ;;AAsBA;EACI,gBAAA;EACA,qCAvDQ;AAoCZ;;AAsBA;EACI,cClES;EDmET,0BAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,qBAAA;AAnBJ;;AAsBA;EACI,YAAA;EACA,uCArEU;AAkDd;;AAsBA;EACI,YAAA;EACA,gBAAA;AAnBJ;;AAsBA;EACI,cCpFS;EDqFT,qCA9ES;AA2Db;;AAsBA;EACI,YAAA;AAnBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: $blue-color;;\n\n//-SIZES\n$section-heading-size: clamp(2rem, 2.8vw, 2.3rem);\n$item-size: clamp(1rem, 1.8vw, 1.4rem);\n$option-size: clamp(0.8rem, 1.4vw, 1.2rem);\n$price-size: clamp(1rem, 1.8vw, 1.4rem);\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: clamp(85vw, 60vw, 95vw);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n\n    border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n.menu-section{\n    max-width: 80vw;\n}\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;EAEA,yBAAA;AAjBJ;;AAoBA;EACI;IACI,6DAAA;EAjBN;AACF;AAqBA;EACI,eAAA;AAnBJ;;AAsBA;EACI,yBAAA;EACA,cCvCS;EDwCT,gCA9Ca;EA+Cb,uCArCmB;AAkBvB;;AAsBA;EACI,cAAA;AAnBJ;;AAsBA;EACI,UAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AAnBJ;;AAsBA;EACI,gBAAA;EACA,qCAvDQ;AAoCZ;;AAsBA;EACI,cClES;EDmET,0BAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,qBAAA;AAnBJ;;AAsBA;EACI,YAAA;EACA,qCArEU;AAkDd;;AAsBA;EACI,YAAA;EACA,gBAAA;AAnBJ;;AAsBA;EACI,cCpFS;EDqFT,qCA9ES;AA2Db;;AAsBA;EACI,YAAA;AAnBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: $blue-color;;\n\n//-SIZES\n$section-heading-size: clamp(1.4rem, 2.8vw, 1.8rem);\n$item-size: clamp(1rem, 1.8vw, 1.2rem);\n$option-size: clamp(0.7rem, 1.4vw, 1rem);\n$price-size: clamp(1rem, 1.8vw, 1.2rem);\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: clamp(85vw, 60vw, 95vw);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n\n    border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n.menu-section{\n    max-width: 80vw;\n}\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1426,10 +1903,10 @@ __webpack_require__.r(__webpack_exports__);
 const buildAboutpage = (()=>{
 
     const textContent = [
-        'Ferryhill, what a place to be, bal blab blabadfdf dfdf dfdf dlb',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg dffdffdf fdfdf',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hddfsg jdhg fdfdfd dffdfd df fdfdf f',
-        'hjgfj sdgf jgsd fgs dhgfjgs djf g hds gfjgd hdfdf dfdf dfdf ddffddfsg jdhg f',    
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.'
     ]
 
     const container = document.createElement('div');
@@ -1453,7 +1930,7 @@ const buildAboutpage = (()=>{
         section.appendChild(imgContainer);
         section.appendChild(textContainer);
 
-        /* section.id = `section-${i}`; */
+        section.id = `section-${i}`;
 
         /* let seperator = document.createElement('div');
         seperator.classList.add('seperator'); */
@@ -1484,12 +1961,94 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _styles_contact_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/contact.scss */ "./src/styles/contact.scss");
+/* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
+
+
+
+const API_KEY = "AIzaSyALqs75llImmdtIhHQ2jopv08LW5cleUYs";
+
+const ADDRESS = `<div class='contact-info contact-heading' id='adrss-heading'>Ferryhill Fish & Chips</div>
+                <div class='contact-info'>50 Ferryhill Road,</div>
+                <div class='contact-info'>Irlam,</div>
+                <div class='contact-info'>Manchester,</div>
+                <div class='contact-info'>United Kingdom</div>
+                <div class='contact-info contact-heading'>Tel:</div>
+                <div class='contact-info'>0161 775 4738</div>
+                <div class='contact-info contact-heading'>Email:</div>
+                <div class='contact-info'>ferryhillfishandchips@gmail.com</div>
+                `
+;
 
 
 const buildContactpage = (()=>{
     const container = document.createElement('div');
     container.id = 'contact-container';
 
+    //CREATE SECTIONS
+    const locationSection = document.createElement('div');
+    locationSection.classList.add('contact-section');
+    locationSection.id = 'location-section';
+    
+    const socialSection = document.createElement('div');
+    socialSection.classList.add('contact-section');
+    socialSection.id = 'social-section';
+
+    //CREATE BOXES
+    const contactBox = document.createElement('div');
+    contactBox.classList.add('box');
+    contactBox.id = 'contact-info-box';
+    contactBox.innerHTML = ADDRESS;
+    
+    const mapBox = document.createElement('div');
+    mapBox.classList.add('box');
+    mapBox.id = 'map-box';
+    
+    //A CONTAINER DIV FOR THE MAP
+    const mapContainer = document.createElement('div');
+    mapContainer.id = 'map';
+    //APPEND TO MAPBOX
+    mapBox.appendChild(mapContainer);
+
+    const messageBox = document.createElement('div');
+    messageBox.classList.add('box');
+    messageBox.textContent = 'message box';
+   
+    const socialBox = document.createElement('div');
+    socialBox.classList.add('box');
+    socialBox.textContent = 'social box';
+
+    //APPEND BOXES TO RELEVANT SECTION
+    locationSection.appendChild(contactBox);
+    locationSection.appendChild(mapBox);
+
+    socialSection.appendChild(messageBox);
+    socialSection.appendChild(socialBox);
+
+
+    //APPEND SECTIOSN TO CONTAINER
+    container.appendChild(locationSection);
+    container.appendChild(socialSection);
+
+    //GOOGLE MAPS STUFF
+    const loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_1__.Loader({
+        apiKey: API_KEY,
+        version: "weekly",
+      });
+      
+      loader.load().then(async () => {
+        const { Map } = await google.maps.importLibrary("maps");
+      
+        let map = new Map(mapContainer, {
+          center: { lat: 53.448156, lng: -2.415962 },
+          zoom: 15,
+        });
+
+        let location = new google.maps.LatLng(53.448156,-2.415962 );
+        let marker = new google.maps.Marker({
+            position:location,
+            map:map
+        });
+      });
 
     return container;
 
@@ -1681,7 +2240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const WELCOME_TITLE = 'Welcome to Ferryhill!';
-const WELCOME_MSG = "Voted Salford's Best Chippy IN 2023 by Salfordnow.co.uk readers";
+const WELCOME_MSG = "Voted Salford's Best Chippy in 2023 by Salfordnow.co.uk readers";
 const HOURS_MSG = 'Be sure to check our social media pages or get in touch with us for up-to-date changes';
 const HOURS_INFO = `<div class='heading' id='title'>Opening Hours</div>
                     <div class='heading days'>Mon - Sat</div>
@@ -1986,6 +2545,36 @@ const buildMenu = (()=>{
 
 /***/ }),
 
+/***/ "./src/assets/FH_front.png":
+/*!*********************************!*\
+  !*** ./src/assets/FH_front.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_front.png";
+
+/***/ }),
+
+/***/ "./src/assets/FH_packed.png":
+/*!**********************************!*\
+  !*** ./src/assets/FH_packed.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_packed.png";
+
+/***/ }),
+
+/***/ "./src/assets/FH_potatoes.png":
+/*!************************************!*\
+  !*** ./src/assets/FH_potatoes.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_potatoes.png";
+
+/***/ }),
+
 /***/ "./src/assets/fish.jpg":
 /*!*****************************!*\
   !*** ./src/assets/fish.jpg ***!
@@ -2147,6 +2736,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/contact.js */ "./src/modules/contact.js");
 /* harmony import */ var _modules_about_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/about.js */ "./src/modules/about.js");
 /* harmony import */ var _modules_footer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/footer.js */ "./src/modules/footer.js");
+
 
 
 
