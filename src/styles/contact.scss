@@ -66,16 +66,39 @@ $msg-bold-color: $blue-color;
 }
 
 #message-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
     .msg{
         color: $msg-font-color;
         padding: 0.5rem;
         margin-bottom: 1.5rem;
+
+        width: clamp(200px, 80%, 800px);
     }
 
     .msg-bold{
         font-weight: 700;
         color: $msg-bold-color;
     }
+}
+
+#social-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .social-text{
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    svg{
+        max-width: 50px;
+    }
+
 }
 
 @media only screen and (max-width: 800px){
