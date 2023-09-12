@@ -15,6 +15,18 @@ const ADDRESS = `<div class='contact-info contact-heading' id='adrss-heading'>Fe
                 `
 ;
 
+const MESSAGE = 
+`<div class='msg'><span class='msg-bold'>If you have any enquiries, </span>
+  you can give us a call during opening hours and we'll be glad to help!</div>
+<div class='msg'>If you're not in a rush, then 
+  <span class='msg-bold'>send us an email!</span></div>
+<div class='msg'><span class='msg-bold'>To keep up-to-date </span>
+  with changes to our menu, opening hours or any announcements, please check our 
+  <span class='msg-bold'>Instagram, </span>which is updated frequently, or our 
+  <span class='msg-bold'>Facebook </span>page!</div>
+`
+;
+
 
 const buildContactpage = (()=>{
     const container = document.createElement('div');
@@ -47,7 +59,8 @@ const buildContactpage = (()=>{
 
     const messageBox = document.createElement('div');
     messageBox.classList.add('box');
-    messageBox.textContent = 'message box';
+    messageBox.id = 'message-box';
+    messageBox.innerHTML = MESSAGE;
    
     const socialBox = document.createElement('div');
     socialBox.classList.add('box');
