@@ -11,12 +11,11 @@ $msg-bold-color: $blue-color;
     align-self: center;
     padding: 0 0;
     margin-top: 2.5vh;
-    min-width: 80vw;
+    max-width: 60vw;
     
     display: grid;
     grid-template-columns: auto;
     grid-auto-rows: auto;
-    /* gap: 1rem; */
 
     text-align: center;
 }
@@ -24,19 +23,21 @@ $msg-bold-color: $blue-color;
 
 .contact-section{
     display: flex;
-    padding: 1rem;
-    gap: 0.5rem;
-
-    background-color: $section-bg-color;
+    padding: 0.5rem;
 }
 
 .box{
     flex: 1;
     /* background-color: white; */
-
+    min-width: 50%;
+    height: 100%;
+    padding-block: 1.5rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background-color: $section-bg-color;
 }
 
 #contact-info-box{
@@ -47,13 +48,19 @@ $msg-bold-color: $blue-color;
 
 .contact-heading{
     font-size: 1.2rem;
-    margin-top: 1rem;
     color:  $blue-color;
 }
 
-#map-box{
-    background-color: $section-bg-color;
+.contact-heading:not(:first-child){
+    margin-top: 1rem;
+}
 
+#map-box{
+    width: clamp(250px, 80%, 450px);
+    min-height: 300px;
+    margin: auto;
+
+    background-color: $section-bg-color;
 }
 
 #map{
@@ -68,13 +75,14 @@ $msg-bold-color: $blue-color;
 #message-box{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     .msg{
         color: $msg-font-color;
         padding: 0.5rem;
         margin-bottom: 1.5rem;
+        line-height: 1.5;
 
         width: clamp(200px, 80%, 800px);
     }
@@ -88,25 +96,40 @@ $msg-bold-color: $blue-color;
 #social-box{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
     .social-text{
         font-size: 1.5rem;
-        color: white;
+        color: $gold-color;
     }
 
     svg{
         max-width: 50px;
+        margin-block: 2rem;
     }
 
 }
 
 @media only screen and (max-width: 800px){
    
+    #contact-container{
+        max-width: 100vw;
+    }
+
+    .box{
+        min-width: 100%;
+        height: 50%;
+    }
+
+    .box:not(:first-child){
+        border-top: 1px solid $gold-color;
+        border-top-style: hidden;
+    }
+
     .contact-section{
         flex-direction: column;
         min-width: 95vw;
-        gap: 1rem;
+        gap: 0rem;
    }
 
 }
