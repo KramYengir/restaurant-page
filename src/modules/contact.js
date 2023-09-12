@@ -85,7 +85,7 @@ const buildContactpage = (()=>{
     
     const instagramMsg = document.createElement('div');
     instagramMsg.classList.add('social-text');
-    instagramMsg.textContent = 'Visit us on Instagram!';
+    instagramMsg.textContent = 'Follow us on Instagram!';
 
     const instaLinkContainer = document.createElement('div');
     const instagramLink = document.createElement('a');
@@ -95,7 +95,7 @@ const buildContactpage = (()=>{
     
     const facebookMsg = document.createElement('div');
     facebookMsg.classList.add('social-text');
-    facebookMsg.textContent = 'Follow us on Facebook!';
+    facebookMsg.textContent = 'Visit us on Facebook!';
 
     const facebookLinkContainer = document.createElement('div');
     const facebookLink = document.createElement('a');
