@@ -1,6 +1,8 @@
 # The Odin Project - Restaurant Page Assignment
 **(Also the prototype for a real takeaway restaurant web page)**
 
+Preview live page [here](https://kramyengir.github.io/restaurant-page/)
+
 ---
 
 The purpose of this assignment was to put to practice what I've learned about the modular approach, npm, webpack and building the webpage purely from Javascript via DOM manipulation.
