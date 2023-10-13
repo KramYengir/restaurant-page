@@ -1,4 +1,7 @@
 import '../styles/header.scss';
+import seagullIMG1 from '../assets/seagull_1.png';
+import seagullIMG2 from '../assets/seagull_2.png';
+import seagullIMG3 from '../assets/seagull_3.png';
 
 const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line class="lines" x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
 
@@ -30,6 +33,15 @@ const buildHeader = (()=>{
     line3.classList.add('line');
     line3.id = 'line3';
 
+    // seagull images
+    const seagullIconA = document.createElement('img');
+    seagullIconA.src = seagullIMG1;
+    seagullIconA.id = 'seagull-icon-a';
+    const seagullIconB = document.createElement('img');
+    seagullIconB.src = seagullIMG3;
+    seagullIconB.id = 'seagull-icon-b';
+
+
     menuButton.appendChild(line1);
     menuButton.appendChild(line2);
     menuButton.appendChild(line3);
@@ -60,6 +72,9 @@ const buildHeader = (()=>{
 
     home.appendChild(homeHeading);
     home.appendChild(homeSubHeading);
+    home.appendChild(seagullIconA);
+    home.appendChild(seagullIconB);
+
     menu.textContent = 'Menu';
     about.textContent = 'About';
     contact.textContent = 'Contact';

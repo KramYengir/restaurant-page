@@ -6,15 +6,15 @@
  $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
 
 //FONT SIZES
-$title-size: 2rem;
-$sub-title-size: 1rem;
+$title-size: calc(1.5rem + 0.5vw);
+$sub-title-size: calc(0.8rem + 0.3vw);
 $header-link-size: 1rem;
 $dropdown-link-size: 1.14rem;
 
 //MENU BUTTON SIZES
 $menu-button-gap: 0.4rem;
-$line-width: 3rem;
-$line-height: 0.3rem;
+$line-width: calc(2rem + 0.3vw);
+$line-height: calc(0.2rem + 0.3vw);
 $menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));
 $line-cross-width: calc($menu-button-height * 1.414);
 
@@ -58,6 +58,8 @@ a:active{
     flex-direction: column;
     align-items: center;
     margin-left: 5rem;
+
+    position: relative;
     
     #home-heading{
         /* font-family: 'Rozha One', serif; */
@@ -74,6 +76,24 @@ a:active{
         font-size: $sub-title-size;
         color: white;
         margin-top: -0.15rem;
+    }
+
+    #seagull-icon-a{
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: calc(1.5rem + 0.3vw);
+        
+    }
+
+    #seagull-icon-b{
+        display: block;
+        position: absolute;
+        top: 65%;
+        right: 0.4rem;
+        width: calc(1.5rem + 0.3vw);
+        
     }
 }
 
@@ -127,7 +147,13 @@ a:active{
         min-width: 100vw;
         margin-left: 0;
     }
+
+    #seagull-icon-a,
+    #seagull-icon-b{
+        display: none; 
+    }
 }
+
 
 
 @media only screen and (max-width: 650px){
