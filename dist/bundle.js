@@ -446,7 +446,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   flex-grow: 1;
   align-self: center;
   padding: 0 0;
-  margin-top: 2.5vh;
+  margin-block: 2.5vh;
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
@@ -504,7 +504,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,iBAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAZJ;;AAeA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EAEA,uCC/BiB;ADkBrB;;AAgBA;EACI,2BAAA;AAbJ;;AAiBA;EACI,iBAAA;EACA,gCApCO;EAsCP,2BAAA;EACA,sBAAA;EAEA,iDAAA;EAGA,mBAAA;AAlBJ;;AAsBA;EACI,uBAAA;EACA,gCAjDkB;EAkDlB,4BAAA;EAEA,uCAnDQ;EAoDR,kBAAA;EACA,cCxDS;ADoCb;;AAwBA;EACI,yDAAA;AArBJ;;AAwBA;EACI,yDAAA;AArBJ;;AAwBA;EACI,yDAAA;AArBJ;;AAyBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EAvBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color:$gold-color;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 600px);\n$text-container-size: clamp(300px, 40vw, 600px);\n$font-size: clamp(0.9rem, 1.6vw, 1.2rem);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-top: 2.5vh;\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n\n    line-height: 1.6;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 100%;\n    padding: 1rem;\n\n    background-color: $background-color;\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: cover;\n    //all the same img for now...\n    /* background-image: url('../assets/fish.jpg'); */\n    \n    //border: 2px solid $blue-color;\n    border-radius: 10px;\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem min(5rem, 5vw);\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n#section-1 .img-container{\n    background-image: url('../assets/FH_front.png');\n}\n\n#section-2 .img-container{\n    background-image: url('../assets/FH_packed.png');\n}\n\n#section-3 .img-container{\n    background-image: url('../assets/FH_potatoes.png');\n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAZJ;;AAeA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EAEA,uCC/BiB;ADkBrB;;AAgBA;EACI,2BAAA;AAbJ;;AAiBA;EACI,iBAAA;EACA,gCApCO;EAsCP,2BAAA;EACA,sBAAA;EAEA,iDAAA;EAGA,mBAAA;AAlBJ;;AAsBA;EACI,uBAAA;EACA,gCAjDkB;EAkDlB,4BAAA;EAEA,uCAnDQ;EAoDR,kBAAA;EACA,cCxDS;ADoCb;;AAwBA;EACI,yDAAA;AArBJ;;AAwBA;EACI,yDAAA;AArBJ;;AAwBA;EACI,yDAAA;AArBJ;;AAyBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EAvBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color:$gold-color;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 600px);\n$text-container-size: clamp(300px, 40vw, 600px);\n$font-size: clamp(0.9rem, 1.6vw, 1.2rem);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-block: 2.5vh;\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n\n    line-height: 1.6;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 100%;\n    padding: 1rem;\n\n    background-color: $background-color;\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: cover;\n    //all the same img for now...\n    /* background-image: url('../assets/fish.jpg'); */\n    \n    //border: 2px solid $blue-color;\n    border-radius: 10px;\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem min(5rem, 5vw);\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n#section-1 .img-container{\n    background-image: url('../assets/FH_front.png');\n}\n\n#section-2 .img-container{\n    background-image: url('../assets/FH_packed.png');\n}\n\n#section-3 .img-container{\n    background-image: url('../assets/FH_potatoes.png');\n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -754,20 +754,35 @@ a:active {
   flex-direction: column;
   align-items: center;
   margin-left: 5rem;
+  position: relative;
 }
 #home-tab #home-heading {
   /* font-family: 'Rozha One', serif; */
   color: #a3771f;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: calc(1.5rem + 0.5vw);
   text-shadow: 0.8px 0.8px #4fa9cc;
   letter-spacing: 1.8px;
 }
 #home-tab #home-sub-heading {
-  font-size: 1rem;
+  font-size: calc(0.8rem + 0.3vw);
   color: white;
   margin-top: -0.15rem;
+}
+#home-tab #seagull-icon-a {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: calc(1.5rem + 0.3vw);
+}
+#home-tab #seagull-icon-b {
+  display: block;
+  position: absolute;
+  top: 65%;
+  right: 0.4rem;
+  width: calc(1.5rem + 0.3vw);
 }
 
 #right-side {
@@ -814,6 +829,10 @@ a:active {
   min-width: 100vw;
   margin-left: 0;
 }
+#dropdown-box.active #seagull-icon-a,
+#dropdown-box.active #seagull-icon-b {
+  display: none;
+}
 
 @media only screen and (max-width: 650px) {
   #dropdown-box.active > #home-tab > #home-heading {
@@ -846,8 +865,8 @@ a:active {
     cursor: pointer;
   }
   #menu-button .line {
-    width: 3rem;
-    height: 0.3rem;
+    width: calc(2rem + 0.3vw);
+    height: calc(0.2rem + 0.3vw);
     border-radius: 100px;
     background-color: #ebd693;
     transform-origin: left center;
@@ -861,19 +880,19 @@ a:active {
     background-color: #4fa9cc;
   }
   #menu-button.active #line1 {
-    translate: 0 -0.15rem;
-    width: 2.4038rem;
+    translate: 0 calc((0.2rem + 0.3vw) / -2);
+    width: calc((0.8rem + (0.2rem + 0.3vw) * 3) * 1.414);
     rotate: 45deg;
   }
   #menu-button.active #line3 {
-    translate: 0 0.15rem;
-    width: 2.4038rem;
+    translate: 0 calc((0.2rem + 0.3vw) / 2);
+    width: calc((0.8rem + (0.2rem + 0.3vw) * 3) * 1.414);
     rotate: -45deg;
   }
   #home-tab {
     margin-left: 3rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAuBA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,2DAAA;EACA,cC9BS;ED+BT,yBCrCc;EDsCd,sCAAA;EACA,gCAAA;AAvBJ;;AA0BA;EACI,eAjCe;EAkCf,sBAAA;EACA,gBAAA;EAEA,eAAA;AAxBJ;;AA2BA;EACI,sBAAA;EACA,gBAAA;AAxBJ;;AA2BA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;AAxBJ;AA0BI;EACI,qCAAA;EACA,cCxDU;EDyDV,yBAAA;EACA,gBAAA;EACA,eA1DK;EA2DL,gCAAA;EACA,qBAAA;AAxBR;AA4BI;EACI,eAhES;EAiET,YAAA;EACA,oBAAA;AA1BR;;AA8BA;EACI,mBAAA;AA3BJ;;AA8BA;EACI,yBAAA;AA3BJ;;AA8BA;EACI,gCAAA;EACA,yCAAA;AA3BJ;;AA8BA;EACI,aAAA;AA3BJ;;AA8BA;EACI,kBAAA;EACA,MAAA;EAIA,qBAAA;AA9BJ;;AAiCA;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAjCJ;AAmCI;EACI,cCrHK;EDsHL,kBAjHa;EAkHb,yBAAA;EACA,gBAAA;EACA,cAAA;AAjCR;;AAsCA;EAEG;IAGS,qCAAA;IACA,cCpIC;IDqID,yBAAA;IACA,kBAjIS;IAkIT,iBAAA;IACA,iBAAA;IACA,gBAAA;EAtCV;EA0CE;IACI,aAAA;EAxCN;EA2CE;IAEI,0BAAA;IACA,8BClJK;IDmJL,8BAAA;EA1CN;EA8CE;IACI,aAAA;IACA,sBAAA;IACA,WApJU;IAqJV,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCvKU;IDwKV,YAAA;IAEA,YAAA;IAEA,eAAA;EA/CN;EAiDM;IACI,WAhKC;IAiKD,cAhKE;IAkKF,oBAAA;IAEA,yBC9KC;IDiLD,6BAAA;IAGA,wFAAA;EArDV;EA+DM;IACI,QAAA;IACA,UAAA;EA7DV;EAgEM;IACI,yBClMC;EDoIX;EAiEM;IACI,qBAAA;IACA,gBA7LO;IA8LP,aAAA;EA/DV;EAkEM;IACI,oBAAA;IACA,gBAnMO;IAoMP,cAAA;EAhEV;EAqEE;IACI,iBAAA;EAnEN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n //COLORS\n $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\n//FONT SIZES\n$title-size: 2rem;\n$sub-title-size: 1rem;\n$header-link-size: 1rem;\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: 3rem;\n$line-height: 0.3rem;\n$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 90px;\n    z-index: 40;\n    \n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    /* font-family: Georgia, 'Times New Roman', Times, serif; */\n    color: $gold-color;\n    background-color: $background-dark;\n    /* background: $gradient-background; */\n    border-bottom: 2px solid $gold-color;\n}\n\na{\n    font-size: $header-link-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\na:active{\n    transform: scale(1.01);\n    transition: 0.2s;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n    \n    #home-heading{\n        /* font-family: 'Rozha One', serif; */\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 600;\n        font-size: $title-size;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: $sub-title-size;\n        color: white;\n        margin-top: -0.15rem;\n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    position: absolute;\n    top: 0;\n    //z-index: -5;\n    //transform: translateY(-90px);\n\n    transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n    align-items: center;\n    text-align: center;\n    \n    z-index: 1;\n    min-width: 100vw;\n    min-height: 100vh;\n    \n    padding: min(30vh, 250px) 0;\n    gap: calc(2.5rem + 0.33vh);\n\n    background: #2a2a2ab4;\n    backdrop-filter: blur(10px);\n\n    a{\n        color: $gold-color;\n        font-size: $dropdown-link-size;\n        text-transform: uppercase;\n        min-width: 100vw;\n        margin-left: 0;\n    }\n}\n\n\n@media only screen and (max-width: 650px){\n    \n   #dropdown-box.active\n    > #home-tab\n    > #home-heading{\n            /* font-family: 'Rozha One', serif; */\n            color: $gold-color;\n            text-transform: uppercase;\n            font-size: $dropdown-link-size;\n            text-shadow: none;\n            letter-spacing: 0;\n            font-weight: 400;\n\n    }\n    \n    #right-side{\n        display: none;    \n    }\n\n    #dropdown-box.active\n    a.active{\n        text-decoration: underline;\n        text-decoration-color: $blue-color;\n        text-decoration-thickness: 3px;\n        \n    }\n\n    #menu-button{\n        display: flex;\n        flex-direction: column;\n        gap: $menu-button-gap;\n        margin-right: 2.5rem;\n\n        width: max-content;\n        height: max-content; \n        background-color: $background-dark;\n        border: none;\n\n        z-index: 999;\n\n        cursor: pointer;\n\n        .line{\n            width: $line-width;\n            height: $line-height;\n\n            border-radius: 100px;\n\n            background-color: $gold-color;\n\n            //for rotation\n            transform-origin: left center;\n\n            //animation\n            transition: rotate $lines-animate-time,\n                        width $lines-animate-time,\n                        translate $lines-animate-time,\n                        opacity $lines-animate-time,\n                        background-color $lines-animate-time;\n        }\n\n    }\n\n    #menu-button.active{\n        #line2{\n            width: 0;\n            opacity: 0;\n        }\n\n        #line1, #line3{\n            background-color: $blue-color;\n        }\n\n        #line1{\n            translate: 0 calc($line-height / -2);\n            width: $line-cross-width;\n            rotate: 45deg;\n        }\n\n        #line3{\n            translate: 0 calc($line-height / 2);\n            width: $line-cross-width;\n            rotate: -45deg;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAuBA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,2DAAA;EACA,cC9BS;ED+BT,yBCrCc;EDsCd,sCAAA;EACA,gCAAA;AAvBJ;;AA0BA;EACI,eAjCe;EAkCf,sBAAA;EACA,gBAAA;EAEA,eAAA;AAxBJ;;AA2BA;EACI,sBAAA;EACA,gBAAA;AAxBJ;;AA2BA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AAzBJ;AA2BI;EACI,qCAAA;EACA,cC1DU;ED2DV,yBAAA;EACA,gBAAA;EACA,+BA5DK;EA6DL,gCAAA;EACA,qBAAA;AAzBR;AA6BI;EACI,+BAlES;EAmET,YAAA;EACA,oBAAA;AA3BR;AA8BI;EACI,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AA5BR;AAgCI;EACI,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AA9BR;;AAmCA;EACI,mBAAA;AAhCJ;;AAmCA;EACI,yBAAA;AAhCJ;;AAmCA;EACI,gCAAA;EACA,yCAAA;AAhCJ;;AAmCA;EACI,aAAA;AAhCJ;;AAmCA;EACI,kBAAA;EACA,MAAA;EAIA,qBAAA;AAnCJ;;AAsCA;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAtCJ;AAwCI;EACI,cCzIK;ED0IL,kBArIa;EAsIb,yBAAA;EACA,gBAAA;EACA,cAAA;AAtCR;AAyCI;;EAEI,aAAA;AAvCR;;AA6CA;EAEG;IAGS,qCAAA;IACA,cC9JC;ID+JD,yBAAA;IACA,kBA3JS;IA4JT,iBAAA;IACA,iBAAA;IACA,gBAAA;EA7CV;EAiDE;IACI,aAAA;EA/CN;EAkDE;IAEI,0BAAA;IACA,8BC5KK;ID6KL,8BAAA;EAjDN;EAqDE;IACI,aAAA;IACA,sBAAA;IACA,WA9KU;IA+KV,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCjMU;IDkMV,YAAA;IAEA,YAAA;IAEA,eAAA;EAtDN;EAwDM;IACI,yBA1LC;IA2LD,4BA1LE;IA4LF,oBAAA;IAEA,yBCxMC;ID2MD,6BAAA;IAGA,wFAAA;EA5DV;EAsEM;IACI,QAAA;IACA,UAAA;EApEV;EAuEM;IACI,yBC5NC;EDuJX;EAwEM;IACI,wCAAA;IACA,oDAvNO;IAwNP,aAAA;EAtEV;EAyEM;IACI,uCAAA;IACA,oDA7NO;IA8NP,cAAA;EAvEV;EA4EE;IACI,iBAAA;EA1EN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n //COLORS\n $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\n//FONT SIZES\n$title-size: calc(1.5rem + 0.5vw);\n$sub-title-size: calc(0.8rem + 0.3vw);\n$header-link-size: 1rem;\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 90px;\n    z-index: 40;\n    \n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    /* font-family: Georgia, 'Times New Roman', Times, serif; */\n    color: $gold-color;\n    background-color: $background-dark;\n    /* background: $gradient-background; */\n    border-bottom: 2px solid $gold-color;\n}\n\na{\n    font-size: $header-link-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\na:active{\n    transform: scale(1.01);\n    transition: 0.2s;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n\n    position: relative;\n    \n    #home-heading{\n        /* font-family: 'Rozha One', serif; */\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 600;\n        font-size: $title-size;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: $sub-title-size;\n        color: white;\n        margin-top: -0.15rem;\n    }\n\n    #seagull-icon-a{\n        display: block;\n        position: absolute;\n        top: 60%;\n        left: 0;\n        width: calc(1.5rem + 0.3vw);\n        \n    }\n\n    #seagull-icon-b{\n        display: block;\n        position: absolute;\n        top: 65%;\n        right: 0.4rem;\n        width: calc(1.5rem + 0.3vw);\n        \n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    position: absolute;\n    top: 0;\n    //z-index: -5;\n    //transform: translateY(-90px);\n\n    transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n    align-items: center;\n    text-align: center;\n    \n    z-index: 1;\n    min-width: 100vw;\n    min-height: 100vh;\n    \n    padding: min(30vh, 250px) 0;\n    gap: calc(2.5rem + 0.33vh);\n\n    background: #2a2a2ab4;\n    backdrop-filter: blur(10px);\n\n    a{\n        color: $gold-color;\n        font-size: $dropdown-link-size;\n        text-transform: uppercase;\n        min-width: 100vw;\n        margin-left: 0;\n    }\n\n    #seagull-icon-a,\n    #seagull-icon-b{\n        display: none; \n    }\n}\n\n\n\n@media only screen and (max-width: 650px){\n    \n   #dropdown-box.active\n    > #home-tab\n    > #home-heading{\n            /* font-family: 'Rozha One', serif; */\n            color: $gold-color;\n            text-transform: uppercase;\n            font-size: $dropdown-link-size;\n            text-shadow: none;\n            letter-spacing: 0;\n            font-weight: 400;\n\n    }\n    \n    #right-side{\n        display: none;    \n    }\n\n    #dropdown-box.active\n    a.active{\n        text-decoration: underline;\n        text-decoration-color: $blue-color;\n        text-decoration-thickness: 3px;\n        \n    }\n\n    #menu-button{\n        display: flex;\n        flex-direction: column;\n        gap: $menu-button-gap;\n        margin-right: 2.5rem;\n\n        width: max-content;\n        height: max-content; \n        background-color: $background-dark;\n        border: none;\n\n        z-index: 999;\n\n        cursor: pointer;\n\n        .line{\n            width: $line-width;\n            height: $line-height;\n\n            border-radius: 100px;\n\n            background-color: $gold-color;\n\n            //for rotation\n            transform-origin: left center;\n\n            //animation\n            transition: rotate $lines-animate-time,\n                        width $lines-animate-time,\n                        translate $lines-animate-time,\n                        opacity $lines-animate-time,\n                        background-color $lines-animate-time;\n        }\n\n    }\n\n    #menu-button.active{\n        #line2{\n            width: 0;\n            opacity: 0;\n        }\n\n        #line1, #line3{\n            background-color: $blue-color;\n        }\n\n        #line1{\n            translate: 0 calc($line-height / -2);\n            width: $line-cross-width;\n            rotate: 45deg;\n        }\n\n        #line3{\n            translate: 0 calc($line-height / 2);\n            width: $line-cross-width;\n            rotate: -45deg;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -909,7 +928,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
   grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));
   place-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-block: 1rem;
 }
 #homepage-container > div {
   width: clamp(300px, 100vw, 1200px);
@@ -995,7 +1014,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA+BA;EACI,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,gBAAA;AA/BJ;AAkCI;EACI,kCAAA;EACA,+BAAA;EACA,iBAAA;AAhCR;;AAqCA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,4GA5Ca;EA8Cb,2BAAA;EACA,sBAAA;EAEA,wCAAA;AArCJ;AAuCI;EACI,iCAvCa;EAwCb,gBAAA;EACA,yBAAA;EACA,cC5DK;ADuBb;AAwCI;EACI,gBAAA;EACA,uCA9CW;EA+CX,cAAA;EACA,YArEY;AA+BpB;;AA4CA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EAEA,yBCtFc;EDuFd,uCAAA;AA1CJ;AA4CI;EACI,YAAA;EACA,OAAA;EACA,qCAlES;EAmET,cCvFK;AD6Cb;AA6CI;EACI,OAAA;AA3CR;AA8CI;EACI,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCzGU;AD6DlB;AA8CQ;EACI,uCAjFO;EAkFP,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1GQ;AA8DpB;AA+CQ;EACI,qCAxFM;EAyFN,gCAAA;AA7CZ;AAgDQ;EACI,gBAAA;EACA,qBAAA;EACA,YApHO;AAsEnB;AAiDQ;EACI,qCAlGO;EAmGP,YAxHQ;AAyEpB;;AAoDA;EACI;IACI,sBAAA;EAjDN;EAmDM;IACI,eAAA;IACA,eAAA;EAjDV;AACF","sourcesContent":["@import './colors.scss';\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(\n    rgba(0, 0, 0, 0.7),\n    rgba(0, 0, 0, 0.7)\n),\nurl('../assets/fish.jpg');\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: clamp(2rem, 5vw, 3rem);\n$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.5rem);\n$hours-msg-size: clamp(1rem, 1.5vw, 1.2rem);\n$hours-title-size: clamp(1.2rem, 1.5vw, 1.4rem);\n$hours-days-size: clamp(1rem, 1.3vw, 1.2rem);\n$hours-times-size: clamp(0.9rem, 1.2vw, 1rem);\n\n#homepage-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n    place-items: center;\n    gap: 1rem;\n\n    margin-top: 1rem;\n    \n\n    >div{\n        width: clamp(300px, 100vw, 1200px);\n        /* width: min(1200px, 100vw); */\n        min-height: 400px;\n\n    }\n}\n\n#welcome{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n\n    background: $welcome-bg-img;\n\n    background-position: center;\n    background-size: cover;\n\n    /* font-family: 'Merriweather', serif; */\n\n    #welcome-title{\n        font-size: $welcome-title-size;\n        font-weight: 700;\n        text-transform: uppercase;\n        color: $welcome-title-color\n    }\n\n    #welcome-msg{\n        margin-top: 2rem;\n        font-size: $welcome-msg-size;\n        max-width: 80%;\n        color: $welcome-msg-color;\n\n\n    }\n}\n\n#hours{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    padding: 1rem;\n\n    background-color: $hours-background-color;\n    /* border-top: 1px solid $gold-color; */\n    \n    #hours-msg{\n        padding: 10%;\n        flex: 1;\n        font-size: $hours-msg-size;\n        color: $hours-msg-color\n    }\n\n    #hours-div{\n        flex: 1;\n    }\n\n    #hours-info{\n        max-width: 80%;\n        padding: 2rem;\n        border: 1px solid $blue-color;\n        border-radius: 10px;\n        background-color: $hours-times-background-color;\n\n        #title{\n            font-size: $hours-title-size;\n            padding: 0 1rem;\n            border: 2px solid $hours-title-border-color;\n            border-radius: 10px;\n            color: $hours-title-color;\n        }\n\n        .heading{\n            font-size: $hours-days-size;\n            border-bottom: 1px solid $days-border-color;\n        }\n        \n        .days{\n            margin-top: 1rem;\n            margin-bottom: 0.5rem;\n            color: $hours-days-color;\n        }\n\n        .times{\n            font-size: $hours-times-size;\n            color: $hours-times-color;\n        }\n    }\n}\n\n@media only screen and (max-width: 800px){    \n    #hours{\n        flex-direction: column;\n\n        #hours-info{\n            max-width: 100%;\n            padding: 2.5rem;\n        }\n    }\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA+BA;EACI,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA/BJ;AAkCI;EACI,kCAAA;EACA,+BAAA;EACA,iBAAA;AAhCR;;AAqCA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,4GA5Ca;EA8Cb,2BAAA;EACA,sBAAA;EAEA,wCAAA;AArCJ;AAuCI;EACI,iCAvCa;EAwCb,gBAAA;EACA,yBAAA;EACA,cC5DK;ADuBb;AAwCI;EACI,gBAAA;EACA,uCA9CW;EA+CX,cAAA;EACA,YArEY;AA+BpB;;AA4CA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EAEA,yBCtFc;EDuFd,uCAAA;AA1CJ;AA4CI;EACI,YAAA;EACA,OAAA;EACA,qCAlES;EAmET,cCvFK;AD6Cb;AA6CI;EACI,OAAA;AA3CR;AA8CI;EACI,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCzGU;AD6DlB;AA8CQ;EACI,uCAjFO;EAkFP,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1GQ;AA8DpB;AA+CQ;EACI,qCAxFM;EAyFN,gCAAA;AA7CZ;AAgDQ;EACI,gBAAA;EACA,qBAAA;EACA,YApHO;AAsEnB;AAiDQ;EACI,qCAlGO;EAmGP,YAxHQ;AAyEpB;;AAoDA;EACI;IACI,sBAAA;EAjDN;EAmDM;IACI,eAAA;IACA,eAAA;EAjDV;AACF","sourcesContent":["@import './colors.scss';\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(\n    rgba(0, 0, 0, 0.7),\n    rgba(0, 0, 0, 0.7)\n),\nurl('../assets/fish.jpg');\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: clamp(2rem, 5vw, 3rem);\n$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.5rem);\n$hours-msg-size: clamp(1rem, 1.5vw, 1.2rem);\n$hours-title-size: clamp(1.2rem, 1.5vw, 1.4rem);\n$hours-days-size: clamp(1rem, 1.3vw, 1.2rem);\n$hours-times-size: clamp(0.9rem, 1.2vw, 1rem);\n\n#homepage-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n    place-items: center;\n    gap: 1rem;\n\n    margin-block: 1rem;\n    \n\n    >div{\n        width: clamp(300px, 100vw, 1200px);\n        /* width: min(1200px, 100vw); */\n        min-height: 400px;\n\n    }\n}\n\n#welcome{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n\n    background: $welcome-bg-img;\n\n    background-position: center;\n    background-size: cover;\n\n    /* font-family: 'Merriweather', serif; */\n\n    #welcome-title{\n        font-size: $welcome-title-size;\n        font-weight: 700;\n        text-transform: uppercase;\n        color: $welcome-title-color\n    }\n\n    #welcome-msg{\n        margin-top: 2rem;\n        font-size: $welcome-msg-size;\n        max-width: 80%;\n        color: $welcome-msg-color;\n\n\n    }\n}\n\n#hours{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    padding: 1rem;\n\n    background-color: $hours-background-color;\n    /* border-top: 1px solid $gold-color; */\n    \n    #hours-msg{\n        padding: 10%;\n        flex: 1;\n        font-size: $hours-msg-size;\n        color: $hours-msg-color\n    }\n\n    #hours-div{\n        flex: 1;\n    }\n\n    #hours-info{\n        max-width: 80%;\n        padding: 2rem;\n        border: 1px solid $blue-color;\n        border-radius: 10px;\n        background-color: $hours-times-background-color;\n\n        #title{\n            font-size: $hours-title-size;\n            padding: 0 1rem;\n            border: 2px solid $hours-title-border-color;\n            border-radius: 10px;\n            color: $hours-title-color;\n        }\n\n        .heading{\n            font-size: $hours-days-size;\n            border-bottom: 1px solid $days-border-color;\n        }\n        \n        .days{\n            margin-top: 1rem;\n            margin-bottom: 0.5rem;\n            color: $hours-days-color;\n        }\n\n        .times{\n            font-size: $hours-times-size;\n            color: $hours-times-color;\n        }\n    }\n}\n\n@media only screen and (max-width: 800px){    \n    #hours{\n        flex-direction: column;\n\n        #hours-info{\n            max-width: 100%;\n            padding: 2.5rem;\n        }\n    }\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1108,7 +1127,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
   text-transform: uppercase;
   color: #4fa9cc;
   border-bottom: 1px solid #4fa9cc;
-  font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
 }
 
 .section-heading, .menu-item {
@@ -1127,7 +1146,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .menu-item:not(.item-option) {
   margin-top: 1rem;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 .menu-item-name {
@@ -1157,7 +1176,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .menu-item-price::before {
   content: "£";
-}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;EAEA,yBAAA;AAjBJ;;AAoBA;EACI;IACI,6DAAA;EAjBN;AACF;AAqBA;EACI,eAAA;AAnBJ;;AAsBA;EACI,yBAAA;EACA,cCvCS;EDwCT,gCA9Ca;EA+Cb,uCArCmB;AAkBvB;;AAsBA;EACI,cAAA;AAnBJ;;AAsBA;EACI,UAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AAnBJ;;AAsBA;EACI,gBAAA;EACA,qCAvDQ;AAoCZ;;AAsBA;EACI,cClES;EDmET,0BAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,qBAAA;AAnBJ;;AAsBA;EACI,YAAA;EACA,qCArEU;AAkDd;;AAsBA;EACI,YAAA;EACA,gBAAA;AAnBJ;;AAsBA;EACI,YAnFe;EAoFf,uCA9ES;AA2Db;;AAsBA;EACI,YAAA;AAnBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: white;\n\n//-SIZES\n$section-heading-size: clamp(1.4rem, 1.5vw, 1.8rem);\n$item-size: clamp(1rem, 1.8vw, 1.2rem);\n$option-size: clamp(0.7rem, 0.8vw, 1rem);\n$price-size: clamp(0.9rem, 1.5vw, 1.2rem);\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: clamp(85vw, 60vw, 95vw);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n\n    border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n.menu-section{\n    max-width: 80vw;\n}\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;EAEA,yBAAA;AAjBJ;;AAoBA;EACI;IACI,6DAAA;EAjBN;AACF;AAqBA;EACI,eAAA;AAnBJ;;AAsBA;EACI,yBAAA;EACA,cCvCS;EDwCT,gCA9Ca;EA+Cb,wCArCmB;AAkBvB;;AAsBA;EACI,cAAA;AAnBJ;;AAsBA;EACI,UAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AAnBJ;;AAsBA;EACI,gBAAA;EACA,qCAvDQ;AAoCZ;;AAsBA;EACI,cClES;EDmET,0BAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,qBAAA;AAnBJ;;AAsBA;EACI,YAAA;EACA,qCArEU;AAkDd;;AAsBA;EACI,YAAA;EACA,gBAAA;AAnBJ;;AAsBA;EACI,YAnFe;EAoFf,uCA9ES;AA2Db;;AAsBA;EACI,YAAA;AAnBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: white;\n\n//-SIZES\n$section-heading-size: clamp(1.25rem, 1.8vw, 1.6rem);\n$item-size: clamp(1rem, 1.5vw, 1.2rem);\n$option-size: clamp(0.7rem, 0.8vw, 1rem);\n$price-size: clamp(0.9rem, 1.5vw, 1.2rem);\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: clamp(85vw, 60vw, 95vw);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n\n    border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n.menu-section{\n    max-width: 80vw;\n}\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2238,6 +2257,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _styles_header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/header.scss */ "./src/styles/header.scss");
+/* harmony import */ var _assets_seagull_1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/seagull_1.png */ "./src/assets/seagull_1.png");
+/* harmony import */ var _assets_seagull_2_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/seagull_2.png */ "./src/assets/seagull_2.png");
+/* harmony import */ var _assets_seagull_3_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/seagull_3.png */ "./src/assets/seagull_3.png");
+
+
+
 
 
 const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line class="lines" x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
@@ -2270,6 +2295,15 @@ const buildHeader = (()=>{
     line3.classList.add('line');
     line3.id = 'line3';
 
+    // seagull images
+    const seagullIconA = document.createElement('img');
+    seagullIconA.src = _assets_seagull_1_png__WEBPACK_IMPORTED_MODULE_1__;
+    seagullIconA.id = 'seagull-icon-a';
+    const seagullIconB = document.createElement('img');
+    seagullIconB.src = _assets_seagull_3_png__WEBPACK_IMPORTED_MODULE_3__;
+    seagullIconB.id = 'seagull-icon-b';
+
+
     menuButton.appendChild(line1);
     menuButton.appendChild(line2);
     menuButton.appendChild(line3);
@@ -2300,6 +2334,9 @@ const buildHeader = (()=>{
 
     home.appendChild(homeHeading);
     home.appendChild(homeSubHeading);
+    home.appendChild(seagullIconA);
+    home.appendChild(seagullIconB);
+
     menu.textContent = 'Menu';
     about.textContent = 'About';
     contact.textContent = 'Contact';
@@ -2740,6 +2777,36 @@ module.exports = __webpack_require__.p + "FH_potatoes.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fish.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/seagull_1.png":
+/*!**********************************!*\
+  !*** ./src/assets/seagull_1.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "seagull_1.png";
+
+/***/ }),
+
+/***/ "./src/assets/seagull_2.png":
+/*!**********************************!*\
+  !*** ./src/assets/seagull_2.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "seagull_2.png";
+
+/***/ }),
+
+/***/ "./src/assets/seagull_3.png":
+/*!**********************************!*\
+  !*** ./src/assets/seagull_3.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "seagull_3.png";
 
 /***/ })
 
