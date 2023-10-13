@@ -22,12 +22,12 @@ $hours-title-border-color: $blue-color;
 $days-border-color: $blue-color;
 
 //FONTSIZES
-$welcome-title-size: clamp(2.8rem, 5vw, 4.5rem);
-$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.8rem);
-$hours-msg-size: clamp(1.3rem, 1.5vw, 1.5rem);
-$hours-title-size: clamp(1.6rem, 2vw, 1.8rem);
-$hours-days-size: clamp(1.4rem, 1.6vw, 1.6rem);
-$hours-times-size: clamp(1rem, 1.3vw, 1.2rem);
+$welcome-title-size: clamp(2rem, 5vw, 3rem);
+$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.5rem);
+$hours-msg-size: clamp(1rem, 1.5vw, 1.2rem);
+$hours-title-size: clamp(1.2rem, 1.5vw, 1.4rem);
+$hours-days-size: clamp(1rem, 1.3vw, 1.2rem);
+$hours-times-size: clamp(0.9rem, 1.2vw, 1rem);
 
 #homepage-container{
     display: grid;
@@ -72,7 +72,7 @@ $hours-times-size: clamp(1rem, 1.3vw, 1.2rem);
         font-size: $welcome-msg-size;
         max-width: 80%;
         color: $welcome-msg-color;
-        /* text-transform: uppercase; */
+
 
     }
 }

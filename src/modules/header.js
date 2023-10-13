@@ -78,10 +78,10 @@ const buildHeader = (()=>{
     header.appendChild(menuButton);
     header.appendChild(dropDownBox);
     
-    home.addEventListener('click', ()=>{
+/*     home.addEventListener('click', ()=>{
         if(menuButton.classList.contains('active'))
             toggleDropbox();
-    })
+    }) */
 
     //add eventlisteners to all links
     //to reset page position
@@ -104,19 +104,35 @@ const buildHeader = (()=>{
     const toggleDropbox = ()=>{
         dropDownBox.classList.toggle('active');
         menuButton.classList.toggle('active');
+
+        toggleHomeLinkDisplay(dropDownBox.classList.contains('active'));
+
         if(dropDownBox.classList.contains('active')){
+            dropDownBox.appendChild(home);
             dropDownBox.appendChild(menu);
             dropDownBox.appendChild(about);
             dropDownBox.appendChild(contact)
 
         }
         else{
+            dropDownBox.removeChild(home);
             dropDownBox.removeChild(menu);
             dropDownBox.removeChild(about);
             dropDownBox.removeChild(contact);
+            left.appendChild(home);
             right.appendChild(menu);
             right.appendChild(about);
             right.appendChild(contact);
+        }
+    }
+
+    const toggleHomeLinkDisplay = (inDropbox)=>{
+        if(inDropbox){
+            homeHeading.textContent = 'Home';
+            homeSubHeading.style.display = 'none';
+        } else{
+            homeHeading.textContent = 'Ferryhill';
+            homeSubHeading.style.display = 'block';
         }
     }
 

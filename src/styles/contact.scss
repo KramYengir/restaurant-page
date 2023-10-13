@@ -9,14 +9,15 @@ $msg-bold-color: $blue-color;
 //FONT SIZES
 $heading: clamp(1rem, 20px, 1.2rem);
 $standard: clamp(0.8rem, 16px, 1rem);
-$highlight: clamp(0.9rem, 18px, 1.1rem);;
-$social-heading: clamp(1rem, 26px, 1.4rem);
+$highlight: clamp(0.9rem, 19px, 1.2rem);
+$social-heading: clamp(1rem, 22px, 1.2rem);
 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 #contact-container{
@@ -37,12 +38,10 @@ $social-heading: clamp(1rem, 26px, 1.4rem);
 .contact-section{
     display: flex;
     padding: 0.5rem;
-    /* gap: 1rem; */
 }
 
 .box{
     flex: 1;
-    /* background-color: white; */
     min-width: 50%;
     height: 100%;
     padding-block: 2rem;
@@ -100,7 +99,6 @@ $social-heading: clamp(1rem, 26px, 1.4rem);
         font-size: $standard;
         color: $msg-font-color;
         margin-bottom: 1.5rem;
-        line-height: 1.4;
 
         width: clamp(100px, 80%, 800px);
     }
@@ -120,6 +118,11 @@ $social-heading: clamp(1rem, 26px, 1.4rem);
     .social-text{
         font-size: $social-heading;
         color: $gold-color;
+    }
+
+    .social-name{
+        font-size: calc($social-heading * 1.2);
+        font-weight: 700;
     }
 
     svg{

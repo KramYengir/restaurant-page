@@ -7,13 +7,13 @@ $container-background-color: $background-dark-90;
 $section-background-color: $gold-dark-color;
 $heading-color: $blue-color;
 $item-name-color: $gold-color;
-$item-price-color: $blue-color;;
+$item-price-color: white;
 
 //-SIZES
-$section-heading-size: clamp(1.4rem, 2.8vw, 1.8rem);
+$section-heading-size: clamp(1.4rem, 1.5vw, 1.8rem);
 $item-size: clamp(1rem, 1.8vw, 1.2rem);
-$option-size: clamp(0.7rem, 1.4vw, 1rem);
-$price-size: clamp(1rem, 1.8vw, 1.2rem);
+$option-size: clamp(0.7rem, 0.8vw, 1rem);
+$price-size: clamp(0.9rem, 1.5vw, 1.2rem);
 
 #menu-container{
     display: grid;
