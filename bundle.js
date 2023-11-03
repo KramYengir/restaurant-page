@@ -434,9 +434,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_front.png */ "./src/assets/FH_front.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_packed.png */ "./src/assets/FH_packed.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_potatoes.png */ "./src/assets/FH_potatoes.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/mike-amelia.jpg */ "./src/assets/mike-amelia.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/christos.png */ "./src/assets/christos.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/inside-store.png */ "./src/assets/inside-store.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -470,21 +470,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
 }
 
 .img-container {
-  aspect-ratio: 4/3;
+  aspect-ratio: 1;
   width: clamp(300px, 65vw, 400px);
   background-position: center;
   background-size: cover;
-  /* background-image: url('../assets/fish.jpg'); */
   border-radius: 10px;
 }
 
 .text-container {
   /* aspect-ratio: 4/3; */
   width: clamp(300px, 60vw, 450px);
-  padding: 1rem min(5rem, 5vw);
+  padding: 1rem min(5rem, 3vw);
   font-size: calc(12px + 0.390625vw);
   text-align: center;
-  color: #ebd693;
+  color: white;
 }
 
 #section-1 .img-container {
@@ -505,7 +504,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbJ;;AAgBA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCChCiB;EDiCjB,mBAAA;AAdJ;;AAkBA;EACI,2BAAA;AAfJ;;AAmBA;EACI,iBAAA;EACA,gCAvCO;EAyCP,2BAAA;EACA,sBAAA;EAEA,iDAAA;EAGA,mBAAA;AApBJ;;AAwBA;EACI,uBAAA;EACA,gCApDkB;EAqDlB,4BAAA;EAEA,kCAtDQ;EAuDR,kBAAA;EACA,cC3DS;ADqCb;;AA0BA;EACI,yDAAA;AAvBJ;;AA0BA;EACI,yDAAA;AAvBJ;;AA0BA;EACI,yDAAA;AAvBJ;;AA2BA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EAzBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color:$gold-color;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 400px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-block: 2.5vh;\n\n    width: clamp(300px, 95vw, 1000px);\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n\n    line-height: 1.6;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 1rem;\n\n    background-color: $background-color;\n    border-radius: 10px;\n\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 4/3;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: cover;\n    //all the same img for now...\n    /* background-image: url('../assets/fish.jpg'); */\n    \n    //border: 2px solid $blue-color;\n    border-radius: 10px;\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem min(5rem, 5vw);\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n    \n}\n\n#section-1 .img-container{\n    background-image: url('../assets/FH_front.png');\n}\n\n#section-2 .img-container{\n    background-image: url('../assets/FH_packed.png');\n}\n\n#section-3 .img-container{\n    background-image: url('../assets/FH_potatoes.png');\n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbJ;;AAgBA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCChCiB;EDiCjB,mBAAA;AAdJ;;AAkBA;EACI,2BAAA;AAfJ;;AAmBA;EACI,eAAA;EACA,gCAvCO;EAyCP,2BAAA;EACA,sBAAA;EACA,mBAAA;AAjBJ;;AAqBA;EACI,uBAAA;EACA,gCAhDkB;EAiDlB,4BAAA;EAEA,kCAlDQ;EAmDR,kBAAA;EACA,YAzDS;AAsCb;;AAsBA;EACI,yDAAA;AAnBJ;;AAsBA;EACI,yDAAA;AAnBJ;;AAsBA;EACI,yDAAA;AAnBJ;;AAuBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EArBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 400px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-block: 2.5vh;\n\n    width: clamp(300px, 95vw, 1000px);\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n\n    line-height: 1.6;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 1rem;\n\n    background-color: $background-color;\n    border-radius: 10px;\n\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 1;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: cover;\n    border-radius: 10px;\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem min(5rem, 3vw);\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n}\n\n#section-1 .img-container{\n    background-image: url('../assets/mike-amelia.jpg');\n}\n\n#section-2 .img-container{\n    background-image: url('../assets/christos.png');\n}\n\n#section-3 .img-container{\n    background-image: url('../assets/inside-store.png');\n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1997,9 +1996,16 @@ __webpack_require__.r(__webpack_exports__);
 const buildAboutpage = (()=>{
 
     const textContent = [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.',
+        `Ferryhill Fish and Chips is a family-run business established in 
+        2013 by husband and wife, Mike and Amelia.
+        With over 30 years working within the industry, 
+        we bring our knowledge and passion to provide quality food and 
+        good friendly service to our customers.`,
+        `Under the stewardship of nephew Christos since 2020, our shop has flourished, 
+        garnering consistent 5-star reviews on Google. 
+        Our menu continues to evolve, and we are proud to have been voted 
+        the best chippy in Manchester by readers of salfordnow.co.uk in 2023.`,
+        `Under Christos's leadership, the menu has expanded to include a diverse selection of vegan, vegetarian, and gluten-free options, catering to a wide range of dietary preferences.`,
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.'
     ]
 
@@ -2740,33 +2746,13 @@ const buildMenu = (()=>{
 
 /***/ }),
 
-/***/ "./src/assets/FH_front.png":
+/***/ "./src/assets/christos.png":
 /*!*********************************!*\
-  !*** ./src/assets/FH_front.png ***!
+  !*** ./src/assets/christos.png ***!
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "FH_front.png";
-
-/***/ }),
-
-/***/ "./src/assets/FH_packed.png":
-/*!**********************************!*\
-  !*** ./src/assets/FH_packed.png ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "FH_packed.png";
-
-/***/ }),
-
-/***/ "./src/assets/FH_potatoes.png":
-/*!************************************!*\
-  !*** ./src/assets/FH_potatoes.png ***!
-  \************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "FH_potatoes.png";
+module.exports = __webpack_require__.p + "christos.png";
 
 /***/ }),
 
@@ -2777,6 +2763,26 @@ module.exports = __webpack_require__.p + "FH_potatoes.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fish.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/inside-store.png":
+/*!*************************************!*\
+  !*** ./src/assets/inside-store.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "inside-store.png";
+
+/***/ }),
+
+/***/ "./src/assets/mike-amelia.jpg":
+/*!************************************!*\
+  !*** ./src/assets/mike-amelia.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "mike-amelia.jpg";
 
 /***/ }),
 
