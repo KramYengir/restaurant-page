@@ -2,7 +2,7 @@
 
 //COLORS
 $background-color: $background-dark-90;
-$font-color:$gold-color;
+$font-color: white;
 
 //SIZES
 $img-size: clamp(300px, 65vw, 400px);
@@ -43,15 +43,11 @@ $font-size: calc(12px + 0.390625vw);
 
 
 .img-container{
-    aspect-ratio: 4/3;
+    aspect-ratio: 1;
     width: $img-size;
     
     background-position: center;
     background-size: cover;
-    //all the same img for now...
-    /* background-image: url('../assets/fish.jpg'); */
-    
-    //border: 2px solid $blue-color;
     border-radius: 10px;
     
 }
@@ -59,24 +55,23 @@ $font-size: calc(12px + 0.390625vw);
 .text-container{
     /* aspect-ratio: 4/3; */
     width: $text-container-size;
-    padding: 1rem min(5rem, 5vw);
+    padding: 1rem min(5rem, 3vw);
     
     font-size: $font-size;
     text-align: center;
     color: $font-color;
-    
 }
 
 #section-1 .img-container{
-    background-image: url('../assets/FH_front.png');
+    background-image: url('../assets/mike-amelia.jpg');
 }
 
 #section-2 .img-container{
-    background-image: url('../assets/FH_packed.png');
+    background-image: url('../assets/christos.png');
 }
 
 #section-3 .img-container{
-    background-image: url('../assets/FH_potatoes.png');
+    background-image: url('../assets/inside-store.png');
 }
 
 
