@@ -5,15 +5,17 @@ $background-color: $background-dark-90;
 $font-color:$gold-color;
 
 //SIZES
-$img-size: clamp(300px, 65vw, 600px);
-$text-container-size: clamp(300px, 40vw, 600px);
-$font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+$img-size: clamp(300px, 65vw, 400px);
+$text-container-size: clamp(300px, 60vw, 450px);
+$font-size: calc(12px + 0.390625vw);
 
 #about-container{
     flex-grow: 1;
     align-self: center;
     padding: 0 0;
     margin-block: 2.5vh;
+
+    width: clamp(300px, 95vw, 1000px);
     
     display: grid;
     grid-template-columns: auto;
@@ -28,10 +30,11 @@ $font-size: clamp(0.9rem, 1.6vw, 1.2rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100%;
     padding: 1rem;
 
     background-color: $background-color;
+    border-radius: 10px;
+
 }
 
 .section:nth-child(even){

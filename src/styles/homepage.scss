@@ -22,12 +22,12 @@ $hours-title-border-color: $blue-color;
 $days-border-color: $blue-color;
 
 //FONTSIZES
-$welcome-title-size: clamp(2rem, 5vw, 3rem);
-$welcome-msg-size: clamp(1.2rem, 1.8vw, 1.5rem);
-$hours-msg-size: clamp(1rem, 1.5vw, 1.2rem);
-$hours-title-size: clamp(1.2rem, 1.5vw, 1.4rem);
-$hours-days-size: clamp(1rem, 1.3vw, 1.2rem);
-$hours-times-size: clamp(0.9rem, 1.2vw, 1rem);
+$welcome-title-size: calc(24px + 0.390625vw);
+$welcome-msg-size: calc(16px + 0.390625vw);
+$hours-msg-size: calc(16px + 0.390625vw);
+$hours-title-size: calc(18px + 0.390625vw);
+$hours-days-size: calc(16px + 0.390625vw);
+$hours-times-size: calc(14px + 0.390625vw);
 
 #homepage-container{
     display: grid;
@@ -39,10 +39,10 @@ $hours-times-size: clamp(0.9rem, 1.2vw, 1rem);
     
 
     >div{
-        width: clamp(300px, 100vw, 1200px);
+        width: clamp(300px, 95vw, 1000px);
         /* width: min(1200px, 100vw); */
         min-height: 400px;
-
+        border-radius: 10px;
     }
 }
 
@@ -52,6 +52,8 @@ $hours-times-size: clamp(0.9rem, 1.2vw, 1rem);
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    padding-inline: 0.8rem;
 
     background: $welcome-bg-img;
 
