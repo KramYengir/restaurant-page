@@ -10,10 +10,10 @@ $item-name-color: $gold-color;
 $item-price-color: white;
 
 //-SIZES
-$section-heading-size: clamp(1.25rem, 1.8vw, 1.6rem);
-$item-size: clamp(1rem, 1.5vw, 1.2rem);
-$option-size: clamp(0.7rem, 0.8vw, 1rem);
-$price-size: clamp(0.9rem, 1.5vw, 1.2rem);
+$section-heading-size: calc(18px + 0.390625vw);;
+$item-size: calc(14px + 0.390625vw);
+$option-size: calc(10px + 0.390625vw);;
+$price-size: calc(12px + 0.390625vw);;
 
 #menu-container{
     display: grid;
@@ -22,7 +22,7 @@ $price-size: clamp(0.9rem, 1.5vw, 1.2rem);
     align-self: center;
     gap: 3rem;
     /* flex-grow: 1; */
-    width: clamp(85vw, 60vw, 95vw);
+    width: min(85vw, 1000px);
     min-height: 95%;
     
     background-color: $container-background-color;
@@ -39,9 +39,9 @@ $price-size: clamp(0.9rem, 1.5vw, 1.2rem);
 
 }
 
-.menu-section{
-    max-width: 80vw;
-}
+/* .menu-section{
+    max-width: 80%;
+} */
 
 .section-heading{
     text-transform: uppercase;
