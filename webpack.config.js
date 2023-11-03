@@ -24,7 +24,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource'
       }
     ],
@@ -34,6 +34,7 @@ module.exports = {
         title: 'Halloumi Gold',
         filename: 'index.html',
         template: 'src/template.html',
+        favicon: 'src/assets/favicon.ico',
     })
   ],
   mode: 'development'

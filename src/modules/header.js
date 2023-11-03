@@ -7,6 +7,7 @@ const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="c
 
 const buildHeader = (()=>{
 
+    const headerContainer = document.createElement('div');
     const header = document.createElement('header');
     const left = document.createElement('div');
     const right = document.createElement('div');
@@ -16,10 +17,9 @@ const buildHeader = (()=>{
     const about = document.createElement('a');
     const contact = document.createElement('a');
 
-
     const menuButton = document.createElement('button');
-    //add svg to menu button
-    /* menuButton.innerHTML = SVG; */
+    
+    headerContainer.id = 'header-container'
 
     //instead, I'm going to use three divs inside the
     //button to create the hamburger effect
@@ -92,6 +92,7 @@ const buildHeader = (()=>{
     header.appendChild(right);
     header.appendChild(menuButton);
     header.appendChild(dropDownBox);
+    headerContainer.appendChild(header);
     
 /*     home.addEventListener('click', ()=>{
         if(menuButton.classList.contains('active'))
@@ -151,7 +152,7 @@ const buildHeader = (()=>{
         }
     }
 
-    return header;
+    return headerContainer;
 
 })();
 
