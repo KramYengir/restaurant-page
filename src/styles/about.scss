@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap');
 
 //COLORS
 $background-color: $background-dark-90;
@@ -24,6 +25,8 @@ $font-size: calc(12px + 0.390625vw);
     grid-row-gap: 2rem;
 
     line-height: 1.6;
+
+
 }
 
 .section{
@@ -53,10 +56,26 @@ $font-size: calc(12px + 0.390625vw);
     /* aspect-ratio: 4/3; */
     width: $text-container-size;
     padding: 1rem min(5rem, 3vw);
-    
-    font-size: $font-size;
     text-align: center;
-    color: $font-color;
+
+    h3, p{
+        //font-family: 'Mulish', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        //font-family: 'Roboto', sans-serif;
+    }
+
+    h3{
+        color: $gold-color;
+        text-transform: uppercase; 
+        margin-bottom: 2rem; 
+        letter-spacing: 3px;
+    }
+    
+    p{
+        font-size: $font-size;
+        color: $font-color;
+
+    }
 }
 
 @media only screen and (max-width: 800px){

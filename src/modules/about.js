@@ -2,10 +2,12 @@ import '../styles/about.scss';
 import mikeAmeliaImg from '../assets/mike-amelia.jpg';
 import christosImg from '../assets/christos.png';
 import menuImg from '../assets/inside-store.png';
+import wrappedFoodImg from '../assets/wrapped-food.png';
 
 const buildAboutpage = (()=>{
 
-    const images = [mikeAmeliaImg, christosImg, menuImg];
+    const images = [mikeAmeliaImg, christosImg, menuImg, wrappedFoodImg];
+    const headings = ['Who we are', 'Our standards', 'Our food', 'our shmerkle shmerkle'];
 
     const textContent = [];
     textContent[0] = 
@@ -33,7 +35,7 @@ const buildAboutpage = (()=>{
     container.id = 'about-container';
 
     
-    for(let i = 0; i < textContent.length-1; i++){
+    for(let i = 0; i < textContent.length; i++){
 
         let img = document.createElement('img');
         img.classList.add('img');
@@ -43,7 +45,12 @@ const buildAboutpage = (()=>{
         let textContainer = document.createElement('div');
         textContainer.classList.add('text-container');
         textContainer.id = `text-${i}`;
-        textContainer.textContent = `${textContent[i]}`;
+        let heading = document.createElement('h3');
+        heading.textContent = headings[i];
+        let paragraph = document.createElement('p');
+        paragraph.textContent = `${textContent[i]}`;
+        textContainer.appendChild(heading);
+        textContainer.appendChild(paragraph);
 
         let section = document.createElement('div');
         section.classList.add('section')
