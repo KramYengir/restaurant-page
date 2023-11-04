@@ -428,19 +428,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
-
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/mike-amelia.jpg */ "./src/assets/mike-amelia.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/christos.png */ "./src/assets/christos.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/inside-store.png */ "./src/assets/inside-store.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
-var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
-var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap);"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   flex-grow: 1;
@@ -469,11 +461,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   flex-direction: row-reverse;
 }
 
-.img-container {
+.img {
   aspect-ratio: 1;
   width: clamp(300px, 65vw, 400px);
-  background-position: center;
-  background-size: cover;
   border-radius: 10px;
 }
 
@@ -481,21 +471,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   /* aspect-ratio: 4/3; */
   width: clamp(300px, 60vw, 450px);
   padding: 1rem min(5rem, 3vw);
-  font-size: calc(12px + 0.390625vw);
   text-align: center;
+}
+.text-container h3, .text-container p {
+  font-family: "Open Sans", sans-serif;
+}
+.text-container h3 {
+  color: #ebd693;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+.text-container p {
+  font-size: calc(12px + 0.390625vw);
   color: white;
-}
-
-#section-1 .img-container {
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-}
-
-#section-2 .img-container {
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
-}
-
-#section-3 .img-container {
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
 }
 
 @media only screen and (max-width: 800px) {
@@ -504,7 +493,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAWA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbJ;;AAgBA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCChCiB;EDiCjB,mBAAA;AAdJ;;AAkBA;EACI,2BAAA;AAfJ;;AAmBA;EACI,eAAA;EACA,gCAvCO;EAyCP,2BAAA;EACA,sBAAA;EACA,mBAAA;AAjBJ;;AAqBA;EACI,uBAAA;EACA,gCAhDkB;EAiDlB,4BAAA;EAEA,kCAlDQ;EAmDR,kBAAA;EACA,YAzDS;AAsCb;;AAsBA;EACI,yDAAA;AAnBJ;;AAsBA;EACI,yDAAA;AAnBJ;;AAsBA;EACI,yDAAA;AAnBJ;;AAuBA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EArBN;AACF","sourcesContent":["@import './colors.scss';\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 400px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-block: 2.5vh;\n\n    width: clamp(300px, 95vw, 1000px);\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n\n    line-height: 1.6;\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 1rem;\n\n    background-color: $background-color;\n    border-radius: 10px;\n\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img-container{\n    aspect-ratio: 1;\n    width: $img-size;\n    \n    background-position: center;\n    background-size: cover;\n    border-radius: 10px;\n    \n}\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem min(5rem, 3vw);\n    \n    font-size: $font-size;\n    text-align: center;\n    color: $font-color;\n}\n\n#section-1 .img-container{\n    background-image: url('../assets/mike-amelia.jpg');\n}\n\n#section-2 .img-container{\n    background-image: url('../assets/christos.png');\n}\n\n#section-3 .img-container{\n    background-image: url('../assets/inside-store.png');\n}\n\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbJ;;AAkBA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCnCiB;EDoCjB,mBAAA;AAhBJ;;AAoBA;EACI,2BAAA;AAjBJ;;AAqBA;EACI,eAAA;EACA,gCAzCO;EA0CP,mBAAA;AAlBJ;;AAsBA;EACI,uBAAA;EACA,gCA/CkB;EAgDlB,4BAAA;EACA,kBAAA;AAnBJ;AAqBI;EAEI,oCAAA;AApBR;AAwBI;EACI,cC7DK;ED8DL,yBAAA;EACA,mBAAA;EACA,mBAAA;AAtBR;AAyBI;EACI,kCAhEI;EAiEJ,YAtEK;AA+Cb;;AA4BA;EAEI;IACI,sBAAA;IACA,eAAA;IACA,SAAA;EA1BN;AACF","sourcesContent":["@import './colors.scss';\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap');\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 400px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container{\n    flex-grow: 1;\n    align-self: center;\n    padding: 0 0;\n    margin-block: 2.5vh;\n\n    width: clamp(300px, 95vw, 1000px);\n    \n    display: grid;\n    grid-template-columns: auto;\n    justify-content: center;\n    align-items: center;\n    grid-row-gap: 2rem;\n\n    line-height: 1.6;\n\n\n}\n\n.section{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 1rem;\n\n    background-color: $background-color;\n    border-radius: 10px;\n\n}\n\n.section:nth-child(even){\n    flex-direction: row-reverse;\n}\n\n\n.img{\n    aspect-ratio: 1;\n    width: $img-size;\n    border-radius: 10px;    \n}\n\n\n.text-container{\n    /* aspect-ratio: 4/3; */\n    width: $text-container-size;\n    padding: 1rem min(5rem, 3vw);\n    text-align: center;\n\n    h3, p{\n        //font-family: 'Mulish', sans-serif;\n        font-family: 'Open Sans', sans-serif;\n        //font-family: 'Roboto', sans-serif;\n    }\n\n    h3{\n        color: $gold-color;\n        text-transform: uppercase; \n        margin-bottom: 2rem; \n        letter-spacing: 3px;\n    }\n    \n    p{\n        font-size: $font-size;\n        color: $font-color;\n\n    }\n}\n\n@media only screen and (max-width: 800px){\n   \n    .section, .section:nth-child(even){\n        flex-direction: column;\n        min-width: 95vw;\n        gap: 1rem;\n   }\n\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1991,53 +1980,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _styles_about_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/about.scss */ "./src/styles/about.scss");
+/* harmony import */ var _assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/mike-amelia.jpg */ "./src/assets/mike-amelia.jpg");
+/* harmony import */ var _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/christos.png */ "./src/assets/christos.png");
+/* harmony import */ var _assets_inside_store_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/inside-store.png */ "./src/assets/inside-store.png");
+/* harmony import */ var _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/wrapped-food.png */ "./src/assets/wrapped-food.png");
+
+
+
+
 
 
 const buildAboutpage = (()=>{
 
-    const textContent = [
+    const images = [_assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__, _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__, _assets_inside_store_png__WEBPACK_IMPORTED_MODULE_3__, _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__];
+    const headings = ['Who we are', 'Our standards', 'Our food', 'our shmerkle shmerkle'];
+
+    const textContent = [];
+    textContent[0] = 
         `Ferryhill Fish and Chips is a family-run business established in 
         2013 by husband and wife, Mike and Amelia.
         With over 30 years working within the industry, 
         we bring our knowledge and passion to provide quality food and 
-        good friendly service to our customers.`,
-        `Under the stewardship of nephew Christos since 2020, our shop has flourished, 
-        garnering consistent 5-star reviews on Google. 
+        good friendly service to our customers.`;
+    textContent[1] = 
+        `Under the stewardship of nephew Christos since 2020, our shop has 
+        flourished, garnering consistent 5-star reviews on Google. 
         Our menu continues to evolve, and we are proud to have been voted 
-        the best chippy in Manchester by readers of salfordnow.co.uk in 2023.`,
-        `Under Christos's leadership, the menu has expanded to include a diverse selection of vegan, vegetarian, and gluten-free options, catering to a wide range of dietary preferences.`,
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ultrices enim sed ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis posuere orci.'
-    ]
+        the best chippy in Manchester by readers of salfordnow.co.uk in 2023.`;
+    textContent[2] = 
+        `Our ever-expanding menu continues to add a 
+        diverse selection of vegan, vegetarian, and gluten-free options, 
+        catering to a wide range of dietary preferences.`;
+    textContent[3] = 
+        `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Pellentesque finibus ultrices enim sed ornare. Orci varius natoque 
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        Donec quis posuere orci.`;
 
     const container = document.createElement('div');
     container.id = 'about-container';
 
     
-    for(let i = 1; i<4; i++){
+    for(let i = 0; i < textContent.length; i++){
 
-        let imgContainer = document.createElement('div');
-        imgContainer.classList.add('img-container');
-        imgContainer.id = `img-${i}`;
+        let img = document.createElement('img');
+        img.classList.add('img');
+        img.id = `img-${i}`;
+        img.src = images[i];
 
         let textContainer = document.createElement('div');
         textContainer.classList.add('text-container');
         textContainer.id = `text-${i}`;
-        textContainer.textContent = `${textContent[i-1]}`;
+        let heading = document.createElement('h3');
+        heading.textContent = headings[i];
+        let paragraph = document.createElement('p');
+        paragraph.textContent = `${textContent[i]}`;
+        textContainer.appendChild(heading);
+        textContainer.appendChild(paragraph);
 
         let section = document.createElement('div');
         section.classList.add('section')
 
-        section.appendChild(imgContainer);
+        section.appendChild(img);
         section.appendChild(textContainer);
 
         section.id = `section-${i}`;
 
-        /* let seperator = document.createElement('div');
-        seperator.classList.add('seperator'); */
-
         container.appendChild(section);
-        /* container.appendChild(textContainer); */
-        /* container.appendChild(seperator); */
         
     }
 
@@ -2813,6 +2822,16 @@ module.exports = __webpack_require__.p + "seagull_2.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "seagull_3.png";
+
+/***/ }),
+
+/***/ "./src/assets/wrapped-food.png":
+/*!*************************************!*\
+  !*** ./src/assets/wrapped-food.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "wrapped-food.png";
 
 /***/ })
 
