@@ -42,15 +42,12 @@ $font-size: calc(12px + 0.390625vw);
 }
 
 
-.img-container{
+.img{
     aspect-ratio: 1;
     width: $img-size;
-    
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
+
 
 .text-container{
     /* aspect-ratio: 4/3; */
@@ -61,19 +58,6 @@ $font-size: calc(12px + 0.390625vw);
     text-align: center;
     color: $font-color;
 }
-
-#section-1 .img-container{
-    background-image: url('../assets/mike-amelia.jpg');
-}
-
-#section-2 .img-container{
-    background-image: url('../assets/christos.png');
-}
-
-#section-3 .img-container{
-    background-image: url('../assets/inside-store.png');
-}
-
 
 @media only screen and (max-width: 800px){
    
