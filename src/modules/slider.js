@@ -1,9 +1,9 @@
 import "../styles/slider.scss";
 
-const msg0 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
-const msg1 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
-const msg2 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
-const msg3 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
+const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds`;
+const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled And Chipped <span>Fresh</span> On The Day`;
+const msg2 = `We <span>Fry</span> In 100% Uncontaminated <span>Sustainable</span> Palm Oil`;
+const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable And <span>Biodegradable</span>`;
 
 const icons = ["fa-fish", "fa-house", "fa-cat", "fa-dog"];
 
@@ -37,7 +37,7 @@ const Slider = (() => {
     icon.classList.add("fa-solid");
     icon.classList.add(`${icons[i]}`);
     let p = document.createElement("p");
-    p.innerText = msgs[i];
+    p.innerHTML = msgs[i];
     textBox.appendChild(p);
     textBox.appendChild(icon);
     slide.appendChild(textBox);
