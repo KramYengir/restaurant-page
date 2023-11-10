@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap");
 
 //FONT COLORS
 $welcome-title-color: $gold-color;
@@ -25,6 +26,10 @@ $hours-msg-size: calc(16px + 0.390625vw);
 $hours-title-size: calc(18px + 0.390625vw);
 $hours-days-size: calc(16px + 0.390625vw);
 $hours-times-size: calc(14px + 0.390625vw);
+
+#homepage-container *:not(i) {
+  font-family: "Poppins", sans-serif;
+}
 
 #homepage-container {
   display: grid;
