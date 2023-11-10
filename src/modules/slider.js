@@ -1,5 +1,14 @@
 import "../styles/slider.scss";
 
+const msg0 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
+const msg1 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
+const msg2 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
+const msg3 = `Our Fish Are Line Caught From Sustainable Fishing Grounds`;
+
+const icons = ["fa-fish", "fa-house", "fa-cat", "fa-dog"];
+
+const msgs = [msg0, msg1, msg2, msg3];
+
 const Slider = (() => {
   const sliderContainer = document.createElement("div");
   const prevBtn = document.createElement("button");
@@ -10,13 +19,30 @@ const Slider = (() => {
   sliderContainer.classList.add("slider-container");
   prevBtn.classList.add("prev-btn");
   nextBtn.classList.add("next-btn");
+  prevBtn.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
+  nextBtn.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
 
   // create slide & dot elements
   for (let i = 0; i < 4; i++) {
+    // slide first
     let slide = document.createElement("div");
     slide.classList.add("slide");
     slide.dataset.index = i;
+    slide.id = `slide${i}`;
 
+    // then textbox
+    let textBox = document.createElement("div");
+    textBox.classList.add("flex-centered");
+    let icon = document.createElement("i");
+    icon.classList.add("fa-solid");
+    icon.classList.add(`${icons[i]}`);
+    let p = document.createElement("p");
+    p.innerText = msgs[i];
+    textBox.appendChild(p);
+    textBox.appendChild(icon);
+    slide.appendChild(textBox);
+
+    // then dots
     let dot = document.createElement("div");
     dot.dataset.index = i;
     dot.classList.add("dot");
