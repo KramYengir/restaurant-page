@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import "./colors.scss";
 
 //FONT COLORS
 $welcome-title-color: $gold-color;
@@ -9,11 +9,8 @@ $hours-days-color: white;
 $hours-times-color: white;
 
 //BACKGROUND IMAGE
-$welcome-bg-img: linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)
-),
-url('../assets/fish.jpg');
+$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url("../assets/fish.jpg");
 
 //BORDER & BACKGROUND COLORS
 $hours-background-color: $background-dark;
@@ -29,117 +26,114 @@ $hours-title-size: calc(18px + 0.390625vw);
 $hours-days-size: calc(16px + 0.390625vw);
 $hours-times-size: calc(14px + 0.390625vw);
 
-#homepage-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));
-    place-items: center;
-    gap: 1rem;
+#homepage-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));
+  place-items: center;
+  gap: 1rem;
 
-    margin-block: 1rem;
-    
+  margin-block: 1rem;
 
-    >div{
-        width: clamp(300px, 95vw, 1000px);
-        /* width: min(1200px, 100vw); */
-        min-height: 400px;
-        border-radius: 10px;
-    }
+  > div {
+    width: clamp(300px, 95vw, 1000px);
+    /* width: min(1200px, 100vw); */
+    min-height: 400px;
+    border-radius: 10px;
+  }
 }
 
-#welcome{
-    display: flex;
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding-inline: 0.8rem;
+
+  background: $welcome-bg-img;
+
+  background-position: center;
+  background-size: cover;
+
+  /* font-family: 'Merriweather', serif; */
+
+  #welcome-title {
+    font-size: $welcome-title-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $welcome-title-color;
+  }
+
+  #welcome-msg {
+    margin-top: 2rem;
+    font-size: $welcome-msg-size;
+    max-width: 80%;
+    color: $welcome-msg-color;
+  }
+}
+
+#hours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+
+  background-color: $hours-background-color;
+  /* border-top: 1px solid $gold-color; */
+
+  #hours-msg {
+    padding: 10%;
+    flex: 1;
+    font-size: $hours-msg-size;
+    color: $hours-msg-color;
+  }
+
+  #hours-div {
+    flex: 1;
+  }
+
+  #hours-info {
+    max-width: 80%;
+    padding: 2rem;
+    border: 1px solid $blue-color;
+    border-radius: 10px;
+    background-color: $hours-times-background-color;
+
+    #title {
+      font-size: $hours-title-size;
+      padding: 0 1rem;
+      border: 2px solid $hours-title-border-color;
+      border-radius: 10px;
+      color: $hours-title-color;
+    }
+
+    .heading {
+      font-size: $hours-days-size;
+      border-bottom: 1px solid $days-border-color;
+    }
+
+    .days {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: $hours-days-color;
+    }
+
+    .times {
+      font-size: $hours-times-size;
+      color: $hours-times-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #hours {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
-    padding-inline: 0.8rem;
-
-    background: $welcome-bg-img;
-
-    background-position: center;
-    background-size: cover;
-
-    /* font-family: 'Merriweather', serif; */
-
-    #welcome-title{
-        font-size: $welcome-title-size;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: $welcome-title-color
+    #hours-info {
+      max-width: 100%;
+      padding: 2.5rem;
     }
-
-    #welcome-msg{
-        margin-top: 2rem;
-        font-size: $welcome-msg-size;
-        max-width: 80%;
-        color: $welcome-msg-color;
-
-
-    }
-}
-
-#hours{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-
-    background-color: $hours-background-color;
-    /* border-top: 1px solid $gold-color; */
-    
-    #hours-msg{
-        padding: 10%;
-        flex: 1;
-        font-size: $hours-msg-size;
-        color: $hours-msg-color
-    }
-
-    #hours-div{
-        flex: 1;
-    }
-
-    #hours-info{
-        max-width: 80%;
-        padding: 2rem;
-        border: 1px solid $blue-color;
-        border-radius: 10px;
-        background-color: $hours-times-background-color;
-
-        #title{
-            font-size: $hours-title-size;
-            padding: 0 1rem;
-            border: 2px solid $hours-title-border-color;
-            border-radius: 10px;
-            color: $hours-title-color;
-        }
-
-        .heading{
-            font-size: $hours-days-size;
-            border-bottom: 1px solid $days-border-color;
-        }
-        
-        .days{
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            color: $hours-days-color;
-        }
-
-        .times{
-            font-size: $hours-times-size;
-            color: $hours-times-color;
-        }
-    }
-}
-
-@media only screen and (max-width: 800px){    
-    #hours{
-        flex-direction: column;
-
-        #hours-info{
-            max-width: 100%;
-            padding: 2.5rem;
-        }
-    }
+  }
 }

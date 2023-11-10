@@ -1,0 +1,86 @@
+$container-width: 100%;
+$container-height: calc(var($container-width) * 0.56);
+
+.slider-container {
+  position: relative;
+  /* width: $container-width;
+  height: $container-height; */
+  background: slategray;
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 95%;
+    height: 95%;
+    background: darkslategray;
+
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+
+    img {
+      display: none;
+      overflow: hidden;
+    }
+    .active-img {
+      display: block;
+    }
+  }
+
+  & > button {
+    position: absolute;
+    top: 70%;
+
+    width: 100px;
+    height: 50px;
+
+    opacity: 50%;
+
+    cursor: pointer;
+  }
+
+  .prev-btn {
+    left: 1%;
+  }
+
+  .next-btn {
+    right: 1%;
+  }
+
+  .dot {
+    position: absolute;
+    bottom: 4%;
+
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    opacity: 30%;
+
+    cursor: pointer;
+  }
+
+  .dot.active-dot {
+    opacity: 100%;
+  }
+
+  #dot0 {
+    left: 42.5%;
+  }
+
+  #dot1 {
+    left: 47.5%;
+  }
+
+  #dot2 {
+    left: 52.5%;
+  }
+
+  #dot3 {
+    left: 57.5%;
+  }
+}

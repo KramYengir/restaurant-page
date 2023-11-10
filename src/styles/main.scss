@@ -1,36 +1,35 @@
-@import './colors.scss';
-@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import "./colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
-
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Merriweather', serif;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
 }
 
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#content, #content-main{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+#content,
+#content-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-#content{
-    justify-content: space-between;
-    width: 100%;
-
+#content {
+  justify-content: space-between;
+  width: 100%;
 }
 
-#content-main{
-    margin-top: 90px;
-    margin-bottom: 50px; 
-    background-color: $blue-dark-color;
+#content-main {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  background-color: $blue-dark-color;
 }
