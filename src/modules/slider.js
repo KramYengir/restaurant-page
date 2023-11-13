@@ -9,6 +9,8 @@ const icons = ["fa-fish", "fa-house", "fa-cat", "fa-dog"];
 
 const msgs = [msg0, msg1, msg2, msg3];
 
+let startX;
+
 const Slider = (() => {
   const sliderContainer = document.createElement("div");
   const prevBtn = document.createElement("button");
@@ -85,6 +87,35 @@ const Slider = (() => {
       setCurrentDot();
     });
   });
+
+  sliderContainer.addEventListener("touchstart", handleTouchStart);
+  sliderContainer.addEventListener("touchmove", handleTouchMove);
+
+  function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+  }
+
+  function handleTouchMove(event) {
+    if (!startX) return;
+
+    const currentX = event.touches[0].clientX;
+    const diffX = startX - currentX;
+
+    // Adjust this threshold based on your needs
+    if (Math.abs(diffX) > 50) {
+      // Swipe right
+      if (diffX > 0) {
+        loadNextSlide();
+      }
+      // Swipe left
+      else {
+        loadPrevSlide();
+      }
+
+      // Reset startX to avoid rapid swiping
+      startX = null;
+    }
+  }
 
   function loadNextSlide() {
     let currentSlide = getCurrentSlide();
