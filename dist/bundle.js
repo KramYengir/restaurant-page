@@ -475,12 +475,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
 }
 .text-container h3,
 .text-container p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .text-container h3 {
   color: #ebd693;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 3px;
 }
 .text-container p {
@@ -495,7 +495,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACE,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbF;;AAgBA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCjCmB;EDkCnB,mBAAA;AAdF;;AAiBA;EACE,2BAAA;AAdF;;AAiBA;EACE,eAAA;EACA,gCArCS;EAsCT,mBAAA;AAdF;;AAiBA;EACE,uBAAA;EACA,gCA1CoB;EA2CpB,4BAAA;EACA,kBAAA;AAdF;AAgBE;;EAGE,oCAAA;AAfJ;AAmBE;EACE,cCzDS;ED0DT,yBAAA;EACA,mBAAA;EACA,mBAAA;AAjBJ;AAoBE;EACE,kCA5DQ;EA6DR,YAlES;AAgDb;;AAsBA;EACE;;IAEE,sBAAA;IACA,eAAA;IACA,SAAA;EAnBF;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 400px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container {\n  flex-grow: 1;\n  align-self: center;\n  padding: 0 0;\n  margin-block: 2.5vh;\n\n  width: clamp(300px, 95vw, 1000px);\n\n  display: grid;\n  grid-template-columns: auto;\n  justify-content: center;\n  align-items: center;\n  grid-row-gap: 2rem;\n\n  line-height: 1.6;\n}\n\n.section {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n\n  background-color: $background-color;\n  border-radius: 10px;\n}\n\n.section:nth-child(even) {\n  flex-direction: row-reverse;\n}\n\n.img {\n  aspect-ratio: 1;\n  width: $img-size;\n  border-radius: 10px;\n}\n\n.text-container {\n  /* aspect-ratio: 4/3; */\n  width: $text-container-size;\n  padding: 1rem min(5rem, 3vw);\n  text-align: center;\n\n  h3,\n  p {\n    //font-family: 'Mulish', sans-serif;\n    font-family: \"Open Sans\", sans-serif;\n    //font-family: 'Roboto', sans-serif;\n  }\n\n  h3 {\n    color: $gold-color;\n    text-transform: uppercase;\n    margin-bottom: 2rem;\n    letter-spacing: 3px;\n  }\n\n  p {\n    font-size: $font-size;\n    color: $font-color;\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  .section,\n  .section:nth-child(even) {\n    flex-direction: column;\n    min-width: 95vw;\n    gap: 1rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACE,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbF;;AAgBA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCjCmB;EDkCnB,mBAAA;AAdF;;AAiBA;EACE,2BAAA;AAdF;;AAiBA;EACE,eAAA;EACA,gCArCS;EAsCT,mBAAA;AAdF;;AAiBA;EACE,uBAAA;EACA,gCA1CoB;EA2CpB,4BAAA;EACA,kBAAA;AAdF;AAgBE;;EAIE,iCAAA;AAhBJ;AAmBE;EACE,cCzDS;ED0DT,yBAAA;EACA,qBAAA;EACA,mBAAA;AAjBJ;AAoBE;EACE,kCA5DQ;EA6DR,YAlES;AAgDb;;AAsBA;EACE;;IAEE,sBAAA;IACA,eAAA;IACA,SAAA;EAnBF;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 65vw, 400px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container {\n  flex-grow: 1;\n  align-self: center;\n  padding: 0 0;\n  margin-block: 2.5vh;\n\n  width: clamp(300px, 95vw, 1000px);\n\n  display: grid;\n  grid-template-columns: auto;\n  justify-content: center;\n  align-items: center;\n  grid-row-gap: 2rem;\n\n  line-height: 1.6;\n}\n\n.section {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n\n  background-color: $background-color;\n  border-radius: 10px;\n}\n\n.section:nth-child(even) {\n  flex-direction: row-reverse;\n}\n\n.img {\n  aspect-ratio: 1;\n  width: $img-size;\n  border-radius: 10px;\n}\n\n.text-container {\n  /* aspect-ratio: 4/3; */\n  width: $text-container-size;\n  padding: 1rem min(5rem, 3vw);\n  text-align: center;\n\n  h3,\n  p {\n    //font-family: 'Mulish', sans-serif;\n    //font-family: \"Open Sans\", sans-serif;\n    font-family: \"Roboto\", sans-serif;\n  }\n\n  h3 {\n    color: $gold-color;\n    text-transform: uppercase;\n    margin-bottom: 1.5rem;\n    letter-spacing: 3px;\n  }\n\n  p {\n    font-size: $font-size;\n    color: $font-color;\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  .section,\n  .section:nth-child(even) {\n    flex-direction: column;\n    min-width: 95vw;\n    gap: 1rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -727,7 +727,7 @@ header {
 }
 
 a {
-  font-size: 1rem;
+  font-size: calc(12px + 0.3vw);
   background-color: none;
   margin: 0 1.5rem;
   cursor: pointer;
@@ -750,12 +750,12 @@ a:active {
   color: #a3771f;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: calc(1.5rem + 0.5vw);
+  font-size: calc(22px + 0.5vw);
   text-shadow: 0.8px 0.8px #4fa9cc;
   letter-spacing: 1.8px;
 }
 #home-tab #home-sub-heading {
-  font-size: calc(0.8rem + 0.3vw);
+  font-size: calc(12px + 0.3vw);
   color: white;
   margin-top: -0.15rem;
 }
@@ -865,7 +865,8 @@ a:active {
     width: 0;
     opacity: 0;
   }
-  #menu-button.active #line1, #menu-button.active #line3 {
+  #menu-button.active #line1,
+  #menu-button.active #line3 {
     background-color: #4fa9cc;
   }
   #menu-button.active #line1 {
@@ -881,7 +882,7 @@ a:active {
   #home-tab {
     margin-left: 3rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AAuBA;EACI,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,cC7BS;ED8BT,yBCpCc;EDqCd,gCAAA;AAvBJ;;AA0BA;EACI,eA/Be;EAgCf,sBAAA;EACA,gBAAA;EAEA,eAAA;AAxBJ;;AA2BA;EACI,sBAAA;EACA,gBAAA;AAxBJ;;AA2BA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AAzBJ;AA2BI;EACI,qCAAA;EACA,cCxDU;EDyDV,yBAAA;EACA,gBAAA;EACA,+BA1DK;EA2DL,gCAAA;EACA,qBAAA;AAzBR;AA6BI;EACI,+BAhES;EAiET,YAAA;EACA,oBAAA;AA3BR;AA8BI;EACI,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AA5BR;AAgCI;EACI,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AA9BR;;AAmCA;EACI,mBAAA;AAhCJ;;AAmCA;EACI,yBAAA;AAhCJ;;AAmCA;EACI,gCAAA;EACA,yCAAA;AAhCJ;;AAmCA;EACI,aAAA;AAhCJ;;AAmCA;EACI,kBAAA;EACA,MAAA;EAIA,qBAAA;AAnCJ;;AAsCA;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAtCJ;AAwCI;EACI,cCvIK;EDwIL,kBAnIa;EAoIb,yBAAA;EACA,gBAAA;EACA,cAAA;AAtCR;AAyCI;;EAEI,aAAA;AAvCR;;AA6CA;EAEG;IAGS,qCAAA;IACA,cC5JC;ID6JD,yBAAA;IACA,kBAzJS;IA0JT,iBAAA;IACA,iBAAA;IACA,gBAAA;EA7CV;EAiDE;IACI,aAAA;EA/CN;EAkDE;IAEI,0BAAA;IACA,8BC1KK;ID2KL,8BAAA;EAjDN;EAqDE;IACI,aAAA;IACA,sBAAA;IACA,WA5KU;IA6KV,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBC/LU;IDgMV,YAAA;IAEA,YAAA;IAEA,eAAA;EAtDN;EAwDM;IACI,yBAxLC;IAyLD,4BAxLE;IA0LF,oBAAA;IAEA,yBCtMC;IDyMD,6BAAA;IAGA,wFAAA;EA5DV;EAsEM;IACI,QAAA;IACA,UAAA;EApEV;EAuEM;IACI,yBC1NC;EDqJX;EAwEM;IACI,wCAAA;IACA,oDArNO;IAsNP,aAAA;EAtEV;EAyEM;IACI,uCAAA;IACA,oDA3NO;IA4NP,cAAA;EAvEV;EA4EE;IACI,iBAAA;EA1EN;AACF","sourcesContent":["@import './colors.scss';\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n \n //COLORS\n $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);\n\n//FONT SIZES\n$title-size: calc(1.5rem + 0.5vw);\n$sub-title-size: calc(0.8rem + 0.3vw);\n$header-link-size: 1rem;\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader{\n    position: fixed;\n    padding: 0.5rem 0;\n    min-height: 90px;\n    z-index: 40;\n    \n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    \n    color: $gold-color;\n    background-color: $background-dark;\n    border-bottom: 1px solid $gold-color;\n}\n\na{\n    font-size: $header-link-size;\n    background-color: none;\n    margin: 0 1.5rem;\n    \n    cursor: pointer;\n}\n\na:active{\n    transform: scale(1.01);\n    transition: 0.2s;\n}\n\n#home-tab{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-left: 5rem;\n\n    position: relative;\n    \n    #home-heading{\n        /* font-family: 'Rozha One', serif; */\n        color: $gold-dark-color;\n        text-transform: uppercase;\n        font-weight: 600;\n        font-size: $title-size;\n        text-shadow: 0.8px 0.8px $blue-color;\n        letter-spacing: 1.8px;\n\n    }\n    \n    #home-sub-heading{\n        font-size: $sub-title-size;\n        color: white;\n        margin-top: -0.15rem;\n    }\n\n    #seagull-icon-a{\n        display: block;\n        position: absolute;\n        top: 60%;\n        left: 0;\n        width: calc(1.5rem + 0.3vw);\n        \n    }\n\n    #seagull-icon-b{\n        display: block;\n        position: absolute;\n        top: 65%;\n        right: 0.4rem;\n        width: calc(1.5rem + 0.3vw);\n        \n    }\n}\n\n#right-side{\n    padding-right: 2rem;\n}\n\n#right-side a{\n    text-transform: uppercase;\n}\n\n#right-side a.active{\n    border-bottom: 4px solid $blue-color;\n    transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button{\n    display: none;\n}\n\n#dropdown-box{\n    position: absolute;\n    top: 0;\n    //z-index: -5;\n    //transform: translateY(-90px);\n\n    transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active{\n    display: flex;\n    flex-direction: column;\n    flex-wrap: wrap;\n    align-items: center;\n    text-align: center;\n    \n    z-index: 1;\n    min-width: 100vw;\n    min-height: 100vh;\n    \n    padding: min(30vh, 250px) 0;\n    gap: calc(2.5rem + 0.33vh);\n\n    background: #2a2a2ab4;\n    backdrop-filter: blur(10px);\n\n    a{\n        color: $gold-color;\n        font-size: $dropdown-link-size;\n        text-transform: uppercase;\n        min-width: 100vw;\n        margin-left: 0;\n    }\n\n    #seagull-icon-a,\n    #seagull-icon-b{\n        display: none; \n    }\n}\n\n\n\n@media only screen and (max-width: 650px){\n    \n   #dropdown-box.active\n    > #home-tab\n    > #home-heading{\n            /* font-family: 'Rozha One', serif; */\n            color: $gold-color;\n            text-transform: uppercase;\n            font-size: $dropdown-link-size;\n            text-shadow: none;\n            letter-spacing: 0;\n            font-weight: 400;\n\n    }\n    \n    #right-side{\n        display: none;    \n    }\n\n    #dropdown-box.active\n    a.active{\n        text-decoration: underline;\n        text-decoration-color: $blue-color;\n        text-decoration-thickness: 3px;\n        \n    }\n\n    #menu-button{\n        display: flex;\n        flex-direction: column;\n        gap: $menu-button-gap;\n        margin-right: 2.5rem;\n\n        width: max-content;\n        height: max-content; \n        background-color: $background-dark;\n        border: none;\n\n        z-index: 999;\n\n        cursor: pointer;\n\n        .line{\n            width: $line-width;\n            height: $line-height;\n\n            border-radius: 100px;\n\n            background-color: $gold-color;\n\n            //for rotation\n            transform-origin: left center;\n\n            //animation\n            transition: rotate $lines-animate-time,\n                        width $lines-animate-time,\n                        translate $lines-animate-time,\n                        opacity $lines-animate-time,\n                        background-color $lines-animate-time;\n        }\n\n    }\n\n    #menu-button.active{\n        #line2{\n            width: 0;\n            opacity: 0;\n        }\n\n        #line1, #line3{\n            background-color: $blue-color;\n        }\n\n        #line1{\n            translate: 0 calc($line-height / -2);\n            width: $line-cross-width;\n            rotate: 45deg;\n        }\n\n        #line3{\n            translate: 0 calc($line-height / 2);\n            width: $line-cross-width;\n            rotate: -45deg;\n        }\n    }\n    \n\n    #home-tab{\n        margin-left: 3rem;\n    }\n\n}\n\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AA2BA;EACE,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,cCjCW;EDkCX,yBCxCgB;EDyChB,gCAAA;AA3BF;;AA8BA;EACE,6BA/BiB;EAgCjB,sBAAA;EACA,gBAAA;EAEA,eAAA;AA5BF;;AA+BA;EACE,sBAAA;EACA,gBAAA;AA5BF;;AA+BA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AA7BF;AA+BE;EACE,qCAAA;EACA,cC5Dc;ED6Dd,yBAAA;EACA,gBAAA;EACA,6BA1DS;EA2DT,gCAAA;EACA,qBAAA;AA7BJ;AAgCE;EACE,6BA/Da;EAgEb,YAAA;EACA,oBAAA;AA9BJ;AAiCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AA/BJ;AAkCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AAhCJ;;AAoCA;EACE,mBAAA;AAjCF;;AAoCA;EACE,yBAAA;AAjCF;;AAoCA;EACE,gCAAA;EACA,yCAAA;AAjCF;;AAoCA;EACE,aAAA;AAjCF;;AAoCA;EACE,kBAAA;EACA,MAAA;EAIA,qBAAA;AApCF;;AAuCA;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAvCF;AAyCE;EACE,cCxIS;EDyIT,kBAhIiB;EAiIjB,yBAAA;EACA,gBAAA;EACA,cAAA;AAvCJ;AA0CE;;EAEE,aAAA;AAxCJ;;AA4CA;EACE;IACE,qCAAA;IACA,cCxJS;IDyJT,yBAAA;IACA,kBAjJiB;IAkJjB,iBAAA;IACA,iBAAA;IACA,gBAAA;EAzCF;EA4CA;IACE,aAAA;EA1CF;EA6CA;IACE,0BAAA;IACA,8BCpKS;IDqKT,8BAAA;EA3CF;EA8CA;IACE,aAAA;IACA,sBAAA;IACA,WAjKc;IAkKd,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCxLc;IDyLd,YAAA;IAEA,YAAA;IAEA,eAAA;EA/CF;EAiDE;IACE,yBA7KO;IA8KP,4BA7KQ;IA+KR,oBAAA;IAEA,yBC/LO;IDkMP,6BAAA;IAGA,wFACE;EAtDN;EA+DE;IACE,QAAA;IACA,UAAA;EA7DJ;EAgEE;;IAEE,yBCpNO;EDsJX;EAiEE;IACE,wCAAA;IACA,oDA3Ma;IA4Mb,aAAA;EA/DJ;EAkEE;IACE,uCAAA;IACA,oDAjNa;IAkNb,cAAA;EAhEJ;EAoEA;IACE,iBAAA;EAlEF;AACF","sourcesContent":["@import \"./colors.scss\";\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n\n//COLORS\n$gradient-background: linear-gradient(\n  180deg,\n  rgba(42, 42, 42, 0.9) 90%,\n  rgba(175, 175, 175, 1) 110%\n);\n\n//FONT SIZES\n$title-size: calc(22px + 0.5vw);\n$sub-title-size: calc(12px + 0.3vw);\n$header-link-size: calc(12px + 0.3vw);\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap * 2) + calc($line-height * 3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader {\n  position: fixed;\n  padding: 0.5rem 0;\n  min-height: 90px;\n  z-index: 40;\n\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-bottom: 1px solid $gold-color;\n}\n\na {\n  font-size: $header-link-size;\n  background-color: none;\n  margin: 0 1.5rem;\n\n  cursor: pointer;\n}\n\na:active {\n  transform: scale(1.01);\n  transition: 0.2s;\n}\n\n#home-tab {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-left: 5rem;\n\n  position: relative;\n\n  #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-dark-color;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-size: $title-size;\n    text-shadow: 0.8px 0.8px $blue-color;\n    letter-spacing: 1.8px;\n  }\n\n  #home-sub-heading {\n    font-size: $sub-title-size;\n    color: white;\n    margin-top: -0.15rem;\n  }\n\n  #seagull-icon-a {\n    display: block;\n    position: absolute;\n    top: 60%;\n    left: 0;\n    width: calc(1.5rem + 0.3vw);\n  }\n\n  #seagull-icon-b {\n    display: block;\n    position: absolute;\n    top: 65%;\n    right: 0.4rem;\n    width: calc(1.5rem + 0.3vw);\n  }\n}\n\n#right-side {\n  padding-right: 2rem;\n}\n\n#right-side a {\n  text-transform: uppercase;\n}\n\n#right-side a.active {\n  border-bottom: 4px solid $blue-color;\n  transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button {\n  display: none;\n}\n\n#dropdown-box {\n  position: absolute;\n  top: 0;\n  //z-index: -5;\n  //transform: translateY(-90px);\n\n  transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  align-items: center;\n  text-align: center;\n\n  z-index: 1;\n  min-width: 100vw;\n  min-height: 100vh;\n\n  padding: min(30vh, 250px) 0;\n  gap: calc(2.5rem + 0.33vh);\n\n  background: #2a2a2ab4;\n  backdrop-filter: blur(10px);\n\n  a {\n    color: $gold-color;\n    font-size: $dropdown-link-size;\n    text-transform: uppercase;\n    min-width: 100vw;\n    margin-left: 0;\n  }\n\n  #seagull-icon-a,\n  #seagull-icon-b {\n    display: none;\n  }\n}\n\n@media only screen and (max-width: 650px) {\n  #dropdown-box.active > #home-tab > #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-color;\n    text-transform: uppercase;\n    font-size: $dropdown-link-size;\n    text-shadow: none;\n    letter-spacing: 0;\n    font-weight: 400;\n  }\n\n  #right-side {\n    display: none;\n  }\n\n  #dropdown-box.active a.active {\n    text-decoration: underline;\n    text-decoration-color: $blue-color;\n    text-decoration-thickness: 3px;\n  }\n\n  #menu-button {\n    display: flex;\n    flex-direction: column;\n    gap: $menu-button-gap;\n    margin-right: 2.5rem;\n\n    width: max-content;\n    height: max-content;\n    background-color: $background-dark;\n    border: none;\n\n    z-index: 999;\n\n    cursor: pointer;\n\n    .line {\n      width: $line-width;\n      height: $line-height;\n\n      border-radius: 100px;\n\n      background-color: $gold-color;\n\n      //for rotation\n      transform-origin: left center;\n\n      //animation\n      transition:\n        rotate $lines-animate-time,\n        width $lines-animate-time,\n        translate $lines-animate-time,\n        opacity $lines-animate-time,\n        background-color $lines-animate-time;\n    }\n  }\n\n  #menu-button.active {\n    #line2 {\n      width: 0;\n      opacity: 0;\n    }\n\n    #line1,\n    #line3 {\n      background-color: $blue-color;\n    }\n\n    #line1 {\n      translate: 0 calc($line-height / -2);\n      width: $line-cross-width;\n      rotate: 45deg;\n    }\n\n    #line3 {\n      translate: 0 calc($line-height / 2);\n      width: $line-cross-width;\n      rotate: -45deg;\n    }\n  }\n\n  #home-tab {\n    margin-left: 3rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -909,9 +910,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_packed.png */ "./src/assets/FH_packed.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_front.png */ "./src/assets/FH_front.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   font-family: "Poppins", sans-serif;
@@ -962,14 +965,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   align-items: center;
   text-align: center;
   padding: 1rem 1.5rem;
-  background-color: #2a2a2a;
+  gap: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_1___});
   /* border-top: 1px solid \$gold-color; */
 }
 #hours #hours-msg {
-  padding: 10%;
+  padding: 30px;
   flex: 1;
   font-size: calc(16px + 0.390625vw);
-  color: #ebd693;
+  color: white;
+  border-radius: 10px;
+  align-self: center;
 }
 #hours #hours-div {
   flex: 1;
@@ -1010,7 +1016,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EAEA,yBCvFgB;EDwFhB,uCAAA;AApCF;AAsCE;EACE,YAAA;EACA,OAAA;EACA,kCArEa;EAsEb,cCxFS;ADoDb;AAuCE;EACE,OAAA;AArCJ;AAwCE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC1Gc;ADoElB;AAwCI;EACE,kCApFa;EAqFb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1Gc;AAoEpB;AAyCI;EACE,kCA3FY;EA4FZ,gCAAA;AAvCN;AA0CI;EACE,gBAAA;EACA,qBAAA;EACA,YApHa;AA4EnB;AA2CI;EACE,kCArGa;EAsGb,YAxHc;AA+EpB;;AA8CA;EACE;IACE,sBAAA;EA3CF;EA6CE;IACE,eAAA;IACA,eAAA;EA3CJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n\n  background-color: $hours-background-color;\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 10%;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AAtCF;AAwCE;EACE,aAAA;EACA,OAAA;EACA,kCAxEa;EAyEb,YA3Fc;EA8Fd,mBAAA;EAEA,kBAAA;AAzCJ;AA4CE;EACE,OAAA;AA1CJ;AA6CE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBClHc;ADuElB;AA6CI;EACE,kCA5Fa;EA6Fb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YAlHc;AAuEpB;AA8CI;EACE,kCAnGY;EAoGZ,gCAAA;AA5CN;AA+CI;EACE,gBAAA;EACA,qBAAA;EACA,YA5Ha;AA+EnB;AAgDI;EACE,kCA7Ga;EA8Gb,YAhIc;AAkFpB;;AAmDA;EACE;IACE,sBAAA;EAhDF;EAkDE;IACE,eAAA;IACA,eAAA;EAhDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1235,34 +1241,41 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
   gap: 20px;
   color: rgb(226, 219, 219);
   background-color: rgba(44, 42, 42, 0.5647058824);
-  max-width: min(80%, 500px);
+  max-width: min(80%, 400px);
   min-height: 50%;
   border-radius: 20px;
   padding: 20px;
-  font-size: calc(24px + 0.33vw);
+  font-size: calc(18px + 0.33vw);
   text-align: center;
 }
 .slider-container .slide > div i {
-  font-size: calc(24px + 0.8vw);
+  font-size: calc(22px + 0.8vw);
 }
 .slider-container .slide > div span {
   color: #4fa9cc;
-  font-size: calc(24px + 0.6vw);
+  font-size: calc(20px + 0.6vw);
 }
-.slider-container > button {
+.slider-container button {
   position: absolute;
-  top: 90%;
+  top: 85%;
   width: 60px;
   height: 50px;
   background-color: transparent;
   border: none;
-  opacity: 60%;
+  opacity: 80%;
   cursor: pointer;
 }
-.slider-container > button i {
+.slider-container button i {
   font-family: "Font Awesome 6 Free";
   color: #fff;
   font-size: calc(24px + 1vw);
+}
+.slider-container button:hover,
+.slider-container button:focus {
+  opacity: 100;
+}
+.slider-container button:active {
+  transform: scale(1.08);
 }
 .slider-container .prev-btn {
   left: 1%;
@@ -1297,19 +1310,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
 }
 
 #slide0 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_0___});
 }
 
 #slide1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_1___});
 }
 
 #slide2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_2___});
 }
 
 #slide3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_3___});
 }
 
 #slide0,
@@ -1324,7 +1337,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,cCxCO;EDyCP,6BAAA;AATN;AAaE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAdJ;AAgBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAdN;AAkBE;EACE,QAAA;AAhBJ;AAmBE;EACE,SAAA;AAjBJ;AAoBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAtBJ;AAyBE;EACE,aAAA;AAvBJ;AA0BE;EACE,WAAA;AAxBJ;AA2BE;EACE,WAAA;AAzBJ;AA4BE;EACE,WAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;;AAiCA;EACE,4GAAA;AA9BF;;AAkCA;EACE,4GAAA;AA/BF;;AAmCA;EACE,4GAAA;AAhCF;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;;;;EAIE,sBAAA;EACA,2BAAA;AAlCF;;AAuCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AApCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 500px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(24px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(24px + 0.8vw);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(24px + 0.6vw);\n    }\n  }\n\n  & > button {\n    position: absolute;\n    top: 90%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 60%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,cCxCO;EDyCP,6BAAA;AATN;AAaE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAdJ;AAgBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAdN;AAkBE;;EAEE,YAAA;AAhBJ;AAmBE;EACE,sBAAA;AAjBJ;AAoBE;EACE,QAAA;AAlBJ;AAqBE;EACE,SAAA;AAnBJ;AAsBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAxBJ;AA2BE;EACE,aAAA;AAzBJ;AA4BE;EACE,WAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;AA8BE;EACE,WAAA;AA5BJ;AA+BE;EACE,WAAA;AA7BJ;;AAmCA;EACE,4GAAA;AAhCF;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;EACE,4GAAA;AAlCF;;AAsCA;EACE,4GAAA;AAnCF;;AAuCA;;;;EAIE,sBAAA;EACA,2BAAA;AApCF;;AAyCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAtCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 400px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(18px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(22px + 0.8vw);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(20px + 0.6vw);\n    }\n  }\n\n  button {\n    position: absolute;\n    top: 85%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 80%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  button:hover,\n  button:focus {\n    opacity: 100;\n  }\n\n  button:active {\n    transform: scale(1.08);\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2198,7 +2211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/mike-amelia.jpg */ "./src/assets/mike-amelia.jpg");
 /* harmony import */ var _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/christos.png */ "./src/assets/christos.png");
 /* harmony import */ var _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/painting.jpg */ "./src/assets/painting.jpg");
-/* harmony import */ var _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/wrapped-food.png */ "./src/assets/wrapped-food.png");
+/* harmony import */ var _assets_fish_and_chips_square_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/fish-and-chips-square.jpg */ "./src/assets/fish-and-chips-square.jpg");
 
 
 
@@ -2206,7 +2219,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const buildAboutpage = (() => {
-  const images = [_assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__, _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__, _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__, _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__];
+  const images = [_assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__, _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__, _assets_fish_and_chips_square_jpg__WEBPACK_IMPORTED_MODULE_4__, _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__];
   const headings = [
     "Our Beginnings...",
     "Our Standards...",
@@ -2983,7 +2996,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds`;
 const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
-const msg2 = `We <span>Fry</span> In 100% Uncontaminated & <span>Sustainable</span> Palm Oil`;
+const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Palm Oil`;
 const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
 
 const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
@@ -3167,6 +3180,16 @@ const Slider = (() => {
 
 /***/ }),
 
+/***/ "./src/assets/FH_front.png":
+/*!*********************************!*\
+  !*** ./src/assets/FH_front.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_front.png";
+
+/***/ }),
+
 /***/ "./src/assets/FH_packed.png":
 /*!**********************************!*\
   !*** ./src/assets/FH_packed.png ***!
@@ -3194,6 +3217,16 @@ module.exports = __webpack_require__.p + "FH_potatoes.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "christos.png";
+
+/***/ }),
+
+/***/ "./src/assets/fish-and-chips-square.jpg":
+/*!**********************************************!*\
+  !*** ./src/assets/fish-and-chips-square.jpg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fish-and-chips-square.jpg";
 
 /***/ }),
 
@@ -3274,16 +3307,6 @@ module.exports = __webpack_require__.p + "seagull_2.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "seagull_3.png";
-
-/***/ }),
-
-/***/ "./src/assets/wrapped-food.png":
-/*!*************************************!*\
-  !*** ./src/assets/wrapped-food.png ***!
-  \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "wrapped-food.png";
 
 /***/ })
 
