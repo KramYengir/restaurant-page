@@ -2,10 +2,10 @@ import "../styles/about.scss";
 import mikeAmeliaImg from "../assets/mike-amelia.jpg";
 import christosImg from "../assets/christos.png";
 import painting from "../assets/painting.jpg";
-import wrappedFoodImg from "../assets/wrapped-food.png";
+import foodImg from "../assets/fish-and-chips-square.jpg";
 
 const buildAboutpage = (() => {
-  const images = [mikeAmeliaImg, christosImg, wrappedFoodImg, painting];
+  const images = [mikeAmeliaImg, christosImg, foodImg, painting];
   const headings = [
     "Our Beginnings...",
     "Our Standards...",
