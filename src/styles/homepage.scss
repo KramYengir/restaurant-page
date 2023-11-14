@@ -11,7 +11,7 @@ $hours-times-color: white;
 
 //BACKGROUND IMAGE
 $welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url("../assets/fish.jpg");
+  url("../assets/FH_packed.png");
 
 //BORDER & BACKGROUND COLORS
 $hours-background-color: $background-dark;
@@ -42,7 +42,7 @@ $hours-times-size: calc(14px + 0.390625vw);
   > div {
     width: clamp(300px, 95vw, 1000px);
     /* width: min(1200px, 100vw); */
-    min-height: 400px;
+    min-height: 350px;
     border-radius: 10px;
   }
 }
