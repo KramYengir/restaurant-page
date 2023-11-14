@@ -724,6 +724,7 @@ header {
   color: #ebd693;
   background-color: #2a2a2a;
   border-bottom: 1px solid #ebd693;
+  border-radius: 0 0 10px 10px;
 }
 
 a {
@@ -882,7 +883,7 @@ a:active {
   #home-tab {
     margin-left: 3rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AA2BA;EACE,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,cCjCW;EDkCX,yBCxCgB;EDyChB,gCAAA;AA3BF;;AA8BA;EACE,6BA/BiB;EAgCjB,sBAAA;EACA,gBAAA;EAEA,eAAA;AA5BF;;AA+BA;EACE,sBAAA;EACA,gBAAA;AA5BF;;AA+BA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AA7BF;AA+BE;EACE,qCAAA;EACA,cC5Dc;ED6Dd,yBAAA;EACA,gBAAA;EACA,6BA1DS;EA2DT,gCAAA;EACA,qBAAA;AA7BJ;AAgCE;EACE,6BA/Da;EAgEb,YAAA;EACA,oBAAA;AA9BJ;AAiCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AA/BJ;AAkCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AAhCJ;;AAoCA;EACE,mBAAA;AAjCF;;AAoCA;EACE,yBAAA;AAjCF;;AAoCA;EACE,gCAAA;EACA,yCAAA;AAjCF;;AAoCA;EACE,aAAA;AAjCF;;AAoCA;EACE,kBAAA;EACA,MAAA;EAIA,qBAAA;AApCF;;AAuCA;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAvCF;AAyCE;EACE,cCxIS;EDyIT,kBAhIiB;EAiIjB,yBAAA;EACA,gBAAA;EACA,cAAA;AAvCJ;AA0CE;;EAEE,aAAA;AAxCJ;;AA4CA;EACE;IACE,qCAAA;IACA,cCxJS;IDyJT,yBAAA;IACA,kBAjJiB;IAkJjB,iBAAA;IACA,iBAAA;IACA,gBAAA;EAzCF;EA4CA;IACE,aAAA;EA1CF;EA6CA;IACE,0BAAA;IACA,8BCpKS;IDqKT,8BAAA;EA3CF;EA8CA;IACE,aAAA;IACA,sBAAA;IACA,WAjKc;IAkKd,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCxLc;IDyLd,YAAA;IAEA,YAAA;IAEA,eAAA;EA/CF;EAiDE;IACE,yBA7KO;IA8KP,4BA7KQ;IA+KR,oBAAA;IAEA,yBC/LO;IDkMP,6BAAA;IAGA,wFACE;EAtDN;EA+DE;IACE,QAAA;IACA,UAAA;EA7DJ;EAgEE;;IAEE,yBCpNO;EDsJX;EAiEE;IACE,wCAAA;IACA,oDA3Ma;IA4Mb,aAAA;EA/DJ;EAkEE;IACE,uCAAA;IACA,oDAjNa;IAkNb,cAAA;EAhEJ;EAoEA;IACE,iBAAA;EAlEF;AACF","sourcesContent":["@import \"./colors.scss\";\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n\n//COLORS\n$gradient-background: linear-gradient(\n  180deg,\n  rgba(42, 42, 42, 0.9) 90%,\n  rgba(175, 175, 175, 1) 110%\n);\n\n//FONT SIZES\n$title-size: calc(22px + 0.5vw);\n$sub-title-size: calc(12px + 0.3vw);\n$header-link-size: calc(12px + 0.3vw);\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap * 2) + calc($line-height * 3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader {\n  position: fixed;\n  padding: 0.5rem 0;\n  min-height: 90px;\n  z-index: 40;\n\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-bottom: 1px solid $gold-color;\n}\n\na {\n  font-size: $header-link-size;\n  background-color: none;\n  margin: 0 1.5rem;\n\n  cursor: pointer;\n}\n\na:active {\n  transform: scale(1.01);\n  transition: 0.2s;\n}\n\n#home-tab {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-left: 5rem;\n\n  position: relative;\n\n  #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-dark-color;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-size: $title-size;\n    text-shadow: 0.8px 0.8px $blue-color;\n    letter-spacing: 1.8px;\n  }\n\n  #home-sub-heading {\n    font-size: $sub-title-size;\n    color: white;\n    margin-top: -0.15rem;\n  }\n\n  #seagull-icon-a {\n    display: block;\n    position: absolute;\n    top: 60%;\n    left: 0;\n    width: calc(1.5rem + 0.3vw);\n  }\n\n  #seagull-icon-b {\n    display: block;\n    position: absolute;\n    top: 65%;\n    right: 0.4rem;\n    width: calc(1.5rem + 0.3vw);\n  }\n}\n\n#right-side {\n  padding-right: 2rem;\n}\n\n#right-side a {\n  text-transform: uppercase;\n}\n\n#right-side a.active {\n  border-bottom: 4px solid $blue-color;\n  transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button {\n  display: none;\n}\n\n#dropdown-box {\n  position: absolute;\n  top: 0;\n  //z-index: -5;\n  //transform: translateY(-90px);\n\n  transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  align-items: center;\n  text-align: center;\n\n  z-index: 1;\n  min-width: 100vw;\n  min-height: 100vh;\n\n  padding: min(30vh, 250px) 0;\n  gap: calc(2.5rem + 0.33vh);\n\n  background: #2a2a2ab4;\n  backdrop-filter: blur(10px);\n\n  a {\n    color: $gold-color;\n    font-size: $dropdown-link-size;\n    text-transform: uppercase;\n    min-width: 100vw;\n    margin-left: 0;\n  }\n\n  #seagull-icon-a,\n  #seagull-icon-b {\n    display: none;\n  }\n}\n\n@media only screen and (max-width: 650px) {\n  #dropdown-box.active > #home-tab > #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-color;\n    text-transform: uppercase;\n    font-size: $dropdown-link-size;\n    text-shadow: none;\n    letter-spacing: 0;\n    font-weight: 400;\n  }\n\n  #right-side {\n    display: none;\n  }\n\n  #dropdown-box.active a.active {\n    text-decoration: underline;\n    text-decoration-color: $blue-color;\n    text-decoration-thickness: 3px;\n  }\n\n  #menu-button {\n    display: flex;\n    flex-direction: column;\n    gap: $menu-button-gap;\n    margin-right: 2.5rem;\n\n    width: max-content;\n    height: max-content;\n    background-color: $background-dark;\n    border: none;\n\n    z-index: 999;\n\n    cursor: pointer;\n\n    .line {\n      width: $line-width;\n      height: $line-height;\n\n      border-radius: 100px;\n\n      background-color: $gold-color;\n\n      //for rotation\n      transform-origin: left center;\n\n      //animation\n      transition:\n        rotate $lines-animate-time,\n        width $lines-animate-time,\n        translate $lines-animate-time,\n        opacity $lines-animate-time,\n        background-color $lines-animate-time;\n    }\n  }\n\n  #menu-button.active {\n    #line2 {\n      width: 0;\n      opacity: 0;\n    }\n\n    #line1,\n    #line3 {\n      background-color: $blue-color;\n    }\n\n    #line1 {\n      translate: 0 calc($line-height / -2);\n      width: $line-cross-width;\n      rotate: 45deg;\n    }\n\n    #line3 {\n      translate: 0 calc($line-height / 2);\n      width: $line-cross-width;\n      rotate: -45deg;\n    }\n  }\n\n  #home-tab {\n    margin-left: 3rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AA2BA;EACE,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,cCjCW;EDkCX,yBCxCgB;EDyChB,gCAAA;EACA,4BAAA;AA3BF;;AA8BA;EACE,6BAhCiB;EAiCjB,sBAAA;EACA,gBAAA;EAEA,eAAA;AA5BF;;AA+BA;EACE,sBAAA;EACA,gBAAA;AA5BF;;AA+BA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AA7BF;AA+BE;EACE,qCAAA;EACA,cC7Dc;ED8Dd,yBAAA;EACA,gBAAA;EACA,6BA3DS;EA4DT,gCAAA;EACA,qBAAA;AA7BJ;AAgCE;EACE,6BAhEa;EAiEb,YAAA;EACA,oBAAA;AA9BJ;AAiCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AA/BJ;AAkCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AAhCJ;;AAoCA;EACE,mBAAA;AAjCF;;AAoCA;EACE,yBAAA;AAjCF;;AAoCA;EACE,gCAAA;EACA,yCAAA;AAjCF;;AAoCA;EACE,aAAA;AAjCF;;AAoCA;EACE,kBAAA;EACA,MAAA;EAIA,qBAAA;AApCF;;AAuCA;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAvCF;AAyCE;EACE,cCzIS;ED0IT,kBAjIiB;EAkIjB,yBAAA;EACA,gBAAA;EACA,cAAA;AAvCJ;AA0CE;;EAEE,aAAA;AAxCJ;;AA4CA;EACE;IACE,qCAAA;IACA,cCzJS;ID0JT,yBAAA;IACA,kBAlJiB;IAmJjB,iBAAA;IACA,iBAAA;IACA,gBAAA;EAzCF;EA4CA;IACE,aAAA;EA1CF;EA6CA;IACE,0BAAA;IACA,8BCrKS;IDsKT,8BAAA;EA3CF;EA8CA;IACE,aAAA;IACA,sBAAA;IACA,WAlKc;IAmKd,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCzLc;ID0Ld,YAAA;IAEA,YAAA;IAEA,eAAA;EA/CF;EAiDE;IACE,yBA9KO;IA+KP,4BA9KQ;IAgLR,oBAAA;IAEA,yBChMO;IDmMP,6BAAA;IAGA,wFACE;EAtDN;EA+DE;IACE,QAAA;IACA,UAAA;EA7DJ;EAgEE;;IAEE,yBCrNO;EDuJX;EAiEE;IACE,wCAAA;IACA,oDA5Ma;IA6Mb,aAAA;EA/DJ;EAkEE;IACE,uCAAA;IACA,oDAlNa;IAmNb,cAAA;EAhEJ;EAoEA;IACE,iBAAA;EAlEF;AACF","sourcesContent":["@import \"./colors.scss\";\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n\n//COLORS\n$gradient-background: linear-gradient(\n  180deg,\n  rgba(42, 42, 42, 0.9) 90%,\n  rgba(175, 175, 175, 1) 110%\n);\n\n//FONT SIZES\n$title-size: calc(22px + 0.5vw);\n$sub-title-size: calc(12px + 0.3vw);\n$header-link-size: calc(12px + 0.3vw);\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap * 2) + calc($line-height * 3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader {\n  position: fixed;\n  padding: 0.5rem 0;\n  min-height: 90px;\n  z-index: 40;\n\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-bottom: 1px solid $gold-color;\n  border-radius: 0 0 10px 10px;\n}\n\na {\n  font-size: $header-link-size;\n  background-color: none;\n  margin: 0 1.5rem;\n\n  cursor: pointer;\n}\n\na:active {\n  transform: scale(1.01);\n  transition: 0.2s;\n}\n\n#home-tab {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-left: 5rem;\n\n  position: relative;\n\n  #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-dark-color;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-size: $title-size;\n    text-shadow: 0.8px 0.8px $blue-color;\n    letter-spacing: 1.8px;\n  }\n\n  #home-sub-heading {\n    font-size: $sub-title-size;\n    color: white;\n    margin-top: -0.15rem;\n  }\n\n  #seagull-icon-a {\n    display: block;\n    position: absolute;\n    top: 60%;\n    left: 0;\n    width: calc(1.5rem + 0.3vw);\n  }\n\n  #seagull-icon-b {\n    display: block;\n    position: absolute;\n    top: 65%;\n    right: 0.4rem;\n    width: calc(1.5rem + 0.3vw);\n  }\n}\n\n#right-side {\n  padding-right: 2rem;\n}\n\n#right-side a {\n  text-transform: uppercase;\n}\n\n#right-side a.active {\n  border-bottom: 4px solid $blue-color;\n  transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button {\n  display: none;\n}\n\n#dropdown-box {\n  position: absolute;\n  top: 0;\n  //z-index: -5;\n  //transform: translateY(-90px);\n\n  transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  align-items: center;\n  text-align: center;\n\n  z-index: 1;\n  min-width: 100vw;\n  min-height: 100vh;\n\n  padding: min(30vh, 250px) 0;\n  gap: calc(2.5rem + 0.33vh);\n\n  background: #2a2a2ab4;\n  backdrop-filter: blur(10px);\n\n  a {\n    color: $gold-color;\n    font-size: $dropdown-link-size;\n    text-transform: uppercase;\n    min-width: 100vw;\n    margin-left: 0;\n  }\n\n  #seagull-icon-a,\n  #seagull-icon-b {\n    display: none;\n  }\n}\n\n@media only screen and (max-width: 650px) {\n  #dropdown-box.active > #home-tab > #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-color;\n    text-transform: uppercase;\n    font-size: $dropdown-link-size;\n    text-shadow: none;\n    letter-spacing: 0;\n    font-weight: 400;\n  }\n\n  #right-side {\n    display: none;\n  }\n\n  #dropdown-box.active a.active {\n    text-decoration: underline;\n    text-decoration-color: $blue-color;\n    text-decoration-thickness: 3px;\n  }\n\n  #menu-button {\n    display: flex;\n    flex-direction: column;\n    gap: $menu-button-gap;\n    margin-right: 2.5rem;\n\n    width: max-content;\n    height: max-content;\n    background-color: $background-dark;\n    border: none;\n\n    z-index: 999;\n\n    cursor: pointer;\n\n    .line {\n      width: $line-width;\n      height: $line-height;\n\n      border-radius: 100px;\n\n      background-color: $gold-color;\n\n      //for rotation\n      transform-origin: left center;\n\n      //animation\n      transition:\n        rotate $lines-animate-time,\n        width $lines-animate-time,\n        translate $lines-animate-time,\n        opacity $lines-animate-time,\n        background-color $lines-animate-time;\n    }\n  }\n\n  #menu-button.active {\n    #line2 {\n      width: 0;\n      opacity: 0;\n    }\n\n    #line1,\n    #line3 {\n      background-color: $blue-color;\n    }\n\n    #line1 {\n      translate: 0 calc($line-height / -2);\n      width: $line-cross-width;\n      rotate: 45deg;\n    }\n\n    #line3 {\n      translate: 0 calc($line-height / 2);\n      width: $line-cross-width;\n      rotate: -45deg;\n    }\n  }\n\n  #home-tab {\n    margin-left: 3rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1056,6 +1057,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #357088;
 }
 
 #content,
@@ -1074,7 +1076,7 @@ body {
   margin-top: 90px;
   margin-bottom: 50px;
   background-color: #357088;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAIA;EACE,SAAA;EACA,sBAAA;EACA,kCAAA;AADF;;AAIA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AADF;;AAIA;;EAEE,aAAA;EACA,sBAAA;EACA,YAAA;AADF;;AAIA;EACE,8BAAA;EACA,WAAA;AADF;;AAIA;EACE,gBAAA;EACA,mBAAA;EACA,yBCxBgB;ADuBlB","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Rozha+One&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap\");\n\n* {\n  margin: 0;\n  box-sizing: border-box;\n  font-family: \"Merriweather\", serif;\n}\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n#content,\n#content-main {\n  display: flex;\n  flex-direction: column;\n  flex-grow: 1;\n}\n\n#content {\n  justify-content: space-between;\n  width: 100%;\n}\n\n#content-main {\n  margin-top: 90px;\n  margin-bottom: 50px;\n  background-color: $blue-dark-color;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAIA;EACE,SAAA;EACA,sBAAA;EACA,kCAAA;AADF;;AAIA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,yBCPgB;ADMlB;;AAIA;;EAEE,aAAA;EACA,sBAAA;EACA,YAAA;AADF;;AAIA;EACE,8BAAA;EACA,WAAA;AADF;;AAIA;EACE,gBAAA;EACA,mBAAA;EACA,yBCzBgB;ADwBlB","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Rozha+One&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap\");\n\n* {\n  margin: 0;\n  box-sizing: border-box;\n  font-family: \"Merriweather\", serif;\n}\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: $blue-dark-color;\n}\n\n#content,\n#content-main {\n  display: flex;\n  flex-direction: column;\n  flex-grow: 1;\n}\n\n#content {\n  justify-content: space-between;\n  width: 100%;\n}\n\n#content-main {\n  margin-top: 90px;\n  margin-bottom: 50px;\n  background-color: $blue-dark-color;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3469,49 +3471,57 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-let currentPage = _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"];
-
 const pages = [_modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"], _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"], _modules_about_js__WEBPACK_IMPORTED_MODULE_5__["default"], _modules_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"]];
 
-const content = document.getElementById('content');
-const contentMain = document.createElement('div');
-contentMain.id = 'content-main';
-contentMain.appendChild(currentPage);
+const content = document.getElementById("content");
+const contentMain = document.createElement("div");
+let currentPage = _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"];
 
+// keep current page after reload
+let lastPageIndex = sessionStorage.getItem("lastPageIndex");
+
+if (lastPageIndex) {
+  currentPage = pages[lastPageIndex];
+}
+
+contentMain.id = "content-main";
+contentMain.appendChild(currentPage);
 content.appendChild(_modules_header_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 content.appendChild(contentMain);
 content.appendChild(_modules_footer_js__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
-const tabLinks = document.querySelectorAll('a');
+const tabLinks = document.querySelectorAll("a");
 
-const loadContent = (index)=>{
-    console.log(index);
-    contentMain.removeChild(currentPage);
-    contentMain.appendChild(pages[index]);
-    currentPage = pages[index];
-}
+const loadContent = (index) => {
+  contentMain.removeChild(currentPage);
+  contentMain.appendChild(pages[index]);
+  currentPage = pages[index];
+  lastPageIndex = index;
+  sessionStorage.setItem("lastPageIndex", index);
+};
 
-const toggleActiveTab = (index)=>{
-    tabLinks.forEach((el,i)=>{
-        if(i === index){
-            tabLinks[index].classList.add('active')
-        }
-        else{
-            tabLinks[i].classList.remove('active')
-            console.log('matching index');
-        }
-    })
-}
+const toggleActiveTab = (index) => {
+  tabLinks.forEach((el, i) => {
+    if (i === index) {
+      tabLinks[index].classList.add("active");
+    } else {
+      tabLinks[i].classList.remove("active");
+      console.log("matching index");
+    }
+  });
+};
 
-tabLinks.forEach((el, i) =>{
-    el.addEventListener('click', ()=>{
-        loadContent(el.dataset.index);
-        toggleActiveTab(i);
-    })
-})
+tabLinks.forEach((el, i) => {
+  el.addEventListener("click", () => {
+    loadContent(el.dataset.index);
+    toggleActiveTab(i);
+  });
+});
 
-
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+  loadContent(lastPageIndex);
+});
 
 })();
 
