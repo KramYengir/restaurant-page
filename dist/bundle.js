@@ -937,7 +937,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-inline: 0.8rem;
+  padding-inline: 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_0___});
   background-position: center;
   background-size: cover;
@@ -961,7 +961,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #2a2a2a;
   /* border-top: 1px solid \$gold-color; */
 }
@@ -1010,7 +1010,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,sBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EAEA,yBCvFgB;EDwFhB,uCAAA;AApCF;AAsCE;EACE,YAAA;EACA,OAAA;EACA,kCArEa;EAsEb,cCxFS;ADoDb;AAuCE;EACE,OAAA;AArCJ;AAwCE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC1Gc;ADoElB;AAwCI;EACE,kCApFa;EAqFb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1Gc;AAoEpB;AAyCI;EACE,kCA3FY;EA4FZ,gCAAA;AAvCN;AA0CI;EACE,gBAAA;EACA,qBAAA;EACA,YApHa;AA4EnB;AA2CI;EACE,kCArGa;EAsGb,YAxHc;AA+EpB;;AA8CA;EACE;IACE,sBAAA;EA3CF;EA6CE;IACE,eAAA;IACA,eAAA;EA3CJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/fish.jpg\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 400px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 0.8rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem;\n\n  background-color: $hours-background-color;\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 10%;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EAEA,yBCvFgB;EDwFhB,uCAAA;AApCF;AAsCE;EACE,YAAA;EACA,OAAA;EACA,kCArEa;EAsEb,cCxFS;ADoDb;AAuCE;EACE,OAAA;AArCJ;AAwCE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC1Gc;ADoElB;AAwCI;EACE,kCApFa;EAqFb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1Gc;AAoEpB;AAyCI;EACE,kCA3FY;EA4FZ,gCAAA;AAvCN;AA0CI;EACE,gBAAA;EACA,qBAAA;EACA,YApHa;AA4EnB;AA2CI;EACE,kCArGa;EAsGb,YAxHc;AA+EpB;;AA8CA;EACE;IACE,sBAAA;EA3CF;EA6CE;IACE,eAAA;IACA,eAAA;EA3CJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/fish.jpg\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 400px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n\n  background-color: $hours-background-color;\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 10%;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2197,7 +2197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_about_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/about.scss */ "./src/styles/about.scss");
 /* harmony import */ var _assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/mike-amelia.jpg */ "./src/assets/mike-amelia.jpg");
 /* harmony import */ var _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/christos.png */ "./src/assets/christos.png");
-/* harmony import */ var _assets_inside_store_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/inside-store.png */ "./src/assets/inside-store.png");
+/* harmony import */ var _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/painting.jpg */ "./src/assets/painting.jpg");
 /* harmony import */ var _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/wrapped-food.png */ "./src/assets/wrapped-food.png");
 
 
@@ -2205,72 +2205,69 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const buildAboutpage = (()=>{
+const buildAboutpage = (() => {
+  const images = [_assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__, _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__, _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__, _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__];
+  const headings = [
+    "Our Beginnings...",
+    "Our Standards...",
+    "Our Food...",
+    "Our Community...",
+  ];
 
-    const images = [_assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__, _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__, _assets_inside_store_png__WEBPACK_IMPORTED_MODULE_3__, _assets_wrapped_food_png__WEBPACK_IMPORTED_MODULE_4__];
-    const headings = ['Who we are', 'Our standards', 'Our food', 'our shmerkle shmerkle'];
-
-    const textContent = [];
-    textContent[0] = 
-        `Ferryhill Fish and Chips is a family-run business established in 
+  const textContent = [];
+  textContent[0] = `Ferryhill Fish and Chips is a family-run business established in 
         2013 by husband and wife, Mike and Amelia.
         With over 30 years working within the industry, 
         we bring our knowledge and passion to provide quality food and 
         good friendly service to our customers.`;
-    textContent[1] = 
-        `Under the stewardship of nephew Christos since 2020, our shop has 
+  textContent[1] = `Under the stewardship of nephew Christos since 2020, our shop has 
         flourished, garnering consistent 5-star reviews on Google. 
         Our menu continues to evolve, and we are proud to have been voted 
         the best chippy in Manchester by readers of salfordnow.co.uk in 2023.`;
-    textContent[2] = 
-        `Our ever-expanding menu continues to add a 
+  textContent[2] = `Our ever-expanding menu continues to add a 
         diverse selection of vegan, vegetarian, and gluten-free options, 
-        catering to a wide range of dietary preferences.`;
-    textContent[3] = 
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Pellentesque finibus ultrices enim sed ornare. Orci varius natoque 
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-        Donec quis posuere orci.`;
+        catering to a wide range of dietary preferences. Crafted with care and the 
+        finest ingredients, our dishes maintain the high standards our 
+        customers have come to expect.`;
+  textContent[3] = `We're deeply rooted in our local community, actively supporting 
+        charitable causes through fundraisers, participating in local events, and 
+        proudly backing our local football team.`;
 
-    const container = document.createElement('div');
-    container.id = 'about-container';
+  const container = document.createElement("div");
+  container.id = "about-container";
 
-    
-    for(let i = 0; i < textContent.length; i++){
+  for (let i = 0; i < textContent.length; i++) {
+    let img = document.createElement("img");
+    img.classList.add("img");
+    img.id = `img-${i}`;
+    img.src = images[i];
 
-        let img = document.createElement('img');
-        img.classList.add('img');
-        img.id = `img-${i}`;
-        img.src = images[i];
+    let textContainer = document.createElement("div");
+    textContainer.classList.add("text-container");
+    textContainer.id = `text-${i}`;
+    let heading = document.createElement("h3");
+    heading.textContent = headings[i];
+    let paragraph = document.createElement("p");
+    paragraph.textContent = `${textContent[i]}`;
+    textContainer.appendChild(heading);
+    textContainer.appendChild(paragraph);
 
-        let textContainer = document.createElement('div');
-        textContainer.classList.add('text-container');
-        textContainer.id = `text-${i}`;
-        let heading = document.createElement('h3');
-        heading.textContent = headings[i];
-        let paragraph = document.createElement('p');
-        paragraph.textContent = `${textContent[i]}`;
-        textContainer.appendChild(heading);
-        textContainer.appendChild(paragraph);
+    let section = document.createElement("div");
+    section.classList.add("section");
 
-        let section = document.createElement('div');
-        section.classList.add('section')
+    section.appendChild(img);
+    section.appendChild(textContainer);
 
-        section.appendChild(img);
-        section.appendChild(textContainer);
+    section.id = `section-${i}`;
 
-        section.id = `section-${i}`;
+    container.appendChild(section);
+  }
 
-        container.appendChild(section);
-        
-    }
-
-
-    return container;
-
+  return container;
 })();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buildAboutpage);
+
 
 /***/ }),
 
@@ -3230,16 +3227,6 @@ module.exports = __webpack_require__.p + "fish.jpg";
 
 /***/ }),
 
-/***/ "./src/assets/inside-store.png":
-/*!*************************************!*\
-  !*** ./src/assets/inside-store.png ***!
-  \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "inside-store.png";
-
-/***/ }),
-
 /***/ "./src/assets/mike-amelia.jpg":
 /*!************************************!*\
   !*** ./src/assets/mike-amelia.jpg ***!
@@ -3247,6 +3234,16 @@ module.exports = __webpack_require__.p + "inside-store.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "mike-amelia.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/painting.jpg":
+/*!*********************************!*\
+  !*** ./src/assets/painting.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "painting.jpg";
 
 /***/ }),
 
