@@ -3006,7 +3006,7 @@ const Slider = (() => {
   nextBtn.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
 
   // create slide & dot elements
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < msgs.length; i++) {
     // slide first
     let slide = document.createElement("div");
     slide.classList.add("slide");
@@ -3044,7 +3044,6 @@ const Slider = (() => {
     sliderContainer.appendChild(el);
   });
 
-  //sliderContainer.appendChild(slide);
   sliderContainer.appendChild(prevBtn);
   sliderContainer.appendChild(nextBtn);
   dotEls.forEach((el) => {
@@ -3092,6 +3091,8 @@ const Slider = (() => {
       else {
         loadPrevSlide();
       }
+
+      setCurrentDot();
 
       // Reset startX to avoid rapid swiping
       startX = null;
