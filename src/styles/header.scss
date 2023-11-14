@@ -40,7 +40,10 @@ header {
   color: $gold-color;
   background-color: $background-dark;
   border-bottom: 1px solid $gold-color;
-  border-radius: 0 0 10px 10px;
+
+  a:hover {
+    color: $blue-color;
+  }
 }
 
 a {
@@ -49,11 +52,6 @@ a {
   margin: 0 1.5rem;
 
   cursor: pointer;
-}
-
-a:active {
-  transform: scale(1.01);
-  transition: 0.2s;
 }
 
 #home-tab {

@@ -6,7 +6,7 @@ $background-color: $background-dark-90;
 $font-color: white;
 
 //SIZES
-$img-size: clamp(300px, 65vw, 400px);
+$img-size: clamp(300px, 55vw, 350px);
 $text-container-size: clamp(300px, 60vw, 450px);
 $font-size: calc(12px + 0.390625vw);
 
@@ -42,9 +42,10 @@ $font-size: calc(12px + 0.390625vw);
 }
 
 .img {
+  padding: 10px;
   aspect-ratio: 1;
   width: $img-size;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .text-container {
