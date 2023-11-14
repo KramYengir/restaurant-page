@@ -4,7 +4,7 @@
 //FONT COLORS
 $welcome-title-color: $gold-color;
 $welcome-msg-color: white;
-$hours-msg-color: $gold-color;
+$hours-msg-color: white;
 $hours-title-color: white;
 $hours-days-color: white;
 $hours-times-color: white;
@@ -84,15 +84,23 @@ $hours-times-size: calc(14px + 0.390625vw);
   align-items: center;
   text-align: center;
   padding: 1rem 1.5rem;
+  gap: 1rem;
 
-  background-color: $hours-background-color;
+  //background-color: $hours-background-color;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url("../assets/FH_front.png");
   /* border-top: 1px solid $gold-color; */
 
   #hours-msg {
-    padding: 10%;
+    padding: 30px;
     flex: 1;
     font-size: $hours-msg-size;
     color: $hours-msg-color;
+
+    //background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    align-self: center;
   }
 
   #hours-div {

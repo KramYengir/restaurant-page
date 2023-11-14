@@ -56,14 +56,14 @@ $font-size: calc(12px + 0.390625vw);
   h3,
   p {
     //font-family: 'Mulish', sans-serif;
-    font-family: "Open Sans", sans-serif;
-    //font-family: 'Roboto', sans-serif;
+    //font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
   h3 {
     color: $gold-color;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 3px;
   }
 

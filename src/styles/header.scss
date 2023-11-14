@@ -1,249 +1,240 @@
-@import './colors.scss';
+@import "./colors.scss";
 /* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
  */
- 
- //COLORS
- $gradient-background: linear-gradient(180deg, rgba(42,42,42,0.9) 90%, rgba(175,175,175,1) 110%);
+
+//COLORS
+$gradient-background: linear-gradient(
+  180deg,
+  rgba(42, 42, 42, 0.9) 90%,
+  rgba(175, 175, 175, 1) 110%
+);
 
 //FONT SIZES
-$title-size: calc(1.5rem + 0.5vw);
-$sub-title-size: calc(0.8rem + 0.3vw);
-$header-link-size: 1rem;
+$title-size: calc(22px + 0.5vw);
+$sub-title-size: calc(12px + 0.3vw);
+$header-link-size: calc(12px + 0.3vw);
 $dropdown-link-size: 1.14rem;
 
 //MENU BUTTON SIZES
 $menu-button-gap: 0.4rem;
 $line-width: calc(2rem + 0.3vw);
 $line-height: calc(0.2rem + 0.3vw);
-$menu-button-height: calc(calc($menu-button-gap*2) + calc($line-height*3));
+$menu-button-height: calc(calc($menu-button-gap * 2) + calc($line-height * 3));
 $line-cross-width: calc($menu-button-height * 1.414);
 
 //ANIMATE TIMES
 $lines-animate-time: 0.5s;
 $dropbox-animate-time: 0.33s;
 
-header{
-    position: fixed;
-    padding: 0.5rem 0;
-    min-height: 90px;
-    z-index: 40;
-    
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    color: $gold-color;
-    background-color: $background-dark;
-    border-bottom: 1px solid $gold-color;
+header {
+  position: fixed;
+  padding: 0.5rem 0;
+  min-height: 90px;
+  z-index: 40;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $gold-color;
+  background-color: $background-dark;
+  border-bottom: 1px solid $gold-color;
 }
 
-a{
-    font-size: $header-link-size;
-    background-color: none;
-    margin: 0 1.5rem;
-    
-    cursor: pointer;
+a {
+  font-size: $header-link-size;
+  background-color: none;
+  margin: 0 1.5rem;
+
+  cursor: pointer;
 }
 
-a:active{
-    transform: scale(1.01);
-    transition: 0.2s;
+a:active {
+  transform: scale(1.01);
+  transition: 0.2s;
 }
 
-#home-tab{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 5rem;
+#home-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5rem;
 
-    position: relative;
-    
-    #home-heading{
-        /* font-family: 'Rozha One', serif; */
-        color: $gold-dark-color;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: $title-size;
-        text-shadow: 0.8px 0.8px $blue-color;
-        letter-spacing: 1.8px;
+  position: relative;
 
-    }
-    
-    #home-sub-heading{
-        font-size: $sub-title-size;
-        color: white;
-        margin-top: -0.15rem;
-    }
-
-    #seagull-icon-a{
-        display: block;
-        position: absolute;
-        top: 60%;
-        left: 0;
-        width: calc(1.5rem + 0.3vw);
-        
-    }
-
-    #seagull-icon-b{
-        display: block;
-        position: absolute;
-        top: 65%;
-        right: 0.4rem;
-        width: calc(1.5rem + 0.3vw);
-        
-    }
-}
-
-#right-side{
-    padding-right: 2rem;
-}
-
-#right-side a{
+  #home-heading {
+    /* font-family: 'Rozha One', serif; */
+    color: $gold-dark-color;
     text-transform: uppercase;
-}
+    font-weight: 600;
+    font-size: $title-size;
+    text-shadow: 0.8px 0.8px $blue-color;
+    letter-spacing: 1.8px;
+  }
 
-#right-side a.active{
-    border-bottom: 4px solid $blue-color;
-    transition: border-width 0.2s ease-in-out;
-}
+  #home-sub-heading {
+    font-size: $sub-title-size;
+    color: white;
+    margin-top: -0.15rem;
+  }
 
-#menu-button{
-    display: none;
-}
-
-#dropdown-box{
+  #seagull-icon-a {
+    display: block;
     position: absolute;
-    top: 0;
-    //z-index: -5;
-    //transform: translateY(-90px);
+    top: 60%;
+    left: 0;
+    width: calc(1.5rem + 0.3vw);
+  }
 
-    transition: all $dropbox-animate-time;
+  #seagull-icon-b {
+    display: block;
+    position: absolute;
+    top: 65%;
+    right: 0.4rem;
+    width: calc(1.5rem + 0.3vw);
+  }
 }
 
-#dropdown-box.active{
+#right-side {
+  padding-right: 2rem;
+}
+
+#right-side a {
+  text-transform: uppercase;
+}
+
+#right-side a.active {
+  border-bottom: 4px solid $blue-color;
+  transition: border-width 0.2s ease-in-out;
+}
+
+#menu-button {
+  display: none;
+}
+
+#dropdown-box {
+  position: absolute;
+  top: 0;
+  //z-index: -5;
+  //transform: translateY(-90px);
+
+  transition: all $dropbox-animate-time;
+}
+
+#dropdown-box.active {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+
+  z-index: 1;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  padding: min(30vh, 250px) 0;
+  gap: calc(2.5rem + 0.33vh);
+
+  background: #2a2a2ab4;
+  backdrop-filter: blur(10px);
+
+  a {
+    color: $gold-color;
+    font-size: $dropdown-link-size;
+    text-transform: uppercase;
+    min-width: 100vw;
+    margin-left: 0;
+  }
+
+  #seagull-icon-a,
+  #seagull-icon-b {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #dropdown-box.active > #home-tab > #home-heading {
+    /* font-family: 'Rozha One', serif; */
+    color: $gold-color;
+    text-transform: uppercase;
+    font-size: $dropdown-link-size;
+    text-shadow: none;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  #right-side {
+    display: none;
+  }
+
+  #dropdown-box.active a.active {
+    text-decoration: underline;
+    text-decoration-color: $blue-color;
+    text-decoration-thickness: 3px;
+  }
+
+  #menu-button {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    
-    z-index: 1;
-    min-width: 100vw;
-    min-height: 100vh;
-    
-    padding: min(30vh, 250px) 0;
-    gap: calc(2.5rem + 0.33vh);
+    gap: $menu-button-gap;
+    margin-right: 2.5rem;
 
-    background: #2a2a2ab4;
-    backdrop-filter: blur(10px);
+    width: max-content;
+    height: max-content;
+    background-color: $background-dark;
+    border: none;
 
-    a{
-        color: $gold-color;
-        font-size: $dropdown-link-size;
-        text-transform: uppercase;
-        min-width: 100vw;
-        margin-left: 0;
+    z-index: 999;
+
+    cursor: pointer;
+
+    .line {
+      width: $line-width;
+      height: $line-height;
+
+      border-radius: 100px;
+
+      background-color: $gold-color;
+
+      //for rotation
+      transform-origin: left center;
+
+      //animation
+      transition:
+        rotate $lines-animate-time,
+        width $lines-animate-time,
+        translate $lines-animate-time,
+        opacity $lines-animate-time,
+        background-color $lines-animate-time;
+    }
+  }
+
+  #menu-button.active {
+    #line2 {
+      width: 0;
+      opacity: 0;
     }
 
-    #seagull-icon-a,
-    #seagull-icon-b{
-        display: none; 
+    #line1,
+    #line3 {
+      background-color: $blue-color;
     }
+
+    #line1 {
+      translate: 0 calc($line-height / -2);
+      width: $line-cross-width;
+      rotate: 45deg;
+    }
+
+    #line3 {
+      translate: 0 calc($line-height / 2);
+      width: $line-cross-width;
+      rotate: -45deg;
+    }
+  }
+
+  #home-tab {
+    margin-left: 3rem;
+  }
 }
-
-
-
-@media only screen and (max-width: 650px){
-    
-   #dropdown-box.active
-    > #home-tab
-    > #home-heading{
-            /* font-family: 'Rozha One', serif; */
-            color: $gold-color;
-            text-transform: uppercase;
-            font-size: $dropdown-link-size;
-            text-shadow: none;
-            letter-spacing: 0;
-            font-weight: 400;
-
-    }
-    
-    #right-side{
-        display: none;    
-    }
-
-    #dropdown-box.active
-    a.active{
-        text-decoration: underline;
-        text-decoration-color: $blue-color;
-        text-decoration-thickness: 3px;
-        
-    }
-
-    #menu-button{
-        display: flex;
-        flex-direction: column;
-        gap: $menu-button-gap;
-        margin-right: 2.5rem;
-
-        width: max-content;
-        height: max-content; 
-        background-color: $background-dark;
-        border: none;
-
-        z-index: 999;
-
-        cursor: pointer;
-
-        .line{
-            width: $line-width;
-            height: $line-height;
-
-            border-radius: 100px;
-
-            background-color: $gold-color;
-
-            //for rotation
-            transform-origin: left center;
-
-            //animation
-            transition: rotate $lines-animate-time,
-                        width $lines-animate-time,
-                        translate $lines-animate-time,
-                        opacity $lines-animate-time,
-                        background-color $lines-animate-time;
-        }
-
-    }
-
-    #menu-button.active{
-        #line2{
-            width: 0;
-            opacity: 0;
-        }
-
-        #line1, #line3{
-            background-color: $blue-color;
-        }
-
-        #line1{
-            translate: 0 calc($line-height / -2);
-            width: $line-cross-width;
-            rotate: 45deg;
-        }
-
-        #line3{
-            translate: 0 calc($line-height / 2);
-            width: $line-cross-width;
-            rotate: -45deg;
-        }
-    }
-    
-
-    #home-tab{
-        margin-left: 3rem;
-    }
-
-}
-
