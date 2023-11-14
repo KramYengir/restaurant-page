@@ -908,7 +908,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fish.jpg */ "./src/assets/fish.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_packed.png */ "./src/assets/FH_packed.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
@@ -927,7 +927,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
 #homepage-container > div {
   width: clamp(300px, 95vw, 1000px);
   /* width: min(1200px, 100vw); */
-  min-height: 400px;
+  min-height: 350px;
   border-radius: 10px;
 }
 
@@ -1010,7 +1010,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EAEA,yBCvFgB;EDwFhB,uCAAA;AApCF;AAsCE;EACE,YAAA;EACA,OAAA;EACA,kCArEa;EAsEb,cCxFS;ADoDb;AAuCE;EACE,OAAA;AArCJ;AAwCE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC1Gc;ADoElB;AAwCI;EACE,kCApFa;EAqFb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1Gc;AAoEpB;AAyCI;EACE,kCA3FY;EA4FZ,gCAAA;AAvCN;AA0CI;EACE,gBAAA;EACA,qBAAA;EACA,YApHa;AA4EnB;AA2CI;EACE,kCArGa;EAsGb,YAxHc;AA+EpB;;AA8CA;EACE;IACE,sBAAA;EA3CF;EA6CE;IACE,eAAA;IACA,eAAA;EA3CJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/fish.jpg\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 400px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n\n  background-color: $hours-background-color;\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 10%;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EAEA,yBCvFgB;EDwFhB,uCAAA;AApCF;AAsCE;EACE,YAAA;EACA,OAAA;EACA,kCArEa;EAsEb,cCxFS;ADoDb;AAuCE;EACE,OAAA;AArCJ;AAwCE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC1Gc;ADoElB;AAwCI;EACE,kCApFa;EAqFb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA1Gc;AAoEpB;AAyCI;EACE,kCA3FY;EA4FZ,gCAAA;AAvCN;AA0CI;EACE,gBAAA;EACA,qBAAA;EACA,YApHa;AA4EnB;AA2CI;EACE,kCArGa;EAsGb,YAxHc;AA+EpB;;AA8CA;EACE;IACE,sBAAA;EA3CF;EA6CE;IACE,eAAA;IACA,eAAA;EA3CJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: $gold-color;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n\n  background-color: $hours-background-color;\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 10%;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1198,10 +1198,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_front.png */ "./src/assets/FH_front.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_pies.jpg */ "./src/assets/FH_pies.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_sausages.png */ "./src/assets/FH_sausages.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_potatoes.png */ "./src/assets/FH_potatoes.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fried-fish.png */ "./src/assets/fried-fish.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_potatoes.png */ "./src/assets/FH_potatoes.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fish-in-oil.png */ "./src/assets/fish-in-oil.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fish-and-chips.jpg */ "./src/assets/fish-and-chips.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -1324,7 +1324,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,cCxCO;EDyCP,6BAAA;AATN;AAaE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAdJ;AAgBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAdN;AAkBE;EACE,QAAA;AAhBJ;AAmBE;EACE,SAAA;AAjBJ;AAoBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAtBJ;AAyBE;EACE,aAAA;AAvBJ;AA0BE;EACE,WAAA;AAxBJ;AA2BE;EACE,WAAA;AAzBJ;AA4BE;EACE,WAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;;AAiCA;EACE,4GAAA;AA9BF;;AAkCA;EACE,4GAAA;AA/BF;;AAmCA;EACE,4GAAA;AAhCF;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;;;;EAIE,sBAAA;EACA,2BAAA;AAlCF;;AAuCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AApCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 500px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(24px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(24px + 0.8vw);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(24px + 0.6vw);\n    }\n  }\n\n  & > button {\n    position: absolute;\n    top: 90%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 60%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/FH_front.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/FH_pies.jpg\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/FH_sausages.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,cCxCO;EDyCP,6BAAA;AATN;AAaE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAdJ;AAgBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAdN;AAkBE;EACE,QAAA;AAhBJ;AAmBE;EACE,SAAA;AAjBJ;AAoBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAtBJ;AAyBE;EACE,aAAA;AAvBJ;AA0BE;EACE,WAAA;AAxBJ;AA2BE;EACE,WAAA;AAzBJ;AA4BE;EACE,WAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;;AAiCA;EACE,4GAAA;AA9BF;;AAkCA;EACE,4GAAA;AA/BF;;AAmCA;EACE,4GAAA;AAhCF;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;;;;EAIE,sBAAA;EACA,2BAAA;AAlCF;;AAuCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AApCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 500px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(24px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(24px + 0.8vw);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(24px + 0.6vw);\n    }\n  }\n\n  & > button {\n    position: absolute;\n    top: 90%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 60%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2982,11 +2982,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds`;
-const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled And Chipped <span>Fresh</span> On The Day`;
-const msg2 = `We <span>Fry</span> In 100% Uncontaminated <span>Sustainable</span> Palm Oil`;
-const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable And <span>Biodegradable</span>`;
+const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
+const msg2 = `We <span>Fry</span> In 100% Uncontaminated & <span>Sustainable</span> Palm Oil`;
+const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
 
-const icons = ["fa-fish", "fa-house", "fa-cat", "fa-dog"];
+const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
 
 const msgs = [msg0, msg1, msg2, msg3];
 
@@ -3167,23 +3167,13 @@ const Slider = (() => {
 
 /***/ }),
 
-/***/ "./src/assets/FH_front.png":
-/*!*********************************!*\
-  !*** ./src/assets/FH_front.png ***!
-  \*********************************/
+/***/ "./src/assets/FH_packed.png":
+/*!**********************************!*\
+  !*** ./src/assets/FH_packed.png ***!
+  \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "FH_front.png";
-
-/***/ }),
-
-/***/ "./src/assets/FH_pies.jpg":
-/*!********************************!*\
-  !*** ./src/assets/FH_pies.jpg ***!
-  \********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "FH_pies.jpg";
+module.exports = __webpack_require__.p + "FH_packed.png";
 
 /***/ }),
 
@@ -3197,16 +3187,6 @@ module.exports = __webpack_require__.p + "FH_potatoes.png";
 
 /***/ }),
 
-/***/ "./src/assets/FH_sausages.png":
-/*!************************************!*\
-  !*** ./src/assets/FH_sausages.png ***!
-  \************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "FH_sausages.png";
-
-/***/ }),
-
 /***/ "./src/assets/christos.png":
 /*!*********************************!*\
   !*** ./src/assets/christos.png ***!
@@ -3217,13 +3197,33 @@ module.exports = __webpack_require__.p + "christos.png";
 
 /***/ }),
 
-/***/ "./src/assets/fish.jpg":
-/*!*****************************!*\
-  !*** ./src/assets/fish.jpg ***!
-  \*****************************/
+/***/ "./src/assets/fish-and-chips.jpg":
+/*!***************************************!*\
+  !*** ./src/assets/fish-and-chips.jpg ***!
+  \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fish.jpg";
+module.exports = __webpack_require__.p + "fish-and-chips.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/fish-in-oil.png":
+/*!************************************!*\
+  !*** ./src/assets/fish-in-oil.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fish-in-oil.png";
+
+/***/ }),
+
+/***/ "./src/assets/fried-fish.png":
+/*!***********************************!*\
+  !*** ./src/assets/fried-fish.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fried-fish.png";
 
 /***/ }),
 
