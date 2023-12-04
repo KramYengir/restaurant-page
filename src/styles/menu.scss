@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import "./colors.scss";
 
 $heading-border: 1px solid $blue-color;
 
@@ -12,88 +12,107 @@ $item-price-color: white;
 //-SIZES
 $section-heading-size: calc(18px + 0.390625vw);
 $item-size: calc(14px + 0.390625vw);
-$option-size: calc(10px + 0.390625vw);;
-$price-size: calc(12px + 0.390625vw);;
+$option-size: calc(10px + 0.390625vw);
+$price-size: calc(12px + 0.390625vw);
 
-#menu-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));
-    justify-content: center;
-    align-self: center;
-    gap: 3rem;
-    /* flex-grow: 1; */
-    width: min(85vw, 1000px);
-    min-height: 95%;
-    
-    background-color: $container-background-color;
-    padding: 5vh 10vw;
-    margin: 5vh 0;
+#menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));
+  justify-content: center;
+  align-self: center;
+  gap: 3rem;
+  /* flex-grow: 1; */
+  width: min(90vw, 1000px);
+  min-height: 95%;
 
-    border: 1px solid $gold-color;
+  background-color: $container-background-color;
+  padding: 5vh 5vw;
+  margin: 5vh 0;
+
+  border: 1px solid $gold-color;
 }
 
-@media only screen and (max-width: 600px){
-    #menu-container{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));
-    }
-
+@media only screen and (max-width: 600px) {
+  #menu-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));
+  }
 }
 
-/* .menu-section{
-    max-width: 80%;
-} */
-
-.section-heading{
-    text-transform: uppercase;
-    color: $heading-color;
-    border-bottom: $heading-border;
-    font-size: $section-heading-size;
+.section-heading {
+  text-transform: uppercase;
+  color: $heading-color;
+  border-bottom: $heading-border;
+  font-size: $section-heading-size;
 }
 
-.section-heading, .menu-item{
-    margin: 0.5rem;
+.section-heading,
+.menu-item {
+  margin: 0.5rem;
 }
 
-.menu-item ~ div:not(.menu-option){
-    color: red;
+.menu-item ~ div:not(.menu-option) {
+  color: red;
 }
 
-.menu-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu-item:not(.item-option){
-    margin-top: 1rem;
-    font-size: $item-size;
+.menu-item:not(.item-option) {
+  margin-top: 1rem;
+  font-size: $item-size;
 }
 
-.menu-item-name{
-    color: $item-name-color;
-    text-transform: capitalize;
+.menu-item-name {
+  color: $item-name-color;
+  text-transform: capitalize;
 }
 
-.item-option{
-    margin-top: 0;
-    margin-bottom: 0.4rem;
+.item-option {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
 }
 
-.item-option-text{
-    color: white;
-    font-size: $option-size;
+.item-option-text {
+  color: white;
+  font-size: $option-size;
 }
 
-.item-option-text::before{
-    content: ' ';
-    white-space: pre;
+.item-option-text::before {
+  content: " ";
+  white-space: pre;
 }
 
-.menu-item-price{
-    color: $item-price-color;
-    font-size: $price-size;
+.menu-item-price {
+  color: $item-price-color;
+  font-size: $price-size;
 }
 
-.menu-item-price::before{
-    content: '£';
+.menu-item-price::before {
+  content: "£";
+}
+
+// for the ridiculously narrow Galaxy Fold
+@media only screen and (min-width: 279px) {
+  #menu-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));
+  }
+
+  .section-heading {
+    font-size: calc($section-heading-size * 0.8);
+  }
+
+  .menu-item-name {
+    font-size: calc($item-size * 0.8);
+  }
+
+  .item-option-text {
+    font-size: calc($option-size * 0.8);
+  }
+
+  .menu-item-price {
+    font-size: calc($price-size * 0.8);
+  }
 }
