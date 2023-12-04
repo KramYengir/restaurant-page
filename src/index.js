@@ -30,9 +30,11 @@ const tabLinks = document.querySelectorAll("a");
 const loadContent = (index) => {
   contentMain.removeChild(currentPage);
   contentMain.appendChild(pages[index]);
+  toggleActiveTab(index);
   currentPage = pages[index];
   lastPageIndex = index;
   sessionStorage.setItem("lastPageIndex", index);
+  window.scrollTo(0, 0);
 };
 
 const toggleActiveTab = (index) => {
@@ -49,7 +51,6 @@ const toggleActiveTab = (index) => {
 tabLinks.forEach((el, i) => {
   el.addEventListener("click", () => {
     loadContent(el.dataset.index);
-    toggleActiveTab(i);
   });
 });
 
@@ -57,3 +58,5 @@ window.addEventListener("beforeunload", () => {
   window.scrollTo(0, 0);
   loadContent(lastPageIndex);
 });
+
+export { loadContent };

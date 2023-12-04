@@ -91,7 +91,7 @@ $hours-times-size: calc(14px + 0.390625vw);
     url("../assets/FH_front.png");
   /* border-top: 1px solid $gold-color; */
 
-  #hours-msg {
+  .msg-and-btn-container {
     padding: 30px;
     flex: 1;
     font-size: $hours-msg-size;
@@ -101,6 +101,25 @@ $hours-times-size: calc(14px + 0.390625vw);
     border-radius: 10px;
 
     align-self: center;
+
+    button {
+      background-color: transparent;
+      border: 2px solid $hours-title-border-color;
+      color: $hours-msg-color;
+      text-transform: capitalize;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    button:hover,
+    button:focus {
+      border-color: $welcome-title-color;
+      color: $welcome-title-color;
+    }
+  }
+
+  #hours-msg {
+    margin-bottom: 25px;
   }
 
   #hours-div {

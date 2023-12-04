@@ -1,6 +1,7 @@
 import "../styles/homepage.scss";
 
 import Slider from "./slider";
+import { loadContent } from "../index";
 
 const WELCOME_TITLE = "Welcome to Ferryhill!";
 const WELCOME_MSG =
@@ -40,6 +41,9 @@ const buildHomepage = (() => {
   const openingHoursDiv = document.createElement("div");
   openingHoursDiv.id = "hours";
 
+  const msgAndBtnContainer = document.createElement("div");
+  msgAndBtnContainer.classList.add("msg-and-btn-container");
+
   const hoursMsg = document.createElement("div");
   hoursMsg.id = "hours-msg";
   hoursMsg.innerText = HOURS_MSG;
@@ -51,9 +55,18 @@ const buildHomepage = (() => {
   hoursInfo.id = "hours-info";
   hoursInfo.innerHTML = HOURS_INFO;
 
+  const contactBtn = document.createElement("button");
+  contactBtn.innerText = "Find Out More";
+  contactBtn.addEventListener("click", () => {
+    loadContent(3);
+  });
+
   hoursDiv.appendChild(hoursInfo);
 
-  openingHoursDiv.appendChild(hoursMsg);
+  msgAndBtnContainer.appendChild(hoursMsg);
+  msgAndBtnContainer.appendChild(contactBtn);
+
+  openingHoursDiv.appendChild(msgAndBtnContainer);
   openingHoursDiv.appendChild(hoursDiv);
 
   container.appendChild(welcomeDiv);
