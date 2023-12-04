@@ -474,6 +474,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
   width: clamp(300px, 60vw, 450px);
   padding: 1rem min(5rem, 3vw);
   text-align: center;
+  text-wrap: balance;
 }
 .text-container h3,
 .text-container p {
@@ -497,7 +498,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACE,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbF;;AAgBA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCjCmB;EDkCnB,mBAAA;AAdF;;AAiBA;EACE,2BAAA;AAdF;;AAiBA;EACE,aAAA;EACA,iBAAA;EACA,gCAtCS;EAuCT,mBAAA;EACA,iBAAA;AAdF;;AAiBA;EACE,uBAAA;EACA,gCA5CoB;EA6CpB,4BAAA;EACA,kBAAA;AAdF;AAgBE;;EAIE,iCAAA;AAhBJ;AAmBE;EACE,cC3DS;ED4DT,yBAAA;EACA,qBAAA;EACA,mBAAA;AAjBJ;AAoBE;EACE,kCA9DQ;EA+DR,YApES;AAkDb;;AAsBA;EACE;;IAEE,sBAAA;IACA,eAAA;IACA,SAAA;EAnBF;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 55vw, 350px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container {\n  flex-grow: 1;\n  align-self: center;\n  padding: 0 0;\n  margin-block: 2.5vh;\n\n  width: clamp(300px, 95vw, 1000px);\n\n  display: grid;\n  grid-template-columns: auto;\n  justify-content: center;\n  align-items: center;\n  grid-row-gap: 2rem;\n\n  line-height: 1.6;\n}\n\n.section {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n\n  background-color: $background-color;\n  border-radius: 10px;\n}\n\n.section:nth-child(even) {\n  flex-direction: row-reverse;\n}\n\n.img {\n  padding: 10px;\n  aspect-ratio: 4/3;\n  width: $img-size;\n  border-radius: 15px;\n  object-fit: cover;\n}\n\n.text-container {\n  /* aspect-ratio: 4/3; */\n  width: $text-container-size;\n  padding: 1rem min(5rem, 3vw);\n  text-align: center;\n\n  h3,\n  p {\n    //font-family: 'Mulish', sans-serif;\n    //font-family: \"Open Sans\", sans-serif;\n    font-family: \"Roboto\", sans-serif;\n  }\n\n  h3 {\n    color: $gold-color;\n    text-transform: uppercase;\n    margin-bottom: 1.5rem;\n    letter-spacing: 3px;\n  }\n\n  p {\n    font-size: $font-size;\n    color: $font-color;\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  .section,\n  .section:nth-child(even) {\n    flex-direction: column;\n    min-width: 95vw;\n    gap: 1rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACE,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbF;;AAgBA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCjCmB;EDkCnB,mBAAA;AAdF;;AAiBA;EACE,2BAAA;AAdF;;AAiBA;EACE,aAAA;EACA,iBAAA;EACA,gCAtCS;EAuCT,mBAAA;EACA,iBAAA;AAdF;;AAiBA;EACE,uBAAA;EACA,gCA5CoB;EA6CpB,4BAAA;EACA,kBAAA;EACA,kBAAA;AAdF;AAgBE;;EAIE,iCAAA;AAhBJ;AAmBE;EACE,cC5DS;ED6DT,yBAAA;EACA,qBAAA;EACA,mBAAA;AAjBJ;AAoBE;EACE,kCA/DQ;EAgER,YArES;AAmDb;;AAsBA;EACE;;IAEE,sBAAA;IACA,eAAA;IACA,SAAA;EAnBF;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 55vw, 350px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container {\n  flex-grow: 1;\n  align-self: center;\n  padding: 0 0;\n  margin-block: 2.5vh;\n\n  width: clamp(300px, 95vw, 1000px);\n\n  display: grid;\n  grid-template-columns: auto;\n  justify-content: center;\n  align-items: center;\n  grid-row-gap: 2rem;\n\n  line-height: 1.6;\n}\n\n.section {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n\n  background-color: $background-color;\n  border-radius: 10px;\n}\n\n.section:nth-child(even) {\n  flex-direction: row-reverse;\n}\n\n.img {\n  padding: 10px;\n  aspect-ratio: 4/3;\n  width: $img-size;\n  border-radius: 15px;\n  object-fit: cover;\n}\n\n.text-container {\n  /* aspect-ratio: 4/3; */\n  width: $text-container-size;\n  padding: 1rem min(5rem, 3vw);\n  text-align: center;\n  text-wrap: balance;\n\n  h3,\n  p {\n    //font-family: 'Mulish', sans-serif;\n    //font-family: \"Open Sans\", sans-serif;\n    font-family: \"Roboto\", sans-serif;\n  }\n\n  h3 {\n    color: $gold-color;\n    text-transform: uppercase;\n    margin-bottom: 1.5rem;\n    letter-spacing: 3px;\n  }\n\n  p {\n    font-size: $font-size;\n    color: $font-color;\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  .section,\n  .section:nth-child(even) {\n    flex-direction: column;\n    min-width: 95vw;\n    gap: 1rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -682,10 +683,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `footer {
   background-color: #2a2a2a;
   border-top: 1px solid #ebd693;
   font-size: 0.7rem;
+  padding-inline: 10px;
+  /*   img {
+    max-height: 25px;
+  }
+
+  .seagull-img {
+    max-height: 10px;
+  } */
 }
 footer p {
   color: #ebd693;
-}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,cCPW;EDQX,yBCdgB;EDehB,6BAAA;EACA,iBAAA;AAHF;AAKE;EACE,cCbS;ADUb","sourcesContent":["@import \"./colors.scss\";\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  min-height: 50px;\n\n  width: 100%;\n  flex-shrink: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-top: 1px solid $gold-color;\n  font-size: 0.7rem;\n\n  p {\n    color: $gold-color;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,cCPW;EDQX,yBCdgB;EDehB,6BAAA;EACA,iBAAA;EAEA,oBAAA;EAMA;;;;;;KAAA;AAHF;AADE;EACE,cCfS;ADkBb","sourcesContent":["@import \"./colors.scss\";\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  min-height: 50px;\n\n  width: 100%;\n  flex-shrink: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-top: 1px solid $gold-color;\n  font-size: 0.7rem;\n\n  padding-inline: 10px;\n\n  p {\n    color: $gold-color;\n  }\n\n  /*   img {\n    max-height: 25px;\n  }\n\n  .seagull-img {\n    max-height: 10px;\n  } */\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -952,10 +961,37 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   color: #ebd693;
 }
 #welcome #welcome-msg {
-  margin-top: 2rem;
   font-size: calc(16px + 0.390625vw);
+  text-transform: uppercase;
+  text-wrap: balance;
+  margin-top: 2rem;
   max-width: 80%;
   color: white;
+}
+#welcome .button-container {
+  display: flex;
+  gap: 15px;
+}
+#welcome .button-container button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid #4fa9cc;
+  color: white;
+  text-transform: capitalize;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+#welcome .button-container button:hover,
+#welcome .button-container button:focus {
+  border-color: #ebd693;
+  color: #ebd693;
+}
+#welcome .button-container .inverted-btn {
+  background-color: #357088;
+}
+#welcome .button-container .inverted-btn:hover,
+#welcome .button-container .inverted-btn:focus {
+  border-color: #ebd693;
 }
 
 #hours {
@@ -971,7 +1007,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
 #hours .msg-and-btn-container {
   padding: 30px;
   flex: 1;
-  font-size: calc(16px + 0.390625vw);
+  font-size: calc(14px + 0.390625vw);
+  text-wrap: balance;
   color: white;
   border-radius: 10px;
   align-self: center;
@@ -1003,14 +1040,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   background-color: #2a2a2a;
 }
 #hours #hours-info #title {
-  font-size: calc(18px + 0.390625vw);
+  font-size: calc(16px + 0.390625vw);
   padding: 0 1rem;
   border: 2px solid #4fa9cc;
   border-radius: 10px;
   color: white;
 }
 #hours #hours-info .heading {
-  font-size: calc(16px + 0.390625vw);
+  font-size: calc(14px + 0.390625vw);
   border-bottom: 1px solid #4fa9cc;
 }
 #hours #hours-info .days {
@@ -1019,8 +1056,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   color: white;
 }
 #hours #hours-info .times {
-  font-size: calc(14px + 0.390625vw);
+  font-size: calc(12px + 0.390625vw);
   color: white;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
@@ -1031,7 +1072,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AAtCF;AAwCE;EACE,aAAA;EACA,OAAA;EACA,kCAxEa;EAyEb,YA3Fc;EA8Fd,mBAAA;EAEA,kBAAA;AAzCJ;AA2CI;EACE,6BAAA;EACA,yBAAA;EACA,YArGY;EAsGZ,0BAAA;EACA,kBAAA;EACA,kBAAA;AAzCN;AA4CI;;EAEE,qBC7GO;ED8GP,cC9GO;ADoEb;AA8CE;EACE,mBAAA;AA5CJ;AA+CE;EACE,OAAA;AA7CJ;AAgDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCrIc;ADuFlB;AAgDI;EACE,kCA/Ga;EAgHb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YArIc;AAuFpB;AAiDI;EACE,kCAtHY;EAuHZ,gCAAA;AA/CN;AAkDI;EACE,gBAAA;EACA,qBAAA;EACA,YA/Ia;AA+FnB;AAmDI;EACE,kCAhIa;EAiIb,YAnJc;AAkGpB;;AAsDA;EACE;IACE,sBAAA;EAnDF;EAqDE;IACE,eAAA;IACA,eAAA;EAnDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button {\n      background-color: transparent;\n      border: 2px solid $hours-title-border-color;\n      color: $hours-msg-color;\n      text-transform: capitalize;\n      padding: 10px 15px;\n      border-radius: 5px;\n    }\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,kCAlDe;EAmDf,yBAAA;EACA,kBAAA;EAEA,gBAAA;EACA,cAAA;EACA,YA1EgB;AAuCpB;AAsCE;EACE,aAAA;EACA,SAAA;AApCJ;AAsCI;EACE,gBAAA;EACA,6BAAA;EACA,yBAAA;EACA,YApFY;EAqFZ,0BAAA;EACA,kBAAA;EACA,kBAAA;AApCN;AAuCI;;EAEE,qBC5FO;ED6FP,cC7FO;ADwDb;AAwCI;EACE,yBC9FY;ADwDlB;AAyCI;;EAEE,qBCtGO;AD+Db;;AA4CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AA5CF;AA8CE;EACE,aAAA;EACA,OAAA;EACA,kCAzGa;EA0Gb,kBAAA;EAEA,YA9Hc;EAiId,mBAAA;EAEA,kBAAA;AAhDJ;AAkDI;EACE,6BAAA;EACA,yBAAA;EACA,YAxIY;EAyIZ,0BAAA;EACA,kBAAA;EACA,kBAAA;AAhDN;AAmDI;;EAEE,qBChJO;EDiJP,cCjJO;ADgGb;AAqDE;EACE,mBAAA;AAnDJ;AAsDE;EACE,OAAA;AApDJ;AAuDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCxKc;ADmHlB;AAuDI;EACE,kCAlJa;EAmJb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YAxKc;AAmHpB;AAwDI;EACE,kCAzJY;EA0JZ,gCAAA;AAtDN;AAyDI;EACE,gBAAA;EACA,qBAAA;EACA,YAlLa;AA2HnB;AA0DI;EACE,kCAnKa;EAoKb,YAtLc;AA8HpB;;AA6DA;EACE,eAAA;AA1DF;;AA6DA;EACE;IACE,sBAAA;EA1DF;EA4DE;IACE,eAAA;IACA,eAAA;EA1DJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(14px + 0.390625vw);\n$hours-title-size: calc(16px + 0.390625vw);\n$hours-days-size: calc(14px + 0.390625vw);\n$hours-times-size: calc(12px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    font-size: $welcome-msg-size;\n    text-transform: uppercase;\n    text-wrap: balance;\n\n    margin-top: 2rem;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n\n  .button-container {\n    display: flex;\n    gap: 15px;\n\n    button {\n      margin-top: 20px;\n      background-color: transparent;\n      border: 2px solid $hours-title-border-color;\n      color: $hours-msg-color;\n      text-transform: capitalize;\n      padding: 10px 15px;\n      border-radius: 5px;\n    }\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n\n    .inverted-btn {\n      background-color: $blue-dark-color;\n    }\n\n    .inverted-btn:hover,\n    .inverted-btn:focus {\n      border-color: $gold-color;\n    }\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    text-wrap: balance;\n\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button {\n      background-color: transparent;\n      border: 2px solid $hours-title-border-color;\n      color: $hours-msg-color;\n      text-transform: capitalize;\n      padding: 10px 15px;\n      border-radius: 5px;\n    }\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\nbutton {\n  cursor: pointer;\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1261,18 +1302,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
   min-height: 50%;
   border-radius: 20px;
   padding: 20px;
-  font-size: calc(18px + 0.33vw);
+  font-size: calc(16px + 0.33vw);
+  text-transform: capitalize;
   text-align: center;
+  text-wrap: balance;
 }
 .slider-container .slide > div i {
-  font-size: calc(22px + 0.8vw);
+  font-size: calc(18px + 0.33vw);
 }
 .slider-container .slide > div .fa-lines-leaning {
   transform: rotate(180deg);
 }
 .slider-container .slide > div span {
   color: #4fa9cc;
-  font-size: calc(20px + 0.6vw);
+  font-size: calc(18px + 0.33vw);
 }
 .slider-container button {
   position: absolute;
@@ -1356,7 +1399,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,yBAAA;AATN;AAYI;EACE,cC5CO;ED6CP,6BAAA;AAVN;AAcE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAfJ;AAiBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAfN;AAmBE;;EAEE,YAAA;AAjBJ;AAoBE;EACE,sBAAA;AAlBJ;AAqBE;EACE,QAAA;AAnBJ;AAsBE;EACE,SAAA;AApBJ;AAuBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAzBJ;AA4BE;EACE,aAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;AA8BE;EACE,WAAA;AA5BJ;AA+BE;EACE,WAAA;AA7BJ;AAgCE;EACE,WAAA;AA9BJ;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;EACE,4GAAA;AAlCF;;AAsCA;EACE,4GAAA;AAnCF;;AAuCA;EACE,4GAAA;AApCF;;AAwCA;;;;EAIE,sBAAA;EACA,2BAAA;AArCF;;AA0CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAvCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 400px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(18px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(22px + 0.8vw);\n    }\n\n    .fa-lines-leaning {\n      transform: rotate(180deg);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(20px + 0.6vw);\n    }\n  }\n\n  button {\n    position: absolute;\n    top: 85%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 80%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  button:hover,\n  button:focus {\n    opacity: 100;\n  }\n\n  button:active {\n    transform: scale(1.08);\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,0BAAA;EACA,kBAAA;EACA,kBAAA;AARJ;AAUI;EACE,8BAAA;AARN;AAWI;EACE,yBAAA;AATN;AAYI;EACE,cC9CO;ED+CP,8BAAA;AAVN;AAcE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAfJ;AAiBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAfN;AAmBE;;EAEE,YAAA;AAjBJ;AAoBE;EACE,sBAAA;AAlBJ;AAqBE;EACE,QAAA;AAnBJ;AAsBE;EACE,SAAA;AApBJ;AAuBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAzBJ;AA4BE;EACE,aAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;AA8BE;EACE,WAAA;AA5BJ;AA+BE;EACE,WAAA;AA7BJ;AAgCE;EACE,WAAA;AA9BJ;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;EACE,4GAAA;AAlCF;;AAsCA;EACE,4GAAA;AAnCF;;AAuCA;EACE,4GAAA;AApCF;;AAwCA;;;;EAIE,sBAAA;EACA,2BAAA;AArCF;;AA0CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAvCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 400px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(16px + 0.33vw);\n    text-transform: capitalize;\n    text-align: center;\n    text-wrap: balance;\n\n    i {\n      font-size: calc(18px + 0.33vw);\n    }\n\n    .fa-lines-leaning {\n      transform: rotate(180deg);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(18px + 0.33vw);\n    }\n  }\n\n  button {\n    position: absolute;\n    top: 85%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 80%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  button:hover,\n  button:focus {\n    opacity: 100;\n  }\n\n  button:active {\n    transform: scale(1.08);\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2561,6 +2604,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _styles_footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/footer.scss */ "./src/styles/footer.scss");
 
+/* import ship from "../assets/ship-logo.png";
+import seagull from "../assets/seagull_2.png"; */
 
 // copyright icon
 // <i class="fa-regular fa-copyright"></i>;
@@ -2568,8 +2613,20 @@ __webpack_require__.r(__webpack_exports__);
 const buildFooter = (() => {
   const footer = document.createElement("footer");
   const text = document.createElement("p");
-  text.innerText = `Made by Rigney 2023`;
+  /*   const imgShip = document.createElement("img");
+  const imgSeagull = document.createElement("img"); */
 
+  /*   imgShip.src = ship;
+  imgShip.alt = "ship outline";
+  imgShip.classList.add("ship-img");
+
+  imgSeagull.src = seagull;
+  imgSeagull.alt = "seagull shape";
+  imgSeagull.classList.add("seagull-img");
+  
+  /* footer.appendChild(imgSeagull);
+  footer.appendChild(imgShip); */
+  text.innerText = `Made by Rigney 2023`;
   footer.appendChild(text);
 
   return footer;
@@ -2789,6 +2846,7 @@ const HOURS_INFO = `<div class='heading' id='title'>Opening Hours</div>
                     <div class='heading days'>Sunday</div>
                     <div class='times'>--closed--</div>
                     `;
+
 const buildHomepage = (() => {
   const container = document.createElement("div");
   container.id = "homepage-container";
@@ -2805,8 +2863,28 @@ const buildHomepage = (() => {
   welcomeMsg.innerText = WELCOME_MSG;
   welcomeMsg.id = "welcome-msg";
 
+  const buttonDiv = document.createElement("div");
+  buttonDiv.classList.add("button-container");
+
+  const aboutBtn = document.createElement("button");
+  aboutBtn.textContent = "Our Story";
+  aboutBtn.classList.add("inverted-btn");
+  const menuBtn = document.createElement("button");
+  menuBtn.textContent = "Our Menu";
+
+  aboutBtn.addEventListener("click", () => {
+    (0,_index__WEBPACK_IMPORTED_MODULE_2__.loadContent)(2);
+  });
+  menuBtn.addEventListener("click", () => {
+    (0,_index__WEBPACK_IMPORTED_MODULE_2__.loadContent)(1);
+  });
+
+  buttonDiv.appendChild(aboutBtn);
+  buttonDiv.appendChild(menuBtn);
+
   welcomeDiv.appendChild(welcomeTitle);
   welcomeDiv.appendChild(welcomeMsg);
+  welcomeDiv.appendChild(buttonDiv);
 
   //opening hours section
   const openingHoursDiv = document.createElement("div");
@@ -3103,7 +3181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_slider_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/slider.scss */ "./src/styles/slider.scss");
 
 
-const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds`;
+const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds, delivered <span>fresh</span> every day`;
 const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
 const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Palm Oil, <span>Filtered</span> Every Day`;
 const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
