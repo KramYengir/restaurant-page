@@ -176,13 +176,6 @@ const Slider = (() => {
     });
   }
 
-  function handleAutoNextImage() {
-    loadNextSlide();
-    setCurrentDot();
-  }
-
-  setInterval(handleAutoNextImage, 5000);
-
   return sliderContainer;
 })();
 
