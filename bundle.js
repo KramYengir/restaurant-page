@@ -1157,10 +1157,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
   align-self: center;
   gap: 3rem;
   /* flex-grow: 1; */
-  width: min(85vw, 1000px);
+  width: min(90vw, 1000px);
   min-height: 95%;
   background-color: rgba(42, 42, 42, 0.9);
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   margin: 5vh 0;
   border: 1px solid #ebd693;
 }
@@ -1170,9 +1170,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
     grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));
   }
 }
-/* .menu-section{
-    max-width: 80%;
-} */
 .section-heading {
   text-transform: uppercase;
   color: #4fa9cc;
@@ -1180,7 +1177,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
   font-size: calc(18px + 0.390625vw);
 }
 
-.section-heading, .menu-item {
+.section-heading,
+.menu-item {
   margin: 0.5rem;
 }
 
@@ -1226,7 +1224,25 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .menu-item-price::before {
   content: "£";
-}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACI,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,wBAAA;EACA,eAAA;EAEA,uCCzBiB;ED0BjB,iBAAA;EACA,aAAA;EAEA,yBAAA;AAjBJ;;AAoBA;EACI;IACI,6DAAA;EAjBN;AACF;AAqBA;;GAAA;AAIA;EACI,yBAAA;EACA,cCvCS;EDwCT,gCA9Ca;EA+Cb,kCArCmB;AAiBvB;;AAuBA;EACI,cAAA;AApBJ;;AAuBA;EACI,UAAA;AApBJ;;AAuBA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;AApBJ;;AAuBA;EACI,gBAAA;EACA,kCAvDQ;AAmCZ;;AAuBA;EACI,cClES;EDmET,0BAAA;AApBJ;;AAuBA;EACI,aAAA;EACA,qBAAA;AApBJ;;AAuBA;EACI,YAAA;EACA,kCArEU;AAiDd;;AAuBA;EACI,YAAA;EACA,gBAAA;AApBJ;;AAuBA;EACI,YAnFe;EAoFf,kCA9ES;AA0Db;;AAuBA;EACI,YAAA;AApBJ","sourcesContent":["@import './colors.scss';\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: white;\n\n//-SIZES\n$section-heading-size: calc(18px + 0.390625vw);\n$item-size: calc(14px + 0.390625vw);\n$option-size: calc(10px + 0.390625vw);;\n$price-size: calc(12px + 0.390625vw);;\n\n#menu-container{\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n    justify-content: center;\n    align-self: center;\n    gap: 3rem;\n    /* flex-grow: 1; */\n    width: min(85vw, 1000px);\n    min-height: 95%;\n    \n    background-color: $container-background-color;\n    padding: 5vh 10vw;\n    margin: 5vh 0;\n\n    border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px){\n    #menu-container{\n        grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n    }\n\n}\n\n/* .menu-section{\n    max-width: 80%;\n} */\n\n.section-heading{\n    text-transform: uppercase;\n    color: $heading-color;\n    border-bottom: $heading-border;\n    font-size: $section-heading-size;\n}\n\n.section-heading, .menu-item{\n    margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option){\n    color: red;\n}\n\n.menu-item{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.menu-item:not(.item-option){\n    margin-top: 1rem;\n    font-size: $item-size;\n}\n\n.menu-item-name{\n    color: $item-name-color;\n    text-transform: capitalize;\n}\n\n.item-option{\n    margin-top: 0;\n    margin-bottom: 0.4rem;\n}\n\n.item-option-text{\n    color: white;\n    font-size: $option-size;\n}\n\n.item-option-text::before{\n    content: ' ';\n    white-space: pre;\n}\n\n.menu-item-price{\n    color: $item-price-color;\n    font-size: $price-size;\n}\n\n.menu-item-price::before{\n    content: '£';\n}","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}
+
+@media only screen and (min-width: 279px) {
+  #menu-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));
+  }
+  .section-heading {
+    font-size: calc((18px + 0.390625vw) * 0.8);
+  }
+  .menu-item-name {
+    font-size: calc((14px + 0.390625vw) * 0.8);
+  }
+  .item-option-text {
+    font-size: calc((10px + 0.390625vw) * 0.8);
+  }
+  .menu-item-price {
+    font-size: calc((12px + 0.390625vw) * 0.8);
+  }
+}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACE,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,wBAAA;EACA,eAAA;EAEA,uCCzBmB;ED0BnB,gBAAA;EACA,aAAA;EAEA,yBAAA;AAjBF;;AAoBA;EACE;IACE,6DAAA;EAjBF;AACF;AAoBA;EACE,yBAAA;EACA,cClCW;EDmCX,gCAzCe;EA0Cf,kCAhCqB;AAcvB;;AAqBA;;EAEE,cAAA;AAlBF;;AAqBA;EACE,UAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AAlBF;;AAqBA;EACE,gBAAA;EACA,kCAnDU;AAiCZ;;AAqBA;EACE,cC9DW;ED+DX,0BAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,qBAAA;AAlBF;;AAqBA;EACE,YAAA;EACA,kCAjEY;AA+Cd;;AAqBA;EACE,YAAA;EACA,gBAAA;AAlBF;;AAqBA;EACE,YA/EiB;EAgFjB,kCA1EW;AAwDb;;AAqBA;EACE,YAAA;AAlBF;;AAsBA;EACE;IACE,6DAAA;EAnBF;EAsBA;IACE,0CAAA;EApBF;EAuBA;IACE,0CAAA;EArBF;EAwBA;IACE,0CAAA;EAtBF;EAyBA;IACE,0CAAA;EAvBF;AACF","sourcesContent":["@import \"./colors.scss\";\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: white;\n\n//-SIZES\n$section-heading-size: calc(18px + 0.390625vw);\n$item-size: calc(14px + 0.390625vw);\n$option-size: calc(10px + 0.390625vw);\n$price-size: calc(12px + 0.390625vw);\n\n#menu-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n  justify-content: center;\n  align-self: center;\n  gap: 3rem;\n  /* flex-grow: 1; */\n  width: min(90vw, 1000px);\n  min-height: 95%;\n\n  background-color: $container-background-color;\n  padding: 5vh 5vw;\n  margin: 5vh 0;\n\n  border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px) {\n  #menu-container {\n    grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n  }\n}\n\n.section-heading {\n  text-transform: uppercase;\n  color: $heading-color;\n  border-bottom: $heading-border;\n  font-size: $section-heading-size;\n}\n\n.section-heading,\n.menu-item {\n  margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option) {\n  color: red;\n}\n\n.menu-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.menu-item:not(.item-option) {\n  margin-top: 1rem;\n  font-size: $item-size;\n}\n\n.menu-item-name {\n  color: $item-name-color;\n  text-transform: capitalize;\n}\n\n.item-option {\n  margin-top: 0;\n  margin-bottom: 0.4rem;\n}\n\n.item-option-text {\n  color: white;\n  font-size: $option-size;\n}\n\n.item-option-text::before {\n  content: \" \";\n  white-space: pre;\n}\n\n.menu-item-price {\n  color: $item-price-color;\n  font-size: $price-size;\n}\n\n.menu-item-price::before {\n  content: \"£\";\n}\n\n// for the ridiculously narrow Galaxy Fold\n@media only screen and (min-width: 279px) {\n  #menu-container {\n    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));\n  }\n\n  .section-heading {\n    font-size: calc($section-heading-size * 0.8);\n  }\n\n  .menu-item-name {\n    font-size: calc($item-size * 0.8);\n  }\n\n  .item-option-text {\n    font-size: calc($option-size * 0.8);\n  }\n\n  .menu-item-price {\n    font-size: calc($price-size * 0.8);\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3305,7 +3321,6 @@ const Slider = (() => {
     });
 
     currentSlide.classList.remove("active-slide");
-    console.log(getCurrentSlide());
   }
 
   function loadPrevSlide() {
@@ -3322,7 +3337,6 @@ const Slider = (() => {
     });
 
     currentSlide.classList.remove("active-slide");
-    console.log(getCurrentSlide());
   }
 
   function getCurrentSlide() {
@@ -3350,13 +3364,6 @@ const Slider = (() => {
       }
     });
   }
-
-  function handleAutoNextImage() {
-    loadNextSlide();
-    setCurrentDot();
-  }
-
-  setInterval(handleAutoNextImage, 5000);
 
   return sliderContainer;
 })();
