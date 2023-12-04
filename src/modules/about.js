@@ -1,11 +1,11 @@
 import "../styles/about.scss";
-import mikeAmeliaImg from "../assets/mike-amelia.jpg";
-import christosImg from "../assets/christos.png";
+import communityImg from "../assets/FH_christos-pitchside-cropped.jpg";
+import christosImg from "../assets/FH_christos-cropped.jpeg";
 import painting from "../assets/painting.jpg";
-import foodImg from "../assets/fish-and-chips-square.jpg";
+import foodImg from "../assets/FH_fish-meal-1.jpeg";
 
 const buildAboutpage = (() => {
-  const images = [mikeAmeliaImg, christosImg, foodImg, painting];
+  const images = [painting, christosImg, foodImg, communityImg];
   const headings = [
     "Our Beginnings...",
     "Our Standards...",
@@ -14,12 +14,11 @@ const buildAboutpage = (() => {
   ];
 
   const textContent = [];
-  textContent[0] = `Ferryhill Fish and Chips is a family-run business established in 
-        2013 by husband and wife, Mike and Amelia.
-        With over 30 years working within the industry, 
-        we bring our knowledge and passion to provide quality food and 
-        good friendly service to our customers.`;
-  textContent[1] = `Under the stewardship of nephew Christos since 2020, our shop has 
+  textContent[0] = `Ferryhill Fish and Chips, a family-run establishment since 2013, 
+            leverages over 30 years of industry expertise. Our commitment is to bring
+             a blend of knowledge and passion, ensuring our customers experience
+              top-notch food and warm, friendly service.`;
+  textContent[1] = `Under the stewardship of Christos since 2020, our shop has 
         flourished, garnering consistent 5-star reviews on Google. 
         Our menu continues to evolve, and we are proud to have been voted 
         the best chippy in Manchester by readers of salfordnow.co.uk in 2023.`;

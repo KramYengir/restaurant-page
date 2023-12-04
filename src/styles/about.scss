@@ -43,9 +43,10 @@ $font-size: calc(12px + 0.390625vw);
 
 .img {
   padding: 10px;
-  aspect-ratio: 1;
+  aspect-ratio: 4/3;
   width: $img-size;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .text-container {
