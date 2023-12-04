@@ -463,9 +463,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
 
 .img {
   padding: 10px;
-  aspect-ratio: 1;
+  aspect-ratio: 4/3;
   width: clamp(300px, 55vw, 350px);
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .text-container {
@@ -496,7 +497,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#about-container {
     min-width: 95vw;
     gap: 1rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACE,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbF;;AAgBA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCjCmB;EDkCnB,mBAAA;AAdF;;AAiBA;EACE,2BAAA;AAdF;;AAiBA;EACE,aAAA;EACA,eAAA;EACA,gCAtCS;EAuCT,mBAAA;AAdF;;AAiBA;EACE,uBAAA;EACA,gCA3CoB;EA4CpB,4BAAA;EACA,kBAAA;AAdF;AAgBE;;EAIE,iCAAA;AAhBJ;AAmBE;EACE,cC1DS;ED2DT,yBAAA;EACA,qBAAA;EACA,mBAAA;AAjBJ;AAoBE;EACE,kCA7DQ;EA8DR,YAnES;AAiDb;;AAsBA;EACE;;IAEE,sBAAA;IACA,eAAA;IACA,SAAA;EAnBF;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 55vw, 350px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container {\n  flex-grow: 1;\n  align-self: center;\n  padding: 0 0;\n  margin-block: 2.5vh;\n\n  width: clamp(300px, 95vw, 1000px);\n\n  display: grid;\n  grid-template-columns: auto;\n  justify-content: center;\n  align-items: center;\n  grid-row-gap: 2rem;\n\n  line-height: 1.6;\n}\n\n.section {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n\n  background-color: $background-color;\n  border-radius: 10px;\n}\n\n.section:nth-child(even) {\n  flex-direction: row-reverse;\n}\n\n.img {\n  padding: 10px;\n  aspect-ratio: 1;\n  width: $img-size;\n  border-radius: 15px;\n}\n\n.text-container {\n  /* aspect-ratio: 4/3; */\n  width: $text-container-size;\n  padding: 1rem min(5rem, 3vw);\n  text-align: center;\n\n  h3,\n  p {\n    //font-family: 'Mulish', sans-serif;\n    //font-family: \"Open Sans\", sans-serif;\n    font-family: \"Roboto\", sans-serif;\n  }\n\n  h3 {\n    color: $gold-color;\n    text-transform: uppercase;\n    margin-bottom: 1.5rem;\n    letter-spacing: 3px;\n  }\n\n  p {\n    font-size: $font-size;\n    color: $font-color;\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  .section,\n  .section:nth-child(even) {\n    flex-direction: column;\n    min-width: 95vw;\n    gap: 1rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/about.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAYA;EACE,YAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EAEA,iCAAA;EAEA,aAAA;EACA,2BAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,gBAAA;AAbF;;AAgBA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,uCCjCmB;EDkCnB,mBAAA;AAdF;;AAiBA;EACE,2BAAA;AAdF;;AAiBA;EACE,aAAA;EACA,iBAAA;EACA,gCAtCS;EAuCT,mBAAA;EACA,iBAAA;AAdF;;AAiBA;EACE,uBAAA;EACA,gCA5CoB;EA6CpB,4BAAA;EACA,kBAAA;AAdF;AAgBE;;EAIE,iCAAA;AAhBJ;AAmBE;EACE,cC3DS;ED4DT,yBAAA;EACA,qBAAA;EACA,mBAAA;AAjBJ;AAoBE;EACE,kCA9DQ;EA+DR,YApES;AAkDb;;AAsBA;EACE;;IAEE,sBAAA;IACA,eAAA;IACA,SAAA;EAnBF;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//COLORS\n$background-color: $background-dark-90;\n$font-color: white;\n\n//SIZES\n$img-size: clamp(300px, 55vw, 350px);\n$text-container-size: clamp(300px, 60vw, 450px);\n$font-size: calc(12px + 0.390625vw);\n\n#about-container {\n  flex-grow: 1;\n  align-self: center;\n  padding: 0 0;\n  margin-block: 2.5vh;\n\n  width: clamp(300px, 95vw, 1000px);\n\n  display: grid;\n  grid-template-columns: auto;\n  justify-content: center;\n  align-items: center;\n  grid-row-gap: 2rem;\n\n  line-height: 1.6;\n}\n\n.section {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n\n  background-color: $background-color;\n  border-radius: 10px;\n}\n\n.section:nth-child(even) {\n  flex-direction: row-reverse;\n}\n\n.img {\n  padding: 10px;\n  aspect-ratio: 4/3;\n  width: $img-size;\n  border-radius: 15px;\n  object-fit: cover;\n}\n\n.text-container {\n  /* aspect-ratio: 4/3; */\n  width: $text-container-size;\n  padding: 1rem min(5rem, 3vw);\n  text-align: center;\n\n  h3,\n  p {\n    //font-family: 'Mulish', sans-serif;\n    //font-family: \"Open Sans\", sans-serif;\n    font-family: \"Roboto\", sans-serif;\n  }\n\n  h3 {\n    color: $gold-color;\n    text-transform: uppercase;\n    margin-bottom: 1.5rem;\n    letter-spacing: 3px;\n  }\n\n  p {\n    font-size: $font-size;\n    color: $font-color;\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  .section,\n  .section:nth-child(even) {\n    flex-direction: column;\n    min-width: 95vw;\n    gap: 1rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -682,10 +683,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `footer {
   border-top: 1px solid #ebd693;
   font-size: 0.7rem;
 }
-footer > svg {
-  height: 0.6rem;
-  margin-left: -1.3rem;
-}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACI,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,cCPS;EDQT,yBCdc;EDed,6BAAA;EACA,iBAAA;AAHJ;AAKI;EACI,cAAA;EACA,oBAAA;AAHR","sourcesContent":["@import './colors.scss';\n\nfooter{\n    position: fixed;\n    bottom: 0;\n    min-height: 50px;\n\n    width: 100%;\n    flex-shrink: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    color: $gold-color;\n    background-color: $background-dark;\n    border-top: 1px solid $gold-color ;\n    font-size: 0.7rem;\n\n    &>svg{\n        height: 0.6rem;\n        margin-left: -1.3rem;\n    }\n\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+footer p {
+  color: #ebd693;
+}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,cCPW;EDQX,yBCdgB;EDehB,6BAAA;EACA,iBAAA;AAHF;AAKE;EACE,cCbS;ADUb","sourcesContent":["@import \"./colors.scss\";\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  min-height: 50px;\n\n  width: 100%;\n  flex-shrink: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-top: 1px solid $gold-color;\n  font-size: 0.7rem;\n\n  p {\n    color: $gold-color;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -968,13 +968,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_1___});
   /* border-top: 1px solid \$gold-color; */
 }
-#hours #hours-msg {
+#hours .msg-and-btn-container {
   padding: 30px;
   flex: 1;
   font-size: calc(16px + 0.390625vw);
   color: white;
   border-radius: 10px;
   align-self: center;
+}
+#hours .msg-and-btn-container button {
+  background-color: transparent;
+  border: 2px solid #4fa9cc;
+  color: white;
+  text-transform: capitalize;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+#hours .msg-and-btn-container button:hover,
+#hours .msg-and-btn-container button:focus {
+  border-color: #ebd693;
+  color: #ebd693;
+}
+#hours #hours-msg {
+  margin-bottom: 25px;
 }
 #hours #hours-div {
   flex: 1;
@@ -1015,7 +1031,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AAtCF;AAwCE;EACE,aAAA;EACA,OAAA;EACA,kCAxEa;EAyEb,YA3Fc;EA8Fd,mBAAA;EAEA,kBAAA;AAzCJ;AA4CE;EACE,OAAA;AA1CJ;AA6CE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBClHc;ADuElB;AA6CI;EACE,kCA5Fa;EA6Fb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YAlHc;AAuEpB;AA8CI;EACE,kCAnGY;EAoGZ,gCAAA;AA5CN;AA+CI;EACE,gBAAA;EACA,qBAAA;EACA,YA5Ha;AA+EnB;AAgDI;EACE,kCA7Ga;EA8Gb,YAhIc;AAkFpB;;AAmDA;EACE;IACE,sBAAA;EAhDF;EAkDE;IACE,eAAA;IACA,eAAA;EAhDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  #hours-msg {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,gBAAA;EACA,kCAnDe;EAoDf,cAAA;EACA,YAvEgB;AAqCpB;;AAsCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AAtCF;AAwCE;EACE,aAAA;EACA,OAAA;EACA,kCAxEa;EAyEb,YA3Fc;EA8Fd,mBAAA;EAEA,kBAAA;AAzCJ;AA2CI;EACE,6BAAA;EACA,yBAAA;EACA,YArGY;EAsGZ,0BAAA;EACA,kBAAA;EACA,kBAAA;AAzCN;AA4CI;;EAEE,qBC7GO;ED8GP,cC9GO;ADoEb;AA8CE;EACE,mBAAA;AA5CJ;AA+CE;EACE,OAAA;AA7CJ;AAgDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCrIc;ADuFlB;AAgDI;EACE,kCA/Ga;EAgHb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YArIc;AAuFpB;AAiDI;EACE,kCAtHY;EAuHZ,gCAAA;AA/CN;AAkDI;EACE,gBAAA;EACA,qBAAA;EACA,YA/Ia;AA+FnB;AAmDI;EACE,kCAhIa;EAiIb,YAnJc;AAkGpB;;AAsDA;EACE;IACE,sBAAA;EAnDF;EAqDE;IACE,eAAA;IACA,eAAA;EAnDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(16px + 0.390625vw);\n$hours-title-size: calc(18px + 0.390625vw);\n$hours-days-size: calc(16px + 0.390625vw);\n$hours-times-size: calc(14px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    margin-top: 2rem;\n    font-size: $welcome-msg-size;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button {\n      background-color: transparent;\n      border: 2px solid $hours-title-border-color;\n      color: $hours-msg-color;\n      text-transform: capitalize;\n      padding: 10px 15px;\n      border-radius: 5px;\n    }\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1251,6 +1267,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
 .slider-container .slide > div i {
   font-size: calc(22px + 0.8vw);
 }
+.slider-container .slide > div .fa-lines-leaning {
+  transform: rotate(180deg);
+}
 .slider-container .slide > div span {
   color: #4fa9cc;
   font-size: calc(20px + 0.6vw);
@@ -1337,7 +1356,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,cCxCO;EDyCP,6BAAA;AATN;AAaE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAdJ;AAgBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAdN;AAkBE;;EAEE,YAAA;AAhBJ;AAmBE;EACE,sBAAA;AAjBJ;AAoBE;EACE,QAAA;AAlBJ;AAqBE;EACE,SAAA;AAnBJ;AAsBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAxBJ;AA2BE;EACE,aAAA;AAzBJ;AA4BE;EACE,WAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;AA8BE;EACE,WAAA;AA5BJ;AA+BE;EACE,WAAA;AA7BJ;;AAmCA;EACE,4GAAA;AAhCF;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;EACE,4GAAA;AAlCF;;AAsCA;EACE,4GAAA;AAnCF;;AAuCA;;;;EAIE,sBAAA;EACA,2BAAA;AApCF;;AAyCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAtCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 400px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(18px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(22px + 0.8vw);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(20px + 0.6vw);\n    }\n  }\n\n  button {\n    position: absolute;\n    top: 85%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 80%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  button:hover,\n  button:focus {\n    opacity: 100;\n  }\n\n  button:active {\n    transform: scale(1.08);\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/slider.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,4BAAA;AADF;AAGE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EAEA,UAAA;EAEA,kBAAA;EACA,MAAA;EACA,OAAA;EACA,mBAAA;EACA,oBAAA;EACA,sBAAA;AAHJ;AAME;EACE,YAAA;AAJJ;AAOE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,yBAAA;EACA,gDAAA;EAEA,0BAAA;EACA,eAAA;EACA,mBAAA;EACA,aAAA;EAEA,8BAAA;EACA,kBAAA;AARJ;AAUI;EACE,6BAAA;AARN;AAWI;EACE,yBAAA;AATN;AAYI;EACE,cC5CO;ED6CP,6BAAA;AAVN;AAcE;EACE,kBAAA;EACA,QAAA;EAEA,WAAA;EACA,YAAA;EAEA,6BAAA;EACA,YAAA;EACA,YAAA;EAEA,eAAA;AAfJ;AAiBI;EACE,kCAAA;EACA,WAAA;EACA,2BAAA;AAfN;AAmBE;;EAEE,YAAA;AAjBJ;AAoBE;EACE,sBAAA;AAlBJ;AAqBE;EACE,QAAA;AAnBJ;AAsBE;EACE,SAAA;AApBJ;AAuBE;EACE,kBAAA;EACA,UAAA;EAEA,WAAA;EACA,YAAA;EACA,sBAAA;EAEA,mBAAA;EAEA,YAAA;EAEA,eAAA;AAzBJ;AA4BE;EACE,aAAA;AA1BJ;AA6BE;EACE,WAAA;AA3BJ;AA8BE;EACE,WAAA;AA5BJ;AA+BE;EACE,WAAA;AA7BJ;AAgCE;EACE,WAAA;AA9BJ;;AAoCA;EACE,4GAAA;AAjCF;;AAqCA;EACE,4GAAA;AAlCF;;AAsCA;EACE,4GAAA;AAnCF;;AAuCA;EACE,4GAAA;AApCF;;AAwCA;;;;EAIE,sBAAA;EACA,2BAAA;AArCF;;AA0CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAvCF","sourcesContent":["@import \"./colors.scss\";\n\n.slider-container {\n  position: relative;\n  min-height: 500px !important;\n\n  .slide {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n\n    opacity: 0;\n\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 10px;\n    transition: all 0.3s;\n    transition-delay: 0.2s;\n  }\n\n  .slide.active-slide {\n    opacity: 100;\n  }\n\n  .slide > div {\n    display: flex;\n    flex-direction: column-reverse;\n    gap: 20px;\n\n    color: rgb(226, 219, 219);\n    background-color: #2c2a2a90;\n\n    max-width: min(80%, 400px);\n    min-height: 50%;\n    border-radius: 20px;\n    padding: 20px;\n\n    font-size: calc(18px + 0.33vw);\n    text-align: center;\n\n    i {\n      font-size: calc(22px + 0.8vw);\n    }\n\n    .fa-lines-leaning {\n      transform: rotate(180deg);\n    }\n\n    span {\n      color: $blue-color;\n      font-size: calc(20px + 0.6vw);\n    }\n  }\n\n  button {\n    position: absolute;\n    top: 85%;\n\n    width: 60px;\n    height: 50px;\n\n    background-color: transparent;\n    border: none;\n    opacity: 80%;\n\n    cursor: pointer;\n\n    i {\n      font-family: \"Font Awesome 6 Free\";\n      color: #fff;\n      font-size: calc(24px + 1vw);\n    }\n  }\n\n  button:hover,\n  button:focus {\n    opacity: 100;\n  }\n\n  button:active {\n    transform: scale(1.08);\n  }\n\n  .prev-btn {\n    left: 1%;\n  }\n\n  .next-btn {\n    right: 1%;\n  }\n\n  .dot {\n    position: absolute;\n    bottom: 4%;\n\n    width: 10px;\n    height: 10px;\n    background-color: #fff;\n\n    border-radius: 10px;\n\n    opacity: 30%;\n\n    cursor: pointer;\n  }\n\n  .dot.active-dot {\n    opacity: 100%;\n  }\n\n  #dot0 {\n    left: 42.5%;\n  }\n\n  #dot1 {\n    left: 47.5%;\n  }\n\n  #dot2 {\n    left: 52.5%;\n  }\n\n  #dot3 {\n    left: 57.5%;\n  }\n}\n\n// set slide backgrounds\n\n#slide0 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fried-fish.png\");\n}\n\n#slide1 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_potatoes.png\");\n}\n\n#slide2 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-in-oil.png\");\n}\n\n#slide3 {\n  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/fish-and-chips.jpg\");\n}\n\n#slide0,\n#slide1,\n#slide2,\n#slide3 {\n  background-size: cover;\n  background-position: center;\n}\n\n// utility classes\n\n.flex-centered {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2197,6 +2216,89 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   loadContent: () => (/* binding */ loadContent)
+/* harmony export */ });
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _modules_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header.js */ "./src/modules/header.js");
+/* harmony import */ var _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homepage.js */ "./src/modules/homepage.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu.js */ "./src/modules/menu.js");
+/* harmony import */ var _modules_contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/contact.js */ "./src/modules/contact.js");
+/* harmony import */ var _modules_about_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/about.js */ "./src/modules/about.js");
+/* harmony import */ var _modules_footer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/footer.js */ "./src/modules/footer.js");
+
+
+
+
+
+
+
+
+const pages = [_modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"], _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"], _modules_about_js__WEBPACK_IMPORTED_MODULE_5__["default"], _modules_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"]];
+
+const content = document.getElementById("content");
+const contentMain = document.createElement("div");
+let currentPage = _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"];
+
+// keep current page after reload
+let lastPageIndex = sessionStorage.getItem("lastPageIndex");
+
+if (lastPageIndex) {
+  currentPage = pages[lastPageIndex];
+}
+
+contentMain.id = "content-main";
+contentMain.appendChild(currentPage);
+content.appendChild(_modules_header_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+content.appendChild(contentMain);
+content.appendChild(_modules_footer_js__WEBPACK_IMPORTED_MODULE_6__["default"]);
+
+const tabLinks = document.querySelectorAll("a");
+
+const loadContent = (index) => {
+  contentMain.removeChild(currentPage);
+  contentMain.appendChild(pages[index]);
+  toggleActiveTab(index);
+  currentPage = pages[index];
+  lastPageIndex = index;
+  sessionStorage.setItem("lastPageIndex", index);
+  window.scrollTo(0, 0);
+};
+
+const toggleActiveTab = (index) => {
+  tabLinks.forEach((el, i) => {
+    if (i === index) {
+      tabLinks[index].classList.add("active");
+    } else {
+      tabLinks[i].classList.remove("active");
+      console.log("matching index");
+    }
+  });
+};
+
+tabLinks.forEach((el, i) => {
+  el.addEventListener("click", () => {
+    loadContent(el.dataset.index);
+  });
+});
+
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+  loadContent(lastPageIndex);
+});
+
+
+
+
+/***/ }),
+
 /***/ "./src/modules/about.js":
 /*!******************************!*\
   !*** ./src/modules/about.js ***!
@@ -2208,10 +2310,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _styles_about_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/about.scss */ "./src/styles/about.scss");
-/* harmony import */ var _assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/mike-amelia.jpg */ "./src/assets/mike-amelia.jpg");
-/* harmony import */ var _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/christos.png */ "./src/assets/christos.png");
+/* harmony import */ var _assets_FH_christos_pitchside_cropped_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/FH_christos-pitchside-cropped.jpg */ "./src/assets/FH_christos-pitchside-cropped.jpg");
+/* harmony import */ var _assets_FH_christos_cropped_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/FH_christos-cropped.jpeg */ "./src/assets/FH_christos-cropped.jpeg");
 /* harmony import */ var _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/painting.jpg */ "./src/assets/painting.jpg");
-/* harmony import */ var _assets_fish_and_chips_square_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/fish-and-chips-square.jpg */ "./src/assets/fish-and-chips-square.jpg");
+/* harmony import */ var _assets_FH_fish_meal_1_jpeg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/FH_fish-meal-1.jpeg */ "./src/assets/FH_fish-meal-1.jpeg");
 
 
 
@@ -2219,7 +2321,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const buildAboutpage = (() => {
-  const images = [_assets_mike_amelia_jpg__WEBPACK_IMPORTED_MODULE_1__, _assets_christos_png__WEBPACK_IMPORTED_MODULE_2__, _assets_fish_and_chips_square_jpg__WEBPACK_IMPORTED_MODULE_4__, _assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__];
+  const images = [_assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__, _assets_FH_christos_cropped_jpeg__WEBPACK_IMPORTED_MODULE_2__, _assets_FH_fish_meal_1_jpeg__WEBPACK_IMPORTED_MODULE_4__, _assets_FH_christos_pitchside_cropped_jpg__WEBPACK_IMPORTED_MODULE_1__];
   const headings = [
     "Our Beginnings...",
     "Our Standards...",
@@ -2228,12 +2330,11 @@ const buildAboutpage = (() => {
   ];
 
   const textContent = [];
-  textContent[0] = `Ferryhill Fish and Chips is a family-run business established in 
-        2013 by husband and wife, Mike and Amelia.
-        With over 30 years working within the industry, 
-        we bring our knowledge and passion to provide quality food and 
-        good friendly service to our customers.`;
-  textContent[1] = `Under the stewardship of nephew Christos since 2020, our shop has 
+  textContent[0] = `Ferryhill Fish and Chips, a family-run establishment since 2013, 
+            leverages over 30 years of industry expertise. Our commitment is to bring
+             a blend of knowledge and passion, ensuring our customers experience
+              top-notch food and warm, friendly service.`;
+  textContent[1] = `Under the stewardship of Christos since 2020, our shop has 
         flourished, garnering consistent 5-star reviews on Google. 
         Our menu continues to evolve, and we are proud to have been voted 
         the best chippy in Manchester by readers of salfordnow.co.uk in 2023.`;
@@ -2460,28 +2561,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _styles_footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/footer.scss */ "./src/styles/footer.scss");
 
-const SVG = `<svg fill="#ebd693" height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 367.467 367.467" xml:space="preserve">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-            <g id="SVGRepo_iconCarrier"> <g> <path d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z"/> <path d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z"/> </g> </g>
-            </svg>`;
 
-const buildFooter = (()=>{
+// copyright icon
+// <i class="fa-regular fa-copyright"></i>;
 
-    const footer = document.createElement('footer');
- 
-    footer.innerText = 'Created by Rigney Web Solutions 2023'
+const buildFooter = (() => {
+  const footer = document.createElement("footer");
+  const text = document.createElement("p");
+  text.innerText = `Made by Rigney 2023`;
 
-    const parser = new DOMParser();
-    const svgElement = parser.parseFromString(SVG, 'image/svg+xml').querySelector('svg');
+  footer.appendChild(text);
 
-    footer.appendChild(svgElement);
-
-    return footer;
-
+  return footer;
 })();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buildFooter);
+
 
 /***/ }),
 
@@ -2673,6 +2768,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _styles_homepage_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/homepage.scss */ "./src/styles/homepage.scss");
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slider */ "./src/modules/slider.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../index */ "./src/index.js");
+
 
 
 
@@ -2715,6 +2812,9 @@ const buildHomepage = (() => {
   const openingHoursDiv = document.createElement("div");
   openingHoursDiv.id = "hours";
 
+  const msgAndBtnContainer = document.createElement("div");
+  msgAndBtnContainer.classList.add("msg-and-btn-container");
+
   const hoursMsg = document.createElement("div");
   hoursMsg.id = "hours-msg";
   hoursMsg.innerText = HOURS_MSG;
@@ -2726,9 +2826,18 @@ const buildHomepage = (() => {
   hoursInfo.id = "hours-info";
   hoursInfo.innerHTML = HOURS_INFO;
 
+  const contactBtn = document.createElement("button");
+  contactBtn.innerText = "Find Out More";
+  contactBtn.addEventListener("click", () => {
+    (0,_index__WEBPACK_IMPORTED_MODULE_2__.loadContent)(3);
+  });
+
   hoursDiv.appendChild(hoursInfo);
 
-  openingHoursDiv.appendChild(hoursMsg);
+  msgAndBtnContainer.appendChild(hoursMsg);
+  msgAndBtnContainer.appendChild(contactBtn);
+
+  openingHoursDiv.appendChild(msgAndBtnContainer);
   openingHoursDiv.appendChild(hoursDiv);
 
   container.appendChild(welcomeDiv);
@@ -2996,7 +3105,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds`;
 const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
-const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Palm Oil`;
+const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Palm Oil, <span>Filtered</span> Every Day`;
 const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
 
 const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
@@ -3180,6 +3289,36 @@ const Slider = (() => {
 
 /***/ }),
 
+/***/ "./src/assets/FH_christos-cropped.jpeg":
+/*!*********************************************!*\
+  !*** ./src/assets/FH_christos-cropped.jpeg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_christos-cropped.jpeg";
+
+/***/ }),
+
+/***/ "./src/assets/FH_christos-pitchside-cropped.jpg":
+/*!******************************************************!*\
+  !*** ./src/assets/FH_christos-pitchside-cropped.jpg ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_christos-pitchside-cropped.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/FH_fish-meal-1.jpeg":
+/*!****************************************!*\
+  !*** ./src/assets/FH_fish-meal-1.jpeg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "FH_fish-meal-1.jpeg";
+
+/***/ }),
+
 /***/ "./src/assets/FH_front.png":
 /*!*********************************!*\
   !*** ./src/assets/FH_front.png ***!
@@ -3210,26 +3349,6 @@ module.exports = __webpack_require__.p + "FH_potatoes.png";
 
 /***/ }),
 
-/***/ "./src/assets/christos.png":
-/*!*********************************!*\
-  !*** ./src/assets/christos.png ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "christos.png";
-
-/***/ }),
-
-/***/ "./src/assets/fish-and-chips-square.jpg":
-/*!**********************************************!*\
-  !*** ./src/assets/fish-and-chips-square.jpg ***!
-  \**********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fish-and-chips-square.jpg";
-
-/***/ }),
-
 /***/ "./src/assets/fish-and-chips.jpg":
 /*!***************************************!*\
   !*** ./src/assets/fish-and-chips.jpg ***!
@@ -3257,16 +3376,6 @@ module.exports = __webpack_require__.p + "fish-in-oil.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fried-fish.png";
-
-/***/ }),
-
-/***/ "./src/assets/mike-amelia.jpg":
-/*!************************************!*\
-  !*** ./src/assets/mike-amelia.jpg ***!
-  \************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "mike-amelia.jpg";
 
 /***/ }),
 
@@ -3447,82 +3556,12 @@ module.exports = __webpack_require__.p + "seagull_3.png";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _modules_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header.js */ "./src/modules/header.js");
-/* harmony import */ var _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homepage.js */ "./src/modules/homepage.js");
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu.js */ "./src/modules/menu.js");
-/* harmony import */ var _modules_contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/contact.js */ "./src/modules/contact.js");
-/* harmony import */ var _modules_about_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/about.js */ "./src/modules/about.js");
-/* harmony import */ var _modules_footer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/footer.js */ "./src/modules/footer.js");
-
-
-
-
-
-
-
-
-const pages = [_modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"], _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"], _modules_about_js__WEBPACK_IMPORTED_MODULE_5__["default"], _modules_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"]];
-
-const content = document.getElementById("content");
-const contentMain = document.createElement("div");
-let currentPage = _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__["default"];
-
-// keep current page after reload
-let lastPageIndex = sessionStorage.getItem("lastPageIndex");
-
-if (lastPageIndex) {
-  currentPage = pages[lastPageIndex];
-}
-
-contentMain.id = "content-main";
-contentMain.appendChild(currentPage);
-content.appendChild(_modules_header_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
-content.appendChild(contentMain);
-content.appendChild(_modules_footer_js__WEBPACK_IMPORTED_MODULE_6__["default"]);
-
-const tabLinks = document.querySelectorAll("a");
-
-const loadContent = (index) => {
-  contentMain.removeChild(currentPage);
-  contentMain.appendChild(pages[index]);
-  currentPage = pages[index];
-  lastPageIndex = index;
-  sessionStorage.setItem("lastPageIndex", index);
-};
-
-const toggleActiveTab = (index) => {
-  tabLinks.forEach((el, i) => {
-    if (i === index) {
-      tabLinks[index].classList.add("active");
-    } else {
-      tabLinks[i].classList.remove("active");
-      console.log("matching index");
-    }
-  });
-};
-
-tabLinks.forEach((el, i) => {
-  el.addEventListener("click", () => {
-    loadContent(el.dataset.index);
-    toggleActiveTab(i);
-  });
-});
-
-window.addEventListener("beforeunload", () => {
-  window.scrollTo(0, 0);
-  loadContent(lastPageIndex);
-});
-
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
