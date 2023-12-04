@@ -132,7 +132,6 @@ const Slider = (() => {
     });
 
     currentSlide.classList.remove("active-slide");
-    console.log(getCurrentSlide());
   }
 
   function loadPrevSlide() {
@@ -149,7 +148,6 @@ const Slider = (() => {
     });
 
     currentSlide.classList.remove("active-slide");
-    console.log(getCurrentSlide());
   }
 
   function getCurrentSlide() {
