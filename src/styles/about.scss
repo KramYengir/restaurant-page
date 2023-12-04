@@ -54,6 +54,7 @@ $font-size: calc(12px + 0.390625vw);
   width: $text-container-size;
   padding: 1rem min(5rem, 3vw);
   text-align: center;
+  text-wrap: balance;
 
   h3,
   p {

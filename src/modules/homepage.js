@@ -18,6 +18,7 @@ const HOURS_INFO = `<div class='heading' id='title'>Opening Hours</div>
                     <div class='heading days'>Sunday</div>
                     <div class='times'>--closed--</div>
                     `;
+
 const buildHomepage = (() => {
   const container = document.createElement("div");
   container.id = "homepage-container";
@@ -34,8 +35,28 @@ const buildHomepage = (() => {
   welcomeMsg.innerText = WELCOME_MSG;
   welcomeMsg.id = "welcome-msg";
 
+  const buttonDiv = document.createElement("div");
+  buttonDiv.classList.add("button-container");
+
+  const aboutBtn = document.createElement("button");
+  aboutBtn.textContent = "Our Story";
+  aboutBtn.classList.add("inverted-btn");
+  const menuBtn = document.createElement("button");
+  menuBtn.textContent = "Our Menu";
+
+  aboutBtn.addEventListener("click", () => {
+    loadContent(2);
+  });
+  menuBtn.addEventListener("click", () => {
+    loadContent(1);
+  });
+
+  buttonDiv.appendChild(aboutBtn);
+  buttonDiv.appendChild(menuBtn);
+
   welcomeDiv.appendChild(welcomeTitle);
   welcomeDiv.appendChild(welcomeMsg);
+  welcomeDiv.appendChild(buttonDiv);
 
   //opening hours section
   const openingHoursDiv = document.createElement("div");

@@ -38,11 +38,13 @@
     border-radius: 20px;
     padding: 20px;
 
-    font-size: calc(18px + 0.33vw);
+    font-size: calc(16px + 0.33vw);
+    text-transform: capitalize;
     text-align: center;
+    text-wrap: balance;
 
     i {
-      font-size: calc(22px + 0.8vw);
+      font-size: calc(18px + 0.33vw);
     }
 
     .fa-lines-leaning {
@@ -51,7 +53,7 @@
 
     span {
       color: $blue-color;
-      font-size: calc(20px + 0.6vw);
+      font-size: calc(18px + 0.33vw);
     }
   }
 
