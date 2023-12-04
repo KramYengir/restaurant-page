@@ -921,6 +921,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/FH_front.png */ "./src/assets/FH_front.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
@@ -955,36 +956,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   /* font-family: 'Merriweather', serif; */
 }
 #welcome #welcome-title {
-  font-size: calc(28px + 0.390625vw);
+  font-size: calc(32px + 0.390625vw);
   font-weight: 700;
   text-transform: uppercase;
   color: #ebd693;
 }
 #welcome #welcome-msg {
-  font-size: calc(16px + 0.390625vw);
-  text-transform: uppercase;
+  font-size: calc(14px + 0.390625vw);
   text-wrap: balance;
-  margin-top: 2rem;
+  margin-block: 1rem;
   max-width: 80%;
   color: white;
 }
 #welcome .button-container {
   display: flex;
   gap: 15px;
-}
-#welcome .button-container button {
-  margin-top: 20px;
-  background-color: transparent;
-  border: 2px solid #4fa9cc;
-  color: white;
-  text-transform: capitalize;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-#welcome .button-container button:hover,
-#welcome .button-container button:focus {
-  border-color: #ebd693;
-  color: #ebd693;
 }
 #welcome .button-container .inverted-btn {
   background-color: #357088;
@@ -1012,14 +998,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   color: white;
   border-radius: 10px;
   align-self: center;
-}
-#hours .msg-and-btn-container button {
-  background-color: transparent;
-  border: 2px solid #4fa9cc;
-  color: white;
-  text-transform: capitalize;
-  padding: 10px 15px;
-  border-radius: 5px;
 }
 #hours .msg-and-btn-container button:hover,
 #hours .msg-and-btn-container button:focus {
@@ -1061,7 +1039,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
 }
 
 button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #4fa9cc;
+  border-radius: 5px;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  border-color: #ebd693;
+  color: #ebd693;
 }
 
 @media only screen and (max-width: 800px) {
@@ -1072,7 +1063,7 @@ button {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA6BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cC/DS;AD8Bb;AAoCE;EACE,kCAlDe;EAmDf,yBAAA;EACA,kBAAA;EAEA,gBAAA;EACA,cAAA;EACA,YA1EgB;AAuCpB;AAsCE;EACE,aAAA;EACA,SAAA;AApCJ;AAsCI;EACE,gBAAA;EACA,6BAAA;EACA,yBAAA;EACA,YApFY;EAqFZ,0BAAA;EACA,kBAAA;EACA,kBAAA;AApCN;AAuCI;;EAEE,qBC5FO;ED6FP,cC7FO;ADwDb;AAwCI;EACE,yBC9FY;ADwDlB;AAyCI;;EAEE,qBCtGO;AD+Db;;AA4CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AA5CF;AA8CE;EACE,aAAA;EACA,OAAA;EACA,kCAzGa;EA0Gb,kBAAA;EAEA,YA9Hc;EAiId,mBAAA;EAEA,kBAAA;AAhDJ;AAkDI;EACE,6BAAA;EACA,yBAAA;EACA,YAxIY;EAyIZ,0BAAA;EACA,kBAAA;EACA,kBAAA;AAhDN;AAmDI;;EAEE,qBChJO;EDiJP,cCjJO;ADgGb;AAqDE;EACE,mBAAA;AAnDJ;AAsDE;EACE,OAAA;AApDJ;AAuDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBCxKc;ADmHlB;AAuDI;EACE,kCAlJa;EAmJb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YAxKc;AAmHpB;AAwDI;EACE,kCAzJY;EA0JZ,gCAAA;AAtDN;AAyDI;EACE,gBAAA;EACA,qBAAA;EACA,YAlLa;AA2HnB;AA0DI;EACE,kCAnKa;EAoKb,YAtLc;AA8HpB;;AA6DA;EACE,eAAA;AA1DF;;AA6DA;EACE;IACE,sBAAA;EA1DF;EA4DE;IACE,eAAA;IACA,eAAA;EA1DJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(28px + 0.390625vw);\n$welcome-msg-size: calc(16px + 0.390625vw);\n$hours-msg-size: calc(14px + 0.390625vw);\n$hours-title-size: calc(16px + 0.390625vw);\n$hours-days-size: calc(14px + 0.390625vw);\n$hours-times-size: calc(12px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    font-size: $welcome-msg-size;\n    text-transform: uppercase;\n    text-wrap: balance;\n\n    margin-top: 2rem;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n\n  .button-container {\n    display: flex;\n    gap: 15px;\n\n    button {\n      margin-top: 20px;\n      background-color: transparent;\n      border: 2px solid $hours-title-border-color;\n      color: $hours-msg-color;\n      text-transform: capitalize;\n      padding: 10px 15px;\n      border-radius: 5px;\n    }\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n\n    .inverted-btn {\n      background-color: $blue-dark-color;\n    }\n\n    .inverted-btn:hover,\n    .inverted-btn:focus {\n      border-color: $gold-color;\n    }\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    text-wrap: balance;\n\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button {\n      background-color: transparent;\n      border: 2px solid $hours-title-border-color;\n      color: $hours-msg-color;\n      text-transform: capitalize;\n      padding: 10px 15px;\n      border-radius: 5px;\n    }\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\nbutton {\n  cursor: pointer;\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA8BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cChES;AD+Bb;AAoCE;EACE,kCAlDe;EAmDf,kBAAA;EAEA,kBAAA;EACA,cAAA;EACA,YAzEgB;AAsCpB;AAsCE;EACE,aAAA;EACA,SAAA;AApCJ;AAsCI;EACE,yBC9EY;AD0ClB;AAuCI;;EAEE,qBCtFO;ADiDb;;AA0CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AA1CF;AA4CE;EACE,aAAA;EACA,OAAA;EACA,kCAxFa;EAyFb,kBAAA;EAEA,YA7Gc;EAgHd,mBAAA;EAEA,kBAAA;AA9CJ;AAgDI;;EAEE,qBCvHO;EDwHP,cCxHO;AD0Eb;AAkDE;EACE,mBAAA;AAhDJ;AAmDE;EACE,OAAA;AAjDJ;AAoDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC/Ic;AD6FlB;AAoDI;EACE,kCAxHa;EAyHb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA9Ic;AA4FpB;AAqDI;EACE,kCA/HY;EAgIZ,gCAAA;AAnDN;AAsDI;EACE,gBAAA;EACA,qBAAA;EACA,YAxJa;AAoGnB;AAuDI;EACE,kCAzIa;EA0Ib,YA5Jc;AAuGpB;;AA0DA;EACE,gBAAA;EACA,kBAAA;EACA,6BAAA;EACA,YAxKgB;EAyKhB,yBAAA;EACA,kBAAA;EACA,yBAAA;EACA,eAAA;AAvDF;;AA0DA;;EAEE,qBClLW;EDmLX,cCnLW;AD4Hb;;AA0DA;EACE;IACE,sBAAA;EAvDF;EAyDE;IACE,eAAA;IACA,eAAA;EAvDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(32px + 0.390625vw);\n$welcome-msg-size: calc(14px + 0.390625vw);\n$hours-msg-size: calc(14px + 0.390625vw);\n$hours-title-size: calc(16px + 0.390625vw);\n$hours-days-size: calc(14px + 0.390625vw);\n$hours-times-size: calc(12px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    font-size: $welcome-msg-size;\n    text-wrap: balance;\n\n    margin-block: 1rem;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n\n  .button-container {\n    display: flex;\n    gap: 15px;\n\n    .inverted-btn {\n      background-color: $blue-dark-color;\n    }\n\n    .inverted-btn:hover,\n    .inverted-btn:focus {\n      border-color: $gold-color;\n    }\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    text-wrap: balance;\n\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\nbutton {\n  margin-top: 10px;\n  padding: 10px 15px;\n  background-color: transparent;\n  color: $hours-msg-color;\n  border: 2px solid $hours-title-border-color;\n  border-radius: 5px;\n  text-transform: uppercase;\n  cursor: pointer;\n}\n\nbutton:hover,\nbutton:focus {\n  border-color: $welcome-title-color;\n  color: $welcome-title-color;\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2835,7 +2826,7 @@ const WELCOME_TITLE = "Welcome to Ferryhill!";
 const WELCOME_MSG =
   "Voted Salford's Best Chippy in 2023 by Salfordnow.co.uk readers";
 const HOURS_MSG =
-  "Be sure to check our social media pages or get in touch with us for up-to-date changes";
+  "Be sure to check our social media pages or get in touch with us for any up-to-date changes";
 const HOURS_INFO = `<div class='heading' id='title'>Opening Hours</div>
                     <div class='heading days'>Mon - Sat</div>
                     <div class='times'>11:30am  -  1:45pm</div>
