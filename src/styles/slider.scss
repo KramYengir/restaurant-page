@@ -45,6 +45,10 @@
       font-size: calc(22px + 0.8vw);
     }
 
+    .fa-lines-leaning {
+      transform: rotate(180deg);
+    }
+
     span {
       color: $blue-color;
       font-size: calc(20px + 0.6vw);

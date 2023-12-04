@@ -1,24 +1,22 @@
-@import './colors.scss';
+@import "./colors.scss";
 
-footer{
-    position: fixed;
-    bottom: 0;
-    min-height: 50px;
+footer {
+  position: fixed;
+  bottom: 0;
+  min-height: 50px;
 
-    width: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  color: $gold-color;
+  background-color: $background-dark;
+  border-top: 1px solid $gold-color;
+  font-size: 0.7rem;
+
+  p {
     color: $gold-color;
-    background-color: $background-dark;
-    border-top: 1px solid $gold-color ;
-    font-size: 0.7rem;
-
-    &>svg{
-        height: 0.6rem;
-        margin-left: -1.3rem;
-    }
-
+  }
 }
