@@ -1,5 +1,6 @@
 @import "./colors.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap");
 
 //FONT COLORS
 $welcome-title-color: $gold-color;
@@ -20,8 +21,8 @@ $hours-title-border-color: $blue-color;
 $days-border-color: $blue-color;
 
 //FONTSIZES
-$welcome-title-size: calc(28px + 0.390625vw);
-$welcome-msg-size: calc(16px + 0.390625vw);
+$welcome-title-size: calc(32px + 0.390625vw);
+$welcome-msg-size: calc(14px + 0.390625vw);
 $hours-msg-size: calc(14px + 0.390625vw);
 $hours-title-size: calc(16px + 0.390625vw);
 $hours-days-size: calc(14px + 0.390625vw);
@@ -72,10 +73,9 @@ $hours-times-size: calc(12px + 0.390625vw);
 
   #welcome-msg {
     font-size: $welcome-msg-size;
-    text-transform: uppercase;
     text-wrap: balance;
 
-    margin-top: 2rem;
+    margin-block: 1rem;
     max-width: 80%;
     color: $welcome-msg-color;
   }
@@ -83,22 +83,6 @@ $hours-times-size: calc(12px + 0.390625vw);
   .button-container {
     display: flex;
     gap: 15px;
-
-    button {
-      margin-top: 20px;
-      background-color: transparent;
-      border: 2px solid $hours-title-border-color;
-      color: $hours-msg-color;
-      text-transform: capitalize;
-      padding: 10px 15px;
-      border-radius: 5px;
-    }
-
-    button:hover,
-    button:focus {
-      border-color: $welcome-title-color;
-      color: $welcome-title-color;
-    }
 
     .inverted-btn {
       background-color: $blue-dark-color;
@@ -136,15 +120,6 @@ $hours-times-size: calc(12px + 0.390625vw);
     border-radius: 10px;
 
     align-self: center;
-
-    button {
-      background-color: transparent;
-      border: 2px solid $hours-title-border-color;
-      color: $hours-msg-color;
-      text-transform: capitalize;
-      padding: 10px 15px;
-      border-radius: 5px;
-    }
 
     button:hover,
     button:focus {
@@ -195,7 +170,20 @@ $hours-times-size: calc(12px + 0.390625vw);
 }
 
 button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: $hours-msg-color;
+  border: 2px solid $hours-title-border-color;
+  border-radius: 5px;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  border-color: $welcome-title-color;
+  color: $welcome-title-color;
 }
 
 @media only screen and (max-width: 800px) {

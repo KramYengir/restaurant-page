@@ -7,7 +7,7 @@ const WELCOME_TITLE = "Welcome to Ferryhill!";
 const WELCOME_MSG =
   "Voted Salford's Best Chippy in 2023 by Salfordnow.co.uk readers";
 const HOURS_MSG =
-  "Be sure to check our social media pages or get in touch with us for up-to-date changes";
+  "Be sure to check our social media pages or get in touch with us for any up-to-date changes";
 const HOURS_INFO = `<div class='heading' id='title'>Opening Hours</div>
                     <div class='heading days'>Mon - Sat</div>
                     <div class='times'>11:30am  -  1:45pm</div>
