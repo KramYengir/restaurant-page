@@ -16,7 +16,17 @@ footer {
   border-top: 1px solid $gold-color;
   font-size: 0.7rem;
 
+  padding-inline: 10px;
+
   p {
     color: $gold-color;
   }
+
+  /*   img {
+    max-height: 25px;
+  }
+
+  .seagull-img {
+    max-height: 10px;
+  } */
 }
