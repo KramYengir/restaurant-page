@@ -104,7 +104,10 @@ a {
 }
 
 #right-side a.active {
-  border-bottom: 4px solid $blue-color;
+  //border-bottom: 4px solid $blue-color;
+  text-decoration: underline;
+  text-decoration-color: $blue-color;
+  text-decoration-thickness: 3px;
   transition: border-width 0.2s ease-in-out;
 }
 

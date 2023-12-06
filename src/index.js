@@ -39,11 +39,10 @@ const loadContent = (index) => {
 
 const toggleActiveTab = (index) => {
   tabLinks.forEach((el, i) => {
-    if (i === index) {
+    if (i == index) {
       tabLinks[index].classList.add("active");
     } else {
       tabLinks[i].classList.remove("active");
-      console.log("matching index");
     }
   });
 };
