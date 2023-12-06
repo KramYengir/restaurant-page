@@ -791,7 +791,9 @@ a {
 }
 
 #right-side a.active {
-  border-bottom: 4px solid #4fa9cc;
+  text-decoration: underline;
+  text-decoration-color: #4fa9cc;
+  text-decoration-thickness: 3px;
   transition: border-width 0.2s ease-in-out;
 }
 
@@ -890,7 +892,7 @@ a {
   #home-tab {
     margin-left: 3rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AA2BA;EACE,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,cCjCW;EDkCX,yBCxCgB;EDyChB,gCAAA;AA3BF;AA6BE;EACE,cCpCS;ADSb;;AA+BA;EACE,6BAnCiB;EAoCjB,sBAAA;EACA,gBAAA;EAEA,eAAA;AA7BF;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AA9BF;AAgCE;EACE,qCAAA;EACA,cC3Dc;ED4Dd,yBAAA;EACA,gBAAA;EACA,6BAzDS;EA0DT,gCAAA;EACA,qBAAA;AA9BJ;AAiCE;EACE,6BA9Da;EA+Db,YAAA;EACA,oBAAA;AA/BJ;AAkCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AAhCJ;AAmCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AAjCJ;;AAqCA;EACE,mBAAA;AAlCF;;AAqCA;EACE,yBAAA;AAlCF;;AAqCA;EACE,gCAAA;EACA,yCAAA;AAlCF;;AAqCA;EACE,aAAA;AAlCF;;AAqCA;EACE,kBAAA;EACA,MAAA;EAIA,qBAAA;AArCF;;AAwCA;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAxCF;AA0CE;EACE,cCvIS;EDwIT,kBA/HiB;EAgIjB,yBAAA;EACA,gBAAA;EACA,cAAA;AAxCJ;AA2CE;;EAEE,aAAA;AAzCJ;;AA6CA;EACE;IACE,qCAAA;IACA,cCvJS;IDwJT,yBAAA;IACA,kBAhJiB;IAiJjB,iBAAA;IACA,iBAAA;IACA,gBAAA;EA1CF;EA6CA;IACE,aAAA;EA3CF;EA8CA;IACE,0BAAA;IACA,8BCnKS;IDoKT,8BAAA;EA5CF;EA+CA;IACE,aAAA;IACA,sBAAA;IACA,WAhKc;IAiKd,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBCvLc;IDwLd,YAAA;IAEA,YAAA;IAEA,eAAA;EAhDF;EAkDE;IACE,yBA5KO;IA6KP,4BA5KQ;IA8KR,oBAAA;IAEA,yBC9LO;IDiMP,6BAAA;IAGA,wFACE;EAvDN;EAgEE;IACE,QAAA;IACA,UAAA;EA9DJ;EAiEE;;IAEE,yBCnNO;EDoJX;EAkEE;IACE,wCAAA;IACA,oDA1Ma;IA2Mb,aAAA;EAhEJ;EAmEE;IACE,uCAAA;IACA,oDAhNa;IAiNb,cAAA;EAjEJ;EAqEA;IACE,iBAAA;EAnEF;AACF","sourcesContent":["@import \"./colors.scss\";\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n\n//COLORS\n$gradient-background: linear-gradient(\n  180deg,\n  rgba(42, 42, 42, 0.9) 90%,\n  rgba(175, 175, 175, 1) 110%\n);\n\n//FONT SIZES\n$title-size: calc(22px + 0.5vw);\n$sub-title-size: calc(12px + 0.3vw);\n$header-link-size: calc(12px + 0.3vw);\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap * 2) + calc($line-height * 3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader {\n  position: fixed;\n  padding: 0.5rem 0;\n  min-height: 90px;\n  z-index: 40;\n\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-bottom: 1px solid $gold-color;\n\n  a:hover {\n    color: $blue-color;\n  }\n}\n\na {\n  font-size: $header-link-size;\n  background-color: none;\n  margin: 0 1.5rem;\n\n  cursor: pointer;\n}\n\n#home-tab {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-left: 5rem;\n\n  position: relative;\n\n  #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-dark-color;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-size: $title-size;\n    text-shadow: 0.8px 0.8px $blue-color;\n    letter-spacing: 1.8px;\n  }\n\n  #home-sub-heading {\n    font-size: $sub-title-size;\n    color: white;\n    margin-top: -0.15rem;\n  }\n\n  #seagull-icon-a {\n    display: block;\n    position: absolute;\n    top: 60%;\n    left: 0;\n    width: calc(1.5rem + 0.3vw);\n  }\n\n  #seagull-icon-b {\n    display: block;\n    position: absolute;\n    top: 65%;\n    right: 0.4rem;\n    width: calc(1.5rem + 0.3vw);\n  }\n}\n\n#right-side {\n  padding-right: 2rem;\n}\n\n#right-side a {\n  text-transform: uppercase;\n}\n\n#right-side a.active {\n  border-bottom: 4px solid $blue-color;\n  transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button {\n  display: none;\n}\n\n#dropdown-box {\n  position: absolute;\n  top: 0;\n  //z-index: -5;\n  //transform: translateY(-90px);\n\n  transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  align-items: center;\n  text-align: center;\n\n  z-index: 1;\n  min-width: 100vw;\n  min-height: 100vh;\n\n  padding: min(30vh, 250px) 0;\n  gap: calc(2.5rem + 0.33vh);\n\n  background: #2a2a2ab4;\n  backdrop-filter: blur(10px);\n\n  a {\n    color: $gold-color;\n    font-size: $dropdown-link-size;\n    text-transform: uppercase;\n    min-width: 100vw;\n    margin-left: 0;\n  }\n\n  #seagull-icon-a,\n  #seagull-icon-b {\n    display: none;\n  }\n}\n\n@media only screen and (max-width: 650px) {\n  #dropdown-box.active > #home-tab > #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-color;\n    text-transform: uppercase;\n    font-size: $dropdown-link-size;\n    text-shadow: none;\n    letter-spacing: 0;\n    font-weight: 400;\n  }\n\n  #right-side {\n    display: none;\n  }\n\n  #dropdown-box.active a.active {\n    text-decoration: underline;\n    text-decoration-color: $blue-color;\n    text-decoration-thickness: 3px;\n  }\n\n  #menu-button {\n    display: flex;\n    flex-direction: column;\n    gap: $menu-button-gap;\n    margin-right: 2.5rem;\n\n    width: max-content;\n    height: max-content;\n    background-color: $background-dark;\n    border: none;\n\n    z-index: 999;\n\n    cursor: pointer;\n\n    .line {\n      width: $line-width;\n      height: $line-height;\n\n      border-radius: 100px;\n\n      background-color: $gold-color;\n\n      //for rotation\n      transform-origin: left center;\n\n      //animation\n      transition:\n        rotate $lines-animate-time,\n        width $lines-animate-time,\n        translate $lines-animate-time,\n        opacity $lines-animate-time,\n        background-color $lines-animate-time;\n    }\n  }\n\n  #menu-button.active {\n    #line2 {\n      width: 0;\n      opacity: 0;\n    }\n\n    #line1,\n    #line3 {\n      background-color: $blue-color;\n    }\n\n    #line1 {\n      translate: 0 calc($line-height / -2);\n      width: $line-cross-width;\n      rotate: 45deg;\n    }\n\n    #line3 {\n      translate: 0 calc($line-height / 2);\n      width: $line-cross-width;\n      rotate: -45deg;\n    }\n  }\n\n  #home-tab {\n    margin-left: 3rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/header.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EAAA;AA2BA;EACE,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,WAAA;EAEA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EAEA,cCjCW;EDkCX,yBCxCgB;EDyChB,gCAAA;AA3BF;AA6BE;EACE,cCpCS;ADSb;;AA+BA;EACE,6BAnCiB;EAoCjB,sBAAA;EACA,gBAAA;EAEA,eAAA;AA7BF;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,iBAAA;EAEA,kBAAA;AA9BF;AAgCE;EACE,qCAAA;EACA,cC3Dc;ED4Dd,yBAAA;EACA,gBAAA;EACA,6BAzDS;EA0DT,gCAAA;EACA,qBAAA;AA9BJ;AAiCE;EACE,6BA9Da;EA+Db,YAAA;EACA,oBAAA;AA/BJ;AAkCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,OAAA;EACA,2BAAA;AAhCJ;AAmCE;EACE,cAAA;EACA,kBAAA;EACA,QAAA;EACA,aAAA;EACA,2BAAA;AAjCJ;;AAqCA;EACE,mBAAA;AAlCF;;AAqCA;EACE,yBAAA;AAlCF;;AAqCA;EAEE,0BAAA;EACA,8BCpGW;EDqGX,8BAAA;EACA,yCAAA;AAnCF;;AAsCA;EACE,aAAA;AAnCF;;AAsCA;EACE,kBAAA;EACA,MAAA;EAIA,qBAAA;AAtCF;;AAyCA;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EAEA,UAAA;EACA,gBAAA;EACA,iBAAA;EAEA,2BAAA;EACA,0BAAA;EAEA,0CAAA;EACA,2BAAA;AAzCF;AA2CE;EACE,cC1IS;ED2IT,kBAlIiB;EAmIjB,yBAAA;EACA,gBAAA;EACA,cAAA;AAzCJ;AA4CE;;EAEE,aAAA;AA1CJ;;AA8CA;EACE;IACE,qCAAA;IACA,cC1JS;ID2JT,yBAAA;IACA,kBAnJiB;IAoJjB,iBAAA;IACA,iBAAA;IACA,gBAAA;EA3CF;EA8CA;IACE,aAAA;EA5CF;EA+CA;IACE,0BAAA;IACA,8BCtKS;IDuKT,8BAAA;EA7CF;EAgDA;IACE,aAAA;IACA,sBAAA;IACA,WAnKc;IAoKd,oBAAA;IAEA,kBAAA;IACA,mBAAA;IACA,yBC1Lc;ID2Ld,YAAA;IAEA,YAAA;IAEA,eAAA;EAjDF;EAmDE;IACE,yBA/KO;IAgLP,4BA/KQ;IAiLR,oBAAA;IAEA,yBCjMO;IDoMP,6BAAA;IAGA,wFACE;EAxDN;EAiEE;IACE,QAAA;IACA,UAAA;EA/DJ;EAkEE;;IAEE,yBCtNO;EDsJX;EAmEE;IACE,wCAAA;IACA,oDA7Ma;IA8Mb,aAAA;EAjEJ;EAoEE;IACE,uCAAA;IACA,oDAnNa;IAoNb,cAAA;EAlEJ;EAsEA;IACE,iBAAA;EApEF;AACF","sourcesContent":["@import \"./colors.scss\";\n/* @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');\n */\n\n//COLORS\n$gradient-background: linear-gradient(\n  180deg,\n  rgba(42, 42, 42, 0.9) 90%,\n  rgba(175, 175, 175, 1) 110%\n);\n\n//FONT SIZES\n$title-size: calc(22px + 0.5vw);\n$sub-title-size: calc(12px + 0.3vw);\n$header-link-size: calc(12px + 0.3vw);\n$dropdown-link-size: 1.14rem;\n\n//MENU BUTTON SIZES\n$menu-button-gap: 0.4rem;\n$line-width: calc(2rem + 0.3vw);\n$line-height: calc(0.2rem + 0.3vw);\n$menu-button-height: calc(calc($menu-button-gap * 2) + calc($line-height * 3));\n$line-cross-width: calc($menu-button-height * 1.414);\n\n//ANIMATE TIMES\n$lines-animate-time: 0.5s;\n$dropbox-animate-time: 0.33s;\n\nheader {\n  position: fixed;\n  padding: 0.5rem 0;\n  min-height: 90px;\n  z-index: 40;\n\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-bottom: 1px solid $gold-color;\n\n  a:hover {\n    color: $blue-color;\n  }\n}\n\na {\n  font-size: $header-link-size;\n  background-color: none;\n  margin: 0 1.5rem;\n\n  cursor: pointer;\n}\n\n#home-tab {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-left: 5rem;\n\n  position: relative;\n\n  #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-dark-color;\n    text-transform: uppercase;\n    font-weight: 600;\n    font-size: $title-size;\n    text-shadow: 0.8px 0.8px $blue-color;\n    letter-spacing: 1.8px;\n  }\n\n  #home-sub-heading {\n    font-size: $sub-title-size;\n    color: white;\n    margin-top: -0.15rem;\n  }\n\n  #seagull-icon-a {\n    display: block;\n    position: absolute;\n    top: 60%;\n    left: 0;\n    width: calc(1.5rem + 0.3vw);\n  }\n\n  #seagull-icon-b {\n    display: block;\n    position: absolute;\n    top: 65%;\n    right: 0.4rem;\n    width: calc(1.5rem + 0.3vw);\n  }\n}\n\n#right-side {\n  padding-right: 2rem;\n}\n\n#right-side a {\n  text-transform: uppercase;\n}\n\n#right-side a.active {\n  //border-bottom: 4px solid $blue-color;\n  text-decoration: underline;\n  text-decoration-color: $blue-color;\n  text-decoration-thickness: 3px;\n  transition: border-width 0.2s ease-in-out;\n}\n\n#menu-button {\n  display: none;\n}\n\n#dropdown-box {\n  position: absolute;\n  top: 0;\n  //z-index: -5;\n  //transform: translateY(-90px);\n\n  transition: all $dropbox-animate-time;\n}\n\n#dropdown-box.active {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  align-items: center;\n  text-align: center;\n\n  z-index: 1;\n  min-width: 100vw;\n  min-height: 100vh;\n\n  padding: min(30vh, 250px) 0;\n  gap: calc(2.5rem + 0.33vh);\n\n  background: #2a2a2ab4;\n  backdrop-filter: blur(10px);\n\n  a {\n    color: $gold-color;\n    font-size: $dropdown-link-size;\n    text-transform: uppercase;\n    min-width: 100vw;\n    margin-left: 0;\n  }\n\n  #seagull-icon-a,\n  #seagull-icon-b {\n    display: none;\n  }\n}\n\n@media only screen and (max-width: 650px) {\n  #dropdown-box.active > #home-tab > #home-heading {\n    /* font-family: 'Rozha One', serif; */\n    color: $gold-color;\n    text-transform: uppercase;\n    font-size: $dropdown-link-size;\n    text-shadow: none;\n    letter-spacing: 0;\n    font-weight: 400;\n  }\n\n  #right-side {\n    display: none;\n  }\n\n  #dropdown-box.active a.active {\n    text-decoration: underline;\n    text-decoration-color: $blue-color;\n    text-decoration-thickness: 3px;\n  }\n\n  #menu-button {\n    display: flex;\n    flex-direction: column;\n    gap: $menu-button-gap;\n    margin-right: 2.5rem;\n\n    width: max-content;\n    height: max-content;\n    background-color: $background-dark;\n    border: none;\n\n    z-index: 999;\n\n    cursor: pointer;\n\n    .line {\n      width: $line-width;\n      height: $line-height;\n\n      border-radius: 100px;\n\n      background-color: $gold-color;\n\n      //for rotation\n      transform-origin: left center;\n\n      //animation\n      transition:\n        rotate $lines-animate-time,\n        width $lines-animate-time,\n        translate $lines-animate-time,\n        opacity $lines-animate-time,\n        background-color $lines-animate-time;\n    }\n  }\n\n  #menu-button.active {\n    #line2 {\n      width: 0;\n      opacity: 0;\n    }\n\n    #line1,\n    #line3 {\n      background-color: $blue-color;\n    }\n\n    #line1 {\n      translate: 0 calc($line-height / -2);\n      width: $line-cross-width;\n      rotate: 45deg;\n    }\n\n    #line3 {\n      translate: 0 calc($line-height / 2);\n      width: $line-cross-width;\n      rotate: -45deg;\n    }\n  }\n\n  #home-tab {\n    margin-left: 3rem;\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2325,11 +2327,10 @@ const loadContent = (index) => {
 
 const toggleActiveTab = (index) => {
   tabLinks.forEach((el, i) => {
-    if (i === index) {
+    if (i == index) {
       tabLinks[index].classList.add("active");
     } else {
       tabLinks[i].classList.remove("active");
-      console.log("matching index");
     }
   });
 };
@@ -2952,143 +2953,147 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const menuiteams = {
-    fish:{
-        'haddock': '',
-        '- large': '5.00',
-        '- small': '3.20',
-        'cod': '',
-        '- large ': '5.00',
-        '- small ': '3.20',
-        'plaice': '5.20',
-        'homemade fishcake': '1.70',
-        'breaded fishcake': '2.00',
-        'salmon & dill': '2.00',
-        'calamari rings': '4.80',
-        'salt & pepper squid': '4.80',
-        'breaded scampi': '4.20',
-        'fish barm': '',
-        '- large  ': '5.40',
-        '- small  ': '3.60',
-        'fish bites': '2.20',
-        '- 5 pieces': '',
+  fish: {
+    haddock: "",
+    "- large": "5.50",
+    "- small": "3.50",
+    cod: "",
+    "- large ": "5.50",
+    "- small ": "3.50",
+    plaice: "5.20",
+    "homemade fishcake": "1.70",
+    "breaded fishcake": "2.00",
+    "salmon & dill": "2.00",
+    "calamari rings": "4.80",
+    "salt & pepper squid": "4.80",
+    "breaded scampi": "4.20",
+    "fish barm": "",
+    "- large  ": "5.90",
+    "- small  ": "3.90",
+    "fish bites": "3.00",
+    "- 5 pieces": "",
+  },
+  "chips & more": {
+    chips: "",
+    "- large": "3.40",
+    "- regular": "2.30",
+    "- small": "1.95",
+    "- cheesy chips add £1": "",
+    "chip barm": "2.50",
+    scallops: "2.30",
+    "- or 50p each": "",
+    sausage: "",
+    "- large ": "1.80",
+    "- small ": "0.90",
+  },
+  "original holland pies": {
+    meat: "2.20",
+    "meat & potato": "2.20",
+    "cheese & onion": "2.20",
+    "chicken & mushroom": "2.20",
+    pasty: "2.20",
+    "steak & kidney pie": "2.20",
+    "steak & kidney pudding": "2.20",
+    "peppered steak": "2.20",
+    "": "",
+    "vegan pies": "",
+    "- chicken & mushroom": "3.20",
+    "- minced steak & onion": "3.20",
+  },
+  chicken: {
+    "chicken breast": "4.50",
+    "100% chicken fillet burger": "3.50",
+    "chicken nuggets": "3.80",
+    "- portion of 8 or 50p each": "",
+  },
+  extras: {
+    "chicken curry": "5.80",
+    "- served with rice/chips or half & half": "",
+    "chilli con carne": "5.80",
+    "- served with rice/chips or half & half ": "",
+    "": "",
+    "half rice / half chips & curry": "3.50",
+    "sausage dinner": "5.80",
+    "- sausage, chips, peas and gravy": "",
+    "pie dinner": "6.20",
+    "- any pie, chips, peas and gravy": "",
+    haggis: "3.00",
+    "black pudding": "3.00",
+    "minted pea fritters": "2.00",
+    "spam fritters": "2.00",
+    "spring rolls": "3.50",
+    "- 4 in a portion": "",
+  },
+  "sides & sauces": {
+    "peas / gravy / spicy curry / fruity curry / beans": "",
+    "- large": "1.40",
+    "- small": "1.10",
+    rice: "2.50",
+    "salt & pepper seasoning": "0.50",
+  },
+  burgers: {
+    plain: "2.50",
+    double: "3.50",
+    cheese: "2.70",
+    "double cheese": "4.20",
+    veggie: "3.00",
+  },
+  "kids menu": {
+    "- each meal includes chips, drink, ketchup and toy": "",
+    "chicken nuggets": "4.00",
+    "breaded fishcake": "4.00",
+    "fish bites": "4.00",
+    sausage: "4.00",
+  },
+  "gluten free monday & tuesday": {
+    fish: "",
+    "- large": "5.70",
+    "- small": "3.70",
+    "homemade fishcake": "2.10",
+    scallops: "2.70",
+    "- or 60p each": "",
+    "onion rings": "2.70",
+    "- or 60p each ": "",
+    sausage: "2.00",
+    "- battered": "2.20",
+    "bottle of vinegar": "1.50",
+  },
+  "vegan options": {
+    burgers: "3.00",
+    "southern style goujons": "3.00",
+    "- with chips": "3.50",
+    nuggets: "4.00",
+    "- or 55p each": "",
+    pies: "",
+    "- chicken & mushroom or minced steak & onion": "",
+    "small sausage": "1.00",
+  },
+  specials: {
+    "chip barm special": "4.30",
+    "battered chip barm": "3.00",
+    "large spring rolls": "2.00",
+    "minced beef & onion pie": "2.20",
+    "halloumi fries": "3.40",
+    "sweet potato fries": "3.40",
+    "homemade chicken sticks": "3.00",
+    "mozzarella sticks": "2.50",
+    "- with sweet chilli dip": "",
+  },
+  "lunchtime special": {
+    "small fish, chips & peas": "5.50",
+    "- served in a tray": "",
+  },
+  drinks: {
+    cans: "1.20",
+    bottles: "1.70",
+    water: "0.90",
+    cartons: "0.50",
+  },
+};
 
-    },
-    'chips & more':{
-        'chips': '',
-        '- large': '3.40',
-        '- regular': '2.30',
-        '- small': '1.95',
-        '- cheesy chips add £1': '',
-        'chip barm': '2.50',
-        'scallops': '2.30',
-        '- or 50p each': '',
-        'sausage': '',
-        '- large ': '1.80',
-        '- small ': '0.90',
-    },
-    'original holland pies':{
-        'meat': '2.20',
-        'meat & potato': '2.20',
-        'cheese & onion': '2.20',
-        'chicken & mushroom': '2.20',
-        'pasty': '2.20',
-        'steak & kidney pie': '2.20',
-        'steak & kidney pudding': '2.20',
-        'peppered steak': '2.20',
-        '':'',
-        'vegan pies': '',
-        '- chicken & mushroom': '3.20',
-        '- minced steak & onion': '3.20',
-    },
-    'chicken':{
-        'chicken breast': '4.50',
-        '100% chicken fillet burger': '3.50',
-        'chicken nuggets': '3.80',
-        '- portion of 8 or 50p each': '',
-    },
-    'extras':{
-        'chicken curry': '5.20',
-        '- served with rice/chips or half & half':'',
-        'chilli con carne': '5.20',
-        '- served with rice/chips or half & half ':'',
-        '':'',
-        'half rice / half chips & curry': '3.20',
-        'sausage dinner':'5.80',
-        '- sausage, chips, peas and gravy':'',
-        'pie dinner': '6.20',
-        '- any pie, chips, peas and gravy':'',
-        'haggis': '3.00',
-        'black pudding': '3.00',
-        'minted pea fritters': '2.00',
-        'spam fritters': '2.00',
-        'haggis': '3.00',
-        '- 4 in a portion': '',     
-    },
-    'sides & sauces':{
-    'peas / gravy / spicy curry / fruity curry / beans':'',
-    '- large':'1.40',
-    '- small':'1.10',
-    'rice': '2.50',
-    'salt & pepper seasoning':'0.50',
-    },
-    'burgers':{
-        'plain':'2.50',
-        'double':'3.50',
-        'cheese':'2.70',
-        'double cheese':'4.20',
-        'veggie':'3.00',
-    },
-    'kids menu':{
-        '- each meal includes chips, drink, ketchup and toy':'',
-        'chicken nuggets':'3.90',
-        'breaded fishcake':'3.90',
-        'fish bites':'3.90',
-        'sausage':'3.90',
-    },
-    'gluten free monday & tuesday':{
-        'fish':'',
-        '- large':'5.20',
-        '- small':'3.40',
-        'homemade fishcake':'2.10',
-        'scallops':'2.70',
-        '- or 60p each':'',
-        'onion rings':'2.70',
-        '- or 60p each ':'',
-        'sausage':'2.00',
-        '- battered':'2.20',
-        'bottle of vinegar':'1.50',
-    },
-    'vegan options':{
-        'burgers':'3.00',
-        'southern style goujons':'3.00',
-        '- with chips':'3.50',
-        'nuggets':'4.00',
-        '- or 55p each':'',
-        'pies':'',
-        '- chicken & mushroom or minced steak & onion':'',
-        'small sausage':'1.00',
-    },
-    'specials':{
-        'sausage roll':'1.00',
-        'chip barm special':'4.30',
-        'battered chip barm':'3.00',
-        'large spring rolls':'2.00',
-        'minced beef & onion pie':'2.20',
-        'halloumi fries':'3.40',
-        'sweet potato fries':'3.20',
-        'homemade chicken sticks':'3.00',
-
-    },
-    'lunchtime special':{
-        'small fish, chips & peas':'5.50',
-        '- served in a tray':'',
-    }
-}
-
-const helper = (()=>{
-    const isSizeOrOption = (value)=>{
-
-        /* let numRegex = /\d/;
+const helper = (() => {
+  const isSizeOrOption = (value) => {
+    /* let numRegex = /\d/;
 
         if(value.includes('large') || value.includes('small') 
             || value.includes('regular') || (numRegex.test(value) && !(value.includes('%'))))
@@ -3097,82 +3102,77 @@ const helper = (()=>{
         }
         else return false; */
 
-        if(value.includes('-')) return true;
-        else return false;
+    if (value.includes("-")) return true;
+    else return false;
+  };
 
-    }
+  const isEmptyPrice = (price) => {
+    if (price.length === 0) {
+      return true;
+    } else return false;
+  };
 
-    const isEmptyPrice = (price)=>{
-        if(price.length === 0){
-            return true
-        }
-        else return false;
-    }
-
-    return{
-        isSizeOrOption,
-        isEmptyPrice,
-    }
+  return {
+    isSizeOrOption,
+    isEmptyPrice,
+  };
 })();
 
-const buildMenu = (()=>{
-    const container = document.createElement('div');
-    container.id = 'menu-container';
+const buildMenu = (() => {
+  const container = document.createElement("div");
+  container.id = "menu-container";
 
-    let sections = Object.keys(menuiteams);
+  let sections = Object.keys(menuiteams);
 
-    sections.forEach( sectionHeading =>{
+  sections.forEach((sectionHeading) => {
+    //create a menu section
+    let menuSection = document.createElement("div");
+    menuSection.classList.add("menu-section");
 
-        //create a menu section
-        let menuSection = document.createElement('div');
-        menuSection.classList.add('menu-section');
+    //each section has a heading
+    let headingDiv = document.createElement("div");
+    headingDiv.classList.add("section-heading");
+    headingDiv.innerText = sectionHeading;
 
-        //each section has a heading
-        let headingDiv = document.createElement('div');
-        headingDiv.classList.add('section-heading');
-        headingDiv.innerText = sectionHeading;
+    menuSection.appendChild(headingDiv);
 
-        menuSection.appendChild(headingDiv);
-        
-        let items = Object.keys(menuiteams[sectionHeading]);
-        items.forEach(item =>{
-            //create a div for each menu item
-            let itemDiv = document.createElement('div');
-            itemDiv.classList.add('menu-item');
+    let items = Object.keys(menuiteams[sectionHeading]);
+    items.forEach((item) => {
+      //create a div for each menu item
+      let itemDiv = document.createElement("div");
+      itemDiv.classList.add("menu-item");
 
-            let itemName = document.createElement('div');
-            //check if the item is an item or an option/size
-            if(helper.isSizeOrOption(item)){
-                itemDiv.classList.add('item-option')
-                itemName.classList.add('item-option-text');
-            }
-            itemName.classList.add('menu-item-name');
-            itemName.innerText = item;
+      let itemName = document.createElement("div");
+      //check if the item is an item or an option/size
+      if (helper.isSizeOrOption(item)) {
+        itemDiv.classList.add("item-option");
+        itemName.classList.add("item-option-text");
+      }
+      itemName.classList.add("menu-item-name");
+      itemName.innerText = item;
 
-            let itemPrice = document.createElement('div');
-            let price = menuiteams[sectionHeading][item];
+      let itemPrice = document.createElement("div");
+      let price = menuiteams[sectionHeading][item];
 
-            //if the price is empty, we wont add the pound symbol
-            if(!helper.isEmptyPrice(price)){
-                itemPrice.classList.add('menu-item-price');
-            }
-            itemPrice.innerText = price;
+      //if the price is empty, we wont add the pound symbol
+      if (!helper.isEmptyPrice(price)) {
+        itemPrice.classList.add("menu-item-price");
+      }
+      itemPrice.innerText = price;
 
-            itemDiv.append(itemName, itemPrice);
-            
-            menuSection.appendChild(itemDiv);
-        })
+      itemDiv.append(itemName, itemPrice);
 
-        container.appendChild(menuSection);
+      menuSection.appendChild(itemDiv);
+    });
 
-    })
+    container.appendChild(menuSection);
+  });
 
-
-    return container;
-
+  return container;
 })();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buildMenu);
+
 
 /***/ }),
 
@@ -3191,7 +3191,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds, delivered <span>fresh</span> every day`;
 const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
-const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Palm Oil, <span>Filtered</span> Every Day`;
+const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Vegetable Oil, <span>Filtered</span> Every Day`;
 const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
 
 const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
