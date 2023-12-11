@@ -23,15 +23,15 @@ const buildHomepage = (() => {
   const container = document.createElement("div");
   container.id = "homepage-container";
 
-  //welcome section
+  // Welcome section
   const welcomeDiv = document.createElement("div");
   welcomeDiv.id = "welcome";
 
-  const welcomeTitle = document.createElement("div");
+  const welcomeTitle = document.createElement("h1"); // Use semantic heading
   welcomeTitle.innerText = WELCOME_TITLE;
   welcomeTitle.id = "welcome-title";
 
-  const welcomeMsg = document.createElement("div");
+  const welcomeMsg = document.createElement("p"); // Use semantic paragraph
   welcomeMsg.innerText = WELCOME_MSG;
   welcomeMsg.id = "welcome-msg";
 
@@ -58,14 +58,14 @@ const buildHomepage = (() => {
   welcomeDiv.appendChild(welcomeMsg);
   welcomeDiv.appendChild(buttonDiv);
 
-  //opening hours section
+  // Opening hours section
   const openingHoursDiv = document.createElement("div");
   openingHoursDiv.id = "hours";
 
   const msgAndBtnContainer = document.createElement("div");
   msgAndBtnContainer.classList.add("msg-and-btn-container");
 
-  const hoursMsg = document.createElement("div");
+  const hoursMsg = document.createElement("p"); // Use semantic paragraph
   hoursMsg.id = "hours-msg";
   hoursMsg.innerText = HOURS_MSG;
 

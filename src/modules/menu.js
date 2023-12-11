@@ -141,15 +141,6 @@ const menuiteams = {
 
 const helper = (() => {
   const isSizeOrOption = (value) => {
-    /* let numRegex = /\d/;
-
-        if(value.includes('large') || value.includes('small') 
-            || value.includes('regular') || (numRegex.test(value) && !(value.includes('%'))))
-        {
-            return true;                   
-        }
-        else return false; */
-
     if (value.includes("-")) return true;
     else return false;
   };

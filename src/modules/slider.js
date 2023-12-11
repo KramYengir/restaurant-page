@@ -1,51 +1,51 @@
 import "../styles/slider.scss";
 
-const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds, delivered <span>fresh</span> every day`;
-const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
-const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Vegetable Oil, <span>Filtered</span> Every Day`;
-const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
+const messages = [
+  "Our <span>Fish</span> Are Line Caught From Sustainable Fishing Grounds, delivered fresh every day",
+  "Our <span>Chips</span> Are Made Using Quality Potatoes Peeled & Chipped Fresh On The Day",
+  "We <span>Fry</span> In 100% Uncontaminated & Sustainable Vegetable Oil, Filtered Every Day",
+  "All Of Our <span>Packaging</span> & Utensils Are 100% Recyclable & Biodegradable",
+];
 
 const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
-
-const msgs = [msg0, msg1, msg2, msg3];
-
-let startX;
 
 const Slider = (() => {
   const sliderContainer = document.createElement("div");
   const prevBtn = document.createElement("button");
   const nextBtn = document.createElement("button");
-  let slides = [];
-  let dotEls = [];
+  const slides = [];
+  const dotEls = [];
 
   sliderContainer.classList.add("slider-container");
   prevBtn.classList.add("prev-btn");
+  prevBtn.setAttribute("aria-label", "Previous Slide");
   nextBtn.classList.add("next-btn");
+  nextBtn.setAttribute("aria-label", "Next Slide");
   prevBtn.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
   nextBtn.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
 
   // create slide & dot elements
-  for (let i = 0; i < msgs.length; i++) {
+  messages.forEach((msg, i) => {
     // slide first
-    let slide = document.createElement("div");
+    const slide = document.createElement("div");
     slide.classList.add("slide");
     slide.dataset.index = i;
     slide.id = `slide${i}`;
 
     // then textbox
-    let textBox = document.createElement("div");
+    const textBox = document.createElement("div");
     textBox.classList.add("flex-centered");
-    let icon = document.createElement("i");
+    const icon = document.createElement("i");
     icon.classList.add("fa-solid");
     icon.classList.add(`${icons[i]}`);
-    let p = document.createElement("p");
-    p.innerHTML = msgs[i];
+    const p = document.createElement("p");
+    p.innerHTML = msg;
     textBox.appendChild(p);
     textBox.appendChild(icon);
     slide.appendChild(textBox);
 
     // then dots
-    let dot = document.createElement("div");
+    const dot = document.createElement("div");
     dot.dataset.index = i;
     dot.classList.add("dot");
     dot.id = `dot${i}`;
@@ -57,7 +57,7 @@ const Slider = (() => {
 
     slides.push(slide);
     dotEls.push(dot);
-  }
+  });
 
   slides.forEach((el) => {
     sliderContainer.appendChild(el);
@@ -87,8 +87,40 @@ const Slider = (() => {
     });
   });
 
+  // Keyboard navigation
+  sliderContainer.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      loadPrevSlide();
+      setCurrentDot();
+    } else if (event.key === "ArrowRight") {
+      loadNextSlide();
+      setCurrentDot();
+    }
+  });
+
+  // Ensure button elements are focusable
+  prevBtn.setAttribute("tabindex", "0");
+  nextBtn.setAttribute("tabindex", "0");
+
+  // Ensure buttons are accessible with Enter key
+  prevBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      loadPrevSlide();
+      setCurrentDot();
+    }
+  });
+
+  nextBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      loadNextSlide();
+      setCurrentDot();
+    }
+  });
+
   sliderContainer.addEventListener("touchstart", handleTouchStart);
   sliderContainer.addEventListener("touchmove", handleTouchMove);
+
+  let startX;
 
   function handleTouchStart(event) {
     startX = event.touches[0].clientX;
@@ -119,7 +151,7 @@ const Slider = (() => {
   }
 
   function loadNextSlide() {
-    let currentSlide = getCurrentSlide();
+    const currentSlide = getCurrentSlide();
 
     slides.forEach((slide, i) => {
       if (slide === currentSlide) {
@@ -135,7 +167,7 @@ const Slider = (() => {
   }
 
   function loadPrevSlide() {
-    let currentSlide = getCurrentSlide();
+    const currentSlide = getCurrentSlide();
 
     slides.forEach((slide, i) => {
       if (slide === currentSlide) {
@@ -155,7 +187,7 @@ const Slider = (() => {
   }
 
   function setCurrentDot() {
-    let currentSlide = getCurrentSlide();
+    const currentSlide = getCurrentSlide();
 
     dotEls.forEach((dot, i) => {
       if (currentSlide.dataset.index == i) {

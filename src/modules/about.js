@@ -6,6 +6,13 @@ import foodImg from "../assets/FH_fish-meal-1.jpeg";
 
 const buildAboutpage = (() => {
   const images = [painting, christosImg, foodImg, communityImg];
+  const altMsgs = [
+    "A painting of the front fo the chip shop, with customers sitting outside",
+    "The owner and head fryer, Christos, proudly standing beside his station",
+    "Some tasty looking fish and chips resting on some paper before they get wrapped up",
+    "The owner and head fryer, Christos, proudly posing beside a pitchside ad board for his chip shop",
+  ];
+
   const headings = [
     "Our Beginnings...",
     "Our Standards...",
@@ -39,6 +46,7 @@ const buildAboutpage = (() => {
     img.classList.add("img");
     img.id = `img-${i}`;
     img.src = images[i];
+    img.alt = altMsgs[i];
 
     let textContainer = document.createElement("div");
     textContainer.classList.add("text-container");
