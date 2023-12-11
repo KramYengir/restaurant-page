@@ -27,16 +27,11 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource",
       },
-      /* {
-        test: /\.html$/,
-        use: 'html-loader',
-        
-      } */
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Halloumi Gold",
+      title: "Ferryhill Fish & Chips",
       filename: "index.html",
       template: "src/template.html",
       favicon: "src/assets/favicon.ico",
