@@ -25,7 +25,7 @@ content.appendChild(header);
 content.appendChild(contentMain);
 content.appendChild(footer);
 
-const tabLinks = document.querySelectorAll("a");
+const tabLinks = document.querySelectorAll(".link");
 
 const loadContent = (index) => {
   contentMain.removeChild(currentPage);

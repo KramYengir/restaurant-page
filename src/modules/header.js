@@ -62,6 +62,10 @@ const buildHeader = (() => {
   menu.id = "menu-tab";
   about.id = "about-tab";
   contact.id = "contact-tab";
+  home.classList.add("link");
+  menu.classList.add("link");
+  about.classList.add("link");
+  contact.classList.add("link");
 
   menuButton.id = "menu-button";
 

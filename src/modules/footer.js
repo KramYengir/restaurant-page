@@ -1,28 +1,18 @@
 import "../styles/footer.scss";
-/* import ship from "../assets/ship-logo.png";
-import seagull from "../assets/seagull_2.png"; */
 
 // copyright icon
 // <i class="fa-regular fa-copyright"></i>;
 
 const buildFooter = (() => {
   const footer = document.createElement("footer");
-  const text = document.createElement("p");
-  /*   const imgShip = document.createElement("img");
-  const imgSeagull = document.createElement("img"); */
+  const madeByRigneyLink = document.createElement("a");
 
-  /*   imgShip.src = ship;
-  imgShip.alt = "ship outline";
-  imgShip.classList.add("ship-img");
+  madeByRigneyLink.innerText = `Made by Rigney 2023`;
+  madeByRigneyLink.href = "https://madebyrigney.com/";
+  madeByRigneyLink.setAttribute("target", "_blank");
+  madeByRigneyLink.setAttribute("rel", "noreferrer noopener");
 
-  imgSeagull.src = seagull;
-  imgSeagull.alt = "seagull shape";
-  imgSeagull.classList.add("seagull-img");
-  
-  /* footer.appendChild(imgSeagull);
-  footer.appendChild(imgShip); */
-  text.innerText = `Made by Rigney 2023`;
-  footer.appendChild(text);
+  footer.appendChild(madeByRigneyLink);
 
   return footer;
 })();
