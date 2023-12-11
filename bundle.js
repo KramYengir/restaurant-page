@@ -3182,10 +3182,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const messages = [
-  "Our <span>Fish</span> Are Line Caught From Sustainable Fishing Grounds, delivered fresh every day",
-  "Our <span>Chips</span> Are Made Using Quality Potatoes Peeled & Chipped Fresh On The Day",
-  "We <span>Fry</span> In 100% Uncontaminated & Sustainable Vegetable Oil, Filtered Every Day",
-  "All Of Our <span>Packaging</span> & Utensils Are 100% Recyclable & Biodegradable",
+  "Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds, delivered <span>fresh</span> every day",
+  "Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day",
+  "We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Vegetable Oil, <span>Filtered</span> Every Day",
+  "All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>",
 ];
 
 const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
