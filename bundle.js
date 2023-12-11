@@ -692,9 +692,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `footer {
     max-height: 10px;
   } */
 }
-footer p {
+footer a {
   color: #ebd693;
-}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,cCPW;EDQX,yBCdgB;EDehB,6BAAA;EACA,iBAAA;EAEA,oBAAA;EAMA;;;;;;KAAA;AAHF;AADE;EACE,cCfS;ADkBb","sourcesContent":["@import \"./colors.scss\";\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  min-height: 50px;\n\n  width: 100%;\n  flex-shrink: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-top: 1px solid $gold-color;\n  font-size: 0.7rem;\n\n  padding-inline: 10px;\n\n  p {\n    color: $gold-color;\n  }\n\n  /*   img {\n    max-height: 25px;\n  }\n\n  .seagull-img {\n    max-height: 10px;\n  } */\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+  text-decoration: none;
+}`, "",{"version":3,"sources":["webpack://./src/styles/footer.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAEA;EACE,eAAA;EACA,SAAA;EACA,gBAAA;EAEA,WAAA;EACA,cAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,cCPW;EDQX,yBCdgB;EDehB,6BAAA;EACA,iBAAA;EAEA,oBAAA;EAOA;;;;;;KAAA;AAJF;AADE;EACE,cCfS;EDgBT,qBAAA;AAGJ","sourcesContent":["@import \"./colors.scss\";\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  min-height: 50px;\n\n  width: 100%;\n  flex-shrink: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  color: $gold-color;\n  background-color: $background-dark;\n  border-top: 1px solid $gold-color;\n  font-size: 0.7rem;\n\n  padding-inline: 10px;\n\n  a {\n    color: $gold-color;\n    text-decoration: none;\n  }\n\n  /*   img {\n    max-height: 25px;\n  }\n\n  .seagull-img {\n    max-height: 10px;\n  } */\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -955,7 +956,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#homepage-container *:not(i) {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${___CSS_LOADER_URL_REPLACEMENT_0___});
   background-position: center;
   background-size: cover;
-  /* font-family: 'Merriweather', serif; */
 }
 #welcome #welcome-title {
   font-size: calc(32px + 0.390625vw);
@@ -1066,7 +1066,7 @@ button:focus {
     max-width: 100%;
     padding: 2.5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA8BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;EAEA,wCAAA;AAjCF;AAmCE;EACE,kCA5CiB;EA6CjB,gBAAA;EACA,yBAAA;EACA,cChES;AD+Bb;AAoCE;EACE,kCAlDe;EAmDf,kBAAA;EAEA,kBAAA;EACA,cAAA;EACA,YAzEgB;AAsCpB;AAsCE;EACE,aAAA;EACA,SAAA;AApCJ;AAsCI;EACE,yBC9EY;AD0ClB;AAuCI;;EAEE,qBCtFO;ADiDb;;AA0CA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AA1CF;AA4CE;EACE,aAAA;EACA,OAAA;EACA,kCAxFa;EAyFb,kBAAA;EAEA,YA7Gc;EAgHd,mBAAA;EAEA,kBAAA;AA9CJ;AAgDI;;EAEE,qBCvHO;EDwHP,cCxHO;AD0Eb;AAkDE;EACE,mBAAA;AAhDJ;AAmDE;EACE,OAAA;AAjDJ;AAoDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC/Ic;AD6FlB;AAoDI;EACE,kCAxHa;EAyHb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA9Ic;AA4FpB;AAqDI;EACE,kCA/HY;EAgIZ,gCAAA;AAnDN;AAsDI;EACE,gBAAA;EACA,qBAAA;EACA,YAxJa;AAoGnB;AAuDI;EACE,kCAzIa;EA0Ib,YA5Jc;AAuGpB;;AA0DA;EACE,gBAAA;EACA,kBAAA;EACA,6BAAA;EACA,YAxKgB;EAyKhB,yBAAA;EACA,kBAAA;EACA,yBAAA;EACA,gBAAA;EACA,eAAA;AAvDF;;AA0DA;;EAEE,qBCnLW;EDoLX,cCpLW;AD6Hb;;AA0DA;EACE;IACE,sBAAA;EAvDF;EAyDE;IACE,eAAA;IACA,eAAA;EAvDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(32px + 0.390625vw);\n$welcome-msg-size: calc(14px + 0.390625vw);\n$hours-msg-size: calc(14px + 0.390625vw);\n$hours-title-size: calc(16px + 0.390625vw);\n$hours-days-size: calc(14px + 0.390625vw);\n$hours-times-size: calc(12px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  /* font-family: 'Merriweather', serif; */\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    font-size: $welcome-msg-size;\n    text-wrap: balance;\n\n    margin-block: 1rem;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n\n  .button-container {\n    display: flex;\n    gap: 15px;\n\n    .inverted-btn {\n      background-color: $blue-dark-color;\n    }\n\n    .inverted-btn:hover,\n    .inverted-btn:focus {\n      border-color: $gold-color;\n    }\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    text-wrap: balance;\n\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\nbutton {\n  margin-top: 10px;\n  padding: 10px 15px;\n  background-color: transparent;\n  color: $hours-msg-color;\n  border: 2px solid $hours-title-border-color;\n  border-radius: 5px;\n  text-transform: uppercase;\n  font-weight: 600;\n  cursor: pointer;\n}\n\nbutton:hover,\nbutton:focus {\n  border-color: $welcome-title-color;\n  color: $welcome-title-color;\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/homepage.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AA8BA;EACE,kCAAA;AA3BF;;AA8BA;EACE,aAAA;EACA,2DAAA;EACA,mBAAA;EACA,SAAA;EAEA,kBAAA;AA5BF;AA8BE;EACE,iCAAA;EACA,+BAAA;EACA,iBAAA;EACA,mBAAA;AA5BJ;;AAgCA;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,oBAAA;EAEA,4GA9Ce;EAgDf,2BAAA;EACA,sBAAA;AAhCF;AAkCE;EACE,kCA1CiB;EA2CjB,gBAAA;EACA,yBAAA;EACA,cC9DS;AD8Bb;AAmCE;EACE,kCAhDe;EAiDf,kBAAA;EAEA,kBAAA;EACA,cAAA;EACA,YAvEgB;AAqCpB;AAqCE;EACE,aAAA;EACA,SAAA;AAnCJ;AAqCI;EACE,yBC5EY;ADyClB;AAsCI;;EAEE,qBCpFO;ADgDb;;AAyCA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,SAAA;EAGA,4GAAA;EAEA,uCAAA;AAzCF;AA2CE;EACE,aAAA;EACA,OAAA;EACA,kCAtFa;EAuFb,kBAAA;EAEA,YA3Gc;EA8Gd,mBAAA;EAEA,kBAAA;AA7CJ;AA+CI;;EAEE,qBCrHO;EDsHP,cCtHO;ADyEb;AAiDE;EACE,mBAAA;AA/CJ;AAkDE;EACE,OAAA;AAhDJ;AAmDE;EACE,cAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,yBC7Ic;AD4FlB;AAmDI;EACE,kCAtHa;EAuHb,eAAA;EACA,yBAAA;EACA,mBAAA;EACA,YA5Ic;AA2FpB;AAoDI;EACE,kCA7HY;EA8HZ,gCAAA;AAlDN;AAqDI;EACE,gBAAA;EACA,qBAAA;EACA,YAtJa;AAmGnB;AAsDI;EACE,kCAvIa;EAwIb,YA1Jc;AAsGpB;;AAyDA;EACE,gBAAA;EACA,kBAAA;EACA,6BAAA;EACA,YAtKgB;EAuKhB,yBAAA;EACA,kBAAA;EACA,yBAAA;EACA,gBAAA;EACA,eAAA;AAtDF;;AAyDA;;EAEE,qBCjLW;EDkLX,cClLW;AD4Hb;;AAyDA;EACE;IACE,sBAAA;EAtDF;EAwDE;IACE,eAAA;IACA,eAAA;EAtDJ;AACF","sourcesContent":["@import \"./colors.scss\";\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish&family=Open+Sans:wght@500&family=Roboto&display=swap\");\n\n//FONT COLORS\n$welcome-title-color: $gold-color;\n$welcome-msg-color: white;\n$hours-msg-color: white;\n$hours-title-color: white;\n$hours-days-color: white;\n$hours-times-color: white;\n\n//BACKGROUND IMAGE\n$welcome-bg-img: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),\n  url(\"../assets/FH_packed.png\");\n\n//BORDER & BACKGROUND COLORS\n$hours-background-color: $background-dark;\n$hours-times-background-color: $background-dark;\n$hours-title-border-color: $blue-color;\n$days-border-color: $blue-color;\n\n//FONTSIZES\n$welcome-title-size: calc(32px + 0.390625vw);\n$welcome-msg-size: calc(14px + 0.390625vw);\n$hours-msg-size: calc(14px + 0.390625vw);\n$hours-title-size: calc(16px + 0.390625vw);\n$hours-days-size: calc(14px + 0.390625vw);\n$hours-times-size: calc(12px + 0.390625vw);\n\n#homepage-container *:not(i) {\n  font-family: \"Poppins\", sans-serif;\n}\n\n#homepage-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(0.8fr, 1fr));\n  place-items: center;\n  gap: 1rem;\n\n  margin-block: 1rem;\n\n  > div {\n    width: clamp(300px, 95vw, 1000px);\n    /* width: min(1200px, 100vw); */\n    min-height: 350px;\n    border-radius: 10px;\n  }\n}\n\n#welcome {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n\n  padding-inline: 2rem;\n\n  background: $welcome-bg-img;\n\n  background-position: center;\n  background-size: cover;\n\n  #welcome-title {\n    font-size: $welcome-title-size;\n    font-weight: 700;\n    text-transform: uppercase;\n    color: $welcome-title-color;\n  }\n\n  #welcome-msg {\n    font-size: $welcome-msg-size;\n    text-wrap: balance;\n\n    margin-block: 1rem;\n    max-width: 80%;\n    color: $welcome-msg-color;\n  }\n\n  .button-container {\n    display: flex;\n    gap: 15px;\n\n    .inverted-btn {\n      background-color: $blue-dark-color;\n    }\n\n    .inverted-btn:hover,\n    .inverted-btn:focus {\n      border-color: $gold-color;\n    }\n  }\n}\n\n#hours {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  padding: 1rem 1.5rem;\n  gap: 1rem;\n\n  //background-color: $hours-background-color;\n  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),\n    url(\"../assets/FH_front.png\");\n  /* border-top: 1px solid $gold-color; */\n\n  .msg-and-btn-container {\n    padding: 30px;\n    flex: 1;\n    font-size: $hours-msg-size;\n    text-wrap: balance;\n\n    color: $hours-msg-color;\n\n    //background-color: rgba(0, 0, 0, 0.2);\n    border-radius: 10px;\n\n    align-self: center;\n\n    button:hover,\n    button:focus {\n      border-color: $welcome-title-color;\n      color: $welcome-title-color;\n    }\n  }\n\n  #hours-msg {\n    margin-bottom: 25px;\n  }\n\n  #hours-div {\n    flex: 1;\n  }\n\n  #hours-info {\n    max-width: 80%;\n    padding: 2rem;\n    border: 1px solid $blue-color;\n    border-radius: 10px;\n    background-color: $hours-times-background-color;\n\n    #title {\n      font-size: $hours-title-size;\n      padding: 0 1rem;\n      border: 2px solid $hours-title-border-color;\n      border-radius: 10px;\n      color: $hours-title-color;\n    }\n\n    .heading {\n      font-size: $hours-days-size;\n      border-bottom: 1px solid $days-border-color;\n    }\n\n    .days {\n      margin-top: 1rem;\n      margin-bottom: 0.5rem;\n      color: $hours-days-color;\n    }\n\n    .times {\n      font-size: $hours-times-size;\n      color: $hours-times-color;\n    }\n  }\n}\n\nbutton {\n  margin-top: 10px;\n  padding: 10px 15px;\n  background-color: transparent;\n  color: $hours-msg-color;\n  border: 2px solid $hours-title-border-color;\n  border-radius: 5px;\n  text-transform: uppercase;\n  font-weight: 600;\n  cursor: pointer;\n}\n\nbutton:hover,\nbutton:focus {\n  border-color: $welcome-title-color;\n  color: $welcome-title-color;\n}\n\n@media only screen and (max-width: 800px) {\n  #hours {\n    flex-direction: column;\n\n    #hours-info {\n      max-width: 100%;\n      padding: 2.5rem;\n    }\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1211,7 +1211,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
 
 .item-option-text {
   color: white;
-  font-size: calc(10px + 0.390625vw);
+  font-size: calc(11px + 0.390625vw);
 }
 
 .item-option-text::before {
@@ -1239,12 +1239,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@charset "UTF-8";
     font-size: calc((14px + 0.390625vw) * 0.8);
   }
   .item-option-text {
-    font-size: calc((10px + 0.390625vw) * 0.8);
+    font-size: calc((11px + 0.390625vw) * 0.8);
   }
   .menu-item-price {
     font-size: calc((12px + 0.390625vw) * 0.8);
   }
-}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACE,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,wBAAA;EACA,eAAA;EAEA,uCCzBmB;ED0BnB,gBAAA;EACA,aAAA;EAEA,yBAAA;AAjBF;;AAoBA;EACE;IACE,6DAAA;EAjBF;AACF;AAoBA;EACE,yBAAA;EACA,cClCW;EDmCX,gCAzCe;EA0Cf,kCAhCqB;AAcvB;;AAqBA;;EAEE,cAAA;AAlBF;;AAqBA;EACE,UAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AAlBF;;AAqBA;EACE,gBAAA;EACA,kCAnDU;AAiCZ;;AAqBA;EACE,cC9DW;ED+DX,0BAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,qBAAA;AAlBF;;AAqBA;EACE,YAAA;EACA,kCAjEY;AA+Cd;;AAqBA;EACE,YAAA;EACA,gBAAA;AAlBF;;AAqBA;EACE,YA/EiB;EAgFjB,kCA1EW;AAwDb;;AAqBA;EACE,YAAA;AAlBF;;AAsBA;EACE;IACE,6DAAA;EAnBF;EAsBA;IACE,0CAAA;EApBF;EAuBA;IACE,0CAAA;EArBF;EAwBA;IACE,0CAAA;EAtBF;EAyBA;IACE,0CAAA;EAvBF;AACF","sourcesContent":["@import \"./colors.scss\";\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: white;\n\n//-SIZES\n$section-heading-size: calc(18px + 0.390625vw);\n$item-size: calc(14px + 0.390625vw);\n$option-size: calc(10px + 0.390625vw);\n$price-size: calc(12px + 0.390625vw);\n\n#menu-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n  justify-content: center;\n  align-self: center;\n  gap: 3rem;\n  /* flex-grow: 1; */\n  width: min(90vw, 1000px);\n  min-height: 95%;\n\n  background-color: $container-background-color;\n  padding: 5vh 5vw;\n  margin: 5vh 0;\n\n  border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px) {\n  #menu-container {\n    grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n  }\n}\n\n.section-heading {\n  text-transform: uppercase;\n  color: $heading-color;\n  border-bottom: $heading-border;\n  font-size: $section-heading-size;\n}\n\n.section-heading,\n.menu-item {\n  margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option) {\n  color: red;\n}\n\n.menu-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.menu-item:not(.item-option) {\n  margin-top: 1rem;\n  font-size: $item-size;\n}\n\n.menu-item-name {\n  color: $item-name-color;\n  text-transform: capitalize;\n}\n\n.item-option {\n  margin-top: 0;\n  margin-bottom: 0.4rem;\n}\n\n.item-option-text {\n  color: white;\n  font-size: $option-size;\n}\n\n.item-option-text::before {\n  content: \" \";\n  white-space: pre;\n}\n\n.menu-item-price {\n  color: $item-price-color;\n  font-size: $price-size;\n}\n\n.menu-item-price::before {\n  content: \"£\";\n}\n\n// for the ridiculously narrow Galaxy Fold\n@media only screen and (min-width: 279px) {\n  #menu-container {\n    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));\n  }\n\n  .section-heading {\n    font-size: calc($section-heading-size * 0.8);\n  }\n\n  .menu-item-name {\n    font-size: calc($item-size * 0.8);\n  }\n\n  .item-option-text {\n    font-size: calc($option-size * 0.8);\n  }\n\n  .menu-item-price {\n    font-size: calc($price-size * 0.8);\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/menu.scss","webpack://./src/styles/colors.scss"],"names":[],"mappings":"AAAA,gBAAgB;AAiBhB;EACE,aAAA;EACA,6DAAA;EACA,uBAAA;EACA,kBAAA;EACA,SAAA;EACA,kBAAA;EACA,wBAAA;EACA,eAAA;EAEA,uCCzBmB;ED0BnB,gBAAA;EACA,aAAA;EAEA,yBAAA;AAjBF;;AAoBA;EACE;IACE,6DAAA;EAjBF;AACF;AAoBA;EACE,yBAAA;EACA,cClCW;EDmCX,gCAzCe;EA0Cf,kCAhCqB;AAcvB;;AAqBA;;EAEE,cAAA;AAlBF;;AAqBA;EACE,UAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AAlBF;;AAqBA;EACE,gBAAA;EACA,kCAnDU;AAiCZ;;AAqBA;EACE,cC9DW;ED+DX,0BAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,qBAAA;AAlBF;;AAqBA;EACE,YAAA;EACA,kCAjEY;AA+Cd;;AAqBA;EACE,YAAA;EACA,gBAAA;AAlBF;;AAqBA;EACE,YA/EiB;EAgFjB,kCA1EW;AAwDb;;AAqBA;EACE,YAAA;AAlBF;;AAsBA;EACE;IACE,6DAAA;EAnBF;EAsBA;IACE,0CAAA;EApBF;EAuBA;IACE,0CAAA;EArBF;EAwBA;IACE,0CAAA;EAtBF;EAyBA;IACE,0CAAA;EAvBF;AACF","sourcesContent":["@import \"./colors.scss\";\n\n$heading-border: 1px solid $blue-color;\n\n//-COLORS\n$container-background-color: $background-dark-90;\n$section-background-color: $gold-dark-color;\n$heading-color: $blue-color;\n$item-name-color: $gold-color;\n$item-price-color: white;\n\n//-SIZES\n$section-heading-size: calc(18px + 0.390625vw);\n$item-size: calc(14px + 0.390625vw);\n$option-size: calc(11px + 0.390625vw);\n$price-size: calc(12px + 0.390625vw);\n\n#menu-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(400px, 0.9fr));\n  justify-content: center;\n  align-self: center;\n  gap: 3rem;\n  /* flex-grow: 1; */\n  width: min(90vw, 1000px);\n  min-height: 95%;\n\n  background-color: $container-background-color;\n  padding: 5vh 5vw;\n  margin: 5vh 0;\n\n  border: 1px solid $gold-color;\n}\n\n@media only screen and (max-width: 600px) {\n  #menu-container {\n    grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));\n  }\n}\n\n.section-heading {\n  text-transform: uppercase;\n  color: $heading-color;\n  border-bottom: $heading-border;\n  font-size: $section-heading-size;\n}\n\n.section-heading,\n.menu-item {\n  margin: 0.5rem;\n}\n\n.menu-item ~ div:not(.menu-option) {\n  color: red;\n}\n\n.menu-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.menu-item:not(.item-option) {\n  margin-top: 1rem;\n  font-size: $item-size;\n}\n\n.menu-item-name {\n  color: $item-name-color;\n  text-transform: capitalize;\n}\n\n.item-option {\n  margin-top: 0;\n  margin-bottom: 0.4rem;\n}\n\n.item-option-text {\n  color: white;\n  font-size: $option-size;\n}\n\n.item-option-text::before {\n  content: \" \";\n  white-space: pre;\n}\n\n.menu-item-price {\n  color: $item-price-color;\n  font-size: $price-size;\n}\n\n.menu-item-price::before {\n  content: \"£\";\n}\n\n// for the ridiculously narrow Galaxy Fold\n@media only screen and (min-width: 279px) {\n  #menu-container {\n    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));\n  }\n\n  .section-heading {\n    font-size: calc($section-heading-size * 0.8);\n  }\n\n  .menu-item-name {\n    font-size: calc($item-size * 0.8);\n  }\n\n  .item-option-text {\n    font-size: calc($option-size * 0.8);\n  }\n\n  .menu-item-price {\n    font-size: calc($price-size * 0.8);\n  }\n}\n","$background-dark: #2a2a2a;\n$background-darkish: rgb(58, 58, 58);\n$background-dark-90: rgba(42, 42, 42, 0.9);\n$background-dark-80: rgba(42, 42, 42, 0.8);\n$background-light: #f5f1de;\n$background-light-2: #cccccc;\n$gold-color: #ebd693;\n$gold-dark-color: #a3771f;\n$blue-color: #4fa9cc;\n$blue-dark-color: #357088;"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2313,7 +2313,7 @@ content.appendChild(_modules_header_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 content.appendChild(contentMain);
 content.appendChild(_modules_footer_js__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
-const tabLinks = document.querySelectorAll("a");
+const tabLinks = document.querySelectorAll(".link");
 
 const loadContent = (index) => {
   contentMain.removeChild(currentPage);
@@ -2374,6 +2374,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const buildAboutpage = (() => {
   const images = [_assets_painting_jpg__WEBPACK_IMPORTED_MODULE_3__, _assets_FH_christos_cropped_jpeg__WEBPACK_IMPORTED_MODULE_2__, _assets_FH_fish_meal_1_jpeg__WEBPACK_IMPORTED_MODULE_4__, _assets_FH_christos_pitchside_cropped_jpg__WEBPACK_IMPORTED_MODULE_1__];
+  const altMsgs = [
+    "A painting of the front fo the chip shop, with customers sitting outside",
+    "The owner and head fryer, Christos, proudly standing beside his station",
+    "Some tasty looking fish and chips resting on some paper before they get wrapped up",
+    "The owner and head fryer, Christos, proudly posing beside a pitchside ad board for his chip shop",
+  ];
+
   const headings = [
     "Our Beginnings...",
     "Our Standards...",
@@ -2407,6 +2414,7 @@ const buildAboutpage = (() => {
     img.classList.add("img");
     img.id = `img-${i}`;
     img.src = images[i];
+    img.alt = altMsgs[i];
 
     let textContainer = document.createElement("div");
     textContainer.classList.add("text-container");
@@ -2463,11 +2471,8 @@ const ADDRESS = `<div class='contact-info contact-heading' id='adrss-heading'>Fe
                 <div class='contact-info'>0161 775 4738</div>
                 <div class='contact-info contact-heading'>Email:</div>
                 <div class='contact-info'>ferryhillfishandchips@gmail.com</div>
-                `
-;
-
-const MESSAGE = 
-`<div class='msg'><span class='msg-bold'>If you have any enquiries, </span>
+                `;
+const MESSAGE = `<div class='msg'><span class='msg-bold'>If you have any enquiries, </span>
   you can give us a call during opening hours and we'll be glad to help!</div>
 <div class='msg'>If you're not in a rush, then 
   <span class='msg-bold'>send us an email!</span></div>
@@ -2475,10 +2480,8 @@ const MESSAGE =
   with changes to our menu, opening hours or any announcements, please check our 
   <span class='msg-bold'>Instagram, </span>which is updated frequently, or our 
   <span class='msg-bold'>Facebook </span>page!</div>
-`
-;
-
-const INSTAGRAM_SVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 264.5833 264.5833" inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)" sodipodi:docname="Instagram_(2022).svg"><defs><radialGradient id="f" cx="158.429" cy="578.088" r="52.3515" xlink:href="#a" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -4.03418 4.28018 0 -2332.2273 942.2356)" fx="158.429" fy="578.088"/><radialGradient inkscape:collect="always" xlink:href="#b" id="g" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.67441 -1.16203 1.51283 .87801 -814.3657 -47.8354)" cx="172.6149" cy="600.6924" fx="172.6149" fy="600.6924" r="65"/><radialGradient inkscape:collect="always" xlink:href="#c" id="h" cx="144.012" cy="51.3367" fx="144.012" fy="51.3367" r="67.081" gradientTransform="matrix(-2.3989 .67549 -.23008 -.81732 464.9957 -26.4035)" gradientUnits="userSpaceOnUse"/><radialGradient inkscape:collect="always" xlink:href="#d" id="e" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-3.10797 .87652 -.6315 -2.23914 1345.6503 1374.1983)" cx="199.7884" cy="628.4379" fx="199.7884" fy="628.4379" r="52.3515"/><linearGradient inkscape:collect="always" id="d"><stop offset="0" stop-color="#ff005f"/><stop offset="1" stop-color="#fc01d8"/></linearGradient><linearGradient id="c"><stop offset="0" stop-color="#780cff"/><stop stop-color="#820bff" offset="1" stop-opacity="0"/></linearGradient><linearGradient inkscape:collect="always" id="b"><stop offset="0" stop-color="#fc0"/><stop offset="1" stop-color="#fc0" stop-opacity="0"/></linearGradient><linearGradient id="a"><stop offset="0" stop-color="#fc0"/><stop offset=".1242" stop-color="#fc0"/><stop offset=".5672" stop-color="#fe4a05"/><stop offset=".6942" stop-color="#ff0f3f"/><stop offset="1" stop-color="#fe0657" stop-opacity="0"/></linearGradient></defs><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:zoom=".515" inkscape:cx="500" inkscape:cy="500" inkscape:document-units="mm" inkscape:current-layer="layer1" inkscape:document-rotation="0" showgrid="false" inkscape:window-width="1366" inkscape:window-height="705" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"/><g inkscape:label="Layer 1" inkscape:groupmode="layer"><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#e)" transform="translate(-71.8155 -18.1429)"/><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#f)" transform="translate(-71.8155 -18.1429)"/><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#g)" transform="translate(-71.8155 -18.1429)"/><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#h)" transform="translate(-71.8155 -18.1429)"/><path d="M132.3452 33.973c-26.7167 0-30.0696.1167-40.5629.5939-10.4727.4792-17.6212 2.136-23.8762 4.567-6.4701 2.5107-11.9586 5.8693-17.4265 11.3352-5.472 5.464-8.8332 10.9483-11.354 17.4116-2.4389 6.2524-4.099 13.3976-4.5703 23.8585-.4693 10.4854-.5923 13.8379-.5923 40.5348 0 26.697.1189 30.0371.5943 40.5225.4817 10.465 2.1397 17.6082 4.5703 23.8585 2.5147 6.4654 5.8758 11.9497 11.3458 17.4136 5.466 5.468 10.9544 8.8349 17.4204 11.3456 6.259 2.4309 13.4097 4.0877 23.8803 4.567 10.4933.477 13.8441.5938 40.5588.5938 26.7188 0 30.0615-.1167 40.5547-.5939 10.4728-.4792 17.6295-2.136 23.8885-4.567 6.4681-2.5106 11.9484-5.8775 17.4143-11.3455 5.472-5.4639 8.8332-10.9482 11.354-17.4115 2.4183-6.2524 4.0784-13.3976 4.5703-23.8585.4713-10.4854.5943-13.8277.5943-40.5246 0-26.697-.123-30.0473-.5943-40.5328-.4919-10.465-2.152-17.6081-4.5703-23.8584-2.5208-6.4654-5.882-11.9498-11.354-17.4137-5.4721-5.468-10.9442-8.8266-17.4204-11.3353-6.2714-2.4309-13.424-4.0877-23.8967-4.5669-10.4933-.4772-13.8339-.5939-40.5588-.5939zm-8.825 17.7147c2.6193-.0041 5.5418 0 8.825 0 26.2659 0 29.379.0942 39.7513.5652 9.5915.4383 14.7971 2.0397 18.2648 3.3852 4.5908 1.7817 7.8638 3.9116 11.3048 7.3521 3.4431 3.4406 5.5745 6.7173 7.3617 11.3046 1.3465 3.461 2.9512 8.6628 3.3877 18.2472.4714 10.3625.5739 13.4754.5739 39.7095 0 26.234-.1025 29.347-.5739 39.7095-.4386 9.5843-2.0412 14.7861-3.3877 18.2471-1.783 4.5874-3.9186 7.8539-7.3617 11.2923-3.443 3.4406-6.712 5.5704-11.3048 7.3521-3.4636 1.3517-8.6733 2.949-18.2648 3.3873-10.3702.471-13.4854.5734-39.7513.5734-26.2679 0-29.381-.1024-39.7513-.5734-9.5914-.4423-14.797-2.0438-18.2668-3.3893-4.5908-1.7817-7.87-3.9116-11.313-7.3521-3.4431-3.4405-5.5745-6.709-7.3617-11.2985-1.3465-3.461-2.9512-8.6628-3.3877-18.2471-.4714-10.3626-.5657-13.4754-.5657-39.7259 0-26.2504.0943-29.347.5657-39.7095.4386-9.5844 2.0412-14.7861 3.3877-18.2512 1.783-4.5874 3.9186-7.8641 7.3617-11.3046 3.443-3.4406 6.7222-5.5704 11.313-7.3562 3.4677-1.3517 8.6754-2.949 18.2668-3.3894 9.075-.4096 12.5919-.5324 30.9264-.553zm61.3363 16.322c-6.5173 0-11.805 5.2776-11.805 11.792 0 6.5125 5.2877 11.7962 11.805 11.7962 6.5172 0 11.8049-5.2837 11.8049-11.7962 0-6.5124-5.2877-11.796-11.805-11.796zm-52.5113 13.7826c-27.8993 0-50.5191 22.6031-50.5191 50.4817 0 27.8786 22.6198 50.4714 50.5191 50.4714s50.511-22.5928 50.511-50.4714c0-27.8786-22.6137-50.4817-50.513-50.4817zm0 17.7147c18.109 0 32.7914 14.6694 32.7914 32.767 0 18.0956-14.6824 32.767-32.7914 32.767-18.111 0-32.7913-14.6714-32.7913-32.767 0-18.0976 14.6803-32.767 32.7913-32.767z" inkscape:connector-curvature="0" fill="#fff"/></g></svg>`
+`;
+const INSTAGRAM_SVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 264.5833 264.5833" inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)" sodipodi:docname="Instagram_(2022).svg"><defs><radialGradient id="f" cx="158.429" cy="578.088" r="52.3515" xlink:href="#a" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -4.03418 4.28018 0 -2332.2273 942.2356)" fx="158.429" fy="578.088"/><radialGradient inkscape:collect="always" xlink:href="#b" id="g" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.67441 -1.16203 1.51283 .87801 -814.3657 -47.8354)" cx="172.6149" cy="600.6924" fx="172.6149" fy="600.6924" r="65"/><radialGradient inkscape:collect="always" xlink:href="#c" id="h" cx="144.012" cy="51.3367" fx="144.012" fy="51.3367" r="67.081" gradientTransform="matrix(-2.3989 .67549 -.23008 -.81732 464.9957 -26.4035)" gradientUnits="userSpaceOnUse"/><radialGradient inkscape:collect="always" xlink:href="#d" id="e" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-3.10797 .87652 -.6315 -2.23914 1345.6503 1374.1983)" cx="199.7884" cy="628.4379" fx="199.7884" fy="628.4379" r="52.3515"/><linearGradient inkscape:collect="always" id="d"><stop offset="0" stop-color="#ff005f"/><stop offset="1" stop-color="#fc01d8"/></linearGradient><linearGradient id="c"><stop offset="0" stop-color="#780cff"/><stop stop-color="#820bff" offset="1" stop-opacity="0"/></linearGradient><linearGradient inkscape:collect="always" id="b"><stop offset="0" stop-color="#fc0"/><stop offset="1" stop-color="#fc0" stop-opacity="0"/></linearGradient><linearGradient id="a"><stop offset="0" stop-color="#fc0"/><stop offset=".1242" stop-color="#fc0"/><stop offset=".5672" stop-color="#fe4a05"/><stop offset=".6942" stop-color="#ff0f3f"/><stop offset="1" stop-color="#fe0657" stop-opacity="0"/></linearGradient></defs><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:zoom=".515" inkscape:cx="500" inkscape:cy="500" inkscape:document-units="mm" inkscape:current-layer="layer1" inkscape:document-rotation="0" showgrid="false" inkscape:window-width="1366" inkscape:window-height="705" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"/><g inkscape:label="Layer 1" inkscape:groupmode="layer"><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#e)" transform="translate(-71.8155 -18.1429)"/><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#f)" transform="translate(-71.8155 -18.1429)"/><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#g)" transform="translate(-71.8155 -18.1429)"/><path d="M204.1503 18.1429c-55.2305 0-71.3834.057-74.5232.3175-11.3342.9424-18.387 2.7275-26.0708 6.554-5.9214 2.9413-10.5915 6.3506-15.2005 11.1298-8.3938 8.7157-13.481 19.4383-15.3226 32.1842-.8953 6.1877-1.1558 7.4496-1.2087 39.0558-.0203 10.5354 0 24.4007 0 42.9984 0 55.2008.061 71.3418.3256 74.4764.9157 11.032 2.6453 17.9728 6.3081 25.565 7 14.5329 20.369 25.4428 36.119 29.5137 5.4535 1.4044 11.4767 2.1779 19.2092 2.5442 3.2762.1425 36.6684.2443 70.081.2443 33.4127 0 66.8253-.0407 70.02-.2035 8.9535-.4214 14.1526-1.1195 19.9011-2.6054 15.8517-4.0912 28.9767-14.8383 36.119-29.5748 3.5916-7.409 5.4128-14.6144 6.237-25.0704.179-2.2796.2543-38.6263.2543-74.924 0-36.304-.0814-72.5835-.2605-74.8632-.8343-10.6249-2.6555-17.7692-6.363-25.3207-3.0421-6.1816-6.42-10.798-11.324-15.518-8.752-8.3616-19.4555-13.4502-32.2101-15.2902-6.18-.8936-7.411-1.1582-39.033-1.2131z" inkscape:connector-curvature="0" fill="url(#h)" transform="translate(-71.8155 -18.1429)"/><path d="M132.3452 33.973c-26.7167 0-30.0696.1167-40.5629.5939-10.4727.4792-17.6212 2.136-23.8762 4.567-6.4701 2.5107-11.9586 5.8693-17.4265 11.3352-5.472 5.464-8.8332 10.9483-11.354 17.4116-2.4389 6.2524-4.099 13.3976-4.5703 23.8585-.4693 10.4854-.5923 13.8379-.5923 40.5348 0 26.697.1189 30.0371.5943 40.5225.4817 10.465 2.1397 17.6082 4.5703 23.8585 2.5147 6.4654 5.8758 11.9497 11.3458 17.4136 5.466 5.468 10.9544 8.8349 17.4204 11.3456 6.259 2.4309 13.4097 4.0877 23.8803 4.567 10.4933.477 13.8441.5938 40.5588.5938 26.7188 0 30.0615-.1167 40.5547-.5939 10.4728-.4792 17.6295-2.136 23.8885-4.567 6.4681-2.5106 11.9484-5.8775 17.4143-11.3455 5.472-5.4639 8.8332-10.9482 11.354-17.4115 2.4183-6.2524 4.0784-13.3976 4.5703-23.8585.4713-10.4854.5943-13.8277.5943-40.5246 0-26.697-.123-30.0473-.5943-40.5328-.4919-10.465-2.152-17.6081-4.5703-23.8584-2.5208-6.4654-5.882-11.9498-11.354-17.4137-5.4721-5.468-10.9442-8.8266-17.4204-11.3353-6.2714-2.4309-13.424-4.0877-23.8967-4.5669-10.4933-.4772-13.8339-.5939-40.5588-.5939zm-8.825 17.7147c2.6193-.0041 5.5418 0 8.825 0 26.2659 0 29.379.0942 39.7513.5652 9.5915.4383 14.7971 2.0397 18.2648 3.3852 4.5908 1.7817 7.8638 3.9116 11.3048 7.3521 3.4431 3.4406 5.5745 6.7173 7.3617 11.3046 1.3465 3.461 2.9512 8.6628 3.3877 18.2472.4714 10.3625.5739 13.4754.5739 39.7095 0 26.234-.1025 29.347-.5739 39.7095-.4386 9.5843-2.0412 14.7861-3.3877 18.2471-1.783 4.5874-3.9186 7.8539-7.3617 11.2923-3.443 3.4406-6.712 5.5704-11.3048 7.3521-3.4636 1.3517-8.6733 2.949-18.2648 3.3873-10.3702.471-13.4854.5734-39.7513.5734-26.2679 0-29.381-.1024-39.7513-.5734-9.5914-.4423-14.797-2.0438-18.2668-3.3893-4.5908-1.7817-7.87-3.9116-11.313-7.3521-3.4431-3.4405-5.5745-6.709-7.3617-11.2985-1.3465-3.461-2.9512-8.6628-3.3877-18.2471-.4714-10.3626-.5657-13.4754-.5657-39.7259 0-26.2504.0943-29.347.5657-39.7095.4386-9.5844 2.0412-14.7861 3.3877-18.2512 1.783-4.5874 3.9186-7.8641 7.3617-11.3046 3.443-3.4406 6.7222-5.5704 11.313-7.3562 3.4677-1.3517 8.6754-2.949 18.2668-3.3894 9.075-.4096 12.5919-.5324 30.9264-.553zm61.3363 16.322c-6.5173 0-11.805 5.2776-11.805 11.792 0 6.5125 5.2877 11.7962 11.805 11.7962 6.5172 0 11.8049-5.2837 11.8049-11.7962 0-6.5124-5.2877-11.796-11.805-11.796zm-52.5113 13.7826c-27.8993 0-50.5191 22.6031-50.5191 50.4817 0 27.8786 22.6198 50.4714 50.5191 50.4714s50.511-22.5928 50.511-50.4714c0-27.8786-22.6137-50.4817-50.513-50.4817zm0 17.7147c18.109 0 32.7914 14.6694 32.7914 32.767 0 18.0956-14.6824 32.767-32.7914 32.767-18.111 0-32.7913-14.6714-32.7913-32.767 0-18.0976 14.6803-32.767 32.7913-32.767z" inkscape:connector-curvature="0" fill="#fff"/></g></svg>`;
 
 const FACEBOOK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
 <style type="text/css">
@@ -2493,111 +2496,116 @@ const FACEBOOK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http:
 <path class="st1" d="M27.8,25.6l0.9-5.6h-5.3v-3.9c0-1.6,0.6-2.8,3-2.8h2.6V8.2c-1.4-0.2-3-0.4-4.4-0.4c-4.6,0-7.8,2.8-7.8,7.8V20  h-5v5.6h5v14.1c1.1,0.2,2.2,0.3,3.3,0.3c1.1,0,2.2-0.1,3.3-0.3V25.6H27.8z"/>
 </svg>`;
 
-const FERRYHILL_INSTAGRAM_URL = 'https://www.instagram.com/ferryhill_fishchips/';
-const FERRYHILL_FACEBOOK_URL = 'https://www.facebook.com/FerryhillFishChips/?ref=embed_page';
+const FERRYHILL_INSTAGRAM_URL =
+  "https://www.instagram.com/ferryhill_fishchips/";
+const FERRYHILL_FACEBOOK_URL =
+  "https://www.facebook.com/FerryhillFishChips/?ref=embed_page";
 
-const buildContactpage = (()=>{
-    const container = document.createElement('div');
-    container.id = 'contact-container';
+const buildContactpage = (() => {
+  const container = document.createElement("div");
+  container.id = "contact-container";
 
-    //CREATE SECTIONS
-    const locationSection = document.createElement('div');
-    locationSection.classList.add('contact-section');
-    locationSection.id = 'location-section';
-    
-    const socialSection = document.createElement('div');
-    socialSection.classList.add('contact-section');
-    socialSection.id = 'social-section';
+  //CREATE SECTIONS
+  const locationSection = document.createElement("div");
+  locationSection.classList.add("contact-section");
+  locationSection.id = "location-section";
 
-    //CREATE BOXES
-    const contactBox = document.createElement('div');
-    contactBox.classList.add('box');
-    contactBox.id = 'contact-info-box';
-    contactBox.innerHTML = ADDRESS;
-    
-    const mapBox = document.createElement('div');
-    mapBox.classList.add('box');
-    mapBox.id = 'map-box';
-    
-    //A CONTAINER DIV FOR THE MAP
-    const mapContainer = document.createElement('div');
-    mapContainer.id = 'map';
-    //APPEND TO MAPBOX
-    mapBox.appendChild(mapContainer);
+  const socialSection = document.createElement("div");
+  socialSection.classList.add("contact-section");
+  socialSection.id = "social-section";
 
-    const messageBox = document.createElement('div');
-    messageBox.classList.add('box');
-    messageBox.id = 'message-box';
-    messageBox.innerHTML = MESSAGE;
-   
-    const socialBox = document.createElement('div');
-    socialBox.classList.add('box');
-    socialBox.id = 'social-box';
-    
-    const instagramMsg = document.createElement('div');
-    instagramMsg.classList.add('social-text');
-    instagramMsg.innerHTML = "Follow us on <span class='social-name'>Instagram</span>";
+  //CREATE BOXES
+  const contactBox = document.createElement("div");
+  contactBox.classList.add("box");
+  contactBox.id = "contact-info-box";
+  contactBox.innerHTML = ADDRESS;
 
-    const instaLinkContainer = document.createElement('div');
-    const instagramLink = document.createElement('a');
-    instagramLink.href = FERRYHILL_INSTAGRAM_URL;
-    instagramLink.innerHTML = INSTAGRAM_SVG;
-    instaLinkContainer.appendChild(instagramLink);
-    
-    const facebookMsg = document.createElement('div');
-    facebookMsg.classList.add('social-text');
-    facebookMsg.innerHTML = "Visit us on <span class='social-name'>Facebook</span>";
+  const mapBox = document.createElement("div");
+  mapBox.classList.add("box");
+  mapBox.id = "map-box";
 
-    const facebookLinkContainer = document.createElement('div');
-    const facebookLink = document.createElement('a');
-    facebookLink.href = FERRYHILL_FACEBOOK_URL;
-    facebookLink.innerHTML = FACEBOOK_SVG;
-    facebookLinkContainer.appendChild(facebookLink);
-    
-    socialBox.appendChild(instagramMsg);
-    socialBox.appendChild(instaLinkContainer);
+  //A CONTAINER DIV FOR THE MAP
+  const mapContainer = document.createElement("div");
+  mapContainer.id = "map";
+  //APPEND TO MAPBOX
+  mapBox.appendChild(mapContainer);
 
-    socialBox.appendChild(facebookMsg);
-    socialBox.appendChild(facebookLinkContainer);
+  const messageBox = document.createElement("div");
+  messageBox.classList.add("box");
+  messageBox.id = "message-box";
+  messageBox.innerHTML = MESSAGE;
 
-    //APPEND BOXES TO RELEVANT SECTION
-    locationSection.appendChild(contactBox);
-    locationSection.appendChild(mapBox);
+  const socialBox = document.createElement("div");
+  socialBox.classList.add("box");
+  socialBox.id = "social-box";
 
-    socialSection.appendChild(messageBox);
-    socialSection.appendChild(socialBox);
+  const instagramMsg = document.createElement("div");
+  instagramMsg.classList.add("social-text");
+  instagramMsg.innerHTML =
+    "Follow us on <span class='social-name'>Instagram</span>";
 
+  const instaLinkContainer = document.createElement("div");
+  const instagramLink = document.createElement("a");
+  instagramLink.setAttribute("aria-label", "Link to Instagram");
+  instagramLink.href = FERRYHILL_INSTAGRAM_URL;
+  instagramLink.innerHTML = INSTAGRAM_SVG;
+  instaLinkContainer.appendChild(instagramLink);
 
-    //APPEND SECTIOSN TO CONTAINER
-    container.appendChild(locationSection);
-    container.appendChild(socialSection);
+  const facebookMsg = document.createElement("div");
+  facebookMsg.classList.add("social-text");
+  facebookMsg.innerHTML =
+    "Visit us on <span class='social-name'>Facebook</span>";
 
-    //GOOGLE MAPS STUFF
-    const loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_1__.Loader({
-        apiKey: API_KEY,
-        version: "weekly",
-      });
-      
-      loader.load().then(async () => {
-        const { Map } = await google.maps.importLibrary("maps");
-      
-        let map = new Map(mapContainer, {
-          center: { lat: 53.448156, lng: -2.415962 },
-          zoom: 15,
-        });
+  const facebookLinkContainer = document.createElement("div");
+  const facebookLink = document.createElement("a");
+  facebookLink.setAttribute("aria-label", "Link to Facebook");
+  facebookLink.href = FERRYHILL_FACEBOOK_URL;
+  facebookLink.innerHTML = FACEBOOK_SVG;
+  facebookLinkContainer.appendChild(facebookLink);
 
-        let location = new google.maps.LatLng(53.448156,-2.415962 );
-        let marker = new google.maps.Marker({
-            position:location,
-            map:map
-        });
-      });
+  socialBox.appendChild(instagramMsg);
+  socialBox.appendChild(instaLinkContainer);
 
-    return container;
+  socialBox.appendChild(facebookMsg);
+  socialBox.appendChild(facebookLinkContainer);
 
+  //APPEND BOXES TO RELEVANT SECTION
+  locationSection.appendChild(contactBox);
+  locationSection.appendChild(mapBox);
+
+  socialSection.appendChild(messageBox);
+  socialSection.appendChild(socialBox);
+
+  //APPEND SECTIOSN TO CONTAINER
+  container.appendChild(locationSection);
+  container.appendChild(socialSection);
+
+  //GOOGLE MAPS STUFF
+  const loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_1__.Loader({
+    apiKey: API_KEY,
+    version: "weekly",
+  });
+
+  loader.load().then(async () => {
+    const { Map } = await google.maps.importLibrary("maps");
+
+    let map = new Map(mapContainer, {
+      center: { lat: 53.448156, lng: -2.415962 },
+      zoom: 15,
+    });
+
+    let location = new google.maps.LatLng(53.448156, -2.415962);
+    let marker = new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  });
+
+  return container;
 })();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buildContactpage);
+
 
 /***/ }),
 
@@ -2613,30 +2621,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _styles_footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/footer.scss */ "./src/styles/footer.scss");
 
-/* import ship from "../assets/ship-logo.png";
-import seagull from "../assets/seagull_2.png"; */
 
 // copyright icon
 // <i class="fa-regular fa-copyright"></i>;
 
 const buildFooter = (() => {
   const footer = document.createElement("footer");
-  const text = document.createElement("p");
-  /*   const imgShip = document.createElement("img");
-  const imgSeagull = document.createElement("img"); */
+  const madeByRigneyLink = document.createElement("a");
 
-  /*   imgShip.src = ship;
-  imgShip.alt = "ship outline";
-  imgShip.classList.add("ship-img");
+  madeByRigneyLink.innerText = `Made by Rigney 2023`;
+  madeByRigneyLink.href = "https://madebyrigney.com/";
+  madeByRigneyLink.setAttribute("target", "_blank");
+  madeByRigneyLink.setAttribute("rel", "noreferrer noopener");
 
-  imgSeagull.src = seagull;
-  imgSeagull.alt = "seagull shape";
-  imgSeagull.classList.add("seagull-img");
-  
-  /* footer.appendChild(imgSeagull);
-  footer.appendChild(imgShip); */
-  text.innerText = `Made by Rigney 2023`;
-  footer.appendChild(text);
+  footer.appendChild(madeByRigneyLink);
 
   return footer;
 })();
@@ -2667,158 +2665,161 @@ __webpack_require__.r(__webpack_exports__);
 
 const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line class="lines" x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
 
-const buildHeader = (()=>{
+const buildHeader = (() => {
+  const headerContainer = document.createElement("div");
+  const header = document.createElement("header");
+  const left = document.createElement("div");
+  const right = document.createElement("div");
 
-    const headerContainer = document.createElement('div');
-    const header = document.createElement('header');
-    const left = document.createElement('div');
-    const right = document.createElement('div');
+  const home = document.createElement("a");
+  const menu = document.createElement("a");
+  const about = document.createElement("a");
+  const contact = document.createElement("a");
 
-    const home = document.createElement('a');
-    const menu = document.createElement('a');
-    const about = document.createElement('a');
-    const contact = document.createElement('a');
+  const menuButton = document.createElement("button");
 
-    const menuButton = document.createElement('button');
-    
-    headerContainer.id = 'header-container'
+  headerContainer.id = "header-container";
 
-    //instead, I'm going to use three divs inside the
-    //button to create the hamburger effect
-    const line1 = document.createElement('div');
-    line1.classList.add('line');
-    line1.id = 'line1';
-    const line2 = document.createElement('div');
-    line2.classList.add('line');
-    line2.id = 'line2';
-    const line3 = document.createElement('div');
-    line3.classList.add('line');
-    line3.id = 'line3';
+  //instead, I'm going to use three divs inside the
+  //button to create the hamburger effect
+  const line1 = document.createElement("div");
+  line1.classList.add("line");
+  line1.id = "line1";
+  const line2 = document.createElement("div");
+  line2.classList.add("line");
+  line2.id = "line2";
+  const line3 = document.createElement("div");
+  line3.classList.add("line");
+  line3.id = "line3";
 
-    // seagull images
-    const seagullIconA = document.createElement('img');
-    seagullIconA.src = _assets_seagull_1_png__WEBPACK_IMPORTED_MODULE_1__;
-    seagullIconA.id = 'seagull-icon-a';
-    const seagullIconB = document.createElement('img');
-    seagullIconB.src = _assets_seagull_3_png__WEBPACK_IMPORTED_MODULE_3__;
-    seagullIconB.id = 'seagull-icon-b';
+  // seagull images
+  const seagullIconA = document.createElement("img");
+  seagullIconA.src = _assets_seagull_1_png__WEBPACK_IMPORTED_MODULE_1__;
+  seagullIconA.alt = "Icon of a seagull";
+  seagullIconA.id = "seagull-icon-a";
+  const seagullIconB = document.createElement("img");
+  seagullIconB.src = _assets_seagull_3_png__WEBPACK_IMPORTED_MODULE_3__;
+  seagullIconB.alt = "Icon of another seagull";
+  seagullIconB.id = "seagull-icon-b";
 
+  menuButton.appendChild(line1);
+  menuButton.appendChild(line2);
+  menuButton.appendChild(line3);
 
-    menuButton.appendChild(line1);
-    menuButton.appendChild(line2);
-    menuButton.appendChild(line3);
+  menuButton.setAttribute("aria-label", "Dropdown Menu Button");
 
-    const homeHeading = document.createElement('div');
-    homeHeading.id = 'home-heading';
-    const homeSubHeading = document.createElement('div');
-    homeSubHeading.id = 'home-sub-heading';
-    homeHeading.textContent = 'Ferryhill'
-    homeSubHeading.textContent = "Fish and Chips";
+  const homeHeading = document.createElement("div");
+  homeHeading.id = "home-heading";
+  const homeSubHeading = document.createElement("div");
+  homeSubHeading.id = "home-sub-heading";
+  homeHeading.textContent = "Ferryhill";
+  homeSubHeading.textContent = "Fish and Chips";
 
-    left.id = 'left-side';
-    right.id = 'right-side';
+  left.id = "left-side";
+  right.id = "right-side";
 
-    home.id = 'home-tab';
-    menu.id = 'menu-tab';
-    about.id = 'about-tab';
-    contact.id = 'contact-tab';
+  home.id = "home-tab";
+  menu.id = "menu-tab";
+  about.id = "about-tab";
+  contact.id = "contact-tab";
+  home.classList.add("link");
+  menu.classList.add("link");
+  about.classList.add("link");
+  contact.classList.add("link");
 
-    menuButton.id = 'menu-button';
+  menuButton.id = "menu-button";
 
-    //set the data-index attribute to we can associate each
-    //header link to a page
-    home.dataset.index = 0;
-    menu.dataset.index = 1;
-    about.dataset.index = 2;
-    contact.dataset.index = 3;
+  //set the data-index attribute to we can associate each
+  //header link to a page
+  home.dataset.index = 0;
+  menu.dataset.index = 1;
+  about.dataset.index = 2;
+  contact.dataset.index = 3;
 
-    home.appendChild(homeHeading);
-    home.appendChild(homeSubHeading);
-    home.appendChild(seagullIconA);
-    home.appendChild(seagullIconB);
+  home.appendChild(homeHeading);
+  home.appendChild(homeSubHeading);
+  home.appendChild(seagullIconA);
+  home.appendChild(seagullIconB);
 
-    menu.textContent = 'Menu';
-    about.textContent = 'About';
-    contact.textContent = 'Contact';
+  menu.textContent = "Menu";
+  about.textContent = "About";
+  contact.textContent = "Contact";
 
-    //dropdown box
-    const dropDownBox = document.createElement('div');
-    dropDownBox.id = 'dropdown-box'; 
-    
-    left.appendChild(home);
-    right.appendChild(menu);
-    right.appendChild(about);
-    right.appendChild(contact);
+  //dropdown box
+  const dropDownBox = document.createElement("div");
+  dropDownBox.id = "dropdown-box";
 
-    header.appendChild(left);
-    header.appendChild(right);
-    header.appendChild(menuButton);
-    header.appendChild(dropDownBox);
-    headerContainer.appendChild(header);
-    
-/*     home.addEventListener('click', ()=>{
+  left.appendChild(home);
+  right.appendChild(menu);
+  right.appendChild(about);
+  right.appendChild(contact);
+
+  header.appendChild(left);
+  header.appendChild(right);
+  header.appendChild(menuButton);
+  header.appendChild(dropDownBox);
+  headerContainer.appendChild(header);
+
+  /*     home.addEventListener('click', ()=>{
         if(menuButton.classList.contains('active'))
             toggleDropbox();
     }) */
 
-    //add eventlisteners to all links
-    //to reset page position
-    let headerLinks = [...header.querySelectorAll('a')];
-    headerLinks.forEach(el =>{
-        el.addEventListener('click', ()=>{
-            window.scrollTo(0,0);
-        })
-    })
+  //add eventlisteners to all links
+  //to reset page position
+  let headerLinks = [...header.querySelectorAll("a")];
+  headerLinks.forEach((el) => {
+    el.addEventListener("click", () => {
+      window.scrollTo(0, 0);
+    });
+  });
 
-    menuButton.addEventListener('click', ()=>{
-        toggleDropbox();
-        
-    })
+  menuButton.addEventListener("click", () => {
+    toggleDropbox();
+  });
 
-    dropDownBox.addEventListener('click', ()=>{
-        toggleDropbox();
-    })
+  dropDownBox.addEventListener("click", () => {
+    toggleDropbox();
+  });
 
-    const toggleDropbox = ()=>{
-        dropDownBox.classList.toggle('active');
-        menuButton.classList.toggle('active');
+  const toggleDropbox = () => {
+    dropDownBox.classList.toggle("active");
+    menuButton.classList.toggle("active");
 
-        toggleHomeLinkDisplay(dropDownBox.classList.contains('active'));
+    toggleHomeLinkDisplay(dropDownBox.classList.contains("active"));
 
-        if(dropDownBox.classList.contains('active')){
-            dropDownBox.appendChild(home);
-            dropDownBox.appendChild(menu);
-            dropDownBox.appendChild(about);
-            dropDownBox.appendChild(contact)
-
-        }
-        else{
-            dropDownBox.removeChild(home);
-            dropDownBox.removeChild(menu);
-            dropDownBox.removeChild(about);
-            dropDownBox.removeChild(contact);
-            left.appendChild(home);
-            right.appendChild(menu);
-            right.appendChild(about);
-            right.appendChild(contact);
-        }
+    if (dropDownBox.classList.contains("active")) {
+      dropDownBox.appendChild(home);
+      dropDownBox.appendChild(menu);
+      dropDownBox.appendChild(about);
+      dropDownBox.appendChild(contact);
+    } else {
+      dropDownBox.removeChild(home);
+      dropDownBox.removeChild(menu);
+      dropDownBox.removeChild(about);
+      dropDownBox.removeChild(contact);
+      left.appendChild(home);
+      right.appendChild(menu);
+      right.appendChild(about);
+      right.appendChild(contact);
     }
+  };
 
-    const toggleHomeLinkDisplay = (inDropbox)=>{
-        if(inDropbox){
-            homeHeading.textContent = 'Home';
-            homeSubHeading.style.display = 'none';
-        } else{
-            homeHeading.textContent = 'Ferryhill';
-            homeSubHeading.style.display = 'block';
-        }
+  const toggleHomeLinkDisplay = (inDropbox) => {
+    if (inDropbox) {
+      homeHeading.textContent = "Home";
+      homeSubHeading.style.display = "none";
+    } else {
+      homeHeading.textContent = "Ferryhill";
+      homeSubHeading.style.display = "block";
     }
+  };
 
-    return headerContainer;
-
+  return headerContainer;
 })();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buildHeader);
+
 
 /***/ }),
 
@@ -2860,15 +2861,15 @@ const buildHomepage = (() => {
   const container = document.createElement("div");
   container.id = "homepage-container";
 
-  //welcome section
+  // Welcome section
   const welcomeDiv = document.createElement("div");
   welcomeDiv.id = "welcome";
 
-  const welcomeTitle = document.createElement("div");
+  const welcomeTitle = document.createElement("h1"); // Use semantic heading
   welcomeTitle.innerText = WELCOME_TITLE;
   welcomeTitle.id = "welcome-title";
 
-  const welcomeMsg = document.createElement("div");
+  const welcomeMsg = document.createElement("p"); // Use semantic paragraph
   welcomeMsg.innerText = WELCOME_MSG;
   welcomeMsg.id = "welcome-msg";
 
@@ -2895,14 +2896,14 @@ const buildHomepage = (() => {
   welcomeDiv.appendChild(welcomeMsg);
   welcomeDiv.appendChild(buttonDiv);
 
-  //opening hours section
+  // Opening hours section
   const openingHoursDiv = document.createElement("div");
   openingHoursDiv.id = "hours";
 
   const msgAndBtnContainer = document.createElement("div");
   msgAndBtnContainer.classList.add("msg-and-btn-container");
 
-  const hoursMsg = document.createElement("div");
+  const hoursMsg = document.createElement("p"); // Use semantic paragraph
   hoursMsg.id = "hours-msg";
   hoursMsg.innerText = HOURS_MSG;
 
@@ -3093,15 +3094,6 @@ const menuiteams = {
 
 const helper = (() => {
   const isSizeOrOption = (value) => {
-    /* let numRegex = /\d/;
-
-        if(value.includes('large') || value.includes('small') 
-            || value.includes('regular') || (numRegex.test(value) && !(value.includes('%'))))
-        {
-            return true;                   
-        }
-        else return false; */
-
     if (value.includes("-")) return true;
     else return false;
   };
@@ -3189,52 +3181,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_slider_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/slider.scss */ "./src/styles/slider.scss");
 
 
-const msg0 = `Our <span>Fish</span> Are <span>Line Caught</span> From <span>Sustainable</span> Fishing Grounds, delivered <span>fresh</span> every day`;
-const msg1 = `Our <span>Chips</span> Are Made Using <span>Quality Potatoes</span> Peeled & Chipped <span>Fresh</span> On The Day`;
-const msg2 = `We <span>Fry</span> In <span>100%</span> Uncontaminated & <span>Sustainable</span> Vegetable Oil, <span>Filtered</span> Every Day`;
-const msg3 = `All Of Our <span>Packaging</span> & Utensils Are <span>100%</span> Recyclable & <span>Biodegradable</span>`;
+const messages = [
+  "Our <span>Fish</span> Are Line Caught From Sustainable Fishing Grounds, delivered fresh every day",
+  "Our <span>Chips</span> Are Made Using Quality Potatoes Peeled & Chipped Fresh On The Day",
+  "We <span>Fry</span> In 100% Uncontaminated & Sustainable Vegetable Oil, Filtered Every Day",
+  "All Of Our <span>Packaging</span> & Utensils Are 100% Recyclable & Biodegradable",
+];
 
 const icons = ["fa-fish", "fa-lines-leaning", "fa-droplet", "fa-leaf"];
-
-const msgs = [msg0, msg1, msg2, msg3];
-
-let startX;
 
 const Slider = (() => {
   const sliderContainer = document.createElement("div");
   const prevBtn = document.createElement("button");
   const nextBtn = document.createElement("button");
-  let slides = [];
-  let dotEls = [];
+  const slides = [];
+  const dotEls = [];
 
   sliderContainer.classList.add("slider-container");
   prevBtn.classList.add("prev-btn");
+  prevBtn.setAttribute("aria-label", "Previous Slide");
   nextBtn.classList.add("next-btn");
+  nextBtn.setAttribute("aria-label", "Next Slide");
   prevBtn.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
   nextBtn.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
 
   // create slide & dot elements
-  for (let i = 0; i < msgs.length; i++) {
+  messages.forEach((msg, i) => {
     // slide first
-    let slide = document.createElement("div");
+    const slide = document.createElement("div");
     slide.classList.add("slide");
     slide.dataset.index = i;
     slide.id = `slide${i}`;
 
     // then textbox
-    let textBox = document.createElement("div");
+    const textBox = document.createElement("div");
     textBox.classList.add("flex-centered");
-    let icon = document.createElement("i");
+    const icon = document.createElement("i");
     icon.classList.add("fa-solid");
     icon.classList.add(`${icons[i]}`);
-    let p = document.createElement("p");
-    p.innerHTML = msgs[i];
+    const p = document.createElement("p");
+    p.innerHTML = msg;
     textBox.appendChild(p);
     textBox.appendChild(icon);
     slide.appendChild(textBox);
 
     // then dots
-    let dot = document.createElement("div");
+    const dot = document.createElement("div");
     dot.dataset.index = i;
     dot.classList.add("dot");
     dot.id = `dot${i}`;
@@ -3246,7 +3238,7 @@ const Slider = (() => {
 
     slides.push(slide);
     dotEls.push(dot);
-  }
+  });
 
   slides.forEach((el) => {
     sliderContainer.appendChild(el);
@@ -3276,8 +3268,40 @@ const Slider = (() => {
     });
   });
 
+  // Keyboard navigation
+  sliderContainer.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      loadPrevSlide();
+      setCurrentDot();
+    } else if (event.key === "ArrowRight") {
+      loadNextSlide();
+      setCurrentDot();
+    }
+  });
+
+  // Ensure button elements are focusable
+  prevBtn.setAttribute("tabindex", "0");
+  nextBtn.setAttribute("tabindex", "0");
+
+  // Ensure buttons are accessible with Enter key
+  prevBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      loadPrevSlide();
+      setCurrentDot();
+    }
+  });
+
+  nextBtn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      loadNextSlide();
+      setCurrentDot();
+    }
+  });
+
   sliderContainer.addEventListener("touchstart", handleTouchStart);
   sliderContainer.addEventListener("touchmove", handleTouchMove);
+
+  let startX;
 
   function handleTouchStart(event) {
     startX = event.touches[0].clientX;
@@ -3308,7 +3332,7 @@ const Slider = (() => {
   }
 
   function loadNextSlide() {
-    let currentSlide = getCurrentSlide();
+    const currentSlide = getCurrentSlide();
 
     slides.forEach((slide, i) => {
       if (slide === currentSlide) {
@@ -3324,7 +3348,7 @@ const Slider = (() => {
   }
 
   function loadPrevSlide() {
-    let currentSlide = getCurrentSlide();
+    const currentSlide = getCurrentSlide();
 
     slides.forEach((slide, i) => {
       if (slide === currentSlide) {
@@ -3344,7 +3368,7 @@ const Slider = (() => {
   }
 
   function setCurrentDot() {
-    let currentSlide = getCurrentSlide();
+    const currentSlide = getCurrentSlide();
 
     dotEls.forEach((dot, i) => {
       if (currentSlide.dataset.index == i) {
