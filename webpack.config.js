@@ -37,11 +37,13 @@ module.exports = {
       template: "src/template.html",
       favicon: "src/assets/favicon.ico",
     }),
-    new CopyWebpackPlugin([
-      { from: "_headers", to: "_headers" },
-      { from: "_redirects", to: "_redirects" },
-      // Add more files if needed
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "_headers", to: "_headers" },
+        { from: "_redirects", to: "_redirects" },
+        // Add more files if needed
+      ],
+    }),
   ],
   mode: "development",
 };
