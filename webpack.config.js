@@ -5,10 +5,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: `bundle.[chunkhash].js`,
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "[name][hash][ext]",
   },
   devtool: "source-map",
   devServer: {
