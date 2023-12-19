@@ -2346,6 +2346,27 @@ window.addEventListener("beforeunload", () => {
   loadContent(lastPageIndex);
 });
 
+// to process links to menu, about us and contact page
+document.addEventListener("DOMContentLoaded", function () {
+  // Check for the path on page load
+  const path = window.location.pathname;
+
+  // Load the corresponding module
+  if (path === "/home") {
+    // Load the menu module
+    loadContent(0);
+  } else if (path === "/menu") {
+    // Load the menu module
+    loadContent(1);
+  } else if (path === "/about") {
+    // Load the contact module
+    loadContent(2);
+  } else if (path === "/contact") {
+    // Load the contact module
+    loadContent(3);
+  }
+});
+
 
 
 
