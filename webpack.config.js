@@ -38,8 +38,8 @@ module.exports = {
       favicon: "src/assets/favicon.ico",
     }),
     new CopyWebpackPlugin([
-      { from: "_headers", to: "_headers", toType: "file" },
-      { from: "_redirects", to: "_redirects", toType: "file" },
+      { from: "_headers", to: "_headers" },
+      { from: "_redirects", to: "_redirects" },
       // Add more files if needed
     ]),
   ],
