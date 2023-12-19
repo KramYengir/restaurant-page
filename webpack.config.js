@@ -39,8 +39,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "_headers", to: "_headers" },
-        { from: "_redirects", to: "_redirects" },
+        { from: "_headers", to: "" },
+        { from: "_redirects", to: "" },
         // Add more files if needed
       ],
     }),
