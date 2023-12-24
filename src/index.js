@@ -7,6 +7,7 @@ import about from "./modules/about.js";
 import footer from "./modules/footer.js";
 
 const pages = [homepage, menu, about, contact];
+const pageNames = ["", "menu", "about", "contact"];
 
 const content = document.getElementById("content");
 const contentMain = document.createElement("div");
@@ -35,6 +36,9 @@ const loadContent = (index) => {
   lastPageIndex = index;
   sessionStorage.setItem("lastPageIndex", index);
   window.scrollTo(0, 0);
+
+  //amend the url
+  amendUrlPath(pageNames[index]);
 };
 
 const toggleActiveTab = (index) => {
@@ -57,6 +61,19 @@ window.addEventListener("beforeunload", () => {
   window.scrollTo(0, 0);
   loadContent(lastPageIndex);
 });
+
+function amendUrlPath(page) {
+  const currentUrl = window.location.href;
+
+  // Check if the page is already in the URL
+  if (currentUrl.includes("/" + page)) {
+    // Replace the existing occurrence of the page in the URL
+    window.location.href = currentUrl.replace(new RegExp("/" + page + "$"), "");
+  } else {
+    // Append the page to the URL
+    window.location.href += "/" + page;
+  }
+}
 
 // to process links to menu, about us and contact page
 document.addEventListener("DOMContentLoaded", function () {
