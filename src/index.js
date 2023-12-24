@@ -68,6 +68,12 @@ function amendUrlPath(page) {
   // Get the base URL without any path
   const baseUrl = window.location.origin;
 
+  // For homepage
+  if (currentPage == pages[0]) {
+    history.pushState({}, page, baseUrl);
+    return;
+  }
+
   // Check if the page is already in the URL
   if (currentUrl.includes("/" + page)) {
     // Replace the existing occurrence of the page in the URL
