@@ -71,10 +71,10 @@ function amendUrlPath(page) {
   // Check if the page is already in the URL
   if (currentUrl.includes("/" + page)) {
     // Replace the existing occurrence of the page in the URL
-    window.location.href = currentUrl.replace(new RegExp("/" + page + "$"), "");
+    history.pushState({}, page, currentUrl);
   } else {
-    // Redirect to the base URL with the new page
-    window.location.href = baseUrl + "/" + page;
+    // Update the URL without triggering a page reload
+    history.pushState({}, page, baseUrl + "/" + pageName);
   }
 }
 
