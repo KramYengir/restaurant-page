@@ -65,13 +65,16 @@ window.addEventListener("beforeunload", () => {
 function amendUrlPath(page) {
   const currentUrl = window.location.href;
 
+  // Get the base URL without any path
+  const baseUrl = window.location.origin;
+
   // Check if the page is already in the URL
   if (currentUrl.includes("/" + page)) {
     // Replace the existing occurrence of the page in the URL
     window.location.href = currentUrl.replace(new RegExp("/" + page + "$"), "");
   } else {
-    // Append the page to the URL
-    window.location.href += "/" + page;
+    // Redirect to the base URL with the new page
+    window.location.href = baseUrl + "/" + page;
   }
 }
 
