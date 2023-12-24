@@ -74,7 +74,7 @@ function amendUrlPath(page) {
     history.pushState({}, page, currentUrl);
   } else {
     // Update the URL without triggering a page reload
-    history.pushState({}, page, baseUrl + "/" + pageName);
+    history.pushState({}, page, baseUrl + "/" + page);
   }
 }
 
