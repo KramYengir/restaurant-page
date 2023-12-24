@@ -7,7 +7,7 @@ import about from "./modules/about.js";
 import footer from "./modules/footer.js";
 
 const pages = [homepage, menu, about, contact];
-const pageNames = ["", "menu", "about", "contact"];
+const pageNames = ["home", "menu", "about", "contact"];
 
 const content = document.getElementById("content");
 const contentMain = document.createElement("div");
