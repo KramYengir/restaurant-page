@@ -11,16 +11,16 @@ footer {
   justify-content: center;
   align-items: center;
 
-  color: $gold-color;
   background-color: $background-dark;
   border-top: 1px solid $gold-color;
-  font-size: 0.7rem;
 
   padding-inline: 10px;
 
   a {
     color: $gold-color;
     text-decoration: none;
+    font-size: 0.8rem;
+    color: $background-light;
   }
 
   /*   img {

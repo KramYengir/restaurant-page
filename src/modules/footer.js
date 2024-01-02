@@ -5,14 +5,14 @@ import "../styles/footer.scss";
 
 const buildFooter = (() => {
   const footer = document.createElement("footer");
-  const madeByRigneyLink = document.createElement("a");
+  const rigneyMadeLink = document.createElement("a");
 
-  madeByRigneyLink.innerText = `Made by Rigney 2023`;
-  madeByRigneyLink.href = "https://madebyrigney.com/";
-  madeByRigneyLink.setAttribute("target", "_blank");
-  madeByRigneyLink.setAttribute("rel", "noreferrer noopener");
+  rigneyMadeLink.innerText = "Rigney Made 2023 Ⓒ";
+  rigneyMadeLink.href = "https://rigneymade.com/";
+  rigneyMadeLink.setAttribute("target", "_blank");
+  rigneyMadeLink.setAttribute("rel", "noreferrer noopener");
 
-  footer.appendChild(madeByRigneyLink);
+  footer.appendChild(rigneyMadeLink);
 
   return footer;
 })();
