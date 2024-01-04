@@ -1,7 +1,7 @@
 # The Odin Project - Restaurant Page Assignment
 **(Also the prototype for a real takeaway restaurant web page)**
 
-Preview live page [here](https://kramyengir.github.io/restaurant-page/)
+Preview live page [here](https://ferryhillfishandchips.com/)
 
 ---
 
