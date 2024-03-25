@@ -7,7 +7,7 @@ const buildFooter = (() => {
   const footer = document.createElement("footer");
   const rigneyMadeLink = document.createElement("a");
 
-  rigneyMadeLink.innerText = "Rigney Made 2023 Ⓒ";
+  rigneyMadeLink.innerText = "RigneyMade 2023 Ⓒ";
   rigneyMadeLink.href = "https://rigneymade.com/";
   rigneyMadeLink.setAttribute("target", "_blank");
   rigneyMadeLink.setAttribute("rel", "noreferrer noopener");
