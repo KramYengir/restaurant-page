@@ -1,11 +1,14 @@
 # The Odin Project - Restaurant Page Assignment
-**(Also the prototype for a real takeaway restaurant web page)**
+**(Also developed into a real takeaway restaurant web page)**
 
-Preview live page [here](https://kramyengir.github.io/restaurant-page/)
+Preview live page [here](https://ferryhillfishandchips.com/)
 
 ---
 
 The purpose of this assignment was to put to practice what I've learned about the modular approach, npm, webpack and building the webpage purely from Javascript via DOM manipulation.
+
+**UPDATE:** 
+*In hindsight, numerous areas for improvement are needed for this project. Furthermore, with proficiency gained in React fundamentals since, plans are underway for a complete overhaul of the project using React, with a focus on enhancing performance and ensuring high accessibility standards are met.*
 
 ### What I've learned...
 - Setting up the webpack environment
