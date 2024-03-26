@@ -117,10 +117,10 @@ const menuiteams = {
     "small sausage": "1.00",
   },
   specials: {
-    "chip barm special": "4.30",
+    "chip barm special": "4.60",
     "battered chip barm": "3.00",
     "large spring rolls": "2.00",
-    "minced beef & onion pie": "2.20",
+    "minced beef & onion pie": "2.40",
     "halloumi fries": "3.40",
     "sweet potato fries": "3.40",
     "homemade chicken sticks": "3.00",
@@ -128,7 +128,7 @@ const menuiteams = {
     "- with sweet chilli dip": "",
   },
   "lunchtime special": {
-    "small fish, chips & peas": "5.50",
+    "small fish, chips & peas": "6.20",
     "- served in a tray": "",
   },
   drinks: {
@@ -136,6 +136,7 @@ const menuiteams = {
     bottles: "1.90",
     water: "0.90",
     cartons: "0.50",
+    "tea & coffee": "1.50",
   },
 };
 
