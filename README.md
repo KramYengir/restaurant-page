@@ -8,7 +8,7 @@ Preview live page [here](https://ferryhillfishandchips.com/)
 The purpose of this assignment was to put to practice what I've learned about the modular approach, npm, webpack and building the webpage purely from Javascript via DOM manipulation.
 
 **UPDATE:** 
-*In hindsight, numerous areas for improvement are needed for this project. Furthermore, with proficiency gained in React fundamentals since, plans are underway for a complete overhaul of the project using React, with a focus on enhancing performance and ensuring high accessibility standards are met.*
+*In hindsight, numerous areas for improvement are needed for this project. Furthermore, with proficiency since gained in React and Next.js, plans are underway for a complete overhaul of the project using these frameworks, with a focus on enhancing performance, SEO and ensuring high accessibility standards are met.*
 
 ### What I've learned...
 - Setting up the webpack environment
